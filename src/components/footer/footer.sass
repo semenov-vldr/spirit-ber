@@ -4,49 +4,162 @@
     padding: 40px 100px
     display: grid
     grid-template-columns: repeat(4, 1fr)
+    column-gap: 20px
+    @media (min-width: 1200px)
+      & > *:not(:last-child)
+        position: relative
+        &::after
+          content: ""
+          position: absolute
+          width: 4px
+          height: 100%
+          bottom: 0
+          right: 0
+          background-color: $frosted-top
+          box-shadow: -1px 0px 2px rgba(113, 200, 255, 0.12), -3px 0px 2px rgba(113, 200, 255, 0.04), 1px 0px 1px rgba(0, 0, 0, 0.06), 1px 0px 4px rgba(0, 0, 0, 0.28), inset -1px 0px 1px rgba(113, 200, 255, 0.03)
+          border-radius: 8px
+    @media (max-width: 1200px)
+      grid-template-columns: repeat(2, 1fr)
+      padding: 40px 50px
+      row-gap: 32px
+    @media (max-width: 600px)
+      column-gap: 15px
+      row-gap: 20px
+      padding: 40px 20px
+
   &__logo
     grid-column: span 1
     display: flex
     flex-direction: column
     gap: 10px
+    padding-right: 40px
     &-text
       font-size: 20px
+    @media (max-width: 1200px)
+      grid-column: 1 / -1
+      padding: 0
+      align-items: center
+
+  &-documents
+    grid-column: span 1
+    grid-row: 3 / span 1
+    display: flex
+    flex-direction: column
+    gap: 28px
+    padding-right: 40px
+    color: #A8A8A8
+    @media (max-width: 1400px)
+      padding-right: 20px
+    @media (max-width: 1200px)
+      padding: 0
+      grid-column: 1 / -1
+      grid-row: 2 / span 1
+      align-items: center
+
+
+  &-documents__item
+    @media (max-width: 1200px)
+      background-color: rgba(106, 106, 106, 0.1)
+      padding: 15px
+      width: 100%
+      text-align: center
+      color: $white
+      border-radius: 4px
+
+  &-documents__link
+    position: relative
+    padding-left: 20px
+    &::before
+      content: ""
+      position: absolute
+      background-image: url("/assets/img/icons/file.svg")
+      background-repeat: no-repeat
+      background-size: cover
+      width: 13px
+      height: 16px
+      left: -8px
+      bottom: 0
+      transform: translateX(-100%)
+      margin-left: 18px
+    @media (max-width: 600px)
+      font-size: 14px
 
   &-requisites
     grid-column: span 1
     grid-row: 2 / span 1
     color: #A8A8A8
-    display: flex
-    flex-direction: column
-    gap: 28px
+    padding-right: 40px
+    @media (max-width: 1400px)
+      padding-right: 20px
+    @media (max-width: 1200px)
+      grid-column: 1 / -1
+      grid-row: 5 / span 1
+    @media (max-width: 600px)
+      padding: 0
 
   &-nav__title
-    font-size: 24px
+    font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 768px) / (1920 - 768))), 24px)
     font-weight: 500
     margin-bottom: 12px
+    @media (max-width: 600px)
+      margin-bottom: 0
+    @media (max-width: 400px)
+      font-size: 16px
 
   &-nav
     padding: 0 40px
+    @media (max-width: 1400px)
+      padding: 0 20px
+    @media (max-width: 600px)
+      padding: 0
 
   &-nav__list
     display: flex
     flex-direction: column
     gap: 10px
+    @media (max-width: 600px)
+      gap: 8px
+
+  &-nav__link,
+  &-requisites
     color: #A8A8A8
+    font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 768px) / (1920 - 768))), 16px)
+    &:hover
+      color: $white
+    @media (max-width: 400px)
+      font-size: 12px
+
 
   &-nav--services
     grid-column: 2 / span 1
+    @media (max-width: 1200px)
+      grid-column: span 1
+      grid-row: 3 / span 1
+
 
   &-nav--info
     grid-column: 2 / span 1
-    grid-row: 2 / span 1
+    grid-row: 2 / span 2
+    @media (max-width: 1200px)
+      grid-column: span 1
+      grid-row: 4 / span 1
 
   &-nav--about
     grid-column: 3 / span 1
+    grid-row: span 3
+    @media (max-width: 1200px)
+      grid-column: 2 / span 1
+      grid-row: 3 / span 1
 
   &-nav--contact
     grid-column: 4 / span 1
     .footer-nav__list
       gap: 24px
-      color: $white
+      a
+        color: $white
+      @media (max-width: 600px)
+        gap: 8px
+    @media (max-width: 1200px)
+      grid-column: 2 / span 1
+      grid-row: 4 / span 1
 

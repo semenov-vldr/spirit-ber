@@ -7,36 +7,67 @@ header.header
 
     button.header__burger
 
-    ul.header__nav.header-nav
+    mixin headerNavItem(link, text)
       li.header-nav__item
-        a.header-nav__link(href="/") Услуги
-      li.header-nav__item
-        a.header-nav__link(href="/") Цены
-      li.header-nav__item
-        a.header-nav__link(href="/") Примеры работ
-      li.header-nav__item
-        a.header-nav__link(href="/") О нас
-      li.header-nav__item
-        a.header-nav__link(href="/") Контакты
+        a.header-nav__link(href=link)=text
 
-    .header__contact.header-contact
-      button(type="button").header-contact__menu-tablet Связаться с нами
-        span Телефон, почта, адрес
+    mixin headerSubNavItem(link, text)
+      li.header-subnav__item
+        a.header-subnav__link(href=link)=text
 
-      ul.header-contact__list
 
-        li.header-contact__item
-          a.header-contact__link(href="tel:+74999940097") +7 499 994 00 97
-          span.header-contact__description пн-пт с 09:00 до 18:00
+    .header-nav
+      ul.header-nav__list
+        li.header-nav__item
+          a.header-nav__link Услуги
 
-        li.header-contact__item
-          a.header-contact__link(href="") sales@spirit-bear.ru
-          span.header-contact__description круглосуточно, без выходных
+          ul.header-subnav.header-subnav-1
+            li.header-subnav__item
+              a.header-subnav__link(href="/") Лазерная резка металла
+              ul.header-subnav.header-subnav-2
+                +headerSubNavItem('/', 'Лазерная резка листа')
+                +headerSubNavItem('/', 'Лазерная резка швеллера')
+                +headerSubNavItem('/', 'Лазерная резка труб')
+                +headerSubNavItem('/', 'Лазерная резка уголка')
 
-        li.header-contact__item
-          a.header-contact__link МО, Солнечногорск,
-            br
-            | д. Пешки, цех №22
+            +headerSubNavItem('/', 'Гибка листового металла')
+            +headerSubNavItem('/', 'Порошковая покраска металла')
+            +headerSubNavItem('/', 'Слесарные работы')
+            +headerSubNavItem('/', 'Металлоконструкции')
+
+
+        +headerNavItem('/', 'Цены')
+        +headerNavItem('/', 'Примеры работ')
+        +headerNavItem('/', 'О нас')
+        +headerNavItem('/', 'Контакты')
+
+      .header__contact.header-contact
+        button(type="button").header-contact__menu-tablet Связаться с нами
+          span Телефон, почта, адрес
+
+        ul.header-contact__list
+
+          li.header-contact__item
+            a.header-contact__link(href="tel:+74999940097") +7 499 994 00 97
+            button.header-contact__button-copy
+              svg(width="12" height="12")
+                use(href='assets/img/sprite.svg#button-copy')
+            span.header-contact__description пн-пт с 09:00 до 18:00
+
+          li.header-contact__item
+            a.header-contact__link(href="") sales@spirit-bear.ru
+            button.header-contact__button-copy
+              svg(width="12" height="12")
+                use(href='assets/img/sprite.svg#button-copy')
+            span.header-contact__description круглосуточно, без выходных
+
+          li.header-contact__item
+            a.header-contact__link МО, Солнечногорск,
+              br
+              | д. Пешки, цех №22
+            button.header-contact__button-copy
+              svg(width="12" height="12")
+                use(href='assets/img/sprite.svg#button-copy')
 
 
 

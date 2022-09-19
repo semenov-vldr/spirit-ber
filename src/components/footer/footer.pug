@@ -5,54 +5,53 @@ footer.footer
         use(href='assets/img/sprite.svg#footer-logo')
       span.footer__logo-text Металлообработка на заказ
 
-    ul.footer__requisites.footer-requisites
-      li.footer-requisites__item
-        a.footer-requisites__link.footer-requisites__link--download(href="") Скачать договоро оказания услуг
-      li.footer-requisites__item
-        a.footer-requisites__link.footer-requisites__link--download(href="") Скачать договор постакви
-      li.footer-requisites__item
-        a.footer-requisites__link «ООО «Спирит-Бер», 2016-2022. Все права защищены.» Реквизиты: ИНН 7735186587, ОГРН 1207700015753
+    ul.footer__documents.footer-documents
+      li.footer-documents__item
+        a.footer-documents__link(href="") Скачать договор оказания услуг
+      li.footer-documents__item
+        a.footer-documents__link(href="") Скачать договор поставки
+
+    .footer-requisites «ООО «Спирит-Бер», 2016-2022. Все права защищены.» Реквизиты: ИНН 7735186587, ОГРН 1207700015753
 
 
-    mixin navItem(link, text)
+    mixin footerNavItem(link, text)
       li.footer-nav__item
         a.footer-nav__link(href=link)=text
 
     .footer__nav.footer-nav.footer-nav--services
       h4.footer-nav__title Услуги
       ul.footer-nav__list
-        +navItem('/', 'Лазерная резка металла')
-        +navItem('/', 'Гибка листового металла')
-        +navItem('/', 'Порошковая покраска')
-        +navItem('/', 'Слесарные работы')
-        +navItem('/', 'Изготовление металлоконструкций')
+        +footerNavItem('/', 'Лазерная резка металла')
+        +footerNavItem('/', 'Гибка листового металла')
+        +footerNavItem('/', 'Порошковая покраска')
+        +footerNavItem('/', 'Слесарные работы')
+        +footerNavItem('/', 'Изготовление металлоконструкций')
 
     .footer__nav.footer-nav.footer-nav--info
       h4.footer-nav__title Информация
       ul.footer-nav__list
-        +navItem('/', 'Карта сайта')
-        +navItem('/', 'Политика обработки персональных данных')
-        +navItem('/', 'Электронный документоооборот')
+        +footerNavItem('/', 'Карта сайта')
+        +footerNavItem('/', 'Политика обработки персональных данных')
+        +footerNavItem('/', 'Электронный документоооборот')
 
     .footer__nav.footer-nav.footer-nav--about
       h4.footer-nav__title О компании
       ul.footer-nav__list
-        +navItem('/', 'Производство')
-        +navItem('/', 'Вакансии')
-        +navItem('/', 'Реквезиты')
-        +navItem('/', 'Электронный документооборот')
-        +navItem('/', 'Контакты')
-        +navItem('/', 'Доставка')
-        +navItem('/', 'Реквизиты')
+        +footerNavItem('/', 'Производство')
+        +footerNavItem('/', 'Вакансии')
+        +footerNavItem('/', 'Реквезиты')
+        +footerNavItem('/', 'Электронный документооборот')
+        +footerNavItem('/', 'Контакты')
+        +footerNavItem('/', 'Доставка')
+        +footerNavItem('/', 'Реквизиты')
 
     .footer__nav.footer-nav.footer-nav--contact
-      h4.footer-nav__title О компании
+      h4.footer-nav__title Контакты
       ul.footer-nav__list
-        +navItem('/', '+7 (499) 994-00-97')
-        +navItem('/', 'sales@spirit-bear.ru')
-        +navItem('/', 'Московская область, г.о.Солнечногорск, деревня Пешки, цех № 22')
-        +navItem('/', 'Электронный документооборот')
-        +navItem('/', `Пн - Пт с 09:00 до 18:00, Сб - Вс выходной`)
+        +footerNavItem('/', '+7 (499) 994-00-97')
+        +footerNavItem('/', 'sales@spirit-bear.ru')
+        +footerNavItem('', 'Московская область, г.о.Солнечногорск, деревня Пешки, цех № 22')
+        +footerNavItem('/', `Пн - Пт с 09:00 до 18:00, Сб - Вс выходной`)
 
 
 

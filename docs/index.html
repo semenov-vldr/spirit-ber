@@ -22,20 +22,55 @@
               <use href="assets/img/sprite.svg#header-logo"></use>
             </svg></a>
           <button class="header__burger"></button>
-          <ul class="header__nav header-nav">
-            <li class="header-nav__item"><a class="header-nav__link" href="/">Услуги</a></li>
-            <li class="header-nav__item"><a class="header-nav__link" href="/">Цены</a></li>
-            <li class="header-nav__item"><a class="header-nav__link" href="/">Примеры работ</a></li>
-            <li class="header-nav__item"><a class="header-nav__link" href="/">О нас</a></li>
-            <li class="header-nav__item"><a class="header-nav__link" href="/">Контакты</a></li>
-          </ul>
-          <div class="header__contact header-contact">
-            <button class="header-contact__menu-tablet" type="button">Связаться с нами<span>Телефон, почта, адрес</span></button>
-            <ul class="header-contact__list">
-              <li class="header-contact__item"><a class="header-contact__link" href="tel:+74999940097">+7 499 994 00 97</a><span class="header-contact__description">пн-пт с 09:00 до 18:00</span></li>
-              <li class="header-contact__item"><a class="header-contact__link" href="">sales@spirit-bear.ru</a><span class="header-contact__description">круглосуточно, без выходных</span></li>
-              <li class="header-contact__item"><a class="header-contact__link">МО, Солнечногорск,<br>д. Пешки, цех №22</a></li>
+          <div class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item"><a class="header-nav__link">Услуги</a>
+                <ul class="header-subnav header-subnav-1">
+                  <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка металла</a>
+                    <ul class="header-subnav header-subnav-2">
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка листа</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка швеллера</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка труб</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка уголка</a></li>
+                    </ul>
+                  </li>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="/">Гибка листового металла</a></li>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="/">Порошковая покраска металла</a></li>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="/">Слесарные работы</a></li>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="/">Металлоконструкции</a></li>
+                </ul>
+              </li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="/">Цены</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="/">Примеры работ</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="/">О нас</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="/">Контакты</a></li>
             </ul>
+            <div class="header__contact header-contact">
+              <button class="header-contact__menu-tablet" type="button">Связаться с нами<span>Телефон, почта, адрес</span></button>
+              <ul class="header-contact__list">
+                <li class="header-contact__item"><a class="header-contact__link" href="tel:+74999940097">+7 499 994 00 97</a>
+                  <button class="header-contact__button-copy">
+                    <svg width="12" height="12">
+                      <use href="assets/img/sprite.svg#button-copy"></use>
+                    </svg>
+                  </button><span class="header-contact__description">пн-пт с 09:00 до 18:00</span>
+                </li>
+                <li class="header-contact__item"><a class="header-contact__link" href="">sales@spirit-bear.ru</a>
+                  <button class="header-contact__button-copy">
+                    <svg width="12" height="12">
+                      <use href="assets/img/sprite.svg#button-copy"></use>
+                    </svg>
+                  </button><span class="header-contact__description">круглосуточно, без выходных</span>
+                </li>
+                <li class="header-contact__item"><a class="header-contact__link">МО, Солнечногорск,<br>д. Пешки, цех №22</a>
+                  <button class="header-contact__button-copy">
+                    <svg width="12" height="12">
+                      <use href="assets/img/sprite.svg#button-copy"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </header>
@@ -50,11 +85,11 @@
               <svg width="262" height="60">
                 <use href="assets/img/sprite.svg#footer-logo"></use>
               </svg><span class="footer__logo-text">Металлообработка на заказ</span></a>
-            <ul class="footer__requisites footer-requisites">
-              <li class="footer-requisites__item"><a class="footer-requisites__link footer-requisites__link--download" href="">Скачать договоро оказания услуг</a></li>
-              <li class="footer-requisites__item"><a class="footer-requisites__link footer-requisites__link--download" href="">Скачать договор постакви</a></li>
-              <li class="footer-requisites__item"><a class="footer-requisites__link">«ООО «Спирит-Бер», 2016-2022. Все права защищены.» Реквизиты: ИНН 7735186587, ОГРН 1207700015753</a></li>
+            <ul class="footer__documents footer-documents">
+              <li class="footer-documents__item"><a class="footer-documents__link" href="">Скачать договор оказания услуг</a></li>
+              <li class="footer-documents__item"><a class="footer-documents__link" href="">Скачать договор поставки</a></li>
             </ul>
+            <div class="footer-requisites">«ООО «Спирит-Бер», 2016-2022. Все права защищены.» Реквизиты: ИНН 7735186587, ОГРН 1207700015753</div>
             <div class="footer__nav footer-nav footer-nav--services">
               <h4 class="footer-nav__title">Услуги</h4>
               <ul class="footer-nav__list">
@@ -86,12 +121,11 @@
               </ul>
             </div>
             <div class="footer__nav footer-nav footer-nav--contact">
-              <h4 class="footer-nav__title">О компании</h4>
+              <h4 class="footer-nav__title">Контакты</h4>
               <ul class="footer-nav__list">
                             <li class="footer-nav__item"><a class="footer-nav__link" href="/">+7 (499) 994-00-97</a></li>
                             <li class="footer-nav__item"><a class="footer-nav__link" href="/">sales@spirit-bear.ru</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Московская область, г.о.Солнечногорск, деревня Пешки, цех № 22</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Электронный документооборот</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Московская область, г.о.Солнечногорск, деревня Пешки, цех № 22</a></li>
                             <li class="footer-nav__item"><a class="footer-nav__link" href="/">Пн - Пт с 09:00 до 18:00, Сб - Вс выходной</a></li>
               </ul>
             </div>
