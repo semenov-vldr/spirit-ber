@@ -16,6 +16,23 @@
   headerBurger.addEventListener('click', () => toggleActiveElem(header, headerNav));
 
 
+  // mobile menu
+  const mobileWidth = window.matchMedia('(max-width: 1100px)');
+
+  if (mobileWidth) {
+    const headerListSubNav_1 = document.querySelectorAll('.header-subnav-1'); // список подменю 1-го уровня
+    headerListSubNav_1.forEach(subNav_1 => {
+      const parent = subNav_1.parentNode;
+      const link = parent.querySelector('.header-nav__link');
+      link.addEventListener('click', () => toggleActiveElem(subNav_1));
+
+    })
+
+  }
+
+
+
+
 
   // copy text
   function copyToClipboard(str) {
