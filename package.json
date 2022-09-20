@@ -1,9 +1,9 @@
 {
-  "name": "work-project",
+  "name": "spirit-ber",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "homepage": "https://semenov-vldr.github.io/test-project",
+  "homepage": "https://semenov-vldr.github.io/spirit-ber",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",

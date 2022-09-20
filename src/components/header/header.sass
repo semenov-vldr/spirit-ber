@@ -2,6 +2,8 @@
   position: absolute
   z-index: 1
   width: 100%
+  background: linear-gradient(180deg, rgba(18, 25, 32, 0.12) 0%, rgba(18, 25, 32, 0.107268) 61%, rgba(18, 25, 32, 0) 100%)
+  backdrop-filter: blur(4px)
   @media (max-width: $width-mobile)
     max-height: 66px
     &.js-active
@@ -44,11 +46,18 @@
       display: none
       align-items: flex-start
       flex-direction: column
+      gap: 12px
       height: 100%
       top: 66px
       left: 0
       right: 0
       background-color: var(--bg-black)
+      padding: 0 20px
+      overflow-y: scroll
+      overscroll-behavior: contain
+      padding-bottom: 30px
+      &::-webkit-scrollbar
+        width: 0
 
 
   &-nav__list
@@ -60,19 +69,18 @@
       width: 100%
       flex-direction: column
       gap: 0
-      background-color: $frosted-top
       border-radius: 8px
-      margin: 0 20px
 
 
   &-nav__item
     @media (max-width: $width-mobile)
-      padding: 25px 0
+      padding: 25px 12px
+      background-color: $frosted-top
       width: 100%
-
-    &:hover .header-subnav-1
-      transform: rotateX(0deg)
-      visibility: visible
+    @media (min-width: $width-mobile)
+      &:hover .header-subnav-1
+        transform: rotateX(0deg)
+        visibility: visible
 
   &-nav__link
     white-space: nowrap
@@ -83,6 +91,9 @@
     &:active
       background-color: $frosted-top
       border-radius: 4px
+    @media (max-width: $width-mobile)
+      display: block
+      padding: 0
 
 
   &-subnav
@@ -102,16 +113,28 @@
         padding: 8px 50px 8px 12px
       & a:hover
         color: $white
+      @media (max-width: $width-mobile)
+        width: 100%
+        padding: 25px 0
+    @media (max-width: $width-mobile)
+      position: relative
+      width: 100%
+      visibility: visible
+      transform: initial
+      display: none
+      &.js-active
+        display: block
+        overflow: hidden
 
   &-subnav-1
     padding-top: 15px
     border-radius: 4px 4px 0 0
     .header-subnav__item
-      position: relative
       border-left: 2px solid transparent
-      &:hover .header-subnav-2
-        transform: rotateX(0deg)
-        visibility: visible
+      @media (min-width: $width-mobile)
+        &:hover .header-subnav-2
+          transform: rotateX(0deg)
+          visibility: visible
     & > .header-subnav__item:nth-child(1)
       &:hover
         border-color: $accent
@@ -141,9 +164,10 @@
     display: flex
     margin-left: auto
     @media (max-width: $width-mobile)
-      margin-left: 0
       width: 100%
       align-items: center
+      background-color: $frosted-top
+      border-radius: 8px
 
     &__list
       display: flex
@@ -166,11 +190,10 @@
         position: relative
         flex-direction: column
         gap: 0
-        background-color: $frosted-top
-        margin: 0 20px
+        background-color: transparent
         width: 100%
         transform: initial
-        border-radius: 8px
+        bottom: 0
 
     &__item
       white-space: nowrap
@@ -186,11 +209,15 @@
           right: 18px
           top: 50%
           transform: translateY(-50%)
+        @media (max-width: $width-mobile)
+          background-color: initial
+          padding: 20px 12px
+          &:hover
+            background-color: initial
     &__button-copy
       display: inline-block
       cursor: pointer
       margin-left: 8px
-
 
     &__link
       white-space: nowrap
