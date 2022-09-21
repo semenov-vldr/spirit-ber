@@ -1,4 +1,6 @@
 
+<!--mixin link(href, name)-->
+<!--  a(href=gh_pages+href)= name-->
 <!--+link('about.html', 'О нас')--><!DOCTYPE html>
 <html lang="ru-RU">
   <head>
@@ -75,14 +77,13 @@
         </div>
       </header>
       <main>
-        <section>
+        <section class="section-column">
           <div class="hero" style="background-image: url('/assets/img/bg-hero.png');">
             <div class="container hero__container"></div>
           </div>
           <div class="portfolio">
             <div class="container portfolio__container">
-              <h2 class="title-section">Примеры работ</h2>
-              <button class="button button--outline">Смотреть портфолио</button>
+              <h2 class="title-section">Примеры работ</h2><a class="button button--outline" href="">Смотреть портфолио</a>
               <ul class="portfolio__list">
                                 <li class="portfolio__item">
                                   <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/01.png" alt="portfolio"></div>
@@ -147,6 +148,69 @@
                 <!--    li.portfolio-tags__item.tag-grey Гибка листового металла-->
                 <!--  p.portfolio__description Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)-->
               </ul>
+            </div>
+          </div>
+          <div class="production">
+            <div class="container production__container grid">
+              <h2 class="title-section">Наше производство</h2><a class="button button--outline" href="">Команда Спирит Бер</a>
+              <ul class="production__values">
+                          <li class="production__value production-value"><span class="production-value__number">100</span><span class="production-value__text">тонн металла<i>обрабатываем в месяц</i></span></li>
+                          <li class="production__value production-value"><span class="production-value__number">50</span><span class="production-value__text">отгрузок<i>производим за месяц</i></span></li>
+                          <li class="production__value production-value"><span class="production-value__number">1916</span><span class="production-value__text">заказов<i>выполнено с 2017 года</i></span></li>
+                          <li class="production__value production-value"><span class="production-value__number">52</span><span class="production-value__text">устройства<i>парк оборудования</i></span></li>
+              </ul>
+              <div class="production__image-wrapper"><img src="./assets/img/production/photo.jpg"></div>
+              <div class="production__advantages__wrapper">
+                <ul class="production__advantages swiper-wrapper">
+                            <li class="production__advantage production-advantage swiper-slide"><img class="production-advantage__icon" src="./assets/img/advantages/01.png">
+                              <p class="production-advantage__title">Круглосуточное производство</p>
+                            </li>
+                            <li class="production__advantage production-advantage swiper-slide"><img class="production-advantage__icon" src="./assets/img/advantages/02.png">
+                              <p class="production-advantage__title">Поддержание принципов бережливого производства</p>
+                            </li>
+                            <li class="production__advantage production-advantage swiper-slide"><img class="production-advantage__icon" src="./assets/img/advantages/03.png">
+                              <p class="production-advantage__title">Полный цикл производства</p>
+                            </li>
+                            <li class="production__advantage production-advantage swiper-slide"><img class="production-advantage__icon" src="./assets/img/advantages/04.png">
+                              <p class="production-advantage__title">Гибкое ценообразование</p>
+                            </li>
+                            <li class="production__advantage production-advantage swiper-slide"><img class="production-advantage__icon" src="./assets/img/advantages/05.png">
+                              <p class="production-advantage__title">Использование исключительно сертифицированного сырья</p>
+                            </li>
+                            <li class="production__advantage production-advantage swiper-slide"><img class="production-advantage__icon" src="./assets/img/advantages/06.png">
+                              <p class="production-advantage__title">Высокотехнологичное оборудование</p>
+                            </li>
+                            <li class="production__advantage production-advantage swiper-slide"><img class="production-advantage__icon" src="./assets/img/advantages/07.png">
+                              <p class="production-advantage__title">Наличие складских площадей</p>
+                            </li>
+                            <li class="production__advantage production-advantage swiper-slide"><img class="production-advantage__icon" src="./assets/img/advantages/08.png">
+                              <p class="production-advantage__title">Контроль качества</p>
+                            </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="news">
+            <div class="container news__container">
+              <h2 class="title-section">Новости Спирит Бер</h2><a class="button button--outline" href="">Читать все новости</a>
+              <div class="news__list grid--4col"><a class="news__item" href=""><img class="news__image" src="./assets/img/news/01.jpg">
+                  <h3 class="news__title">Aisi 304 и 430: отличия</h3>
+                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href=""><img class="news__image" src="./assets/img/news/02.jpg">
+                  <h3 class="news__title">Технологии металлообработки</h3>
+                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href=""><img class="news__image" src="./assets/img/news/03.jpg">
+                  <h3 class="news__title">Порошковая покраска: состав, виды, области применения</h3>
+                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href=""><img class="news__image" src="./assets/img/news/04.jpg">
+                  <h3 class="news__title">Обзор и сравнение CO2- и волоконных лазеров</h3>
+                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href=""><img class="news__image" src="./assets/img/news/05.png">
+                  <h3 class="news__title">Обработка нержавеющей стали</h3>
+                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href=""><img class="news__image" src="./assets/img/news/06.jpg">
+                  <h3 class="news__title">Резка металла: виды и особенности</h3>
+                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href=""><img class="news__image" src="./assets/img/news/07.jpg">
+                  <h3 class="news__title">Виды резки металла</h3>
+                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href=""><img class="news__image" src="./assets/img/news/08.jpg">
+                  <h3 class="news__title">Технологии процесса полимерного покрытия</h3>
+                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a></div>
             </div>
           </div>
         </section>

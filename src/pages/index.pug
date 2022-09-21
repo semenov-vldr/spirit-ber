@@ -4,15 +4,16 @@ block variables
   - var title = "Главная"
   - var pageClass = ''
   - var activePage = 'index'
-  - var gh_pages = "https://semenov-vldr.github.io/test-project/"
 
-  mixin link(href, name)
-    a(href=gh_pages+href)= name
+  //mixin link(href, name)
+  //  a(href=gh_pages+href)= name
 
   //+link('about.html', 'О нас')
 
 block content
 
-  section
+  section.section-column
     include ../components/hero/hero
     include ../components/portfolio/portfolio
+    include ../components/production/production
+    include ../components/news/news

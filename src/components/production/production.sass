@@ -1,0 +1,87 @@
+.production
+
+  &__container
+    text-align: center
+    gap: 30px
+    @media (max-width: $width-mobile)
+      display: flex
+      flex-direction: column
+
+  h2
+    grid-column: 1 / -1
+    margin-bottom: 0
+
+  .button
+    grid-column: 1 / -1
+    margin: 0 auto
+    @media (max-width: $width-mobile)
+      order: 1
+
+  &__values
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-column: span 5
+    @media (max-width: 1300px)
+      grid-column: span 6
+
+  &-value
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 12px
+    padding: 60px 45px
+
+    &__number
+      font-family: 'SpaceGrotesk', sans-serif
+      font-size: clamp(48px, calc(48px + (64 - 48) * ((100vw - 768px) / (1920 - 768))), 64px)
+      line-height: 1
+      color: $accent
+    &__text
+      font-size: clamp(16px, calc(16px + (24 - 16) * ((100vw - 768px) / (1920 - 768))), 24px)
+      & i
+        display: block
+        font-size: clamp(12px, calc(12px + (20 - 12) * ((100vw - 768px) / (1920 - 768))), 20px)
+        color: #A7A7A7
+        font-style: normal
+
+  &__image-wrapper
+    grid-column: 6 / span 7
+    max-width: 925px
+    aspect-ratio: 9 / 5
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    @media (max-width: 1300px)
+      grid-column: 7 / span 6
+    @media (max-width: 768px)
+      aspect-ratio: 37 / 18
+      margin: 0 -20px
+
+  &__advantages__wrapper
+    grid-column: 1 / -1
+
+  &__advantages
+    margin-top: 80px
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    @media (max-width: $width-mobile)
+      grid-template-columns: repeat(3, 1fr)
+    @media (max-width: 768px)
+      display: block
+
+  &__advantage
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 32px
+    padding: 40px
+    @media (max-width: $width-mobile)
+      gap: 26px
+      padding: 20px
+    img
+      width: auto
+      height: 120px
+      object-fit: cover
+
+

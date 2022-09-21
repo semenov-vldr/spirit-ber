@@ -1,0 +1,88 @@
+-
+  const productionValues = [
+    {
+      number: 100, text_1: 'тонн металла', text_2: 'обрабатываем в месяц'
+    },
+
+    {
+      number: 50, text_1: 'отгрузок', text_2: 'производим за месяц'
+    },
+
+    {
+      number: 1916, text_1: 'заказов', text_2: 'выполнено с 2017 года'
+    },
+
+    {
+      number: 52, text_1: 'устройства', text_2: 'парк оборудования'
+    },
+  ]
+
+-
+  const productionAdvantages = [
+    {
+      iconUrl: './assets/img/advantages/01.png', title: 'Круглосуточное производство',
+    },
+
+    {
+      iconUrl: './assets/img/advantages/02.png', title: 'Поддержание принципов бережливого производства',
+    },
+
+    {
+      iconUrl: './assets/img/advantages/03.png', title: 'Полный цикл производства',
+    },
+
+    {
+      iconUrl: './assets/img/advantages/04.png', title: 'Гибкое ценообразование',
+    },
+
+    {
+      iconUrl: './assets/img/advantages/05.png', title: 'Использование исключительно сертифицированного сырья',
+    },
+
+    {
+      iconUrl: './assets/img/advantages/06.png', title: 'Высокотехнологичное оборудование',
+    },
+
+    {
+      iconUrl: './assets/img/advantages/07.png', title: 'Наличие складских площадей',
+    },
+
+    {
+      iconUrl: './assets/img/advantages/08.png', title: 'Контроль качества',
+    },
+
+  ]
+
+mixin createProductionValues ( data )
+  each value in data
+    li.production__value.production-value
+      span.production-value__number=value.number
+      span.production-value__text=value.text_1
+        i=value.text_2
+
+
+
+mixin createProductionAdvantages ( data )
+  each item in data
+    li.production__advantage.production-advantage.swiper-slide
+      img.production-advantage__icon(src=item.iconUrl)
+      p.production-advantage__title=item.title
+
+
+.production
+  .container.production__container.grid
+    h2.title-section Наше производство
+    a(href="").button.button--outline Команда Спирит Бер
+    ul.production__values
+      +createProductionValues(productionValues)
+
+    .production__image-wrapper
+      img(src='./assets/img/production/photo.jpg')
+
+    .production__advantages__wrapper
+      ul.production__advantages.swiper-wrapper
+        +createProductionAdvantages(productionAdvantages)
+
+      .swiper-pagination
+
+

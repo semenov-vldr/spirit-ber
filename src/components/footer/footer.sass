@@ -1,6 +1,7 @@
 .footer
   background-color: $frosted-top
-  margin-top: 430px
+  margin-top: clamp(50px, calc(50px + (430 - 50) * ((100vw - 768px) / (1920 - 768))), 430px)
+
   &__container
     padding: 40px 100px
     display: grid
