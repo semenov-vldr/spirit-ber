@@ -21,15 +21,16 @@
     display: grid
     grid-template-columns: 1fr 1fr
     grid-column: span 5
-    @media (max-width: 1300px)
-      grid-column: span 6
+    gap: 45px 60px
+    @media (max-width: 768px)
+      gap: 30px
 
   &-value
     display: flex
     flex-direction: column
     align-items: center
     gap: 12px
-    padding: 60px 45px
+
 
     &__number
       font-family: 'SpaceGrotesk', sans-serif
@@ -48,18 +49,19 @@
     grid-column: 6 / span 7
     max-width: 925px
     aspect-ratio: 9 / 5
+    align-self: center
     img
       width: 100%
       height: 100%
       object-fit: cover
-    @media (max-width: 1300px)
-      grid-column: 7 / span 6
     @media (max-width: 768px)
       aspect-ratio: 37 / 18
       margin: 0 -20px
 
-  &__advantages__wrapper
+  &__advantages-wrapper
     grid-column: 1 / -1
+    @media (max-width: 768px)
+      grid-column: initial
 
   &__advantages
     margin-top: 80px
@@ -68,20 +70,26 @@
     @media (max-width: $width-mobile)
       grid-template-columns: repeat(3, 1fr)
     @media (max-width: 768px)
-      display: block
+      display: flex
+      margin-top: 40px
 
   &__advantage
     display: flex
     flex-direction: column
     align-items: center
-    gap: 32px
+    gap: 20px
     padding: 40px
     @media (max-width: $width-mobile)
       gap: 26px
       padding: 20px
     img
       width: auto
-      height: 120px
+      height: 150px
       object-fit: cover
+
+    //&__title
+    //  font-size: 20px
+    //  @media (max-width: 768px)
+    //    font-size: 18px
 
 

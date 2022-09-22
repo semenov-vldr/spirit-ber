@@ -1,13 +1,13 @@
 
 {
 
-  const mobileWidth = window.matchMedia('(max-width: 768px)');
+  const mobileWidth = window.matchMedia('(max-width: 768px)').matches;
 
   let mySwiper;
 
   if (mobileWidth) {
 
-    mySwiper = new Swiper('.production__advantages__wrapper', {
+    mySwiper = new Swiper('.production__advantages-wrapper', {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -19,7 +19,7 @@
 
       uniqueNavElements: true,
 
-      slidesPerView: 3,
+      slidesPerView: 1,
 
       // Бесконечная прокрутка
       loop: true,
@@ -38,37 +38,14 @@
       // Брейк поинты (адаптив)
       // Ширина экрана
       breakpoints: {
-        320: {
-          slidesPerView: 1
-        },
-        480: {
-          slidesPerView: 2
-        },
-        // 768: {
-        //   slidesPerView: 3
+        // 320: {
+        //   slidesPerView: 1
         // },
       }
     });
 
   }
 
-
- const productionBlock = document.querySelector('.production');
-
- const desktopWidth = window.matchMedia('(min-width: 769px)');
-
-
- if ( desktopWidth ) {
-   // let swiperContainer = productionBlock.querySelector('.production__advantages__wrapper');
-   // let swiperWrapper = swiperContainer.querySelector('.production__advantages');
-   // let swiperSlides = swiperWrapper.querySelectorAll('.production__advantage');
-   //
-   // mySwiper.destroy(true, true)
-   // swiperSlides.forEach(slide => slide.classList.remove('swiper-slide') );
-   // swiperWrapper.classList.remove('swiper-wrapper')
-   console.log('desktop')
-
- }
 
 
 
