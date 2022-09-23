@@ -1,6 +1,92 @@
 
 {
 
+  const heroIndex = document.querySelector('.hero-index');
+
+  if (heroIndex) {
+
+    const prev = heroIndex.querySelector('.hero-slider-nav__item--prev');
+    const next = heroIndex.querySelector('.hero-slider-nav__item--next');
+    const slides = heroIndex.querySelectorAll('.hero-slide');
+    const dots = heroIndex.querySelectorAll('.hero-slider-pagination__item');
+
+    const addClassActive = (item) => item.classList.add('js-hero-active');
+    const removeClassActive = (item) => item.classList.remove('js-hero-active');
+
+    dots.forEach(dot => {
+      addClassActive(dots[0]);
+      addClassActive (slides[0]);
+      dot.addEventListener('click', () => {
+        dots.forEach(dot => removeClassActive(dot) );
+        slides.forEach(slide => removeClassActive(slide) );
+        addClassActive(dot);
+        const numberDots = dot.getAttribute('data-pagination');
+        slides.forEach(slide => {
+          const numberSlide = slide.getAttribute('data-slide');
+          if (numberDots === numberSlide) addClassActive(slide);
+        });
+      });
+    });
+
+
+    let index = 0;
+
+    const activeSlide = (num) => {
+      slides.forEach(slide => removeClassActive(slide) );
+      addClassActive(slides[num]);
+    };
+
+    const activeSDot = (num) => {
+      dots.forEach(dot => removeClassActive(dot) );
+      addClassActive(dots[num]);
+    };
+
+    const currentSlide = (idx) => {
+      activeSlide(idx);
+      activeSDot(idx)
+    };
+
+    const nextSlide = () => {
+      if (index === slides.length - 1) {
+        index = 0;
+        currentSlide(index);
+      } else {
+        index++;
+        currentSlide(index);
+      }
+    }
+
+    const prevSlide = () => {
+      if (index === 0) {
+        index = slides.length - 1;
+        currentSlide(index);
+      } else {
+        index--;
+        currentSlide(index);
+      }
+    };
+
+    next.addEventListener('click', nextSlide);
+    prev.addEventListener('click', prevSlide);
+
+    dots.forEach((dot, indexDot) => {
+      dot.addEventListener('click', () => {
+        index = indexDot;
+        currentSlide(index);
+      });
+    });
+
+
+
+
+
+  }
+
+
+}
+
+{
+
   const header = document.querySelector('.header');
   const headerMenuDropDown = header.querySelector('.header-contact__menu-tablet');
   const headerContactList = header.querySelector('.header-contact__list');
@@ -60,13 +146,13 @@
 
 {
 
-  const mobileWidth = window.matchMedia('(max-width: 768px)');
+  const mobileWidth = window.matchMedia('(max-width: 768px)').matches;
 
   let mySwiper;
 
   if (mobileWidth) {
 
-    mySwiper = new Swiper('.production__advantages__wrapper', {
+    mySwiper = new Swiper('.production__advantages-wrapper', {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -78,7 +164,7 @@
 
       uniqueNavElements: true,
 
-      slidesPerView: 3,
+      slidesPerView: 1,
 
       // Бесконечная прокрутка
       loop: true,
@@ -97,37 +183,14 @@
       // Брейк поинты (адаптив)
       // Ширина экрана
       breakpoints: {
-        320: {
-          slidesPerView: 1
-        },
-        480: {
-          slidesPerView: 2
-        },
-        // 768: {
-        //   slidesPerView: 3
+        // 320: {
+        //   slidesPerView: 1
         // },
       }
     });
 
   }
 
-
- const productionBlock = document.querySelector('.production');
-
- const desktopWidth = window.matchMedia('(min-width: 769px)');
-
-
- if ( desktopWidth ) {
-   // let swiperContainer = productionBlock.querySelector('.production__advantages__wrapper');
-   // let swiperWrapper = swiperContainer.querySelector('.production__advantages');
-   // let swiperSlides = swiperWrapper.querySelectorAll('.production__advantage');
-   //
-   // mySwiper.destroy(true, true)
-   // swiperSlides.forEach(slide => slide.classList.remove('swiper-slide') );
-   // swiperWrapper.classList.remove('swiper-wrapper')
-   console.log('desktop')
-
- }
 
 
 
