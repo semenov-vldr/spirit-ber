@@ -1,6 +1,6 @@
 .header
   position: absolute
-  z-index: 1
+  z-index: 10
   width: 100%
   background: linear-gradient(180deg, rgba(18, 25, 32, 0.12) 0%, rgba(18, 25, 32, 0.107268) 61%, rgba(18, 25, 32, 0) 100%)
   backdrop-filter: blur(4px)
@@ -171,7 +171,6 @@
 
     &__list
       display: flex
-      align-items: center
       gap: 24px
       &.js-active
         display: flex
@@ -194,6 +193,11 @@
         width: 100%
         transform: initial
         bottom: 0
+
+    &__address
+      display: flex
+      align-items: start
+
 
     &__item
       white-space: nowrap
@@ -221,6 +225,7 @@
 
     &__link
       white-space: nowrap
+      line-height: 1.2
 
     &__description
       display: block

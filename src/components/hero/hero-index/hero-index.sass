@@ -1,0 +1,179 @@
+.hero.hero--index
+  position: relative
+  background-image: url('/assets/img/bg-hero.png')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  height: 100vh
+  min-height: 768px
+  &:after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    background: linear-gradient(90deg, #191111 0%, #191111 19.89%, rgba(25, 17, 17, 0.74) 32.48%, rgba(25, 17, 17, 0) 42.62%, rgba(25, 17, 17, 0) 52.07%, rgba(25, 17, 17, 0) 63.05%, rgba(25, 17, 17, 0.74) 70.5%, rgba(25, 17, 17, 0.938067) 75.63%, #191111 100%)
+    opacity: 0.58
+    mix-blend-mode: darken
+    backdrop-filter: blur(2px)
+  @media (max-width: 900px)
+    &::after
+      background-color: rgba(#000, 0.7)
+
+  .hero
+
+    &__container
+      position: relative
+      display: flex
+      align-items: center
+      height: 100%
+      z-index: 2
+
+    &-slider
+      width: 100%
+      max-width: 1700px
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: auto auto
+      @media (max-width: 900px)
+        grid-template-columns: 1fr
+
+      .hero__tag
+        grid-row: span 1
+        align-self: end
+        @media (max-width: 900px)
+          grid-row: 2 / span 1
+
+
+    &-slider-pagination
+      grid-column: 1 span
+      grid-row: 2 / span 1
+      display: flex
+      flex-direction: column
+      transform: translateX(-50px)
+      @media (max-width: 900px)
+        display: none
+
+      &__item
+        display: flex
+        gap: 20px
+        align-items: center
+        cursor: pointer
+        &.js-hero-active .hero-slider-pagination__name
+          border-left: 2px solid $accent
+          color: $white
+        &:hover .hero-slider-pagination__name
+          color: $white
+        @media (max-width: 900px)
+          display: none
+          &.js-hero-active
+            display: flex
+
+      &__number
+        font-family: 'SpaceGrotesk', sans-serif
+        color: $accent
+        font-size: 24px
+        text-decoration: none
+        min-width: 30px
+
+      &__name
+        padding: 14px 20px
+        font-size: clamp(25px, calc(25px + (40 - 25) * ((100vw - 768px) / (1920 - 768))), 40px)
+        color: rgba($white, 0.4)
+        border-left: 2px solid transparent
+        transition: border 0.5s ease-out
+
+
+    &-slider-nav
+      grid-column: 2 / 1 span
+      display: flex
+      gap: 24px
+      margin-left: auto
+      @media (max-width: 900px)
+        grid-column: 1 / -1
+        grid-row: span 1
+        margin-left: 0
+
+    //&-slider-nav__item
+    //  display: flex
+    //  align-items: center
+    //  justify-content: center
+    //  position: relative
+    //  width: 44px
+    //  height: 44px
+    //  border-radius: 4px
+    //  background-color: rgba(106, 106, 106, 0.1)
+    //  cursor: pointer
+    //  &:hover
+    //    background-color: rgba(106, 106, 106, 0.35)
+    //  &:active
+    //    background-color: rgba(106, 106, 106, 0.7)
+    //
+    //  &--prev::after,
+    //  &--next::after
+    //    content: ""
+    //    display: inline-block
+    //    background-position: center
+    //    background-size: cover
+    //    background-repeat: no-repeat
+    //    width: 10px
+    //    height: 18px
+    //    background-image: url('/assets/img/icons/arrow-right.svg')
+    //  &--prev::after
+    //    transform: rotate(180deg)
+
+
+
+    &-slide
+      position: relative
+      grid-column: 2 / 1 span
+      grid-row: 2 / span 1
+      width: 370px
+      display: none
+      flex-direction: column
+      gap: 16px
+      margin-left: auto
+      &.js-hero-active
+        display: flex
+      &::before
+        position: absolute
+        content: ""
+        width: 1px
+        background-color: #fff
+        height: 150%
+        top: -20%
+        left: -40px
+        opacity: 0.7
+      @media (max-width: 900px)
+        grid-column: 1 / -1
+        grid-row: 3 / span 1
+        width: auto
+        margin: 0 auto
+
+      &__title
+        font-size: 24px
+
+      &__price
+        color: $accent
+        font-size: 20px
+
+      &__description
+        font-size: 16px
+        line-height: 1.7
+        overflow: hidden
+        @media (max-width: 900px)
+          display: -webkit-box
+          -webkit-line-clamp: 6
+          -webkit-box-orient: vertical
+        @media (max-width: 480px)
+          -webkit-line-clamp: 3
+
+      &__links
+        display: flex
+        gap: 16px
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+        margin-top: 10px
+

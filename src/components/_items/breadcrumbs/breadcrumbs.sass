@@ -1,0 +1,35 @@
+.breadcrumbs
+  position: absolute
+  top: 75px
+  left: 0
+  //padding: 75px 0 60px
+  z-index: 10
+  @media (max-width: 768px)
+    padding: 34px 0
+
+  &__container
+    margin: 0
+    display: flex
+    flex-wrap: wrap
+    row-gap: 10px
+    column-gap: 34px
+  &__item
+    display: flex
+    align-items: center
+    position: relative
+    font-size: clamp(12px, calc(12px + (15 - 12) * ((100vw - 768px) / (1920 - 768))), 15px)
+    color: rgba(#EBEBEB, 0.85)
+    line-height: 1.2
+  &__item:not(:last-child)
+    color: rgba(#EBEBEB, 0.4)
+  &__item:not(:last-child)::after
+    position: absolute
+    content: ""
+    background-image: url('/assets/img/icons/breadcrumbs-icon.svg')
+    background-repeat: no-repeat
+    transform: translateX(100%)
+    right: -14px
+    width: 7px
+    height: 6px
+  &__item:last-child
+    pointer-events: none

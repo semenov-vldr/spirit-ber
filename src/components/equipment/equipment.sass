@@ -1,0 +1,123 @@
+.equipment
+  position: relative
+  background-image: url('/assets/img/equipment/back.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  width: 100%
+  //height: 920px
+  height: 100vh
+
+  &__container
+    padding-top: 60px
+    padding-bottom: 60px
+
+  &__tag
+    position: relative
+    z-index: 1
+    color: rgba($white, 0.4)
+    text-transform: uppercase
+    letter-spacing: 0.16em
+    font-size: clamp(12px, calc(12px + (16 - 12) * ((100vw - 768px) / (1920 - 768))), 16px)
+
+
+  &-slider
+
+  &-slide
+
+    &__title
+      position: relative
+      z-index: 1
+      width: 40%
+      font-size: clamp(32px, calc(32px + (64 - 32) * ((100vw - 768px) / (1920 - 768))), 64px)
+      line-height: 1.1
+      margin-bottom: 25px
+
+    &-pagination
+      position: relative
+      z-index: 1
+      display: flex
+      flex-direction: column
+      transform: translateX(-50px)
+      margin-bottom: 35px
+
+      &__item
+        display: flex
+        gap: 20px
+        align-items: center
+        cursor: pointer
+        &.js-machine-active .equipment-slide-pagination__name
+          border-left: 2px solid $accent
+          color: $white
+        &:hover .equipment-slide-pagination__name
+          color: $white
+          border-left: 2px solid $accent
+
+      &__number
+        font-family: 'SpaceGrotesk', sans-serif
+        color: $accent
+        font-size: 24px
+        text-decoration: none
+        min-width: 30px
+
+      &__name
+        padding: 18px 20px
+        font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 768px) / (1920 - 768))), 24px)
+        color: rgba($white, 0.4)
+        border-left: 2px solid transparent
+        transition: border 0.5s ease-out
+
+  &-slide__links
+    display: flex
+    gap: 15px
+
+  &-slide-machine
+
+    &__item
+
+    &__image
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      object-fit: cover
+
+    &__mark-wrapper
+      position: relative
+
+    &__mark
+      position: absolute
+      width: 34px
+      aspect-ratio: 1 / 1
+      border-radius: 50%
+      background-color: $accent
+      display: flex
+      align-items: center
+      justify-content: center
+      span
+        filter: blur(9px)
+        width: 100%
+        aspect-ratio: 1 / 1
+        border-radius: 50%
+        background-color: $accent
+      &::before,
+      &::after
+        content: ""
+        position: absolute
+        border-radius: 50%
+        display: inline-block
+        aspect-ratio: 1 / 1
+      &::before
+        background-color: #fff
+        width: 17px
+        z-index: 2
+      &::after
+        width: 28px
+        background-color: rgba(136, 136, 136, 0.3)
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4)
+
+      &__dot-title
+
+
+

@@ -111,7 +111,6 @@ main
       width: 13px
       height: 16px
 
-
   &--bg-accept
     background-color: $accent
     &:hover
@@ -119,6 +118,19 @@ main
     &:active
       background-color: #2996A7
       box-shadow: none
+  &--bg-grey
+    background-color: rgba(106, 106, 106, 0.1)
+    &:hover
+      background-color: rgba(106, 106, 106, 0.35)
+    &:active
+      background-color: rgba(106, 106, 106, 0.7)
+
+
+.hero__tag
+  color: rgba($white, 0.4)
+  text-transform: uppercase
+  letter-spacing: 0.16em
+  font-size: clamp(12px, calc(12px + (16 - 12) * ((100vw - 768px) / (1920 - 768))), 16px)
 
 
 
@@ -139,14 +151,36 @@ main
     background-color: $white
 
 // стрелки навигации
-//.arrow-nav__prev,
-//.arrow-nav__next
-//  width: 32px
-//  height: 29px
-//  fill: #565654
-//  stroke: #565654
-//  opacity: 0.35
-//  &:hover
-//    fill: var(--c-green)
-//    stroke: var(--c-green)
+.arrow-nav__prev,
+.arrow-nav__next
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  width: 44px
+  height: 44px
+  border-radius: 4px
+  background-color: rgba(106, 106, 106, 0.1)
+  cursor: pointer
+  &:hover
+    background-color: rgba(106, 106, 106, 0.35)
+  &:active
+    background-color: rgba(106, 106, 106, 0.7)
+
+.arrow-nav__prev::after,
+.arrow-nav__next::after
+    content: ""
+    display: inline-block
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    width: 10px
+    height: 18px
+    background-image: url('/assets/img/icons/arrow-right.svg')
+.arrow-nav__prev::after
+    transform: rotate(180deg)
+
+
+
+
 

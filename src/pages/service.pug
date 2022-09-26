@@ -1,0 +1,16 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Лазерная резка"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+
+block content
+  .breadcrumbs
+    .container.breadcrumbs__container
+      a(href="").breadcrumbs__item Главная
+      a(href="").breadcrumbs__item Услуги
+
+  section.section-column
+    include ../components/hero/hero-service/hero-service

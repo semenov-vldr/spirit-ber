@@ -1,0 +1,35 @@
+mixin equipmentSlidePaginationItem (num, name)
+  li.equipment-slide-pagination__item
+    u.equipment-slide-pagination__number=num
+    span.equipment-slide-pagination__name=name
+
+.equipment
+  .container.equipment__container
+    .equipment__tag Оборудование
+    .equipment__slider.equipment-slider
+
+
+      .equipment-slider__item.equipment-slide
+
+        .equipment-slide__title Установка для лазерной резки
+
+        ul.equipment-slide__pagination.equipment-slide-pagination
+          +equipmentSlidePaginationItem('01', 'FIBER LCM R1530F')
+          +equipmentSlidePaginationItem('02', 'LVD ORION 3015 PLUS')
+
+        .equipment-slide__machine.equipment-slide-machine__list
+
+          .equipment-slide-machine__item
+            img.equipment-slide-machine__image(src="/assets/img/equipment/01.png")
+
+            .equipment-slide-machine__mark-wrapper
+              span.equipment-slide-machine__mark
+              p.equipment-slide-machine__mark-title
+
+
+            .equipment-slide__links
+              a(href="").button.button--outline.arrow Смотреть услугу
+              a(href="").button.button--bg-grey Характеристики
+
+
+
