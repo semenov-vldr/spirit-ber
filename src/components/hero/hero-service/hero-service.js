@@ -1,7 +1,8 @@
 {
   const heroService = document.querySelector('.hero-service');
-  const tabsBtn = heroService.querySelectorAll('.hero-service-nav__name');
-  const tabsContent = heroService.querySelectorAll('.hero-service__item');
+  const tabsBtn = document.querySelectorAll('.hero-service-nav__name');
+  const tabsContent = document.querySelectorAll('.hero-service__item');
+
 
   const classActive = 'js-service-active';
 
@@ -35,10 +36,7 @@
         btn.classList.remove('button--bg-accept');
         btn.classList.add('button--bg-grey')
       })
-    } else {
-      btn.classList.remove('button--bg-grey')
-      btn.classList.add('button--bg-accept');
-    }
+    };
 
 
   }

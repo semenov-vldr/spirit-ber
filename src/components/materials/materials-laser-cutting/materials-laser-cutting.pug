@@ -1,0 +1,29 @@
+-
+  const materialsLaserCutting = [
+    { imgSrc: './assets/img/service/material/black-steel-01.png', name: 'Черная сталь' },
+    { imgSrc: './assets/img/service/material/zinc-steel-02.png', name: 'Оцинкованная сталь' },
+    { imgSrc: './assets/img/service/material/stainless steel-03.png', name: 'Нержавеющая сталь' },
+    { imgSrc: './assets/img/service/material/aluminum-04.png', name: 'Алюминий' },
+    { imgSrc: './assets/img/service/material/copper-05.png', name: 'Медь' },
+    { imgSrc: './assets/img/service/material/titanium-06.png', name: 'Титан' },
+    { imgSrc: './assets/img/service/material/brass-07.png', name: 'Латунь' },
+    { imgSrc: './assets/img/service/material/hardox-08.png', name: 'Хардокс (Hardox)' },
+  ];
+
+mixin createMaterialList ( data )
+  each item in data
+    li.materials__item.swiper-slide
+      img(src=item.imgSrc)
+      span.materials__name=item.name
+
+.materials-laser-cutting
+  .container.materials-laser-cutting__container
+    h2.title-section Используемые материалы
+
+    .materials-laser-cutting__wrapper
+      ul.materials-laser-cutting__list.materials__list.swiper-wrapper
+        +createMaterialList(materialsLaserCutting)
+
+      .swiper-pagination
+
+

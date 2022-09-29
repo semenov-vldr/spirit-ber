@@ -127,8 +127,8 @@
     const removeClassActive = (item) => item.classList.remove('js-hero-active');
 
     dots.forEach(dot => {
-      addClassActive(dots[1]);
-      addClassActive (slides[1]);
+      // addClassActive(dots[1]);
+      // addClassActive (slides[1]);
       dot.addEventListener('click', () => {
         dots.forEach(dot => removeClassActive(dot) );
         slides.forEach(slide => removeClassActive(slide) );
@@ -190,18 +190,18 @@
     });
 
 
-
-
-
+    console.log(55555)
   }
 
 
 }
 
+
 {
   const heroService = document.querySelector('.hero-service');
-  const tabsBtn = heroService.querySelectorAll('.hero-service-nav__name');
-  const tabsContent = heroService.querySelectorAll('.hero-service__item');
+  const tabsBtn = document.querySelectorAll('.hero-service-nav__name');
+  const tabsContent = document.querySelectorAll('.hero-service__item');
+
 
   const classActive = 'js-service-active';
 
@@ -235,10 +235,118 @@
         btn.classList.remove('button--bg-accept');
         btn.classList.add('button--bg-grey')
       })
-    } else {
-      btn.classList.remove('button--bg-grey')
-      btn.classList.add('button--bg-accept');
-    }
+    };
+
+
+  }
+
+
+}
+
+
+{
+
+  const mobileWidth = window.matchMedia('(max-width: 768px)').matches;
+
+  let mySwiper;
+
+  if (mobileWidth) {
+
+    mySwiper = new Swiper('.materials-laser-cutting__wrapper', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      // navigation: {
+      //   nextEl: '.arrow-nav__next',
+      //   prevEl: '.arrow-nav__prev',
+      // },
+
+      uniqueNavElements: true,
+
+      slidesPerView: 1,
+
+      // Бесконечная прокрутка
+      loop: true,
+
+      // Откл функционала, если слайдов меньше, чем нужно
+      watchOverflow: true,
+
+      centeredSlides: true,
+
+      // Отступ между слайдами
+      spaceBetween: 15,
+
+      // Стартовый слайд
+      initialSlide: 0,
+
+      // Брейк поинты (адаптив)
+      // Ширина экрана
+      breakpoints: {
+        // 320: {
+        //   slidesPerView: 1
+        // },
+      }
+    });
+
+  }
+
+
+
+
+
+
+}
+
+{
+
+  const mobileWidth = window.matchMedia('(max-width: 768px)').matches;
+
+  const priceLaserCutting = document.querySelector('.price-laser-cutting'); // блок с таблицей цен
+
+  const tableRowList = priceLaserCutting.querySelectorAll('.table-row');    // строки значений
+
+  const table_thickness = priceLaserCutting.querySelectorAll('.col');       // строка толщин материалов
+
+
+  const addClassActive = (item) => item.classList.add('js-price-hover');
+  const removeClassActive = (item) => item.classList.remove('js-price-hover');
+  const toggleClassActive = (item) => item.classList.toggle('js-price-hover');
+
+
+  const createArrayRow = (arrayEmpty, idxItemHover) => {
+    tableRowList.forEach(rowInactive => {
+      const items = rowInactive.querySelectorAll('td');
+      arrayEmpty.push(items[idxItemHover]);
+    });
+  };
+
+
+  const selectRowCol = (index) => {
+    addClassActive (table_thickness[index]) ;
+    let arrayItems = [];
+    createArrayRow( arrayItems, index );
+    arrayItems.forEach(item => addClassActive(item))
+  };
+
+  const DontSelectRowCol = (index) => {
+    removeClassActive (table_thickness[index]) ;
+    let arrayItems = [];
+    createArrayRow( arrayItems, index );
+    arrayItems.forEach(item => removeClassActive(item))
+  };
+
+
+  if (priceLaserCutting) {
+
+    tableRowList.forEach(tableRow => {
+      const tds = tableRow.querySelectorAll('td');
+      tds.forEach((td, idx) => {
+        td.addEventListener('mouseover', () => selectRowCol(idx));
+        td.addEventListener('mouseout', () => DontSelectRowCol(idx) );
+      });
+    });
+
 
 
   }

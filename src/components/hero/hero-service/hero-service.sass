@@ -4,12 +4,19 @@
       margin-top: 140px
 
     &__wrapper
+      display: grid
+      grid-template-columns: repeat(12, 1fr)
       margin-top: 5px
       padding: 10px 40px 10px 0
       background-color: $frosted-top
       border-radius: 8px
       @media (max-width: $width-mobile)
-        grid-template-columns: 1fr
+        display: flex
+        flex-direction: column
+        gap: 40px
+        padding: 0
+      @media (max-width: 480px)
+        gap: 20px
 
     &-service__nav
       grid-column: span 4
@@ -63,7 +70,6 @@
         padding: 25px
 
 
-
     &-service-item
       display: none
       grid-template-columns: repeat(8, 1fr)
@@ -88,6 +94,8 @@
         @media (max-width: 1500px)
           grid-column: span 4
           align-self: center
+        @media (max-width: $width-mobile)
+          grid-column: 1 / -1
 
       &__info
         padding: 48px
@@ -99,6 +107,8 @@
           grid-column: 5 / span 4
         @media (max-width: $width-mobile)
           align-items: center
+          padding: 20px 0
+
 
       &__title
         font-size: 24px

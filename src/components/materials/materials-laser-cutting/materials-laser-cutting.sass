@@ -1,0 +1,36 @@
+.materials-laser-cutting
+
+  img
+    width: 160px
+    aspect-ratio: 1 / 1
+    object-fit: cover
+    @media (max-width: 768px)
+      width: 100%
+      max-width: 240px
+
+  .materials
+
+    &__list
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      gap: 40px 30px
+      @media (max-width: 768px)
+        flex-wrap: initial
+        justify-content: initial
+        gap: initial
+        margin-bottom: 20px
+
+    &__item
+      display: flex
+      flex-direction: column
+      gap: 25px
+      align-items: center
+      width: min-content
+
+    &__name
+      text-align: center
+
+
+
+

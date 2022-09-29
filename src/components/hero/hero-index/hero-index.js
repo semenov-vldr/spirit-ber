@@ -13,8 +13,8 @@
     const removeClassActive = (item) => item.classList.remove('js-hero-active');
 
     dots.forEach(dot => {
-      addClassActive(dots[1]);
-      addClassActive (slides[1]);
+      // addClassActive(dots[1]);
+      // addClassActive (slides[1]);
       dot.addEventListener('click', () => {
         dots.forEach(dot => removeClassActive(dot) );
         slides.forEach(slide => removeClassActive(slide) );
@@ -76,10 +76,9 @@
     });
 
 
-
-
-
+    console.log(55555)
   }
 
 
 }
+

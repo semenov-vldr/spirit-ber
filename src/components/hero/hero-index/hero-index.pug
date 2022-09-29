@@ -1,4 +1,4 @@
-.hero.hero--index
+.hero.hero--index(style="background-image: url('/assets/img/bg-hero.png')")
   .container.hero__container
 
     .hero__slider.hero-slider
@@ -7,7 +7,7 @@
 
       ul.hero-slider__pagination.hero-slider-pagination
 
-        li.hero-slider-pagination__item(data-pagination="1")
+        li.hero-slider-pagination__item.js-hero-active(data-pagination="1")
           u.hero-slider-pagination__number 01
           span.hero-slider-pagination__name Лазерная резка
 
@@ -31,7 +31,7 @@
         button.arrow-nav__prev
         button.arrow-nav__next
 
-      .hero-slider__item.hero-slide(data-slide="1")
+      .hero-slider__item.hero-slide.js-hero-active(data-slide="1")
         h3.hero-slide__title Лазерная резка
         span.hero-slide__price -- ОТ 9 Р / гиб
         p.hero-slide__description Гибка 1 листового металла в нашей компании осуществляется на профессиональных ЧПУ станках DONPRESSMASH и ERMAKSAN. Высокоточная ЧПУ гибка позволяет максимально точно придать форму металлической листовой заготовке. Высокая производительность и программируемые настройки станков обеспечивают минимальные затраты на серийное производство и высокую повторяемость полученного результата.

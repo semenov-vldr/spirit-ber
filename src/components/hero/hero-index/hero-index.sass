@@ -1,6 +1,5 @@
 .hero.hero--index
   position: relative
-  background-image: url('/assets/img/bg-hero.png')
   background-position: center center
   background-repeat: no-repeat
   background-size: cover
@@ -29,6 +28,9 @@
       align-items: center
       height: 100%
       z-index: 2
+      @media (max-width: 480px)
+        bottom: 50px
+        align-items: flex-end
 
     &-slider
       width: 100%

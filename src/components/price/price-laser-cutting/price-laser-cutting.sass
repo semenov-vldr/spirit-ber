@@ -1,0 +1,140 @@
+.price
+
+  &__container
+    position: relative
+
+  h2
+    margin-bottom: clamp(32px, calc(32px + (80 - 32) * ((100vw - 768px) / (1920 - 768))), 80px)
+
+  &-table
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    @media (max-width: $width-mobile)
+      grid-template-columns: 1fr
+      gap: 10px
+
+    &__subtitle
+      font-size: clamp(14px, calc(14px + (24 - 14) * ((100vw - 768px) / (1920 - 768))), 24px)
+      grid-column: span 1
+      @media (max-width: $width-mobile)
+        grid-column: 1 / -1
+
+    &__download
+      justify-self: right
+      display: flex
+      align-items: center
+      gap: 8px
+      margin-right: 15px
+      color: rgba(#fff, 0.5)
+      @media (max-width: 768px)
+        grid-column: 1 / -1
+        justify-self: center
+        background-color: rgba(106, 106, 106, 0.1)
+        border-radius: 4px
+        padding: 16px 25px
+        margin-right: 0
+        justify-content: center
+        width: 100%
+        color: #fff
+        order: 1
+
+
+    &__wrapper
+      overflow-x: scroll
+      margin: 15px 0
+      grid-column: 1 / -1
+      border-radius: 8px
+
+  table
+    width: 100%
+    overflow: hidden
+    border-collapse: collapse
+    border-spacing: 0
+    color: #333333
+    //border-radius: 8px
+    font-size: 14px
+    @media (max-width: 768px)
+      font-size: 12px
+
+  thead
+    position: relative
+    z-index: 2
+    background-color: #f3f4f5
+    .title
+      padding: 0 30px
+      height: 45px
+      @media (max-width: 1500px)
+        text-align: left
+
+  .table-row
+    background-color: #f3f4f5
+    &:hover
+      background-color: #E5E5E6
+    &:hover .row
+      background-color: #C9E1E4F2
+
+  .col
+    text-align: center
+    height: 45px
+    &.js-price-hover
+      background-color: #C9E1E4F2
+
+
+  .row
+    padding: 8px 12px
+    text-align: left
+
+
+  table td,
+  table th
+    position: relative
+    border: 1px solid #BEBEBE
+    height: 72px
+    min-width: 65px
+
+
+  tbody td
+    text-align: center
+    &:hover
+      cursor: pointer
+      outline: 2px solid $accent
+      outline-offset: -1px
+    &.js-price-hover
+      background-color: #E5E5E6
+
+  &-table__footnote
+    color: rgba(#fff, 0.5)
+    display: block
+    grid-column: 1 / -1
+    font-size: 12px
+    &:not(:last-child)
+      margin-bottom: 10px
+    sup
+      margin-right: 8px
+    @media (max-width: 768px)
+      order: 1
+      &:not(:last-child)
+        margin-bottom: 0
+
+  &-table__pricing
+    grid-column: 1 / -1
+    display: flex
+    align-items: center
+    gap: 8px
+    font-size: clamp(14px, calc(64px + (16 - 14) * ((100vw - 768px) / (1920 - 768))), 16px)
+    color: rgba(#fff, 0.5)
+    @media (max-width: 768px)
+      justify-self: center
+      justify-content: center
+      width: 100%
+      color: #fff
+      background-color: rgba(106, 106, 106, 0.1)
+      border-radius: 4px
+      padding: 16px 25px
+
+
+
+
+
+
+
