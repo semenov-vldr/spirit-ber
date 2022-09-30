@@ -136,6 +136,10 @@ main
 
 
 // -------- Swiper -----------
+
+.swiper
+  width: 100%
+
 .swiper-slide
   height: auto
 
@@ -151,34 +155,43 @@ main
     background-color: $white
 
 // стрелки навигации
-.arrow-nav__prev,
-.arrow-nav__next
-  display: flex
+.slider-nav__prev,
+.slider-nav__next
+  position: absolute
+  display: inline-flex
   align-items: center
   justify-content: center
-  position: relative
-  width: 44px
-  height: 44px
+  width: 32px
+  aspect-ratio: 1 / 1
   border-radius: 4px
-  background-color: rgba(106, 106, 106, 0.1)
   cursor: pointer
+  z-index: 1
+  background: rgba(106, 106, 106, 0.1) no-repeat center / 7px 12px
+  top: 50%
+  transform: translateY(-50%)
   &:hover
-    background-color: rgba(106, 106, 106, 0.35)
-  &:active
-    background-color: rgba(106, 106, 106, 0.7)
+    background-color: rgba(106, 106, 106, 0.3)
+.slider-nav__prev
+  background-image: url('/assets/img/icons/arrow-left.svg')
+  transform: translateX(-100%)
+.slider-nav__next
+  background-image: url('/assets/img/icons/arrow-right.svg')
+  transform: translateX(100%)
 
-.arrow-nav__prev::after,
-.arrow-nav__next::after
-    content: ""
-    display: inline-block
-    background-position: center
-    background-size: cover
-    background-repeat: no-repeat
-    width: 10px
-    height: 18px
-    background-image: url('/assets/img/icons/arrow-right.svg')
-.arrow-nav__prev::after
-    transform: rotate(180deg)
+
+// Наложение картинки поверх анимации
+@media (min-width: 769px)
+  img.static
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    &:hover
+      opacity: 0
+@media (max-width: 768px)
+  img.animate
+    display: none
 
 
 

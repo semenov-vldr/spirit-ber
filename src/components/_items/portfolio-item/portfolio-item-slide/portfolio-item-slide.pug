@@ -88,9 +88,9 @@
   ]
 
 
-mixin createPortfolioItems ( portfolioData )
+mixin createPortfolioSlides ( portfolioData )
   each card in portfolioData
-    li.portfolio__item
+    li.portfolio__item.swiper-slide
       .portfolio__image-wrapper
         img(src=card.srcImg alt='portfolio')
       h3.portfolio__title=card.title
@@ -100,4 +100,6 @@ mixin createPortfolioItems ( portfolioData )
       p.portfolio__description= card.description
 
 
-+createPortfolioItems( portfolioItems )
++createPortfolioSlides( portfolioItems )
+
+

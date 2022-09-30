@@ -82,6 +82,7 @@
         flex-direction: column
 
       &__image
+        position: relative
         grid-column: span 5
         border-radius: 8px
         overflow: hidden
@@ -96,6 +97,18 @@
           align-self: center
         @media (max-width: $width-mobile)
           grid-column: 1 / -1
+
+        @media (min-width: 769px)
+          img.static
+            position: absolute
+            top: 0
+            left: 0
+            &:hover
+              opacity: 0
+        @media (max-width: 768px)
+          img.animate
+            display: none
+
 
       &__info
         padding: 48px

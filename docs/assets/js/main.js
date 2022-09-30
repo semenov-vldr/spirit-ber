@@ -114,7 +114,7 @@
 
 {
 
-  const heroIndex = document.querySelector('.hero-index');
+  const heroIndex = document.querySelector('.hero--index');
 
   if (heroIndex) {
 
@@ -122,6 +122,7 @@
     const next = heroIndex.querySelector('.arrow-nav__next');
     const slides = heroIndex.querySelectorAll('.hero-slide');
     const dots = heroIndex.querySelectorAll('.hero-slider-pagination__item');
+
 
     const addClassActive = (item) => item.classList.add('js-hero-active');
     const removeClassActive = (item) => item.classList.remove('js-hero-active');
@@ -298,9 +299,60 @@
 
 }
 
+
 {
 
-  const mobileWidth = window.matchMedia('(max-width: 768px)').matches;
+  let mySwiper;
+
+    mySwiper = new Swiper('.portfolio__swiper', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.slider-nav__next',
+        prevEl: '.slider-nav__prev',
+      },
+
+      uniqueNavElements: true,
+
+      slidesPerView: 3,
+
+      // Бесконечная прокрутка
+      loop: true,
+
+      // Откл функционала, если слайдов меньше, чем нужно
+      watchOverflow: true,
+
+      centeredSlides: false,
+
+      // Отступ между слайдами
+      spaceBetween: 40,
+
+      // Стартовый слайд
+      initialSlide: 0,
+
+      // Брейк поинты (адаптив)
+      // Ширина экрана
+      breakpoints: {
+        320: {
+          slidesPerView: 2
+        },
+        768: {
+          slidesPerView: 3
+        },
+      }
+    });
+
+
+
+
+
+
+
+}
+
+{
 
   const priceLaserCutting = document.querySelector('.price-laser-cutting'); // блок с таблицей цен
 

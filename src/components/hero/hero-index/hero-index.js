@@ -1,6 +1,6 @@
 {
 
-  const heroIndex = document.querySelector('.hero-index');
+  const heroIndex = document.querySelector('.hero--index');
 
   if (heroIndex) {
 
@@ -8,6 +8,7 @@
     const next = heroIndex.querySelector('.arrow-nav__next');
     const slides = heroIndex.querySelectorAll('.hero-slide');
     const dots = heroIndex.querySelectorAll('.hero-slider-pagination__item');
+
 
     const addClassActive = (item) => item.classList.add('js-hero-active');
     const removeClassActive = (item) => item.classList.remove('js-hero-active');

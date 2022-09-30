@@ -1,7 +1,5 @@
 {
 
-  const mobileWidth = window.matchMedia('(max-width: 768px)').matches;
-
   const priceLaserCutting = document.querySelector('.price-laser-cutting'); // блок с таблицей цен
 
   const tableRowList = priceLaserCutting.querySelectorAll('.table-row');    // строки значений

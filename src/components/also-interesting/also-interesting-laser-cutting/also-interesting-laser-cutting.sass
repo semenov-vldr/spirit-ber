@@ -1,0 +1,29 @@
+.also-interesting.also-interesting-laser-cutting
+  .also-interesting
+    &__container
+
+    &__list
+      display: grid
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+      gap: 40px
+
+
+    &-item
+      display: inline-flex
+      flex-direction: column
+      align-items: center
+      gap: 20px
+
+      &__image
+        position: relative
+        max-width: 270px
+        aspect-ratio: 1 / 1
+
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+
+      &__price
+        color: $accent
+

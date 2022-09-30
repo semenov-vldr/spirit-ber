@@ -7,8 +7,6 @@
 
   &__title
     font-size: clamp(14px, calc(14px + (24 - 14) * ((100vw - 768px) / (1920 - 768))), 24px)
-    @media (max-width: 480px)
-      margin-bottom: 40px
 
 
   .button
@@ -18,10 +16,11 @@
 
 
   &__list
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
     margin-top: 110px
     gap: 100px 40px
-    @media (max-width: 1600px)
-      grid-template-columns: repeat(3, 1fr)
     @media (max-width: 900px)
       gap: 40px
     @media (max-width: 768px)
