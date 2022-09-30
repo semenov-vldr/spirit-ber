@@ -2,7 +2,7 @@ const pug = require('gulp-pug');
 
 module.exports = function() {
   $.gulp.task('pug', function () {
-    return $.gulp.src($.path.src + '/pages/**/*.pug')
+    return $.gulp.src($.path.src + '/pages/**/*advantages.pug')
       .pipe(pug({
         pretty: true
       }))

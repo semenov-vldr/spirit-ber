@@ -12,9 +12,9 @@ module.exports = function () {
     );
     $.gulp.watch(
       [
-        $.path.src + "/pages/**/*.pug",
-        $.path.src + "/layouts/**/*.pug",
-        $.path.src + "/components/**/*.pug",
+        $.path.src + "/pages/**/*advantages.pug",
+        $.path.src + "/layouts/**/*advantages.pug",
+        $.path.src + "/components/**/*advantages.pug",
       ],
       $.gulp.series("pug")
     );
