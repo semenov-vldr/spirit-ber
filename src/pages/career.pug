@@ -1,0 +1,18 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Вакансии"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+
+block content
+  .breadcrumbs
+    .container.breadcrumbs__container
+      a(href="/").breadcrumbs__item Главная
+      a(href="").breadcrumbs__item Услуги
+      a(href="").breadcrumbs__item Вакансии
+
+  section.section-column
+
+    include ../components/vacancy/vacancy

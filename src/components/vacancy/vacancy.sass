@@ -1,0 +1,33 @@
+.vacancy
+  .accordion
+
+    &-content
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 15px 25px
+      @media (max-width: 768px)
+        display: flex
+        flex-direction: column
+
+      &__demands--left
+        grid-column: span 1
+      &__demands--right
+        grid-column: 2 / span 1
+        grid-row: span 2
+      &__terms
+        grid-column: span 1
+        grid-row: 2 / span 1
+
+      &__title
+        margin-bottom: 16px
+        @include fontSize(14, 20)
+
+      &__list
+        list-style-type: disc
+        display: flex
+        flex-direction: column
+        gap: 10px
+        padding-left: 20px
+
+      &__item
+        @include fontSize(14, 16)

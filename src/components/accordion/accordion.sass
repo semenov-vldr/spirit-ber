@@ -1,0 +1,77 @@
+.accordion
+  &__container
+    max-width: 1048px
+    margin: 0 auto
+
+
+  &__list
+    display: flex
+    flex-direction: column
+    background-color: $frosted-top
+    border-radius: 8px
+
+  &__item
+    padding: 12px
+    box-shadow: inset 0 1px 1px #333538
+    @media (max-width: 768px)
+      padding: 12px 5px
+    &.js-accordion-active .accordion__content
+      padding: 30px
+      max-height: 1000px
+      @media (max-width: 768px)
+        padding: 20px
+        max-height: 500px
+        overflow: auto
+        &::-webkit-scrollbar
+          width: 0
+          height: 0
+    &.js-accordion-active .accordion__title,
+    &:hover .accordion__title
+      color: #fff
+    &.js-accordion-active .accordion__title svg
+      transform: rotate(90deg)
+
+  &__number
+    position: absolute
+    transform: translate(-100%, -50%)
+    left: -40px
+    top: 50%
+    font-family: 'SpaceGrotesk', sans-serif
+    color: $accent
+    @include fontSize(20, 24)
+    @media (max-width: 1200px)
+      display: none
+
+
+  &__title
+    @include fontSize(14, 24)
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    column-gap: 20px
+    padding: 30px 20px
+    cursor: pointer
+    color: rgba(#fff, 0.6)
+    @media (max-width: 768px)
+      padding: 15px 0
+    & svg
+      transition: 0.3s ease
+      flex: 0 0 10px
+      fill: currentColor
+
+
+  &__content
+    @include fontSize(14, 16)
+    background-color: $frosted-bottom
+    border-radius: 8px
+    box-shadow: 0 0 2px rgba(113, 200, 255, 0.16), inset 0px -4px 24px rgba(0, 0, 0, 0.24)
+    backdrop-filter: blur(6px)
+    max-height: 0
+    padding: 0 30px
+    overflow: hidden
+    transition: 0.3s ease
+    @media (max-width: 768px)
+      padding: 0 20px
+
+
