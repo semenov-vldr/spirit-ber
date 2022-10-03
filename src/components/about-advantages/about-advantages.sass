@@ -1,0 +1,62 @@
+.about-advantages
+
+  &__container
+    max-width: 1320px
+
+  &__content
+    overflow: hidden
+
+
+  &__list
+    @media (min-width: 769px)
+      display: flex
+      flex-direction: column
+
+
+  &-item
+    position: relative
+    display: flex
+    gap: 40px
+    padding: 40px 0
+    @media (min-width: 769px)
+      &:not(:last-child)::after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        height: 1px
+        width: 100%
+        opacity: 0.3
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%)
+    @media (max-width: 768px)
+      flex-direction: column
+      gap: 16px
+      padding: 10px 0
+
+
+  &-item__title
+    @include fontSize(18, 40)
+    text-align: center
+    @media (min-width: 769px)
+      flex: 0 1 30%
+      text-align: left
+
+  &-item__content
+    @media (min-width: 769px)
+      flex: 0 1 70%
+
+
+  &-item__description
+    display: flex
+    gap: 24px
+    &:not(:last-child)
+      margin-bottom: 24px
+
+    &-number
+      color: $accent
+      font-family: 'SpaceGrotesk', sans-serif
+      font-size: 16px
+
+    &-text
+      @include fontSize(14, 16)
+      line-height: 1.7

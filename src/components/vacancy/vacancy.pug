@@ -1,6 +1,27 @@
 .vacancy
   .container.vacancy__container
-    h2.title-section Активные вакансии
+
+    h2.title-section.vacancy__title Активные вакансии
+
+    .vacancy__main.vacancy-main
+      .vacancy-main__text Мы ценим открытость и любовь к своей работе, но не приемлем халтурное отношение к своим обязанностям. Если вы активный и целеустремленный человек, готовый к работе – вы нам подходите!
+      ul.vacancy__contacts
+        li.vacancy__contact.vacancy-contact
+          span.vacancy-contact__title Телефон
+          a.vacancy-contact__number.vacancy-contact__link(href="tel:+74999940097") +7 (499) 994-00-97
+          span.vacancy-contact__timetable пн-пт с 09:00 до 18:00
+
+        li.vacancy__contact.vacancy-contact
+          span.vacancy-contact__title HR-отдел
+          .vacancy-contact__email
+            a.vacancy-contact__link(href="mailto:career@spirit-bear.ru") career@spirit-bear.ru
+            button.header-contact__button-copy
+              svg(width="12" height="12" fill="currentColor")
+                use(href='assets/img/sprite.svg#button-copy')
+          span.vacancy-contact__timetable пн-пт с 09:00 до 18:00
+
+        a.button.button--bg-accept(href="") Откликнуться
+
 
     .accordion
       .accordion__container

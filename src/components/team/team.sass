@@ -1,0 +1,56 @@
+.team
+  &__container
+
+  &__content
+    width: 100%
+    position: relative
+
+  &__content-wrapper
+    width: 100%
+    overflow: hidden
+
+  &__list
+    width: 100%
+
+  &-card
+    max-width: 368px
+    display: inline-flex
+    flex-direction: column
+    gap: 12px
+    &__image
+      width: 100%
+      aspect-ratio: 37 / 40
+      object-fit: cover
+
+    &__name
+      @include fontSize(16, 20)
+
+    &__post
+      color: rgba(#fff, 0.6)
+      font-size: 12px
+      border: 1px solid currentColor
+      border-radius: 32px
+      padding: 4px 12px
+      width: max-content
+
+    &__text
+      @include fontSize(14, 16)
+
+  .slider-nav__prev
+    left: -40px
+  .slider-nav__next
+    right: -40px
+
+  .slider-nav__prev,
+  .slider-nav__next
+    @media (max-width: 1200px)
+      display: none
+
+
+
+  .swiper-pagination
+    display: block
+
+
+
+

@@ -1,0 +1,20 @@
+extends ../layouts/main
+
+block variables
+  - var title = "О компании"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+
+block content
+  .breadcrumbs
+    .container.breadcrumbs__container
+      a(href="/").breadcrumbs__item Главная
+      a(href="").breadcrumbs__item О компании
+
+  section.section-column
+    include ../components/hero/hero-about/hero-about
+    include ../components/provide/provide
+    include ../components/about-advantages/about-advantages
+    include ../components/team/team
+    include ../components/partners/partners
