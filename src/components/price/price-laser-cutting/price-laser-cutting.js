@@ -1,16 +1,19 @@
 {
 
+
   const priceLaserCutting = document.querySelector('.price-laser-cutting'); // блок с таблицей цен
 
-  const tableRowList = priceLaserCutting.querySelectorAll('.table-row');    // строки значений
+  //console.log(priceLaserCutting)
 
-  const table_thickness = priceLaserCutting.querySelectorAll('.col');       // строка толщин материалов
+  let tableRowList = document.querySelectorAll('.table-row');    // строки значений
+
+  //console.log(tableRowList)
+
+  const table_thickness = document.querySelectorAll('.col');       // строка толщин материалов
 
 
   const addClassActive = (item) => item.classList.add('js-price-hover');
   const removeClassActive = (item) => item.classList.remove('js-price-hover');
-  const toggleClassActive = (item) => item.classList.toggle('js-price-hover');
-
 
   const createArrayRow = (arrayEmpty, idxItemHover) => {
     tableRowList.forEach(rowInactive => {

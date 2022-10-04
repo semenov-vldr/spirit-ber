@@ -1,0 +1,19 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Контакты"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+
+block content
+  .breadcrumbs
+    .container.breadcrumbs__container
+      a(href="/").breadcrumbs__item Главная
+      a(href="").breadcrumbs__item Контакты
+
+  section.section-column
+
+    include ../components/hero/hero-contacts/hero-contacts
+    include ../components/faq/faq-contacts/faq-contacts
+    include ../components/feedback/feedback-contacts/feedback-contacts

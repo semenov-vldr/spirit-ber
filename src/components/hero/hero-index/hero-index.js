@@ -4,8 +4,8 @@
 
   if (heroIndex) {
 
-    const prev = heroIndex.querySelector('.arrow-nav__prev');
-    const next = heroIndex.querySelector('.arrow-nav__next');
+    const prev = heroIndex.querySelector('.slider-nav__prev');
+    const next = heroIndex.querySelector('.slider-nav__next');
     const slides = heroIndex.querySelectorAll('.hero-slide');
     const dots = heroIndex.querySelectorAll('.hero-slider-pagination__item');
 

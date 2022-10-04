@@ -1,4 +1,6 @@
 .hero.hero--index(style="background-image: url('/assets/img/bg-hero.png')")
+  video.hero__video(preload='auto' autoplay muted loop)
+    source(src='/assets/video/video1.mp4' type='video/mp4')
   .container.hero__container
 
     .hero__slider.hero-slider
@@ -28,8 +30,8 @@
           span.hero-slider-pagination__name Металлоконструкции
 
       .hero-slider__nav.hero-slider-nav
-        button.arrow-nav__prev
-        button.arrow-nav__next
+        .slider-nav__prev
+        .slider-nav__next
 
       .hero-slider__item.hero-slide.js-hero-active(data-slide="1")
         h3.hero-slide__title Лазерная резка
