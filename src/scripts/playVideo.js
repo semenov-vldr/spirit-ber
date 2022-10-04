@@ -1,37 +1,20 @@
+const playList = document.querySelectorAll('.play-button');
+
+function playShow (btnPlay, video) {
+  video.play();
+  btnPlay.classList.add('visually-hidden')
+};
+
+function pauseShow (btnPlay, video) {
+  video.pause();
+  btnPlay.classList.remove('visually-hidden')
+};
 
 
+playList.forEach(play => {
+  const parent = play.parentNode;
+  const videoContent = parent.querySelector('video');
+  play.addEventListener('click', () => playShow(play, videoContent));
 
-  const playList = document.querySelectorAll('.play-button');
-
-  console.log(playList)
-
-
-  playList.forEach(play => {
-    const parent = play.parentNode;
-    console.log(play)
-  })
-
-
-
-
-
-
-// var podcastAudio = document.getElementById('podcast-audio');
-//
-// var playBtn = document.getElementById('podcast-play');
-//
-// var pauseBtn = document.getElementById('podcast-pause');
-//
-// var playShow = function() {
-//   podcastAudio.play();
-//   playBtn.style.display = "none";
-//   pauseBtn.style.display = "inline-block";
-// };
-//
-// var pauseShow = function() {
-//   podcastAudio.pause();
-//   playBtn.style.display = "inline-block";
-//   pauseBtn.style.display = "none";
-// };
-
-
+  videoContent.addEventListener('click', () => pauseShow(play, videoContent))
+});
