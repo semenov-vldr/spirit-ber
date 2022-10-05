@@ -1,16 +1,18 @@
-// let myMap;
-//
-// ymaps.ready(init);
-//
-// function init () {
-//   // Создание экземпляра карты и его привязка к контейнеру с
-//   // заданным id ("map").
-//   myMap = new ymaps.Map('map-contacts', {
-//     // При инициализации карты обязательно нужно указать
-//     // её центр и коэффициент масштабирования.
-//     center: [55.76, 37.64], // Москва
-//     zoom: 10
-//   });
-//
-//
-// }
+{
+
+  let myMap;
+
+  ymaps.ready(init);
+
+  function init () {
+    myMap = new ymaps.Map('map-contacts', {
+
+      center: [56.13050415063692,37.07479867231817],
+      zoom: 17,
+      controls: []
+    });
+
+
+  }
+
+}

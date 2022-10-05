@@ -19,9 +19,10 @@ header.header
     .header-nav
       ul.header-nav__list
         li.header-nav__item
-          a.header-nav__link(href="/service.html") Услуги
+          //a.header-nav__link(href="/service.html" ) Услуги
+          a.header-nav__link Услуги
 
-          ul.header-subnav.header-subnav-1
+          ul.header-subnav.header-subnav-1.js-active
             li.header-subnav__item
               a.header-subnav__link(href="/laser-cutting.html") Лазерная резка металла
               ul.header-subnav.header-subnav-2
@@ -29,6 +30,22 @@ header.header
                 +headerSubNavItem('/', 'Лазерная резка швеллера')
                 +headerSubNavItem('/', 'Лазерная резка труб')
                 +headerSubNavItem('/', 'Лазерная резка уголка')
+
+            li.header-subnav__item
+              a.header-subnav__link(href="/laser-cutting.html") Гибка листового металла
+              ul.header-subnav.header-subnav-2
+                +headerSubNavItem('/', 'Лазерная резка листа2')
+                +headerSubNavItem('/', 'Лазерная резка швеллера2')
+                +headerSubNavItem('/', 'Лазерная резка труб2')
+                +headerSubNavItem('/', 'Лазерная резка уголка2')
+
+            li.header-subnav__item
+              a.header-subnav__link(href="/laser-cutting.html") Порошковая покраска металла
+              ul.header-subnav.header-subnav-2
+                +headerSubNavItem('/', 'Лазерная резка листа2')
+                +headerSubNavItem('/', 'Лазерная резка швеллера2')
+                +headerSubNavItem('/', 'Лазерная резка труб2')
+                +headerSubNavItem('/', 'Лазерная резка уголка2')
 
             +headerSubNavItem('/', 'Гибка листового металла')
             +headerSubNavItem('/', 'Порошковая покраска металла')
@@ -39,7 +56,7 @@ header.header
         +headerNavItem('/', 'Цены')
         +headerNavItem('/portfolio.html', 'Примеры работ')
         +headerNavItem('/about.html', 'О нас')
-        +headerNavItem('/', 'Контакты')
+        +headerNavItem('/contacts.html', 'Контакты')
 
       .header__contact.header-contact
         button(type="button").header-contact__menu-tablet Связаться с нами

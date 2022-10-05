@@ -1,0 +1,18 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Доставка"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+
+block content
+  .breadcrumbs
+    .container.breadcrumbs__container
+      a(href="/").breadcrumbs__item Главная
+      a(href="").breadcrumbs__item О компании
+      a(href="").breadcrumbs__item Доставка
+
+  section.section-column
+
+    include ../components/hero/hero-delivery/hero-delivery

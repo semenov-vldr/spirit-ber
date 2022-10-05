@@ -1,5 +1,30 @@
 .feedback.feedback-contacts
   .feedback__container.container
+
     .feedback__content
       h3.feedback__title Задать вопрос
-      p.feedback__text
+      .feedback__text-wrapper
+        p.feedback__text Как принято считать, акционеры крупнейших компаний будут ассоциативно распределены по отраслям.
+        p.feedback__text Имеется спорная точка зрения, гласящая примерно следующее: акционеры крупнейших компаний, вне зависимости от их уровня, должны быть преданы социально-демократической анафеме.
+        p.feedback__text Таким образом, начало повседневной работы по формированию позиции позволяет выполнить важные задания по разработке поэтапного и последовательного развития общества.
+
+    form.feedback__form.feedback-form(method='POST' action='' enctype="multipart/form-data" autocomplete="off")
+      .feedback-form__input-container
+        input#name(placeholder="Иванов Иван Иванович*" name="name" pattern="^[A-Za-zА-Яа-яЁё\\s]+$" autocomplete='off' maxlength='40' required )
+        span.feedback-form__error
+        span.feedback-form__mandatory Обязательное поле
+
+      .feedback-form__input-container
+        input#phone(type='tel' name='phone' placeholder="89005555555" data-tel-input='' pattern='[0-9]+$' maxlength='15'  autocomplete='off' required )
+        span.feedback-form__error
+
+      .feedback-form__input-container
+        textarea#message( placeholder="Пожалуйста, введите запрос*" name="message" maxlength='200' rows="4" required)
+        span.feedback-form__error
+
+      .feedback-form__sending
+        label
+          input(type='checkbox' checked)
+          span.feedback-form__checkbox
+          span.feedback-form__agreement Даю согласие на обработку персональных данных
+        button.button.arrow.button--bg-grey.button--outline(type='submit') Отправить&nbsp;вопрос

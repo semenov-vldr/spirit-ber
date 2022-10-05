@@ -1,0 +1,41 @@
+.hero.hero-delivery
+  margin-top: 150px
+  .hero
+    &__container
+
+    &__title
+      @include fontSize(32, 64)
+
+    &__content
+      display: grid
+      grid-template-columns: 65% auto
+      gap: 40px
+
+    &__tabs
+      display: grid
+      grid-template-columns: 45% auto
+
+
+    &-nav
+      background-color: $frosted-top
+      &__title
+        padding: 32px 40px
+        @include fontSize(18, 40)
+        text-align: center
+      &__list
+        display: flex
+        flex-direction: column
+
+      &__item
+        padding: 40px
+
+      &__name
+        @include fontSize(18, 24)
+
+      &__number
+        color: $accent
+        @include fontSize(18, 20)
+
+    &-data
+      background-color: $frosted-bottom
+
