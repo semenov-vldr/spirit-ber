@@ -18,11 +18,11 @@ header.header
 
     .header-nav
       ul.header-nav__list
-        li.header-nav__item
+        li.header-nav__item.header-nav__item--services
           //a.header-nav__link(href="/service.html" ) Услуги
           a.header-nav__link Услуги
 
-          ul.header-subnav.header-subnav-1.js-active
+          ul.header-subnav.header-subnav-1
             li.header-subnav__item
               a.header-subnav__link(href="/laser-cutting.html") Лазерная резка металла
               ul.header-subnav.header-subnav-2
@@ -65,6 +65,8 @@ header.header
         ul.header-contact__list
 
           li.header-contact__item
+            .header-contact__icon
+              img(src="assets/img/icons/header-phone.svg")
             a.header-contact__link(href="tel:+74999940097") +7 499 994 00 97
             button.header-contact__button-copy
               svg(width="12" height="12" fill="#fff")
@@ -72,6 +74,8 @@ header.header
             span.header-contact__description пн-пт с 09:00 до 18:00
 
           li.header-contact__item
+            .header-contact__icon
+              img(src="assets/img/icons/header-email.svg")
             a.header-contact__link(href="mailto:sales@spirit-bear.ru") sales@spirit-bear.ru
             button.header-contact__button-copy
               svg(width="12" height="12" fill="#fff")
@@ -79,6 +83,8 @@ header.header
             span.header-contact__description круглосуточно, без выходных
 
           li.header-contact__item.header-contact__address
+            .header-contact__icon
+              img(src="assets/img/icons/header-address.svg")
             a.header-contact__link МО, Солнечногорск,
               br
               | д. Пешки, цех №22

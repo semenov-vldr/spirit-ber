@@ -1,32 +1,35 @@
 {
 
+  const data = {
+    // класс для всего блока, в котором мы работаем
+    classWrapper: '.hero--index',
+    // класс контента, который будет меняться
+    classSlide: '.hero-slider-pagination__item',
+    // класс табов
+    classNav: '.hero-slide',
+    // имя активного класса
+    activeClass: 'js-hero-active',
+    // data-атрибут для табов
+    dataNameNav: 'data-pagination',
+    // data-атрибут для слайда
+    dataNameSlide: 'data-slide',
+  };
+
+
+  tabsSlides(data)
+
   const heroIndex = document.querySelector('.hero--index');
 
   if (heroIndex) {
 
     const prev = heroIndex.querySelector('.slider-nav__prev');
     const next = heroIndex.querySelector('.slider-nav__next');
+
     const slides = heroIndex.querySelectorAll('.hero-slide');
     const dots = heroIndex.querySelectorAll('.hero-slider-pagination__item');
 
-
     const addClassActive = (item) => item.classList.add('js-hero-active');
     const removeClassActive = (item) => item.classList.remove('js-hero-active');
-
-    dots.forEach(dot => {
-      // addClassActive(dots[1]);
-      // addClassActive (slides[1]);
-      dot.addEventListener('click', () => {
-        dots.forEach(dot => removeClassActive(dot) );
-        slides.forEach(slide => removeClassActive(slide) );
-        addClassActive(dot);
-        const numberDots = dot.getAttribute('data-pagination');
-        slides.forEach(slide => {
-          const numberSlide = slide.getAttribute('data-slide');
-          if (numberDots === numberSlide) addClassActive(slide);
-        });
-      });
-    });
 
 
     let index = 0;

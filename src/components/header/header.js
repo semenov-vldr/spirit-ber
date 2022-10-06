@@ -30,6 +30,8 @@
   }
 
 
+
+  // copy text
   const strList = header.querySelectorAll('.header-contact__link');
 
   strList.forEach(str => {

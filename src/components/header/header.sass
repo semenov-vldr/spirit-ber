@@ -81,6 +81,24 @@
       &:hover .header-subnav-1
         transform: rotateX(0deg)
         visibility: visible
+    &--services
+      @media (max-width: $width-mobile)
+        position: relative
+        &::after
+          content: ""
+          position: absolute
+          background-image: url('/assets/img/icons/arrow-right.svg')
+          background-position: center
+          background-size: cover
+          background-repeat: no-repeat
+          width: 7px
+          height: 12px
+          top: 50%
+          right: 10px
+          transform: translateY(-50%)
+          cursor: pointer
+
+
 
   &-nav__link
     white-space: nowrap
@@ -118,7 +136,8 @@
         padding: 25px 0
     @media (max-width: $width-mobile)
       position: relative
-      width: 100%
+      width: auto
+      margin: 0 -12px
       visibility: visible
       transform: initial
       display: none
@@ -204,25 +223,54 @@
       white-space: nowrap
       @media (max-width: 1400px)
         position: relative
-        padding: 10px 40px 10px 10px
+        padding: 12px 40px 12px 10px
         width: 100%
-        background-color: $frosted-top
+        background-color: #2C2F32
         &:hover
-          background-color: rgba($frosted-top, 0.8)
+          background-color: rgba(#2C2F32, 0.8)
         .icon-header-contact
           position: absolute
           right: 18px
           top: 50%
           transform: translateY(-50%)
-        @media (max-width: $width-mobile)
+      @media (max-width: 1400px) and (min-width: 1100px)
+        display: grid
+        grid-template-columns: 40px 1fr 1fr
+        padding-right: 20px
+        row-gap: 5px
+        column-gap: 16px
+      @media (max-width: $width-mobile)
+        display: grid
+        grid-template-columns: 1fr 1fr
+        background-color: initial
+        padding: 20px 12px
+        &:hover
           background-color: initial
-          padding: 20px 12px
-          &:hover
-            background-color: initial
     &__button-copy
       display: inline-block
       cursor: pointer
       margin-left: 8px
+      @media (max-width: 1400px)
+        justify-self: flex-end
+        grid-row: span 2
+        align-self: center
+      @media (max-width: 1100px)
+        justify-self: flex-end
+
+    &__icon
+      width: 40px
+      height: 40px
+      background-color: #414345
+      border-radius: 2px
+      display: flex
+      align-items: center
+      justify-content: center
+      grid-row: span 2
+      @media  (max-width: 1100px)
+        display: none
+      @media (min-width: 1400px)
+        display: none
+
 
     &__link
       white-space: nowrap

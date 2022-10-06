@@ -74,6 +74,14 @@
   &-slide-machine
 
     &__item
+      svg
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
 
     &__image
       position: absolute
@@ -81,10 +89,17 @@
       height: 100%
       top: 0
       left: 0
-      object-fit: cover
+      //object-fit: cover
+      object-fit: contain
 
     &__mark-wrapper
-      position: relative
+      position: absolute
+      width: 280px
+      padding: 15px
+      background-color: $frosted-top
+      border-radius: 8px
+      left: 30%
+      bottom: 25%
 
     &__mark
       position: absolute
@@ -95,6 +110,8 @@
       display: flex
       align-items: center
       justify-content: center
+      right: -70px
+      bottom: 25px
       span
         filter: blur(9px)
         width: 100%
