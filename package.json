@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "gulp",
-    "deploy": "gh-pages -d docs"
+    "deploy": "gh-pages -d dist"
   },
   "author": "Semenov Vladimir",
   "license": "ISC",
