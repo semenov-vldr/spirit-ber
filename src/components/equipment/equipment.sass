@@ -5,6 +5,7 @@
   background-repeat: no-repeat
   background-position: center
   width: 100%
+  max-width: 1920px
   //height: 920px
   height: 100vh
 
@@ -89,8 +90,12 @@
       height: 100%
       top: 0
       left: 0
-      //object-fit: cover
-      object-fit: contain
+      object-fit: cover
+      img
+        display: block
+        width: 100%
+        height: auto
+
 
     &__mark-wrapper
       position: absolute
@@ -134,7 +139,6 @@
         background-color: rgba(136, 136, 136, 0.3)
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4)
 
-      &__dot-title
 
 
 

@@ -5,21 +5,29 @@
   background-size: cover
   height: 100vh
   min-height: 768px
-  &:after
+  &:after,
+  &:before
     content: ""
     position: absolute
     width: 100%
     height: 100%
     left: 0
     top: 0
-    background: linear-gradient(180deg, rgba(#000, 0) 0%, rgba(#000, 0.33) 80%, rgba(#000, 0.1) 86%)
-    opacity: 0.58
+    z-index: 1
+  &:after
+    background: linear-gradient(90deg, #191111 0%, #191111 19.89%, rgba(25, 17, 17, 0.74) 32.48%, rgba(25, 17, 17, 0) 42.62%, rgba(25, 17, 17, 0) 52.07%, rgba(25, 17, 17, 0) 63.05%, rgba(25, 17, 17, 0.74) 70.5%, rgba(25, 17, 17, 0.938067) 75.63%, #191111 100%)
     mix-blend-mode: darken
     backdrop-filter: blur(2px)
+    opacity: 0.6
+  &::before
+    background: linear-gradient(180deg, rgba(#fff,0) 30%, rgba($bg-black,1) 100%)
+
+
   @media (max-width: 900px)
     &::after
       background-color: rgba(#000, 0.7)
-
+      mix-blend-mode: initial
+      backdrop-filter: initial
   .hero
 
     &__container
@@ -33,6 +41,7 @@
         align-items: flex-end
 
     &-slider
+      position: relative
       width: 100%
       max-width: 1700px
       display: grid
@@ -44,7 +53,7 @@
       .hero__tag
         grid-row: span 1
         align-self: end
-        margin-bottom: 10px
+        margin-bottom: 20px
         @media (max-width: 900px)
           grid-row: 2 / span 1
 
@@ -55,6 +64,7 @@
       display: flex
       flex-direction: column
       transform: translateX(-50px)
+      width: fit-content
       @media (max-width: 1200px)
         transform: translateX(-20px)
       @media (max-width: 900px)
@@ -68,6 +78,8 @@
         &.js-hero-active .hero-slider-pagination__name
           border-left: 2px solid $accent
           color: $white
+        &.js-hero-active .hero-slider-pagination__number
+          color: $accent
         &:hover .hero-slider-pagination__name
           color: $white
         @media (max-width: 900px)
@@ -78,7 +90,7 @@
 
       &__number
         font-family: 'SpaceGrotesk', sans-serif
-        color: $accent
+        color: rgba($accent, 0.4)
         font-size: 24px
         text-decoration: none
         min-width: 30px
@@ -111,9 +123,9 @@
 
     &-slide
       position: relative
+      //position: absolute
       grid-column: 2 / 1 span
       grid-row: 2 / span 1
-      //width: 370px
       display: none
       flex-direction: column
       gap: 16px
@@ -126,8 +138,9 @@
           content: ""
           width: 1px
           background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%)
-          height: 150%
-          top: -20%
+          //height: 150%
+          height: 80vh
+          top: -30%
           left: -40px
           opacity: 0.7
 
@@ -136,9 +149,12 @@
         grid-row: 3 / span 1
         width: auto
         margin: 0 auto
+      @media (min-width: 480px)
+        position: absolute
 
       &__title
         font-size: 24px
+        font-weight: 500
 
       &__price
         color: $accent
@@ -147,7 +163,6 @@
       &__description
         font-size: 16px
         line-height: 1.7
-        overflow: hidden
         @media (max-width: 900px)
           display: -webkit-box
           -webkit-line-clamp: 6
@@ -159,7 +174,8 @@
         display: flex
         gap: 16px
         flex-wrap: wrap
-        justify-content: space-between
         align-items: center
         margin-top: 10px
+        @media (min-width: 900px)
+          justify-content: space-between
 

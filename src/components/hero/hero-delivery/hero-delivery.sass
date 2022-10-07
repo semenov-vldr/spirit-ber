@@ -20,6 +20,8 @@
       grid-template-columns: 45% auto
       @media (max-width: 768px)
         grid-template-columns: 1fr
+        border-radius: 8px
+        overflow: hidden
 
 
 
@@ -30,6 +32,16 @@
       &__title
         padding: 32px 40px
         @include fontSize(18, 40)
+        &--mobile
+          font-size: 18px
+          display: none
+          text-align: center
+          padding: 12px
+        @media (max-width: 768px)
+          display: none
+          &--mobile
+            display: block
+
       &__list
         display: flex
         flex-direction: column
@@ -67,7 +79,9 @@
           display: none
 
     &-data
-      background-color: $frosted-bottom
+      background-color: rgba($frosted-top, 0.7)
+      @media (max-width: 768px)
+        padding: 0 4px 12px
 
       &__list
         display: none
@@ -81,6 +95,9 @@
         padding: 35px
         @media (max-width: 768px)
           padding: 12px
+          background-color: rgba($frosted-bottom, 0.7)
+          border-radius: 8px
+          box-shadow: 0px 0px 2px rgba(113, 200, 255, 0.16), inset 0px -4px 24px rgba(0, 0, 0, 0.24)
 
       &__image
         max-width: 260px

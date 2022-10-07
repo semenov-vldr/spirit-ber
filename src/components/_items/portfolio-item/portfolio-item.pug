@@ -101,3 +101,43 @@ mixin createPortfolioItems ( portfolioData )
 
 
 +createPortfolioItems( portfolioItems )
+
+li.portfolio__item.portfolio-item.js-active
+  .portfolio__image-wrapper
+    img(src='./assets/img/portfolio/04.png' alt='portfolio')
+  h3.portfolio__title Кронштейн для крепления фасада
+  ul.portfolio__tags.portfolio-tags
+    li.portfolio-tags__item.tag-orange Лазерная резка
+    li.portfolio-tags__item.tag-lightblue Изготовление металлоизделий
+  p.portfolio__description TEST Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005
+
+  .portfolio-item__popup.portfolio-popup__item
+    .portfolio-popup__wrapper
+
+      .portfolio-popup__swiper.portfolio-popup__swiper--top
+        .portfolio-popup__swiper-wrapper.swiper-wrapper
+          .swiper-slide
+            img(src='./assets/img/portfolio/04.png' alt='portfolio')
+          .swiper-slide
+            img(src='./assets/img/portfolio/05.png' alt='portfolio')
+          .swiper-slide
+            img(src='./assets/img/portfolio/06.png' alt='portfolio')
+
+      .portfolio-popup__swiper.portfolio-popup__swiper--thumbs
+        .portfolio-popup__swiper-wrapper.swiper-wrapper
+          .swiper-slide
+            img(src='./assets/img/portfolio/04.png' alt='portfolio')
+          .swiper-slide
+            img(src='./assets/img/portfolio/05.png' alt='portfolio')
+          .swiper-slide
+            img(src='./assets/img/portfolio/06.png' alt='portfolio')
+
+      .portfolio-popup__description
+        .portfolio-popup__title Кронштейн для крепления фасада
+        .portfolio-popup__data Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad aliquid dolor, error esse eveniet illum inventore ipsam laudantium minima nisi, nostrum quae quos saepe suscipit veritatis voluptatum! Accusantium, dolorem!
+        .portfolio-popup__link.button.arrow.button--bg-grey.button--outline Смотреть кейс
+
+
+
+
+
