@@ -38,8 +38,7 @@ $.gulp.task(
   )
 );
 
-
 $.gulp.task(
   "default",
-  $.gulp.series("dev", $.gulp.parallel("watch", "server"))
+  $.gulp.series("build", $.gulp.parallel("watch", "server"))
 );
