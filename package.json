@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "homepage": "https://semenov-vldr.github.io/spirit-ber",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
@@ -20,8 +19,7 @@
     "gulp-sourcemaps": "^2.6.5"
   },
   "scripts": {
-    "start": "gulp",
-    "deploy": "gh-pages -d dist"
+    "start": "gulp"
   },
   "author": "Semenov Vladimir",
   "license": "ISC",
