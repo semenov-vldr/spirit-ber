@@ -20,19 +20,28 @@ mixin equipmentSlidePaginationItem (num, name)
         .equipment-slide__machine.equipment-slide-machine__list
 
           .equipment-slide-machine__item
-            //include ../../img/equipment/machine-1-1.svg
-            //include ../../img/equipment/machine-1-1.svg
             .equipment-slide-machine__image
               img(src="assets/img/equipment/01.png")
-            .equipment-slide-machine__mark-wrapper
+
+            .equipment-slide-machine__mark-wrapper.machine__mark--1(style="right:55%; bottom: 25%")
               span.equipment-slide-machine__mark
               p.equipment-slide-machine__mark-title Максимальный размер листа
               p.equipment-slide-machine__mark-text Станок принимает заготовки габаритами до 3000х1500 мм
 
+            .equipment-slide-machine__mark-wrapper.machine__mark--2(style="right:14%; bottom: 24%")
+              span.equipment-slide-machine__mark.left
+              p.equipment-slide-machine__mark-title Мощный лазер
+              p.equipment-slide-machine__mark-text Лазер мощностью более 8000 КВт
+
+            .equipment-slide-machine__mark-wrapper.machine__mark--3(style="right:9%; bottom: 45%")
+              span.equipment-slide-machine__mark.left
+              p.equipment-slide-machine__mark-title Высокоточный луч
+              p.equipment-slide-machine__mark-text Точность реза луча +/- 0,02 мм
+
 
             .equipment-slide__links
-              a(href="").button.button--outline.arrow Смотреть услугу
-              a(href="").button.button--bg-grey Характеристики
+              a.button.button--outline.arrow(href="") Смотреть услугу
+              a.button.button--bg-grey(href="") Характеристики
 
 
 
