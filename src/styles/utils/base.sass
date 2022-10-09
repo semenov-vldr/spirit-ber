@@ -201,6 +201,24 @@ main
   justify-content: center
 
 
+.message-error
+  position: relative
+  display: flex
+  gap: 4px
+  flex-wrap: nowrap
+  &::after
+    content: ""
+    display: block
+    background-image: url('../img/icons/question.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    width: 14px
+    aspect-ratio: 1 / 1
+    right: 0
+    top: 0
+
+
 
 // -------- Swiper -----------
 

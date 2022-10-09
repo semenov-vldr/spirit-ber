@@ -1,0 +1,17 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Блог Спирит Бер"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+
+block content
+  .breadcrumbs
+    .container.breadcrumbs__container
+      a(href="/").breadcrumbs__item Главная
+      a(href="").breadcrumbs__item Блог Спирит Бер
+
+  section.section-column
+
+    include ../components/feedback/feedback-blog/feedback-blog

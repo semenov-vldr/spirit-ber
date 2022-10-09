@@ -81,4 +81,10 @@ phoneInputs.forEach(input => {
   input.addEventListener("paste", onPhonePaste);
 });
 
+const forms = document.querySelectorAll('form');
+
+forms.forEach(form => {
+  const formMandatory = form.querySelector('form .feedback-form__mandatory');
+
+})
 

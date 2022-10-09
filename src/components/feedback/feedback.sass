@@ -72,7 +72,7 @@
         opacity: 1
         caret-color: #fff
       &:required:valid
-        border-color: green
+        border-color: rgba(green, 0.2)
         caret-color: #fff
       &:required:invalid
         border-color: rgba(255, 110, 64, 0.09)
@@ -82,13 +82,15 @@
 
     .feedback-form__error,
     .feedback-form__mandatory
+      display: flex
+      align-items: center
+      gap: 4px
       right: 15px
       top: 50%
       transform: translateY(-50%)
       position: absolute
       @include fontSize(10, 12)
       color: #FF6E40
-      display: inline-block
       padding-top: 5px
       transition: $transition
 
@@ -155,6 +157,9 @@
   &-form__agreement
     @media (max-width: 768px)
       margin-left: 1em
+
+  &-form input[type="file"]
+    border: 1px dashed rgba(#fff, 0.08)
 
 
 

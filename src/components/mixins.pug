@@ -1,0 +1,35 @@
+// ---- Form ----------
+
+mixin errorIcon
+  svg(width="14" height="14" fill="currentColor")
+    use(href='assets/img/sprite.svg#question')
+
+// Name
+mixin inputName
+  .feedback-form__input-container
+    input#name(placeholder="Иванов Иван Иванович*" name="name" pattern="^[A-Za-zА-Яа-яЁё\\s]+$" autocomplete='off' maxlength='40' required )
+    span.feedback-form__error Ошибка ввода
+      +errorIcon
+    //span.feedback-form__mandatory Обязательное поле
+
+// Tel
+mixin inputTel
+  .feedback-form__input-container
+    input#phone(type='tel' name='phone' placeholder="+7(___)___-__-__" data-tel-input='' pattern='.{18,}' maxlength='18'  autocomplete='off' required )
+    span.feedback-form__error
+
+// Text
+mixin inputText
+  .feedback-form__input-container
+    textarea#message( placeholder="Пожалуйста, введите запрос*" name="message" maxlength='200' rows="4" required)
+    span.feedback-form__error
+
+
+// Кнопка "отправить" и согласие
+mixin sending
+  .feedback-form__sending
+    label
+      input(type='checkbox' checked)
+      span.feedback-form__checkbox
+      span.feedback-form__agreement Даю согласие на обработку персональных данных
+    button.button.arrow.button--bg-grey.button--outline(type='submit') Отправить&nbsp;вопрос
