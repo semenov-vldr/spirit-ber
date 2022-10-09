@@ -1,4 +1,71 @@
 
+
+{
+
+  const mobileWidth = window.matchMedia('(max-width: 768px)').matches;
+
+  let mySwiper;
+
+  if (mobileWidth) {
+
+    mySwiper = new Swiper('.about-advantages__content', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      // navigation: {
+      //   nextEl: '.arrow-nav__next',
+      //   prevEl: '.arrow-nav__prev',
+      // },
+
+      uniqueNavElements: true,
+
+      slidesPerView: 1,
+
+      // Бесконечная прокрутка
+      loop: true,
+
+      // Откл функционала, если слайдов меньше, чем нужно
+      watchOverflow: true,
+
+      centeredSlides: true,
+
+      // Отступ между слайдами
+      spaceBetween: 15,
+
+      // Стартовый слайд
+      initialSlide: 0,
+
+      // Брейк поинты (адаптив)
+      // Ширина экрана
+      breakpoints: {
+        // 320: {
+        //   slidesPerView: 1
+        // },
+      }
+    });
+
+  }
+
+
+
+
+
+
+}
+
+{
+
+  const accordionItems = document.querySelectorAll('.accordion__item'); // список элементов аккордиона
+
+  const toggleClass = (item) => item.classList.toggle('js-accordion-active');
+
+  accordionItems.forEach(accordionItem => {
+    accordionItem.addEventListener('click', () => toggleClass(accordionItem));
+  });
+
+}
+
 {
 
   const header = document.querySelector('.header');
@@ -32,19 +99,7 @@
 
 
 
-
-
   // copy text
-  function copyToClipboard(str) {
-    const el = document.createElement('textarea');
-    el.value = str;
-    el.setAttribute('readonly', '');
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-  };
-
   const strList = header.querySelectorAll('.header-contact__link');
 
   strList.forEach(str => {
@@ -119,6 +174,86 @@
 
   let mySwiper;
 
+
+    mySwiper = new Swiper('.team__content-wrapper', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.slider-nav__next',
+        prevEl: '.slider-nav__prev',
+      },
+
+      uniqueNavElements: true,
+
+      slidesPerView: 4,
+
+      // Бесконечная прокрутка
+      loop: true,
+
+      // Откл функционала, если слайдов меньше, чем нужно
+      watchOverflow: true,
+
+      //centeredSlides: true,
+
+      // Отступ между слайдами
+      spaceBetween: 40,
+
+      // Стартовый слайд
+      initialSlide: 0,
+
+      // Брейк поинты (адаптив)
+      // Ширина экрана
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 16,
+        },
+
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+
+        768: {
+          slidesPerView: 3
+        },
+
+        1100: {
+          slidesPerView: 4
+        },
+
+      }
+    });
+
+
+
+
+}
+
+// {
+//
+//   const vacansy = document.querySelector('.vacancy')
+//   const strList = vacansy.querySelectorAll('.vacancy-contact__link');
+//
+//   console.log(vacansy)
+//
+//   strList.forEach(str => {
+//     const copied = str.innerText;
+//     const buttonCopy = str.parentNode.querySelector('.vacancy-contact__button-copy');
+//     buttonCopy.addEventListener('click', () => copyToClipboard(copied) );
+//   });
+//
+// }
+
+
+{
+
+  const mobileWidth = window.matchMedia('(max-width: 768px)').matches;
+
+  let mySwiper;
+
   if (mobileWidth) {
 
     mySwiper = new Swiper('.also-interesting-laser-cutting__slider', {
@@ -173,33 +308,78 @@
 
 {
 
+  let myMap;
+
+  ymaps.ready(init);
+
+  function init () {
+    myMap = new ymaps.Map('map-contacts', {
+
+      center: [56.13050415063692,37.07479867231817],
+      zoom: 17,
+      controls: []
+    });
+
+
+  }
+
+}
+
+{
+
+  const data = {
+    // класс для всего блока, в котором мы работаем
+    classWrapper: '.hero-delivery',
+    // класс контента, который будет меняться
+    classSlide: '.hero-data__list',
+    // класс табов
+    classNav: '.hero-nav__item',
+    // имя активного класса
+    activeClass: 'js-delivery-active',
+    // data-атрибут для табов
+    dataNameNav: 'data-delivery-nav',
+    // data-атрибут для слайда
+    dataNameSlide: 'data-delivery-info',
+  };
+
+
+  tabsSlides(data)
+
+
+}
+
+{
+
+  const data = {
+    // класс для всего блока, в котором мы работаем
+    classWrapper: '.hero--index',
+    // класс контента, который будет меняться
+    classSlide: '.hero-slider-pagination__item',
+    // класс табов
+    classNav: '.hero-slide',
+    // имя активного класса
+    activeClass: 'js-hero-active',
+    // data-атрибут для табов
+    dataNameNav: 'data-pagination',
+    // data-атрибут для слайда
+    dataNameSlide: 'data-slide',
+  };
+
+
+  tabsSlides(data)
+
   const heroIndex = document.querySelector('.hero--index');
 
   if (heroIndex) {
 
-    const prev = heroIndex.querySelector('.arrow-nav__prev');
-    const next = heroIndex.querySelector('.arrow-nav__next');
+    const prev = heroIndex.querySelector('.slider-nav__prev');
+    const next = heroIndex.querySelector('.slider-nav__next');
+
     const slides = heroIndex.querySelectorAll('.hero-slide');
     const dots = heroIndex.querySelectorAll('.hero-slider-pagination__item');
 
-
     const addClassActive = (item) => item.classList.add('js-hero-active');
     const removeClassActive = (item) => item.classList.remove('js-hero-active');
-
-    dots.forEach(dot => {
-      // addClassActive(dots[1]);
-      // addClassActive (slides[1]);
-      dot.addEventListener('click', () => {
-        dots.forEach(dot => removeClassActive(dot) );
-        slides.forEach(slide => removeClassActive(slide) );
-        addClassActive(dot);
-        const numberDots = dot.getAttribute('data-pagination');
-        slides.forEach(slide => {
-          const numberSlide = slide.getAttribute('data-slide');
-          if (numberDots === numberSlide) addClassActive(slide);
-        });
-      });
-    });
 
 
     let index = 0;
@@ -411,17 +591,20 @@
 
 {
 
+
   const priceLaserCutting = document.querySelector('.price-laser-cutting'); // блок с таблицей цен
 
-  const tableRowList = priceLaserCutting.querySelectorAll('.table-row');    // строки значений
+  //console.log(priceLaserCutting)
 
-  const table_thickness = priceLaserCutting.querySelectorAll('.col');       // строка толщин материалов
+  let tableRowList = document.querySelectorAll('.table-row');    // строки значений
+
+  //console.log(tableRowList)
+
+  const table_thickness = document.querySelectorAll('.col');       // строка толщин материалов
 
 
   const addClassActive = (item) => item.classList.add('js-price-hover');
   const removeClassActive = (item) => item.classList.remove('js-price-hover');
-  const toggleClassActive = (item) => item.classList.toggle('js-price-hover');
-
 
   const createArrayRow = (arrayEmpty, idxItemHover) => {
     tableRowList.forEach(rowInactive => {
@@ -462,3 +645,151 @@
 
 
 }
+
+{
+  let swiper__thumbs = new Swiper(".portfolio-popup__swiper--thumbs", {
+    //loop: true,
+    spaceBetween: 28,
+    slidesPerView: "auto",
+    freeMode: true,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    watchOverflow: true,
+    initialSlide: 0,
+  });
+
+  let swiper__top = new Swiper(".portfolio-popup__swiper--top", {
+    loop: true,
+    slidesPerView: 1,
+    centeredSlides: true,
+    initialSlide: 0,
+    thumbs: {
+      swiper: swiper__thumbs,
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    }
+  });
+
+  //--------------------------------------
+
+  const activeClass = 'js-popup-active';
+
+  const portfolio = document.querySelector('.portfolio');
+  const portfolioItems = portfolio.querySelectorAll('.portfolio__item');
+
+
+  const addClassActive = (item) => item.classList.add(activeClass);
+  const removeClassActive = (item) => {
+    item.classList.remove(activeClass);
+    console.log('close');
+  }
+
+  portfolioItems.forEach(item => {
+    item.addEventListener('click', () => addClassActive(item));
+
+    const close = item.querySelector('.portfolio-popup__close');
+    if (close) {
+      close.addEventListener('click', () => {
+        removeClassActive(item);
+        console.log(item)
+      });
+
+    }
+
+  });
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// copy text
+function copyToClipboard(str) {
+  const el = document.createElement('textarea');
+  el.value = str;
+  el.setAttribute('readonly', '');
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+};
+
+const playList = document.querySelectorAll('.play-button');
+
+function playShow (btnPlay, video) {
+  video.play();
+  btnPlay.classList.add('visually-hidden')
+};
+
+function pauseShow (btnPlay, video) {
+  video.pause();
+  btnPlay.classList.remove('visually-hidden')
+};
+
+
+playList.forEach(play => {
+  const parent = play.parentNode;
+  const videoContent = parent.querySelector('video');
+  play.addEventListener('click', () => playShow(play, videoContent));
+
+  videoContent.addEventListener('click', () => pauseShow(play, videoContent))
+});
+
+{
+  // пример объекта
+  const data = {
+    // класс для всего блока, в котором мы работаем
+    classWrapper: '.hero-delivery',
+    // класс контента, который будет меняться
+    classSlide: '.hero-data__list',
+    // класс табов
+    classNav: '.hero-nav__item',
+    // имя активного класса
+    activeClass: 'js-delivery-active',
+    // data-атрибут для табов
+    dataNameNav: 'data-delivery-nav',
+    // data-атрибут для слайда
+    dataNameSlide: 'data-delivery-info',
+  }
+}
+
+
+function tabsSlides ( { classWrapper, classSlide, classNav, activeClass,  dataNameNav, dataNameSlide} ) {
+
+  const heroDelivery = document.querySelector(classWrapper);
+
+  if (heroDelivery) {
+
+    const slides = heroDelivery.querySelectorAll(classSlide);
+    const tabs = heroDelivery.querySelectorAll(classNav);
+
+    const addClassActive = (item) => item.classList.add(activeClass);
+    const removeClassActive = (item) => item.classList.remove(activeClass);
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(tab => removeClassActive(tab));
+        slides.forEach(slide => removeClassActive(slide));
+        addClassActive(tab);
+        const numberTabs = tab.getAttribute(dataNameNav);
+        slides.forEach(slide => {
+          const numberSlide = slide.getAttribute(dataNameSlide);
+          if (numberTabs === numberSlide) addClassActive(slide);
+        });
+      });
+    });
+
+  }
+
+};

@@ -15,6 +15,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/libs.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main.css"><!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+<!-- Yandex map script -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=dad86943-dfef-45bd-9c5e-c404323cb093&amp;lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
     <div class="page">
@@ -26,7 +28,8 @@
           <button class="header__burger"></button>
           <div class="header-nav">
             <ul class="header-nav__list">
-              <li class="header-nav__item"><a class="header-nav__link" href="/service.html">Услуги</a>
+              <li class="header-nav__item header-nav__item--services">
+                <!--a.header-nav__link(href="/service.html" ) Услуги--><a class="header-nav__link">Услуги</a>
                 <ul class="header-subnav header-subnav-1">
                   <li class="header-subnav__item"><a class="header-subnav__link" href="/laser-cutting.html">Лазерная резка металла</a>
                     <ul class="header-subnav header-subnav-2">
@@ -36,6 +39,22 @@
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка уголка</a></li>
                     </ul>
                   </li>
+                  <li class="header-subnav__item"><a class="header-subnav__link" href="/laser-cutting.html">Гибка листового металла</a>
+                    <ul class="header-subnav header-subnav-2">
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка листа2</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка швеллера2</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка труб2</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка уголка2</a></li>
+                    </ul>
+                  </li>
+                  <li class="header-subnav__item"><a class="header-subnav__link" href="/laser-cutting.html">Порошковая покраска металла</a>
+                    <ul class="header-subnav header-subnav-2">
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка листа2</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка швеллера2</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка труб2</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка уголка2</a></li>
+                    </ul>
+                  </li>
                             <li class="header-subnav__item"><a class="header-subnav__link" href="/">Гибка листового металла</a></li>
                             <li class="header-subnav__item"><a class="header-subnav__link" href="/">Порошковая покраска металла</a></li>
                             <li class="header-subnav__item"><a class="header-subnav__link" href="/">Слесарные работы</a></li>
@@ -43,30 +62,33 @@
                 </ul>
               </li>
                         <li class="header-nav__item"><a class="header-nav__link" href="/">Цены</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="/">Примеры работ</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="/">О нас</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="/">Контакты</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="/portfolio.html">Примеры работ</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="/about.html">О нас</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="/contacts.html">Контакты</a></li>
             </ul>
             <div class="header__contact header-contact">
               <button class="header-contact__menu-tablet" type="button">Связаться с нами<span>Телефон, почта, адрес</span></button>
               <ul class="header-contact__list">
-                <li class="header-contact__item"><a class="header-contact__link" href="tel:+74999940097">+7 499 994 00 97</a>
+                <li class="header-contact__item">
+                  <div class="header-contact__icon"><img src="assets/img/icons/header-phone.svg"></div><a class="header-contact__link" href="tel:+74999940097">+7 499 994 00 97</a>
                   <button class="header-contact__button-copy">
-                    <svg width="12" height="12">
+                    <svg width="12" height="12" fill="#fff">
                       <use href="assets/img/sprite.svg#button-copy"></use>
                     </svg>
                   </button><span class="header-contact__description">пн-пт с 09:00 до 18:00</span>
                 </li>
-                <li class="header-contact__item"><a class="header-contact__link" href="">sales@spirit-bear.ru</a>
+                <li class="header-contact__item">
+                  <div class="header-contact__icon"><img src="assets/img/icons/header-email.svg"></div><a class="header-contact__link" href="mailto:sales@spirit-bear.ru">sales@spirit-bear.ru</a>
                   <button class="header-contact__button-copy">
-                    <svg width="12" height="12">
+                    <svg width="12" height="12" fill="#fff">
                       <use href="assets/img/sprite.svg#button-copy"></use>
                     </svg>
                   </button><span class="header-contact__description">круглосуточно, без выходных</span>
                 </li>
-                <li class="header-contact__item header-contact__address"><a class="header-contact__link">МО, Солнечногорск,<br>д. Пешки, цех №22</a>
+                <li class="header-contact__item header-contact__address">
+                  <div class="header-contact__icon"><img src="assets/img/icons/header-address.svg"></div><a class="header-contact__link">МО, Солнечногорск,<br>д. Пешки, цех №22</a>
                   <button class="header-contact__button-copy">
-                    <svg width="12" height="12">
+                    <svg width="12" height="12" fill="#fff">
                       <use href="assets/img/sprite.svg#button-copy"></use>
                     </svg>
                   </button>
@@ -79,6 +101,8 @@
       <main>
         <section class="section-column">
           <div class="hero hero--index" style="background-image: url('/assets/img/bg-hero.png')">
+            <!--video.hero__video(preload='auto' autoplay muted loop)-->
+            <!--  source(src='/assets/video/video1.mp4' type='video/mp4')-->
             <div class="container hero__container">
               <div class="hero__slider hero-slider"><span class="hero__tag">Металлообработка в Москве</span>
                 <ul class="hero-slider__pagination hero-slider-pagination">
@@ -99,8 +123,8 @@
                   </li>
                 </ul>
                 <div class="hero-slider__nav hero-slider-nav">
-                  <button class="arrow-nav__prev"></button>
-                  <button class="arrow-nav__next"></button>
+                  <div class="slider-nav__prev"></div>
+                  <div class="slider-nav__next"></div>
                 </div>
                 <div class="hero-slider__item hero-slide js-hero-active" data-slide="1">
                   <h3 class="hero-slide__title">Лазерная резка</h3><span class="hero-slide__price">-- ОТ 9 Р / гиб</span>
@@ -134,33 +158,16 @@
             <div class="container portfolio__container">
               <h2 class="title-section">Примеры работ</h2><a class="button button--outline" href="">Смотреть портфолио</a>
               <ul class="portfolio__list">
-                                <li class="portfolio__item">
-                                  <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/01.png" alt="portfolio"></div>
-                                  <h3 class="portfolio__title">Металлический борт 150 (30х150х50)</h3>
-                                  <ul class="portfolio__tags portfolio-tags">
-                                    <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
-                                    <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
-                                  </ul>
-                                  <p class="portfolio__description">Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)</p>
-                                </li>
-                                <li class="portfolio__item">
-                                  <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/02.png" alt="portfolio"></div>
-                                  <h3 class="portfolio__title">Металлический борт 100</h3>
-                                  <ul class="portfolio__tags portfolio-tags">
-                                    <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
-                                    <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
-                                  </ul>
-                                  <p class="portfolio__description">Металлический борт из оцинкованной стали с зазором под пластину S=1,5 мм. Габариты: (10х100х50)</p>
-                                </li>
-                                <li class="portfolio__item">
-                                  <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/03.png" alt="portfolio"></div>
-                                  <h3 class="portfolio__title">Вентиляционная решетка</h3>
-                                  <ul class="portfolio__tags portfolio-tags">
-                                    <li class="portfolio-tags__item tag-lightblue">Изготовление металлоизделий</li>
-                                    <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
-                                  </ul>
-                                  <p class="portfolio__description">Декоративная решетка на вентиляционные отверстия из нержавеющей стали AISI 304 матовая S=5мм и перфорированного листа S=1мм.</p>
-                                </li>
+                <!--mixin createPortfolioItems ( portfolioData )-->
+                <!--  each card in portfolioData-->
+                <!--    li.portfolio__item-->
+                <!--      .portfolio__image-wrapper-->
+                <!--        img(src=card.srcImg alt='portfolio')-->
+                <!--      h3.portfolio__title=card.title-->
+                <!--      ul.portfolio__tags.portfolio-tags-->
+                <!--        li.portfolio-tags__item(class=card.tag_item_1.classColor)=card.tag_item_1.text-->
+                <!--        li.portfolio-tags__item(class=card.tag_item_2.classColor)=card.tag_item_2.text-->
+                <!--      p.portfolio__description= card.description-->
                                 <li class="portfolio__item">
                                   <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/04.png" alt="portfolio"></div>
                                   <h3 class="portfolio__title">Кронштейн для крепления фасада</h3>
@@ -169,25 +176,80 @@
                                     <li class="portfolio-tags__item tag-lightblue">Изготовление металлоизделий</li>
                                   </ul>
                                   <p class="portfolio__description">Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005</p>
+                                  <div class="portfolio-item__popup portfolio-popup__item">
+                                    <div class="portfolio-popup__wrapper">
+                                      <div class="portfolio-popup__close">
+                                        <svg width="14" height="14">
+                                          <use href="assets/img/sprite.svg#close"></use>
+                                        </svg>
+                                      </div>
+                                      <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                                        <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                                          <div class="swiper-slide"><img src="./assets/img/portfolio/04.png" alt="portfolio"></div>
+                                          <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"></div>
+                                          <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"></div>
+                                        </div>
+                                      </div>
+                                      <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                                        <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                                          <div class="swiper-slide"><img src="./assets/img/portfolio/04.png" alt="portfolio"></div>
+                                          <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"></div>
+                                          <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"></div>
+                                        </div>
+                                      </div>
+                                      <div class="portfolio-popup__content">
+                                        <div class="portfolio-popup__date">23.08.2022</div>
+                                        <div class="portfolio-popup__title">Кронштейн для крепления фасада</div>
+                                        <ul class="portfolio-popup__tags portfolio-popup-tags">
+                                          <li class="portfolio-tags__item tag-orange portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                                          <li class="portfolio-tags__item tag-lightblue portfolio-popup-tags__item tag-lightblue">Изготовление металлоизделий</li>
+                                        </ul>
+                                        <div class="portfolio-popup__description">Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </li>
-                                <li class="portfolio__item">
-                                  <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/05.png" alt="portfolio"></div>
-                                  <h3 class="portfolio__title">Икля</h3>
-                                  <ul class="portfolio__tags portfolio-tags">
-                                    <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
-                                    <li class="portfolio-tags__item tag-pink">Столярные работы</li>
-                                  </ul>
-                                  <p class="portfolio__description">Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005</p>
-                                </li>
-                                <li class="portfolio__item">
-                                  <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/06.png" alt="portfolio"></div>
-                                  <h3 class="portfolio__title">Зацеп</h3>
-                                  <ul class="portfolio__tags portfolio-tags">
-                                    <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
-                                    <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
-                                  </ul>
-                                  <p class="portfolio__description">Зацеп из нержавеющей стали AISI 304 ммматовая S=1,5мм</p>
-                                </li>
+                <li class="portfolio__item portfolio-item">
+                  <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/04.png" alt="portfolio"></div>
+                  <h3 class="portfolio__title">Кронштейн для крепления фасада</h3>
+                  <ul class="portfolio__tags portfolio-tags">
+                    <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    <li class="portfolio-tags__item tag-lightblue">Изготовление металлоизделий</li>
+                  </ul>
+                  <p class="portfolio__description">TEST Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005</p>
+                  <div class="portfolio-item__popup portfolio-popup__item">
+                    <div class="portfolio-popup__wrapper">
+                      <div class="portfolio-popup__close">
+                        <svg width="14" height="14">
+                          <use href="assets/img/sprite.svg#close"></use>
+                        </svg>
+                      </div>
+                      <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                        <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                          <div class="swiper-slide"><img src="./assets/img/portfolio/04.png" alt="portfolio"></div>
+                          <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"></div>
+                          <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"></div>
+                        </div>
+                      </div>
+                      <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                        <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                          <div class="swiper-slide"><img src="./assets/img/portfolio/04.png" alt="portfolio"></div>
+                          <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"></div>
+                          <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"></div>
+                        </div>
+                      </div>
+                      <div class="portfolio-popup__content">
+                        <div class="portfolio-popup__date">23.08.2022</div>
+                        <p class="portfolio-popup__title">Кронштейн для крепления фасада</p>
+                        <ul class="portfolio-popup__tags portfolio-popup-tags">
+                          <li class="portfolio-tags__item tag-orange portfolio-popup-tags__item">Лазерная резка</li>
+                          <li class="portfolio-tags__item tag-lightblue portfolio-popup-tags__item">Изготовление металлоизделий</li>
+                        </ul>
+                        <p class="portfolio-popup__description">Металлический борт из оцинкованной стали с зазором под пластину S=1,5 мм. Габариты: (10х100х50)</p><a class="portfolio-popup__link button arrow button--outline" href="">Смотреть кейс</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -200,7 +262,16 @@
                           <li class="production__value production-value"><span class="production-value__number">1916</span><span class="production-value__text">заказов<i>выполнено с 2017 года</i></span></li>
                           <li class="production__value production-value"><span class="production-value__number">52</span><span class="production-value__text">устройства<i>парк оборудования</i></span></li>
               </ul>
-              <div class="production__image-wrapper"><img src="./assets/img/production/photo.jpg"></div>
+              <div class="production__video-wrapper">
+                <video class="video-content" preload="auto">
+                  <source src="/assets/video/video1.mp4" type="video/mp4">
+                </video>
+                <div class="play-button">
+                  <svg width="36" height="37">
+                    <use href="assets/img/sprite.svg#playpause"></use>
+                  </svg>
+                </div>
+              </div>
               <div class="production__advantages-wrapper">
                 <ul class="production__advantages swiper-wrapper">
                             <li class="production__advantage production-advantage swiper-slide"><img class="production-advantage__icon" src="./assets/img/advantages/01.png">
@@ -247,9 +318,19 @@
                               </li>
                   </ul>
                   <div class="equipment-slide__machine equipment-slide-machine__list">
-                    <div class="equipment-slide-machine__item"><img class="equipment-slide-machine__image" src="/assets/img/equipment/01.png">
-                      <div class="equipment-slide-machine__mark-wrapper"><span class="equipment-slide-machine__mark"></span>
-                        <p class="equipment-slide-machine__mark-title"></p>
+                    <div class="equipment-slide-machine__item">
+                      <div class="equipment-slide-machine__image"><img src="assets/img/equipment/01.png"></div>
+                      <div class="equipment-slide-machine__mark-wrapper machine__mark--1" style="right:55%; bottom: 25%"><span class="equipment-slide-machine__mark"></span>
+                        <p class="equipment-slide-machine__mark-title">Максимальный размер листа</p>
+                        <p class="equipment-slide-machine__mark-text">Станок принимает заготовки габаритами до 3000х1500 мм</p>
+                      </div>
+                      <div class="equipment-slide-machine__mark-wrapper machine__mark--2" style="right:14%; bottom: 24%"><span class="equipment-slide-machine__mark left"></span>
+                        <p class="equipment-slide-machine__mark-title">Мощный лазер</p>
+                        <p class="equipment-slide-machine__mark-text">Лазер мощностью более 8000 КВт</p>
+                      </div>
+                      <div class="equipment-slide-machine__mark-wrapper machine__mark--3" style="right:9%; bottom: 45%"><span class="equipment-slide-machine__mark left"></span>
+                        <p class="equipment-slide-machine__mark-title">Высокоточный луч</p>
+                        <p class="equipment-slide-machine__mark-text">Точность реза луча +/- 0,02 мм</p>
                       </div>
                       <div class="equipment-slide__links"><a class="button button--outline arrow" href="">Смотреть услугу</a><a class="button button--bg-grey" href="">Характеристики</a></div>
                     </div>
@@ -261,21 +342,29 @@
           <div class="news">
             <div class="container news__container">
               <h2 class="title-section">Новости Спирит Бер</h2><a class="button button--outline" href="">Читать все новости</a>
-              <div class="news__list"><a class="news__item" href=""><img class="news__image" src="./assets/img/news/06.jpg">
+              <div class="news__list"><a class="news__item" href="">
+                  <div class="news__image"><img src="./assets/img/news/06.jpg"></div>
                   <h3 class="news__title">Aisi 304 и 430: отличия</h3>
-                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href=""><img class="news__image" src="./assets/img/news/02.jpg">
+                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href="">
+                  <div class="news__image"><img src="./assets/img/news/02.jpg"></div>
                   <h3 class="news__title">Технологии металлообработки</h3>
-                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href=""><img class="news__image" src="./assets/img/news/03.jpg">
+                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href="">
+                  <div class="news__image"><img src="./assets/img/news/03.jpg"></div>
                   <h3 class="news__title">Порошковая покраска: состав, виды, области применения</h3>
-                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href=""><img class="news__image" src="./assets/img/news/04.jpg">
+                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href="">
+                  <div class="news__image"><img src="./assets/img/news/04.jpg"></div>
                   <h3 class="news__title">Обзор и сравнение CO2- и волоконных лазеров</h3>
-                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href=""><img class="news__image" src="./assets/img/news/05.png">
+                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href="">
+                  <div class="news__image"><img src="./assets/img/news/05.png"></div>
                   <h3 class="news__title">Обработка нержавеющей стали</h3>
-                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href=""><img class="news__image" src="./assets/img/news/06.jpg">
+                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href="">
+                  <div class="news__image"><img src="./assets/img/news/06.jpg"></div>
                   <h3 class="news__title">Резка металла: виды и особенности</h3>
-                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href=""><img class="news__image" src="./assets/img/news/07.jpg">
+                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href="">
+                  <div class="news__image"><img src="./assets/img/news/07.jpg"></div>
                   <h3 class="news__title">Виды резки металла</h3>
-                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href=""><img class="news__image" src="./assets/img/news/08.jpg">
+                  <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a><a class="news__item" href="">
+                  <div class="news__image"><img src="./assets/img/news/08.jpg"></div>
                   <h3 class="news__title">Технологии процесса полимерного покрытия</h3>
                   <time class="news__date">14 июля 2022 г.</time><span class="news__tag">Статьи</span><span class="news__link">Подробнее</span></a></div>
             </div>
@@ -324,10 +413,10 @@
             <div class="footer__nav footer-nav footer-nav--contact">
               <h4 class="footer-nav__title">Контакты</h4>
               <ul class="footer-nav__list">
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">+7 (499) 994-00-97</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">sales@spirit-bear.ru</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="tel:+74999940097">+7 (499) 994-00-97</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="mailto:sales@spirit-bear.ru">sales@spirit-bear.ru</a></li>
                             <li class="footer-nav__item"><a class="footer-nav__link" href="">Московская область, г.о.Солнечногорск, деревня Пешки, цех № 22</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Пн - Пт с 09:00 до 18:00, Сб - Вс выходной</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Пн - Пт с 09:00 до 18:00, Сб - Вс выходной</a></li>
               </ul>
             </div>
           </div>
