@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+
+<!-- ---- Form ------------>
+<!-- Name-->
+<!-- Tel-->
+<!-- Text-->
+<!-- Кнопка "отправить" и согласие--><!DOCTYPE html>
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
@@ -190,17 +195,21 @@
               </div>
               <form class="feedback__form feedback-form" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
                 <div class="feedback-form__input-container">
-                  <input id="name" placeholder="Иванов Иван Иванович*" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40" required><span class="feedback-form__error"></span><span class="feedback-form__mandatory">Обязательное поле</span>
+                  <input id="name" placeholder="Иванов Иван Иванович*" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40" required="required"/><span class="feedback-form__error">Ошибка ввода
+                    <svg width="14" height="14" fill="currentColor">
+                      <use href="assets/img/sprite.svg#question"></use>
+                    </svg></span>
+                  <!--span.feedback-form__mandatory Обязательное поле-->
                 </div>
                 <div class="feedback-form__input-container">
-                  <input id="phone" type="tel" name="phone" placeholder="+7(___)___-__-__" data-tel-input="" pattern=".{18,}" maxlength="18" autocomplete="off" required><span class="feedback-form__error"></span>
+                  <input id="phone" type="tel" name="phone" placeholder="+7(___)___-__-__" data-tel-input="" pattern=".{18,}" maxlength="18" autocomplete="off" required="required"/><span class="feedback-form__error"></span>
                 </div>
                 <div class="feedback-form__input-container">
-                  <textarea id="message" placeholder="Пожалуйста, введите запрос*" name="message" maxlength="200" rows="4" required></textarea><span class="feedback-form__error"></span>
+                  <textarea id="message" placeholder="Пожалуйста, введите запрос*" name="message" maxlength="200" rows="4" required="required"></textarea><span class="feedback-form__error"></span>
                 </div>
                 <div class="feedback-form__sending">
                   <label>
-                    <input type="checkbox" checked><span class="feedback-form__checkbox"></span><span class="feedback-form__agreement">Даю согласие на обработку персональных данных</span>
+                    <input type="checkbox" checked="checked"/><span class="feedback-form__checkbox"></span><span class="feedback-form__agreement">Даю согласие на обработку персональных данных</span>
                   </label>
                   <button class="button arrow button--bg-grey button--outline" type="submit">Отправить&nbsp;вопрос</button>
                 </div>
