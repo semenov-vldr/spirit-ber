@@ -18,7 +18,7 @@
   <body>
     <div class="page">
       <header class="header">
-        <div class="header__container"><a class="header__logo" href="/">
+        <div class="header__container"><a class="header__logo" href="index.html">
             <svg width="181" height="40" fill="#fff">
               <use href="assets/img/sprite.svg#header-logo"></use>
             </svg></a>
@@ -28,7 +28,7 @@
               <li class="header-nav__item header-nav__item--services">
                 <!--a.header-nav__link(href="/service.html" ) Услуги--><a class="header-nav__link">Услуги</a>
                 <ul class="header-subnav header-subnav-1">
-                  <li class="header-subnav__item"><a class="header-subnav__link" href="/laser-cutting.html">Лазерная резка металла</a>
+                  <li class="header-subnav__item"><a class="header-subnav__link" href="laser-cutting.html">Лазерная резка металла</a>
                     <ul class="header-subnav header-subnav-2">
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка листа</a></li>
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка швеллера</a></li>
@@ -36,7 +36,7 @@
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка уголка</a></li>
                     </ul>
                   </li>
-                  <li class="header-subnav__item"><a class="header-subnav__link" href="/laser-cutting.html">Гибка листового металла</a>
+                  <li class="header-subnav__item"><a class="header-subnav__link" href="laser-cutting.html">Гибка листового металла</a>
                     <ul class="header-subnav header-subnav-2">
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка листа2</a></li>
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка швеллера2</a></li>
@@ -58,10 +58,10 @@
                             <li class="header-subnav__item"><a class="header-subnav__link" href="/">Металлоконструкции</a></li>
                 </ul>
               </li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="/">Цены</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="/portfolio.html">Примеры работ</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="/about.html">О нас</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="/contacts.html">Контакты</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="">Цены</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="portfolio.html">Примеры работ</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="about.html">О нас</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="contacts.html">Контакты</a></li>
             </ul>
             <div class="header__contact header-contact">
               <button class="header-contact__menu-tablet" type="button">Связаться с нами<span>Телефон, почта, адрес</span></button>
@@ -193,7 +193,7 @@
                   <input id="name" placeholder="Иванов Иван Иванович*" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40" required><span class="feedback-form__error"></span><span class="feedback-form__mandatory">Обязательное поле</span>
                 </div>
                 <div class="feedback-form__input-container">
-                  <input id="phone" type="tel" name="phone" placeholder="89005555555" data-tel-input="" pattern="[0-9]+$" maxlength="15" autocomplete="off" required><span class="feedback-form__error"></span>
+                  <input id="phone" type="tel" name="phone" placeholder="+7(___)___-__-__" data-tel-input="" pattern=".{18,}" maxlength="18" autocomplete="off" required><span class="feedback-form__error"></span>
                 </div>
                 <div class="feedback-form__input-container">
                   <textarea id="message" placeholder="Пожалуйста, введите запрос*" name="message" maxlength="200" rows="4" required></textarea><span class="feedback-form__error"></span>
