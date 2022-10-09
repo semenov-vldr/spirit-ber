@@ -24,7 +24,7 @@ header.header
 
           ul.header-subnav.header-subnav-1
             li.header-subnav__item
-              a.header-subnav__link(href="/laser-cutting.html") Лазерная резка металла
+              a.header-subnav__link(href="laser-cutting.html") Лазерная резка металла
               ul.header-subnav.header-subnav-2
                 +headerSubNavItem('/', 'Лазерная резка листа')
                 +headerSubNavItem('/', 'Лазерная резка швеллера')
@@ -53,10 +53,10 @@ header.header
             +headerSubNavItem('/', 'Металлоконструкции')
 
 
-        +headerNavItem('/', 'Цены')
-        +headerNavItem('/portfolio.html', 'Примеры работ')
-        +headerNavItem('/about.html', 'О нас')
-        +headerNavItem('/contacts.html', 'Контакты')
+        +headerNavItem('', 'Цены')
+        +headerNavItem('portfolio.html', 'Примеры работ')
+        +headerNavItem('about.html', 'О нас')
+        +headerNavItem('contacts.html', 'Контакты')
 
       .header__contact.header-contact
         button(type="button").header-contact__menu-tablet Связаться с нами
