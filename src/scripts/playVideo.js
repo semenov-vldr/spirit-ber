@@ -2,12 +2,13 @@ const playList = document.querySelectorAll('.play-button');
 
 function playShow (btnPlay, video) {
   video.play();
-  btnPlay.classList.add('visually-hidden')
+  btnPlay.classList.add('visually-hidden');
+  console.log('play')
 };
 
 function pauseShow (btnPlay, video) {
   video.pause();
-  btnPlay.classList.remove('visually-hidden')
+  btnPlay.classList.remove('visually-hidden');
 };
 
 

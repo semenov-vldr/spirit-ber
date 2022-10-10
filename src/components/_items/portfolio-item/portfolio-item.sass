@@ -114,12 +114,18 @@
       border-radius: 8px
       box-shadow: inset 0px 0px 3px rgba(113, 200, 255, 0.24)
       filter: drop-shadow(0px 251px 100px rgba(24, 26, 27, 0.04)) drop-shadow(0px 141px 85px rgba(24, 26, 27, 0.13)) drop-shadow(0px 63px 63px rgba(24, 26, 27, 0.21)) drop-shadow(0px 16px 34px rgba(24, 26, 27, 0.25)) drop-shadow(0px 0px 0px rgba(24, 26, 27, 0.25))
+      @media (max-width: 1400px)
+        grid-template-columns: 60% 40%
+      @media (max-width: 1100px)
+        grid-template-columns: 1fr
+        grid-template-rows: 50% auto
 
       .swiper-slide
         img
-          width: 100%
+          width: auto
           height: 100%
           object-fit: cover
+          aspect-ratio: 55 / 43
 
     &__swiper
       grid-column: span 1
@@ -133,6 +139,8 @@
       padding: 25px 50px
       grid-row: 2 / span 1
       background-color: rgba($frosted-top, 0.7)
+      @media (max-width: 1100px)
+        display: none
 
       .swiper-slide
         max-width: 180px
@@ -173,6 +181,9 @@
         background-color: rgba(#6A6A6A, 0.2)
       &:hover
         background-color: rgba(#6A6A6A, 0.3)
+      @media (max-width: 1100px)
+        right: 10px
+        top: 10px
 
     &__link
       margin-top: 32px

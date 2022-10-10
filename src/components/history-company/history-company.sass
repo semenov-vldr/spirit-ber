@@ -1,0 +1,96 @@
+.history-company
+
+  &__inner
+    position: relative
+    //scroll-snap-type: x mandatory
+    cursor: pointer
+    height: 600px
+    transform: translateY(200px)
+    @media (max-width: 900px)
+      transform: translateY(80px)
+      overflow-x: auto
+      width: 1700px
+      height: 400px
+
+  &__line-years
+    margin-top: 280px
+    position: relative
+    &::after
+      position: absolute
+      content: ""
+      background: repeating-linear-gradient(to right,$accent 0,$accent 4px,transparent 4px,transparent 8px)
+      height: 2px
+      padding: 0 90px
+      left: 90px
+      right: 90px
+      @media (max-width: 1600px)
+        left: 60px
+        right: 60px
+      @media (max-width: 968px)
+        left: 20px
+        right: 20px
+
+  &__list
+    position: relative
+    display: flex
+    @media (max-width: 900px)
+      gap: 32px
+
+  &-item
+    position: relative
+    max-width: 350px
+    &__title
+      font-family: "SpaceGrotesk", sans-serif
+      color: $accent
+      @include fontSize(48, 60)
+    &__text
+      @include fontSize(14, 16)
+
+    &__tie
+      position: absolute
+      width: 2px
+      height: 100px
+      background-color: $accent
+      left: 0
+      right: 0
+      margin: 0 auto
+      &::before,
+      &::after
+        position: absolute
+        content: ""
+        width: 8px
+        aspect-ratio: 1 / 1
+        background-color: $accent
+        left: 0
+        right: 0
+      &::before
+        top: 0
+        transform: translate(-3px ,-100%) rotate(45deg)
+      &::after
+        bottom: 0
+        transform: translate(-3px, 100%) rotate(45deg)
+      @media (max-width: 900px)
+        height: 60px
+    &:nth-child(even)
+      transform: translateY(100px)
+    &:nth-child(even) &__tie
+      transform: translateY(-100px)
+      top: 5px
+
+    &:nth-child(odd)
+      transform: translateY(calc(-100% - 125px))
+    &:nth-child(odd) &__tie
+      transform: translateY(100px)
+      bottom: -20px
+    @media (max-width: 900px)
+      &:nth-child(odd),
+      &:nth-child(even)
+        transform: translateY(calc(-100% - 80px))
+      &:nth-child(odd) &__tie,
+      &:nth-child(even) &__tie
+        transform: translateY(56px)
+        bottom: -20px
+        top: initial
+
+
+

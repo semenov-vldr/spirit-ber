@@ -102,34 +102,38 @@
       background-color: #E5E5E6
 
   &-table__footnote
-    color: rgba(#fff, 0.5)
-    display: block
     grid-column: 1 / -1
-    font-size: 12px
-    &:not(:last-child)
-      margin-bottom: 10px
-    sup
-      margin-right: 8px
-    @media (max-width: 768px)
-      order: 1
-      &:not(:last-child)
-        margin-bottom: 0
 
   &-table__pricing
     grid-column: 1 / -1
-    display: flex
-    align-items: center
-    gap: 8px
-    font-size: clamp(14px, calc(64px + (16 - 14) * ((100vw - 768px) / (1920 - 768))), 16px)
-    color: rgba(#fff, 0.5)
-    @media (max-width: 768px)
-      justify-self: center
-      justify-content: center
-      width: 100%
-      color: #fff
-      background-color: rgba(106, 106, 106, 0.1)
-      border-radius: 4px
-      padding: 16px 25px
+
+.footenote__item
+  color: rgba(#fff, 0.5)
+  display: block
+  font-size: 12px
+  &:not(:last-child)
+    margin-bottom: 10px
+  sup
+    margin-right: 8px
+  @media (max-width: 768px)
+    order: 1
+    //&:not(:last-child)
+    //  margin-bottom: 0
+
+.footenote__pricing
+  display: flex
+  align-items: center
+  gap: 8px
+  font-size: clamp(14px, calc(64px + (16 - 14) * ((100vw - 768px) / (1920 - 768))), 16px)
+  color: rgba(#fff, 0.5)
+  @media (max-width: 768px)
+    justify-self: center
+    justify-content: center
+    width: 100%
+    color: #fff
+    background-color: rgba(106, 106, 106, 0.1)
+    border-radius: 4px
+    padding: 16px 25px
 
 
 
