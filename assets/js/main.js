@@ -66,6 +66,75 @@
 
 }
 
+{
+
+  let myMap;
+
+  ymaps.ready(init);
+
+  function init () {
+    myMap = new ymaps.Map('map-delivery', {
+
+      center: [55.77567297366562,37.616599835937514],
+      zoom: 5,
+      controls: []
+    });
+
+    var myGeoObject = new ymaps.GeoObject({
+      // Описываем геометрию геообъекта.
+      geometry: {
+        // Тип геометрии - "Многоугольник".
+        type: "Polygon",
+        // Указываем координаты вершин многоугольника.
+        coordinates: [
+          // Координаты вершин внешнего контура.
+          [[58.90106587919162,50.59202518749981],
+            [62.30425365644154,34.39714756249991],
+            [61.419288495402085,25.254462624999952],
+            [58.3139648375561,23.93404331249995],
+            [56.06829508097347,28.657649421874922],
+            [54.046752005928525,28.679107093749906],
+            [52.637767811218026,31.458390617187398],
+            [51.29200291865248,33.09509601562492],
+            [50.481450658306365,34.215186499999916],
+            [49.88218060774752,36.80864660241689],
+            [49.160187972696114,38.9626535798339],
+            [48.39125152042711,45.292151909667886],
+            [50.596317656485226,47.755836069335814],
+            [48.424967397462325,51.62851688867174],
+            [51.81210613026443,55.686352618906554],
+            [54.14341697177243,55.11942234374991],
+            [58.90106587919162,50.59202518749981]]
+
+        ],
+        // Задаем правило заливки внутренних контуров по алгоритму "nonZero".
+        fillRule: "nonZero"
+      },
+      // Описываем свойства геообъекта.
+      properties:{
+        // Содержимое балуна.
+        balloonContent: "География поставок"
+      }
+    }, {
+      // Описываем опции геообъекта.
+      // Цвет заливки.
+      fillColor: '#2CE3FF',
+      // Цвет обводки.
+      strokeColor: '#24C2DB',
+      // Общая прозрачность (как для заливки, так и для обводки).
+      opacity: 0.3,
+      // Ширина обводки.
+      strokeWidth: 2,
+      // Стиль обводки.
+      strokeStyle: 'solid'
+    });
+
+    // Добавляем многоугольник на карту.
+    myMap.geoObjects.add(myGeoObject);
+  }
+
+}
+
 const phoneInputs = document.querySelectorAll('input[data-tel-input]');
 
 const getInputNumbersValue = (input) => {
@@ -339,56 +408,49 @@ forms.forEach(form => {
 // }
 
 {
-  let swiper__thumbs = new Swiper(".portfolio-popup__swiper--thumbs", {
-    //loop: true,
-    spaceBetween: 28,
-    slidesPerView: "auto",
-    freeMode: true,
-    watchSlidesProgress: true,
-    watchSlidesVisibility: true,
-    watchOverflow: true,
-    initialSlide: 0,
-  });
-
-  let swiper__top = new Swiper(".portfolio-popup__swiper--top", {
-    loop: true,
-    slidesPerView: 1,
-    centeredSlides: true,
-    initialSlide: 0,
-    thumbs: {
-      swiper: swiper__thumbs,
-    },
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true
-    }
-  });
+  // let swiper__thumbs = new Swiper(".portfolio-popup__swiper--thumbs", {
+  //   //loop: true,
+  //   spaceBetween: 28,
+  //   slidesPerView: "auto",
+  //   freeMode: true,
+  //   watchSlidesProgress: true,
+  //   watchSlidesVisibility: true,
+  //   watchOverflow: true,
+  //   initialSlide: 0,
+  // });
+  //
+  // let swiper__top = new Swiper(".portfolio-popup__swiper--top", {
+  //   loop: true,
+  //   slidesPerView: 1,
+  //   centeredSlides: true,
+  //   initialSlide: 0,
+  //   thumbs: {
+  //     swiper: swiper__thumbs,
+  //   },
+  //   effect: 'fade',
+  //   fadeEffect: {
+  //     crossFade: true
+  //   }
+  // });
 
   //--------------------------------------
-
-  const activeClass = 'js-popup-active';
 
   const portfolio = document.querySelector('.portfolio');
   const portfolioItems = portfolio.querySelectorAll('.portfolio__item');
 
-
-  const addClassActive = (item) => item.classList.add(activeClass);
-  const removeClassActive = (item) => {
-    item.classList.remove(activeClass);
-    console.log('close');
-  }
+  const addClassActive = (item) => item.classList.add('js-popup-active');
+  const removeClassActive = (item) => item.classList.remove('js-popup-active');
 
   portfolioItems.forEach(item => {
     item.addEventListener('click', () => addClassActive(item));
 
     const close = item.querySelector('.portfolio-popup__close');
-    if (close) {
-      close.addEventListener('click', () => {
+      close.addEventListener('click', function () {
         removeClassActive(item);
-        console.log(item)
+        console.log(this)
       });
 
-    }
+
 
   });
 
@@ -475,9 +537,29 @@ forms.forEach(form => {
     myMap = new ymaps.Map('map-contacts', {
 
       center: [56.13050415063692,37.07479867231817],
-      zoom: 17,
+      zoom: 16,
       controls: []
     });
+
+    const pointPickup = [56.130236759852764,37.07856198817317];
+    const pointAddress = [56.130021055835314,37.079999652205565];
+
+    const myPlacemarkPickup = new ymaps.Placemark(pointPickup, {}, {
+      iconLayout: 'default#image',
+      iconImageHref: './assets/img/icons/orange-mark.svg',
+      iconImageSize: [51, 53],
+      iconImageOffset: [0, -53]
+    });
+
+    const myPlacemarkAddress = new ymaps.Placemark(pointAddress, {}, {
+      iconLayout: 'default#image',
+      iconImageHref: './assets/img/icons/accent-mark.svg',
+      iconImageSize: [51, 53],
+      iconImageOffset: [0, -53]
+    })
+
+    myMap.geoObjects.add(myPlacemarkPickup)
+    myMap.geoObjects.add(myPlacemarkAddress)
 
 
   }
@@ -820,12 +902,13 @@ const playList = document.querySelectorAll('.play-button');
 
 function playShow (btnPlay, video) {
   video.play();
-  btnPlay.classList.add('visually-hidden')
+  btnPlay.classList.add('visually-hidden');
+  console.log('play')
 };
 
 function pauseShow (btnPlay, video) {
   video.pause();
-  btnPlay.classList.remove('visually-hidden')
+  btnPlay.classList.remove('visually-hidden');
 };
 
 

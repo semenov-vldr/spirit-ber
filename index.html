@@ -4,6 +4,7 @@
 <!-- Tel-->
 <!-- Text-->
 <!-- Кнопка "отправить" и согласие-->
+<!-- карточка партнера-->
 <!--mixin link(href, name)-->
 <!--  a(href=gh_pages+href)= name-->
 <!--+link('about.html', 'О нас')--><!DOCTYPE html>
@@ -194,6 +195,7 @@
                                           <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"></div>
                                           <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"></div>
                                         </div>
+                                        <div class="swiper-pagination"></div>
                                       </div>
                                       <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
                                         <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
@@ -214,47 +216,91 @@
                                     </div>
                                   </div>
                                 </li>
-                <li class="portfolio__item portfolio-item">
-                  <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/04.png" alt="portfolio"></div>
-                  <h3 class="portfolio__title">Кронштейн для крепления фасада</h3>
-                  <ul class="portfolio__tags portfolio-tags">
-                    <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
-                    <li class="portfolio-tags__item tag-lightblue">Изготовление металлоизделий</li>
-                  </ul>
-                  <p class="portfolio__description">TEST Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005</p>
-                  <div class="portfolio-item__popup portfolio-popup__item">
-                    <div class="portfolio-popup__wrapper">
-                      <div class="portfolio-popup__close">
-                        <svg width="14" height="14">
-                          <use href="assets/img/sprite.svg#close"></use>
-                        </svg>
-                      </div>
-                      <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
-                        <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
-                          <div class="swiper-slide"><img src="./assets/img/portfolio/04.png" alt="portfolio"></div>
-                          <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"></div>
-                          <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"></div>
-                        </div>
-                      </div>
-                      <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
-                        <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
-                          <div class="swiper-slide"><img src="./assets/img/portfolio/04.png" alt="portfolio"></div>
-                          <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"></div>
-                          <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"></div>
-                        </div>
-                      </div>
-                      <div class="portfolio-popup__content">
-                        <div class="portfolio-popup__date">23.08.2022</div>
-                        <p class="portfolio-popup__title">Кронштейн для крепления фасада</p>
-                        <ul class="portfolio-popup__tags portfolio-popup-tags">
-                          <li class="portfolio-tags__item tag-orange portfolio-popup-tags__item">Лазерная резка</li>
-                          <li class="portfolio-tags__item tag-lightblue portfolio-popup-tags__item">Изготовление металлоизделий</li>
-                        </ul>
-                        <p class="portfolio-popup__description">Металлический борт из оцинкованной стали с зазором под пластину S=1,5 мм. Габариты: (10х100х50)</p><a class="portfolio-popup__link button arrow button--outline" href="">Смотреть кейс</a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
+                                <li class="portfolio__item">
+                                  <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/05.png" alt="portfolio"></div>
+                                  <h3 class="portfolio__title">Кронштейн для крепления фасада</h3>
+                                  <ul class="portfolio__tags portfolio-tags">
+                                    <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                                    <li class="portfolio-tags__item tag-lightblue">Изготовление металлоизделий</li>
+                                  </ul>
+                                  <p class="portfolio__description">Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005</p>
+                                  <div class="portfolio-item__popup portfolio-popup__item">
+                                    <div class="portfolio-popup__wrapper">
+                                      <div class="portfolio-popup__close">
+                                        <svg width="14" height="14">
+                                          <use href="assets/img/sprite.svg#close"></use>
+                                        </svg>
+                                      </div>
+                                      <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                                        <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                                          <div class="swiper-slide"><img src="./assets/img/portfolio/04.png" alt="portfolio"></div>
+                                          <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"></div>
+                                          <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"></div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                      </div>
+                                      <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                                        <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                                          <div class="swiper-slide"><img src="./assets/img/portfolio/04.png" alt="portfolio"></div>
+                                          <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"></div>
+                                          <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"></div>
+                                        </div>
+                                      </div>
+                                      <div class="portfolio-popup__content">
+                                        <div class="portfolio-popup__date">23.08.2022</div>
+                                        <div class="portfolio-popup__title">Кронштейн для крепления фасада</div>
+                                        <ul class="portfolio-popup__tags portfolio-popup-tags">
+                                          <li class="portfolio-tags__item tag-orange portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                                          <li class="portfolio-tags__item tag-lightblue portfolio-popup-tags__item tag-lightblue">Изготовление металлоизделий</li>
+                                        </ul>
+                                        <div class="portfolio-popup__description">Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                <!--li.portfolio__item.portfolio-item-->
+                <!--  .portfolio__image-wrapper-->
+                <!--    img(src='./assets/img/portfolio/04.png' alt='portfolio')-->
+                <!--  h3.portfolio__title Кронштейн для крепления фасада-->
+                <!--  ul.portfolio__tags.portfolio-tags-->
+                <!--    li.portfolio-tags__item.tag-orange Лазерная резка-->
+                <!--    li.portfolio-tags__item.tag-lightblue Изготовление металлоизделий-->
+                <!--  p.portfolio__description TEST Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005-->
+                <!---->
+                <!--  .portfolio-item__popup.portfolio-popup__item-->
+                <!--    .portfolio-popup__wrapper-->
+                <!--      .portfolio-popup__close-->
+                <!--        svg(width="14" height="14")-->
+                <!--          use(href='assets/img/sprite.svg#close')-->
+                <!---->
+                <!---->
+                <!--      .portfolio-popup__swiper.portfolio-popup__swiper--top-->
+                <!--        .portfolio-popup__swiper-wrapper.swiper-wrapper-->
+                <!--          .swiper-slide-->
+                <!--            img(src='./assets/img/portfolio/04.png' alt='portfolio')-->
+                <!--          .swiper-slide-->
+                <!--            img(src='./assets/img/portfolio/05.png' alt='portfolio')-->
+                <!--          .swiper-slide-->
+                <!--            img(src='./assets/img/portfolio/06.png' alt='portfolio')-->
+                <!---->
+                <!--      .portfolio-popup__swiper.portfolio-popup__swiper--thumbs-->
+                <!--        .portfolio-popup__swiper-wrapper.swiper-wrapper-->
+                <!--          .swiper-slide-->
+                <!--            img(src='./assets/img/portfolio/04.png' alt='portfolio')-->
+                <!--          .swiper-slide-->
+                <!--            img(src='./assets/img/portfolio/05.png' alt='portfolio')-->
+                <!--          .swiper-slide-->
+                <!--            img(src='./assets/img/portfolio/06.png' alt='portfolio')-->
+                <!---->
+                <!--      .portfolio-popup__content-->
+                <!--        .portfolio-popup__date 23.08.2022-->
+                <!--        p.portfolio-popup__title Кронштейн для крепления фасада-->
+                <!--        ul.portfolio-popup__tags.portfolio-popup-tags-->
+                <!--          li.portfolio-tags__item.tag-orange.portfolio-popup-tags__item Лазерная резка-->
+                <!--          li.portfolio-tags__item.tag-lightblue.portfolio-popup-tags__item Изготовление металлоизделий-->
+                <!---->
+                <!--        p.portfolio-popup__description Металлический борт из оцинкованной стали с зазором под пластину S=1,5 мм. Габариты: (10х100х50)-->
+                <!--        a.portfolio-popup__link.button.arrow.button--outline(href="") Смотреть кейс-->
               </ul>
             </div>
           </div>
