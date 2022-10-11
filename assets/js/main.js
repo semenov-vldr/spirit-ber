@@ -566,24 +566,21 @@
 
   //--------------------------------------
 
-  const portfolio = document.querySelector('.portfolio');
-  const portfolioItems = portfolio.querySelectorAll('.portfolio__item');
-
-  const addClassActive = (item) => item.classList.add('js-popup-active');
-  const removeClassActive = (item) => item.classList.remove('js-popup-active');
-
-  portfolioItems.forEach(item => {
-    item.addEventListener('click', () => addClassActive(item));
-
-    const close = item.querySelector('.portfolio-popup__close');
-      close.addEventListener('click', function () {
-        removeClassActive(item);
-        console.log(this)
-      });
-
-
-
-  });
+  // const portfolio = document.querySelector('.portfolio');
+  // const portfolioItems = portfolio.querySelectorAll('.portfolio__item');
+  //
+  // const addClassActive = (item) => item.classList.add('js-popup-active');
+  // const removeClassActive = (item) => item.classList.remove('js-popup-active');
+  //
+  // portfolioItems.forEach(item => {
+  //   item.addEventListener('click', () => addClassActive(item));
+  //
+  //   const close = item.querySelector('.portfolio-popup__close');
+  //     close.addEventListener('click', function () {
+  //       removeClassActive(item);
+  //       console.log(this)
+  //     });
+  // });
 
 
 }
