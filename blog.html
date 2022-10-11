@@ -118,6 +118,18 @@
               </div>
               <form class="feedback__form feedback-form" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
                 <div class="feedback-form__input-container">
+                  <h3 class="feedback-form__input-title">Прикрепите файлы</h3>
+                  <div class="feedback-form__upload feedback-form-upload">
+                    <svg class="feedback-form-upload__icon" width="24" height="19" fill="#fff">
+                      <use href="assets/img/sprite.svg#drop"></use>
+                    </svg>
+                    <input class="feedback-form-upload__input visually-hidden" id="inputfile" type="file" name="file" multiple accept=".pdf, .doc, .rtf, .jpg, .jpeg, .png" onchange="handleFiles(this.files)">
+                    <label class="feedback-form-upload__label" for="inputfile">Перетащите сюда файл для загрузки</label>
+                    <u>или выберите его в проводнике</u>
+                  </div>
+                  <site class="feedback-form__input-note">Размер файлов не более 150 мб. Допустимые форматы: .pdf, .doc, .rtf, .jpg, .png</site>
+                </div>
+                <div class="feedback-form__input-container">
                   <input id="name" placeholder="Иванов Иван Иванович*" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40" required="required"/><span class="feedback-form__error">Ошибка ввода
                     <svg width="14" height="14" fill="currentColor">
                       <use href="assets/img/sprite.svg#question"></use>
@@ -135,10 +147,6 @@
                     <input type="checkbox" checked="checked"/><span class="feedback-form__checkbox"></span><span class="feedback-form__agreement">Даю согласие на обработку персональных данных</span>
                   </label>
                   <button class="button arrow button--bg-grey button--outline" type="submit">Отправить&nbsp;вопрос</button>
-                </div>
-                <div class="feedback-form__input-container">
-                  <input id="inputdrop" type="file" name="file" multiple>
-                  <label for="inputdrop">Перетащите сюда файл для загрузки</label><span>или выберите его в проводнике</span>
                 </div>
               </form>
             </div>
