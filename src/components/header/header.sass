@@ -74,8 +74,9 @@
 
   &-nav__item
     @media (max-width: $width-mobile)
-      padding: 25px 12px
+      //padding: 25px 12px
       background-color: $frosted-top
+      backdrop-filter: blur(60px)
       width: 100%
     @media (min-width: $width-mobile)
       &:hover .header-subnav-1
@@ -123,7 +124,8 @@
     transition: 0.2s linear
     &__item
       position: relative
-      background-color: $frosted-top
+      background-color: rgba($frosted-top, 0.7)
+      backdrop-filter: blur(60px)
       & a
         display: inline-block
         width: 100%
