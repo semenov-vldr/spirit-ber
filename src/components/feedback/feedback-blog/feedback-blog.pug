@@ -9,12 +9,18 @@
         p.feedback__text Таким образом, начало повседневной работы по формированию позиции позволяет выполнить важные задания по разработке поэтапного и последовательного развития общества.
 
     form.feedback__form.feedback-form(method='POST' action='' enctype="multipart/form-data" autocomplete="off")
+
+      .feedback-form__input-container
+        h3.feedback-form__input-title Прикрепите файлы
+        .feedback-form__upload.feedback-form-upload
+          svg.feedback-form-upload__icon(width="24" height="19" fill="#fff")
+            use(href='assets/img/sprite.svg#drop')
+          input#inputfile.feedback-form-upload__input.visually-hidden(type="file" name="file" multiple accept=".pdf, .doc, .rtf, .jpg, .jpeg, .png" onchange="handleFiles(this.files)")
+          label.feedback-form-upload__label(for='inputfile') Перетащите сюда файл для загрузки
+          u или выберите его в проводнике
+        site.feedback-form__input-note Размер файлов не более 150 мб. Допустимые форматы: .pdf, .doc, .rtf, .jpg, .png
+
       +inputName
       +inputTel
       +inputText
       +sending
-
-      .feedback-form__input-container
-        input#inputdrop(type="file" name="file" multiple)
-        label(for="inputdrop") Перетащите сюда файл для загрузки
-        span или выберите его в проводнике

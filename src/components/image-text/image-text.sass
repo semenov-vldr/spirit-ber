@@ -1,17 +1,24 @@
 .image-text
 
   &__container
-    display: grid
-    grid-template-columns: repeat(12, 1fr)
+    max-width: 1320px
+    min-width: 280px
+    padding: 0 160px
+    box-sizing: content-box
+    margin: 0 auto
+    display: flex
     gap: 40px
     align-items: center
     @media (max-width: $width-mobile)
-      grid-template-columns: 1fr
-      gap: 20px
+      flex-direction: column
+      padding: 0 50px
+    @media (max-width: 768px)
+      padding: 0 20px
 
   &__image
-    height: 100%
-    grid-column: 2 / span 5
+    flex: 0 1 50%
+    align-self: stretch
+    max-height: 660px
     border-radius: 4px
     overflow: hidden
     img
@@ -24,24 +31,69 @@
       grid-column: 1 / -1
 
   &__content
-    grid-column: 7 / span 5
-    @media (max-width: 1400px)
-      grid-column: 7 / span 6
-    @media (max-width: $width-mobile)
-      grid-column: 1 / -1
+    flex: 0 1 50%
 
 
   &__title
     font-size: clamp(18px, calc(18px + (40 - 18) * ((100vw - 768px) / (1920 - 768))), 40px)
     margin-bottom: 12px
 
-
-
-
   &__text, p
     font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 768px) / (1920 - 768))), 16px)
     &:not(:last-child)
       margin-bottom: 20px
+
+  &.col3
+
+    .image-text
+
+      &__container
+        flex-direction: column
+      &__top
+        box-sizing: content-box
+        margin: 0 auto
+        display: flex
+        gap: 40px
+        align-items: center
+        @media (max-width: $width-mobile)
+          flex-direction: column
+          padding: 0 50px
+        @media (max-width: 768px)
+          padding: 0 20px
+
+      &__swiper
+        width: 100%
+        @media (max-width: 768px)
+          order: -1
+          overflow: hidden
+
+      &-cols
+        @media (min-width: 768px)
+          margin-top: 80px
+          display: flex
+          gap: 40px
+          flex: 0 1 100%
+          justify-content: space-between
+
+
+      &-fact__list
+        width: 100%
+        display: flex
+        @media (max-width: 768px)
+
+      &-fact__item
+        @include fontSize(14, 16)
+        @media (min-width: 768px)
+          flex: 0 0 30%
+        @media (max-width: 768px)
+          padding: 12px
+          color: rgba($text, 0.6)
+          background-color: $frosted-top
+          box-shadow: $shadow-block
+          border-radius: 8px
+
+
+
 
 
 
