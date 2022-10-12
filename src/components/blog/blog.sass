@@ -1,0 +1,183 @@
+.blog
+  margin-top: 150px
+  &__container
+    text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__title
+    @include fontSize(14, 24)
+
+  .button
+    @media (max-width: $width-mobile)
+      order: 1
+      margin-top: 40px
+
+  &__list
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    margin-top: 110px
+    gap: 100px 40px
+    @media (max-width: 900px)
+      gap: 40px
+    @media (max-width: 768px)
+      grid-template-columns: repeat(2, 1fr)
+      gap: 25px
+    @media (max-width: 480px)
+      gap: 12px
+      margin-top: 0
+
+
+  &__item
+    max-width: 370px
+    position: relative
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    gap: 12px
+    aspect-ratio: 37 / 39
+    padding: 32px
+    background: linear-gradient(0deg, rgba(20, 30, 39, 0.7), rgba(20, 30, 39, 0.7))
+    text-align: left
+    border-radius: 8px
+    &:hover
+      box-shadow: $shadow-card
+    &:hover img
+      transform: scale(1.2)
+    &:hover .news__link
+      color: $white
+    @media (max-width: 1400px)
+      padding: 25px
+    @media (max-width: 900px)
+      padding: 16px
+    @media (max-width: 768px)
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8)
+        display: none
+    @media (max-width: 480px)
+      gap: 8px
+      padding: 8px
+      aspect-ratio: 4 / 5
+
+  &__image
+    position: absolute
+    width: 100%
+    height: 100%
+    overflow: hidden
+    top: 0
+    left: 0
+    img
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+      z-index: -1
+      left: 0
+      top: 0
+      transition: 0.5s ease
+
+  &__date
+    @include fontSize(12, 16)
+    white-space: nowrap
+    line-height: 1.5
+    @media (max-width: 768px)
+      order: -1
+
+  &__tag
+    width: max-content
+    @include fontSize(10, 12)
+    line-height: 1.4
+    padding: 4px 12px
+    border: 1px solid rgba($white, 0.3)
+    color: rgba($white, 0.6)
+    border-radius: 32px
+    &:hover
+      color: $white
+      border: 1px solid rgba($white, 1)
+
+  &__link
+    width: max-content
+    @include fontSize(12, 16)
+    margin-top: auto
+    border-bottom: 1px solid currentColor
+    @media (max-width: 480px)
+      display: none
+
+
+  .pagination
+    display: flex
+    margin-top: 50px
+    gap: 24px
+
+    .slider-nav__prev,
+    .slider-nav__next
+      position: initial
+      width: 44px
+      aspect-ratio: 1 / 1
+      transform: initial
+      &:disabled
+        background-color: rgba(106, 106, 106, 0.1)
+
+    &__list
+      display: flex
+      gap: 24px
+      justify-content: space-between
+
+    &__item
+      @extend .flex-center
+      width: 44px
+      aspect-ratio: 1 / 1
+      font-weight: 500
+      border-radius: 4px
+      &:hover
+        background-color: rgba(106, 106, 106, 0.2)
+      &.js-pag-active
+        background-color: rgba(106, 106, 106, 0.37)
+
+
+  &-nav
+    align-self: flex-start
+
+
+    &__title
+      @include fontSize(18, 24)
+      text-align: left
+
+    &__header
+      display: flex
+      align-items: flex-start
+      margin-bottom: 16px
+
+
+
+    &__reset
+      cursor: pointer
+      margin-left: 20px
+
+    &__list
+      display: flex
+      gap: 16px
+
+    &__item
+      width: max-content
+      font-size: 14px
+      line-height: 1.4
+      padding: 4px 12px
+      border: 1px solid rgba($white, 0.3)
+      color: rgba($white, 0.6)
+      border-radius: 32px
+      cursor: pointer
+      &:hover,
+      &.js-filter-active
+        color: $white
+        border: 1px solid rgba($white, 1)
+
+
+
+
+
+

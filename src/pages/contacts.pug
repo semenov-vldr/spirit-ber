@@ -5,12 +5,21 @@ block variables
   - var pageClass = ''
   - var activePage = 'index'
 
+mixin breadcrumbs_icon
+  svg(width="7" height="6" fill='#fff')
+    use(href="./assets/img/sprite.svg#breadcrumbs")
+
+
 
 block content
+
   .breadcrumbs
     .container.breadcrumbs__container
-      a(href="/").breadcrumbs__item Главная
-      a(href="").breadcrumbs__item Контакты
+      a(href="").breadcrumbs__item Главная
+      +breadcrumbs_icon
+      a(href="").breadcrumbs__item Что делать в городе?
+      +breadcrumbs_icon
+      a(href="").breadcrumbs__item Что делать в городе?
 
   section.section-column
 

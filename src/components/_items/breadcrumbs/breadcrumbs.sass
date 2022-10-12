@@ -12,25 +12,20 @@
     margin: 0
     display: flex
     flex-wrap: wrap
-    row-gap: 10px
-    column-gap: 34px
-  &__item
-    display: flex
     align-items: center
-    position: relative
-    font-size: clamp(12px, calc(12px + (15 - 12) * ((100vw - 768px) / (1920 - 768))), 15px)
-    color: rgba(#EBEBEB, 0.85)
+    gap: 10px
+
+  &__item
+    @include fontSize(12, 15)
+    color: #EBEBEB
     line-height: 1.2
+
   &__item:not(:last-child)
-    color: rgba(#EBEBEB, 0.4)
-  &__item:not(:last-child)::after
-    position: absolute
-    content: ""
-    background-image: url('../img/icons/breadcrumbs-icon.svg')
-    background-repeat: no-repeat
-    transform: translateX(100%)
-    right: -14px
-    width: 7px
-    height: 6px
+    color: rgba(#EBEBEB, 0.5)
+
   &__item:last-child
     pointer-events: none
+
+  svg
+    fill: rgba(#EBEBEB, 0.5)
+

@@ -1,0 +1,151 @@
+-
+  const blogList = [
+    {
+      category: 'articles',
+      href: '',
+      imgSrc: './assets/img/news/06.jpg',
+      title: 'Aisi 304 и 430: отличия',
+      date: '14 июля 2022 г.',
+      tag: 'Статьи',
+    },
+
+    {
+      category: 'cases',
+      href: '',
+      imgSrc: './assets/img/news/02.jpg',
+      title: 'Технологии металлообработки',
+      date: '14 июля 2022 г.',
+      tag: 'Кейсы',
+    },
+
+    {
+      category: 'articles',
+      href: './assets/img/news/03.jpg',
+      imgSrc: './assets/img/news/03.jpg',
+      title: 'Порошковая покраска: состав, виды, области применения',
+      date: '14 июля 2022 г.',
+      tag: 'Статьи',
+    },
+
+    {
+      category: 'reviews',
+      href: '',
+      imgSrc: './assets/img/news/04.jpg',
+      title: 'Обзор и сравнение CO2- и волоконных лазеров',
+      date: '14 июля 2022 г.',
+      tag: 'Обзоры',
+    },
+
+    {
+      category: 'news',
+      href: '',
+      imgSrc: './assets/img/news/05.png',
+      title: 'Обработка нержавеющей стали',
+      date: '14 июля 2022 г.',
+      tag: 'Новости Спирит Бер',
+    },
+    {
+      category: 'articles',
+      href: '',
+      imgSrc: './assets/img/news/06.jpg',
+      title: 'Резка металла: виды и особенности',
+      date: '14 июля 2022 г.',
+      tag: 'Статьи',
+    },
+
+    {
+      category: 'news',
+      href: '',
+      imgSrc: './assets/img/news/07.jpg',
+      title: 'Виды резки металла',
+      date: '14 июля 2022 г.',
+      tag: 'Новости Спирит Бер',
+    },
+
+    {
+      category: 'cases',
+      href: '',
+      imgSrc: './assets/img/news/08.jpg',
+      title: 'Технологии процесса полимерного покрытия',
+      date: '14 июля 2022 г.',
+      tag: 'Кейсы',
+    },
+
+
+    {
+      category: 'articles',
+      href: '',
+      imgSrc: './assets/img/news/07.jpg',
+      title: 'Виды резки металла',
+      date: '14 июля 2022 г.',
+      tag: 'Статьи',
+    },
+
+    {
+      category: 'cases',
+      href: '',
+      imgSrc: './assets/img/news/08.jpg',
+      title: 'Технологии процесса полимерного покрытия',
+      date: '14 июля 2022 г.',
+      tag: 'Кейсы',
+    },
+
+    {
+      category: 'reviews',
+      href: '',
+      imgSrc: './assets/img/news/04.jpg',
+      title: 'Обзор и сравнение CO2- и волоконных лазеров',
+      date: '14 июля 2022 г.',
+      tag: 'Обзоры',
+    },
+
+    {
+      category: 'articles',
+      href: '',
+      imgSrc: './assets/img/news/05.png',
+      title: 'Обработка нержавеющей стали',
+      date: '14 июля 2022 г.',
+      tag: 'Статьи',
+    },
+
+  ];
+
+
+mixin createGlogItem (list)
+  each blog in list
+    a(href=blog.href data-category=blog.category).blog__item
+      .blog__image
+        img(src=blog.imgSrc)
+      h3.blog__title=blog.title
+      time.blog__date=blog.date
+      span.blog__tag=blog.tag
+      span.blog__link Подробнее
+
+
+
+.blog
+  .container.blog__container
+    h1.title-section Блог Спирит Бер
+
+    nav.blog__nav.blog-nav
+      .blog-nav__header
+        span.blog-nav__title Темы
+        button.blog-nav__reset(data-filter="all")
+          svg(width="8px" height="8px" fill="#A7A7A7")
+            use(href='assets/img/sprite.svg#close')
+      ul.blog-nav__list
+        li.blog-nav__item(data-filter="news") Новости Спирит Бер
+        li.blog-nav__item(data-filter="cases") Кейсы
+        li.blog-nav__item(data-filter="articles") Статьи
+        li.blog-nav__item(data-filter="reviews") Обзоры
+
+    .blog__list
+      +createGlogItem(blogList)
+
+    .blog__pagination.pagination
+      button.slider-nav__prev(aria-label="Previous page" title="Previous page")
+      ul.pagination__list(data-current-page="1")
+      button.slider-nav__next(aria-label="Next page" title="Next page")
+
+
+

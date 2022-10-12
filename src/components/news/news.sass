@@ -6,7 +6,7 @@
     align-items: center
 
   &__title
-    font-size: clamp(14px, calc(14px + (24 - 14) * ((100vw - 768px) / (1920 - 768))), 24px)
+    @include fontSize(14, 24)
 
 
   .button
@@ -32,6 +32,7 @@
 
 
   &__item
+    max-width: 370px
     position: relative
     overflow: hidden
     display: flex
@@ -89,7 +90,7 @@
 
   &__tag
     width: max-content
-    font-size: clamp(10px, calc(10px + (12 - 10) * ((100vw - 768px) / (1920 - 768))), 12px)
+    @include fontSize(10, 12)
     line-height: 1.4
     padding: 4px 12px
     border: 1px solid rgba($white, 0.3)
@@ -101,7 +102,7 @@
 
   &__link
     width: max-content
-    font-size: clamp(12px, calc(12px + (16 - 12) * ((100vw - 768px) / (1920 - 768))), 16px)
+    @include fontSize(12, 16)
     margin-top: auto
     border-bottom: 1px solid currentColor
     @media (max-width: 480px)

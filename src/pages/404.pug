@@ -1,0 +1,17 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Что-то пошло не так"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+
+block content
+  .breadcrumbs
+    .container.breadcrumbs__container
+      a(href="index.html").breadcrumbs__item Главная
+
+  section.section-column
+    include ../components/page404/page404
+    include ../components/also-interesting/also-interesting-laser-cutting/also-interesting-laser-cutting
+

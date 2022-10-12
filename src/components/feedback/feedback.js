@@ -1,4 +1,4 @@
-{
+
 
   const phoneInputs = document.querySelectorAll('input[data-tel-input]');
 
@@ -28,10 +28,15 @@
       let firstSymbols = (inputNumbersValue[0] == "8") ? "8" : "+7";
       formattedInputValue = firstSymbols + " ";
 
-      if (inputNumbersValue[0] == "8") {
-        phoneInputs[0].setAttribute("pattern", ".{17,}");
-        console.log(phoneInputs[0].getAttribute("pattern"));
+      {
+        if (inputNumbersValue[0] == "8") {
+          phoneInputs[0].setAttribute("pattern", ".{17,}");
+        } else {
+          phoneInputs[0].setAttribute("pattern", ".{18,}");
+        }
       }
+
+
 
       if (inputNumbersValue.length > 1) {
         formattedInputValue += "(" + inputNumbersValue.slice(1, 4);
@@ -58,7 +63,7 @@
 // Стирание первого символа
   const onPhoneKeyDown = (evt) => {
     const input = evt.target;
-    if (evt.keyCode == 8 && getInputNumbersValue(input).length == 1) {
+    if (evt.keyCode === 8 && getInputNumbersValue(input).length === 1) {
       input.value = "";
     }
   };
@@ -83,6 +88,58 @@
     input.addEventListener("paste", onPhonePaste);
   });
 
+
+
+
+  //----------- валидация обязательных полей -----------------
+
+  const forms = document.querySelectorAll('.feedback__form');
+
+
+
+  forms.forEach(form => {
+
+    const inputContainerList = form.querySelectorAll('.feedback-form__input-container');
+
+    const errors = form.querySelectorAll('.feedback-form__error');
+    errors.forEach(error => error.classList.add('visually-hidden'))
+
+    inputContainerList.forEach(inputContainer => {
+
+      const inputItem = inputContainer.querySelector('input[required]');
+
+      if (inputItem) {
+        inputItem.addEventListener('input', () => {
+          const error = inputContainer.querySelector('input + .feedback-form__error');
+
+          console.log(inputItem.value)
+
+          const isValid = inputItem.checkValidity();
+          if (isValid || inputItem.value.length === 0 ) {
+            error.classList.add('visually-hidden');
+            error.textContent = ''
+          } else {
+            error.classList.remove('visually-hidden');
+            error.textContent = 'Ошибка ввода'
+          }
+          if (inputItem.value === '' ) {
+            console.log('пусто')
+          }
+
+        })
+      }
+
+
+
+    });
+
+
+
+  })
+
+
+
+  //-------------------------------------------------------------
 
 
 // ---------upload file---------
@@ -156,4 +213,4 @@
 
 
 
-}
+
