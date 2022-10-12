@@ -103,7 +103,14 @@
       </header>
       <main>
         <div class="breadcrumbs">
-          <div class="container breadcrumbs__container"><a class="breadcrumbs__item" href="/">Главная</a><a class="breadcrumbs__item" href="">Контакты</a></div>
+          <div class="container breadcrumbs__container"><a class="breadcrumbs__item" href="">Главная</a>
+            <svg width="7" height="6" fill="#fff">
+              <use href="./assets/img/sprite.svg#breadcrumbs"></use>
+            </svg><a class="breadcrumbs__item" href="">Что делать в городе?</a>
+            <svg width="7" height="6" fill="#fff">
+              <use href="./assets/img/sprite.svg#breadcrumbs"></use>
+            </svg><a class="breadcrumbs__item" href="">Что делать в городе?</a>
+          </div>
         </div>
         <section class="section-column">
           <div class="hero hero-contacts">
@@ -196,11 +203,7 @@
               </div>
               <form class="feedback__form feedback-form" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
                 <div class="feedback-form__input-container">
-                  <input id="name" placeholder="Иванов Иван Иванович*" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40" required="required"/><span class="feedback-form__error">Ошибка ввода
-                    <svg width="14" height="14" fill="currentColor">
-                      <use href="assets/img/sprite.svg#question"></use>
-                    </svg></span>
-                  <!--span.feedback-form__mandatory Обязательное поле-->
+                  <input id="name" placeholder="Иванов Иван Иванович*" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40" required="required"/><span class="feedback-form__error"></span>
                 </div>
                 <div class="feedback-form__input-container">
                   <input id="phone" type="tel" name="phone" placeholder="+7(___)___-__-__" data-tel-input="" pattern=".{18,}" maxlength="18" autocomplete="off" required="required"/><span class="feedback-form__error"></span>
@@ -212,7 +215,7 @@
                   <label>
                     <input type="checkbox" checked="checked"/><span class="feedback-form__checkbox"></span><span class="feedback-form__agreement">Даю согласие на обработку персональных данных</span>
                   </label>
-                  <button class="button arrow button--bg-grey button--outline" type="submit">Отправить&nbsp;вопрос</button>
+                  <button class="button arrow button--outline" type="submit">Отправить&nbsp;вопрос</button>
                 </div>
               </form>
             </div>
