@@ -70,134 +70,142 @@
 
   const blog = document.querySelector('.blog'); // blog
 
-  const paginationList = blog.querySelector('.pagination__list'); // paginationList
-  const blogList = blog.querySelector('.blog__list'); // cards-wrapper
-  const blogItems = blogList.querySelectorAll('.blog__item'); // cards
-  const prevButton = blog.querySelector('.slider-nav__prev'); // prev
-  const nextButton = blog.querySelector('.slider-nav__next'); // next
+  if (blog) {
 
-  const paginationLimit = 8;
+    const paginationList = blog.querySelector('.pagination__list'); // paginationList
 
-  const pageCount = Math.ceil(blogItems.length / paginationLimit);
-  let currentPage = 1;
+    const blogList = blog.querySelector('.blog__list'); // cards-wrapper
+    const blogItems = blogList.querySelectorAll('.blog__item'); // cards
+    const prevButton = blog.querySelector('.slider-nav__prev'); // prev
+    const nextButton = blog.querySelector('.slider-nav__next'); // next
 
-  const disableButton = (button) => {
-    button.setAttribute('disabled', true);
-  };
+    const paginationLimit = 8;
 
-  const enableButton = (button) => {
-    button.removeAttribute('disabled');
-  };
+    const pageCount = Math.ceil(blogItems.length / paginationLimit);
+    let currentPage = 1;
 
-  const handlePageButtonsStatus = () => {
-    (currentPage === 1) ? disableButton(prevButton) : enableButton(prevButton);
-    (pageCount === currentPage) ? disableButton(nextButton) : enableButton(nextButton);
-  };
+    const disableButton = (button) => {
+      button.setAttribute('disabled', true);
+    };
 
-  const handleActivePageNumber = () => {
-    const paginationItems = paginationList.querySelectorAll('.pagination__item');
-    paginationItems.forEach( button => {
-      button.classList.remove('js-pag-active');
-      const pageIndex = Number(button.getAttribute('page-index'));
-      if (pageIndex === currentPage) {
-        button.classList.add('js-pag-active');
+    const enableButton = (button) => {
+      button.removeAttribute('disabled');
+    };
+
+    const handlePageButtonsStatus = () => {
+      (currentPage === 1) ? disableButton(prevButton) : enableButton(prevButton);
+      (pageCount === currentPage) ? disableButton(nextButton) : enableButton(nextButton);
+    };
+
+    const handleActivePageNumber = () => {
+      const paginationItems = paginationList.querySelectorAll('.pagination__item');
+      paginationItems.forEach( button => {
+        button.classList.remove('js-pag-active');
+        const pageIndex = Number(button.getAttribute('page-index'));
+        if (pageIndex === currentPage) {
+          button.classList.add('js-pag-active');
+        }
+      });
+    };
+
+    const appendPageNumber = (index) => {
+      const pageNumber = document.createElement('li');
+      pageNumber.className = 'pagination__item';
+      pageNumber.innerHTML = index;
+      pageNumber.setAttribute('page-index', index);
+      pageNumber.setAttribute('arial-label', 'Page' + index);
+      paginationList.appendChild(pageNumber);
+    };
+
+    const getPaginationNumbers = () => {
+      for (let i =1; i<=pageCount; i++) {
+        appendPageNumber(i);
       }
-    });
-  };
+    };
 
-  const appendPageNumber = (index) => {
-    const pageNumber = document.createElement('li');
-    pageNumber.className = 'pagination__item';
-    pageNumber.innerHTML = index;
-    pageNumber.setAttribute('page-index', index);
-    pageNumber.setAttribute('arial-label', 'Page' + index);
-    paginationList.appendChild(pageNumber);
-  };
+    const setCurrentPage = (pageNum) => {
+      currentPage = pageNum;
 
-  const getPaginationNumbers = () => {
-    for (let i =1; i<=pageCount; i++) {
-      appendPageNumber(i);
-    }
-  };
+      handleActivePageNumber();
+      handlePageButtonsStatus();
 
-  const setCurrentPage = (pageNum) => {
-    currentPage = pageNum;
+      const prevRange = (pageNum - 1) * paginationLimit;
+      const currRange = pageNum * paginationLimit;
 
-    handleActivePageNumber();
-    handlePageButtonsStatus();
-
-    const prevRange = (pageNum - 1) * paginationLimit;
-    const currRange = pageNum * paginationLimit;
-
-    blogItems.forEach((item, index) => {
-      item.style.display = 'none';
-      if (index >= prevRange && index < currRange) {
-        item.style.display = 'flex';
-      }
-    });
-  };
-
-
-  window.addEventListener('load', () => {
-    getPaginationNumbers();
-    setCurrentPage(1);
-
-    prevButton.addEventListener('click', () => setCurrentPage(currentPage - 1) );
-    nextButton.addEventListener('click', () => setCurrentPage(currentPage + 1) );
-
-    const paginationItems = paginationList.querySelectorAll('.pagination__item');
-
-    paginationItems.forEach(button => {
-      const pageIndex = Number(button.getAttribute('page-index'));
-
-      if (pageIndex) {
-        button.addEventListener('click', () => setCurrentPage(pageIndex));
-      }
-    });
-
-  });
-
-
-  //------------------------------------------FILTER-----------------------------------
-
-  function filterBlog (category, items) {
-
-    items.forEach(item => {
-      const categoryItem = item.dataset.category;
-      if (categoryItem === category) {
-        item.style.display = 'flex';
-        //console.log(categoryItem + ' показать')
-      } else {
+      blogItems.forEach((item, index) => {
         item.style.display = 'none';
-        //console.log(categoryItem + ' скрыть')
-      }
-    })
+        if (index >= prevRange && index < currRange) {
+          item.style.display = 'flex';
+        }
+      });
+    };
 
-  };
 
-  const filterItems = blog.querySelectorAll('.blog-nav__item');
-  const resetBtn = blog.querySelector('.blog-nav__reset');
+    window.addEventListener('load', () => {
+      getPaginationNumbers();
+      setCurrentPage(1);
 
-  const addClassActive = (elem) => elem.classList.add('js-filter-active');
-  const removeClassActive = (elem) => elem.classList.remove('js-filter-active');
+      prevButton.addEventListener('click', () => setCurrentPage(currentPage - 1) );
+      nextButton.addEventListener('click', () => setCurrentPage(currentPage + 1) );
 
-  filterItems.forEach(button => {
-    button.addEventListener('click', () => {
-      filterItems.forEach(item => removeClassActive(item));
-      addClassActive(button);
-      const currentCategory = button.dataset.filter;
-      //console.log(currentCategory);
-      filterBlog(currentCategory, blogItems);
+      const paginationItems = paginationList.querySelectorAll('.pagination__item');
+
+      paginationItems.forEach(button => {
+        const pageIndex = Number(button.getAttribute('page-index'));
+
+        if (pageIndex) {
+          button.addEventListener('click', () => setCurrentPage(pageIndex));
+        }
+      });
 
     });
-  });
 
-  resetBtn.addEventListener('click', () => {
-    blogItems.forEach(item => {
-      item.style.display = 'flex';
+
+    //------------------------------------------FILTER-----------------------------------
+
+    function filterBlog (category, items) {
+
+      items.forEach(item => {
+        const categoryItem = item.dataset.category;
+        if (categoryItem === category) {
+          item.style.display = 'flex';
+          //console.log(categoryItem + ' показать')
+        } else {
+          item.style.display = 'none';
+          //console.log(categoryItem + ' скрыть')
+        }
+      })
+
+    };
+
+    const filterItems = blog.querySelectorAll('.blog-nav__item');
+    const resetBtn = blog.querySelector('.blog-nav__reset');
+
+    const addClassActive = (elem) => elem.classList.add('js-filter-active');
+    const removeClassActive = (elem) => elem.classList.remove('js-filter-active');
+
+    filterItems.forEach(button => {
+      button.addEventListener('click', () => {
+        filterItems.forEach(item => removeClassActive(item));
+        addClassActive(button);
+        const currentCategory = button.dataset.filter;
+        //console.log(currentCategory);
+        filterBlog(currentCategory, blogItems);
+
+      });
     });
-    filterItems.forEach(button => removeClassActive(button));
-  });
+
+    resetBtn.addEventListener('click', () => {
+      blogItems.forEach(item => {
+        item.style.display = 'flex';
+      });
+      filterItems.forEach(button => removeClassActive(button));
+    });
+
+
+
+  }
+
 
 
 
@@ -505,7 +513,10 @@
   };
 
   headerMenuDropDown.addEventListener('click', () => toggleActiveElem(headerContactList));
-  headerBurger.addEventListener('click', () => toggleActiveElem(header, headerNav));
+  headerBurger.addEventListener('click', () => {
+    toggleActiveElem(header, headerNav);
+    toggleActiveElem(document.body);
+  });
 
 
   // mobile menu
@@ -513,14 +524,34 @@
 
   if (mobileWidth) {
     const headerListSubNav_1 = document.querySelectorAll('.header-subnav-1'); // список подменю 1-го уровня
-    headerListSubNav_1.forEach(subNav_1 => {
-      const parent = subNav_1.parentNode;
-      const link = parent.querySelector('.header-nav__link');
-      link.addEventListener('click', () => toggleActiveElem(subNav_1));
 
-    })
+    headerListSubNav_1.forEach(subNav => {
+        const parent = subNav.parentNode;
+        const link = parent.querySelector('.header-nav__link');
+        link.addEventListener('click', () => {
+          toggleActiveElem(subNav);
 
+          // добавление тени над рунктом "цена" в бургер-меню
+          const NavItems = header.querySelectorAll('.header-nav__item');
+          NavItems.forEach(navItem => navItem.classList.toggle('js-active'))
+        });
+      });
+
+
+    const headerListSubNav = header.querySelectorAll('.header-subnav__item');
+
+    headerListSubNav.forEach(subNav => {
+      subNav.addEventListener('click', () => {
+        subNav.classList.toggle('js-active');
+        const subNav_2 = subNav.querySelector('.header-subnav-2');
+
+        subNav_2.classList.toggle('js-active');
+      })
+    });
   }
+
+
+
 
 
 
@@ -735,48 +766,106 @@
 // }
 
 {
-  // let swiper__thumbs = new Swiper(".portfolio-popup__swiper--thumbs", {
-  //   //loop: true,
-  //   spaceBetween: 28,
-  //   slidesPerView: "auto",
-  //   freeMode: true,
-  //   watchSlidesProgress: true,
-  //   watchSlidesVisibility: true,
-  //   watchOverflow: true,
-  //   initialSlide: 0,
-  // });
-  //
-  // let swiper__top = new Swiper(".portfolio-popup__swiper--top", {
-  //   loop: true,
-  //   slidesPerView: 1,
-  //   centeredSlides: true,
-  //   initialSlide: 0,
-  //   thumbs: {
-  //     swiper: swiper__thumbs,
-  //   },
-  //   effect: 'fade',
-  //   fadeEffect: {
-  //     crossFade: true
-  //   }
-  // });
+
+  const portfolio = document.querySelector('.portfolio');
+
+  if (portfolio) {
+
+    const portfolioItems = portfolio.querySelectorAll('.portfolio__item');
+
+    portfolioItems.forEach(portfolioItem => {
+
+      const swiperThumbs = portfolioItem.querySelector('.portfolio-popup__swiper--thumbs');
+
+
+
+
+      // let swiper__thumbs = new Swiper(".portfolio-popup__swiper--thumbs", {
+      //   //loop: true,
+      //   spaceBetween: 28,
+      //   slidesPerView: "auto",
+      //   freeMode: true,
+      //   watchSlidesProgress: true,
+      //   watchSlidesVisibility: true,
+      //   watchOverflow: true,
+      //   initialSlide: 0,
+      // });
+      //
+      // let swiper__top = new Swiper(".portfolio-popup__swiper--top", {
+      //   loop: true,
+      //   slidesPerView: 1,
+      //   centeredSlides: true,
+      //   initialSlide: 0,
+      //   thumbs: {
+      //     swiper: swiper__thumbs,
+      //   },
+      //   effect: 'fade',
+      //   fadeEffect: {
+      //     crossFade: true
+      //   }
+      // });
+
+
+
+
+    });
+
+  }
+
+
+
+
+
+
+  let swiper__thumbs = new Swiper(".portfolio-popup__swiper--thumbs", {
+    //loop: true,
+    spaceBetween: 28,
+    slidesPerView: "auto",
+    freeMode: true,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    watchOverflow: true,
+    initialSlide: 0,
+  });
+
+  let swiper__top = new Swiper(".portfolio-popup__swiper--top", {
+    loop: true,
+    slidesPerView: 1,
+    centeredSlides: true,
+    initialSlide: 0,
+    thumbs: {
+      swiper: swiper__thumbs,
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    }
+  });
 
   //--------------------------------------
 
-  // const portfolio = document.querySelector('.portfolio');
-  // const portfolioItems = portfolio.querySelectorAll('.portfolio__item');
-  //
-  // const addClassActive = (item) => item.classList.add('js-popup-active');
-  // const removeClassActive = (item) => item.classList.remove('js-popup-active');
-  //
-  // portfolioItems.forEach(item => {
-  //   item.addEventListener('click', () => addClassActive(item));
-  //
-  //   const close = item.querySelector('.portfolio-popup__close');
-  //     close.addEventListener('click', function () {
-  //       removeClassActive(item);
-  //       console.log(this)
-  //     });
-  // });
+
+
+  if (portfolio) {
+
+    const portfolioItems = portfolio.querySelectorAll('.portfolio__item');
+
+    const addClassActive = (item) => item.classList.add('js-popup-active');
+    const removeClassActive = (item) => item.classList.remove('js-popup-active');
+
+    portfolioItems.forEach(item => {
+      item.addEventListener('click', () => addClassActive(item));
+
+      const close = item.querySelector('.portfolio-popup__close');
+      close.addEventListener('click', function () {
+        removeClassActive(item);
+        console.log(this)
+      });
+    });
+
+  }
+
+
 
 
 }
