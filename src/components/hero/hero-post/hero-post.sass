@@ -1,0 +1,89 @@
+.hero.hero-post
+  position: relative
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  height: 100vh
+  min-height: 768px
+  &::after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background: linear-gradient(90deg, #191111 0%, #191111 21.14%, rgba(25, 17, 17, 0.74) 38.14%, rgba(25, 17, 17, 0) 50.63%, rgba(25, 17, 17, 0) 64.81%, rgba(25, 17, 17, 0) 79.35%, #191111 100%)
+    opacity: 0.8
+    background-blend-mode: multiply
+
+  .hero
+    &__container
+      position: relative
+      z-index: 1
+      display: flex
+      flex-direction: column
+      margin: 0
+      margin-top: 150px
+      overflow: hidden
+      @media (max-width: 480px)
+        width: auto
+        margin-top: 0
+        height: 100%
+        bottom: 50px
+        justify-content: flex-end
+        row-gap: 16px
+
+    &__content
+      display: flex
+      flex-direction: column
+      gap: 32px
+      width: 35%
+      @media (max-width: 1400px)
+        width: 60%
+      @media (max-width: $width-mobile)
+        width: 70%
+      @media (max-width: 480px)
+        width: 100%
+
+    &__title
+      font-size: clamp(32px, calc(32px + (64 - 32) * ((100vw - 768px) / (1920 - 768))), 64px)
+      line-height: 1.2
+
+    &__time
+      color: $accent
+      font-size: clamp(20px, calc(20px + (20 - 18) * ((100vw - 768px) / (1920 - 768))), 18px)
+
+    &__text
+      font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 768px) / (1920 - 768))), 16px)
+      line-height: 1.75
+      color: #EBEBEB
+
+
+    &-anchor
+      margin-top: 15vh
+      width: 55%
+      text-align: center
+      border: 1px solid #6F6F6F
+      border-radius: 4px
+      border-collapse: collapse
+      @media (max-width: 1300px)
+        width: 80%
+      @media (max-width: 480px)
+        display: none
+
+      &__item
+        width: 213px
+        padding: 12px
+        border: 1px solid #6F6F6F
+        &:hover
+          background: rgba(36, 229, 255, 0.03)
+        &:hover .hero-anchor__link
+          color: #fff
+
+      &__link
+        display: block
+        color: rgba(#fff, 0.5)
+
+
+
+

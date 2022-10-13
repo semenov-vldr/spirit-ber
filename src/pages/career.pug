@@ -7,10 +7,13 @@ block variables
 
 
 block content
+
   .breadcrumbs
     .container.breadcrumbs__container
-      a(href="/").breadcrumbs__item Главная
+      a(href="").breadcrumbs__item Главная
+      +breadcrumbs_icon
       a(href="").breadcrumbs__item Услуги
+      +breadcrumbs_icon
       a(href="").breadcrumbs__item Вакансии
 
   section.section-column

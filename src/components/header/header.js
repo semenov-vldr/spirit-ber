@@ -12,7 +12,10 @@
   };
 
   headerMenuDropDown.addEventListener('click', () => toggleActiveElem(headerContactList));
-  headerBurger.addEventListener('click', () => toggleActiveElem(header, headerNav));
+  headerBurger.addEventListener('click', () => {
+    toggleActiveElem(header, headerNav);
+    toggleActiveElem(document.body);
+  });
 
 
   // mobile menu
@@ -20,14 +23,34 @@
 
   if (mobileWidth) {
     const headerListSubNav_1 = document.querySelectorAll('.header-subnav-1'); // список подменю 1-го уровня
-    headerListSubNav_1.forEach(subNav_1 => {
-      const parent = subNav_1.parentNode;
-      const link = parent.querySelector('.header-nav__link');
-      link.addEventListener('click', () => toggleActiveElem(subNav_1));
 
-    })
+    headerListSubNav_1.forEach(subNav => {
+        const parent = subNav.parentNode;
+        const link = parent.querySelector('.header-nav__link');
+        link.addEventListener('click', () => {
+          toggleActiveElem(subNav);
 
+          // добавление тени над рунктом "цена" в бургер-меню
+          const NavItems = header.querySelectorAll('.header-nav__item');
+          NavItems.forEach(navItem => navItem.classList.toggle('js-active'))
+        });
+      });
+
+
+    const headerListSubNav = header.querySelectorAll('.header-subnav__item');
+
+    headerListSubNav.forEach(subNav => {
+      subNav.addEventListener('click', () => {
+        subNav.classList.toggle('js-active');
+        const subNav_2 = subNav.querySelector('.header-subnav-2');
+
+        subNav_2.classList.toggle('js-active');
+      })
+    });
   }
+
+
+
 
 
 

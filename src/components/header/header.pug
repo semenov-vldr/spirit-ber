@@ -18,13 +18,14 @@ header.header
 
     .header-nav
       ul.header-nav__list
-        li.header-nav__item.header-nav__item--services
-          //a.header-nav__link(href="/service.html" ) Услуги
-          a.header-nav__link Услуги
+
+        li.header-nav__item.header-nav__item--service
+          a.header-nav__link(href="##" ) Услуги
 
           ul.header-subnav.header-subnav-1
+
             li.header-subnav__item
-              a.header-subnav__link(href="laser-cutting.html") Лазерная резка металла
+              a.header-subnav__link(href="##") Лазерная резка металла
               ul.header-subnav.header-subnav-2
                 +headerSubNavItem('/', 'Лазерная резка листа')
                 +headerSubNavItem('/', 'Лазерная резка швеллера')
@@ -32,7 +33,7 @@ header.header
                 +headerSubNavItem('/', 'Лазерная резка уголка')
 
             li.header-subnav__item
-              a.header-subnav__link(href="laser-cutting.html") Гибка листового металла
+              a.header-subnav__link(href="##") Гибка листового металла
               ul.header-subnav.header-subnav-2
                 +headerSubNavItem('/', 'Лазерная резка листа2')
                 +headerSubNavItem('/', 'Лазерная резка швеллера2')
@@ -40,7 +41,7 @@ header.header
                 +headerSubNavItem('/', 'Лазерная резка уголка2')
 
             li.header-subnav__item
-              a.header-subnav__link(href="/laser-cutting.html") Порошковая покраска металла
+              a.header-subnav__link(href="##") Порошковая покраска металла
               ul.header-subnav.header-subnav-2
                 +headerSubNavItem('/', 'Лазерная резка листа2')
                 +headerSubNavItem('/', 'Лазерная резка швеллера2')
@@ -75,7 +76,7 @@ header.header
 
           li.header-contact__item
             .header-contact__icon
-              img(src="./assets/img/icons/header-email.svg")
+              img(src="./assets/img/icons/email.svg")
             a.header-contact__link(href="mailto:sales@spirit-bear.ru") sales@spirit-bear.ru
             button.header-contact__button-copy
               svg(width="12" height="12" fill="#fff")
@@ -84,7 +85,7 @@ header.header
 
           li.header-contact__item.header-contact__address
             .header-contact__icon
-              img(src="./assets/img/icons/header-address.svg")
+              img(src="./assets/img/icons/point.svg")
             a.header-contact__link МО, Солнечногорск,
               br
               | д. Пешки, цех №22

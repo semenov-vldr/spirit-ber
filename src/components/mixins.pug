@@ -30,6 +30,12 @@ mixin sending
 
 //--------------------------------
 
+  // breadcrumbs
+mixin breadcrumbs_icon
+  svg(width="7" height="6" fill='#fff')
+    use(href="./assets/img/sprite.svg#breadcrumbs")
+
+
 // карточка партнера
 mixin partnersItem(src)
   li.partners__item

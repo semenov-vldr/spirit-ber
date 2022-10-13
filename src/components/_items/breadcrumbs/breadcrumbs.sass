@@ -11,14 +11,17 @@
   &__container
     margin: 0
     display: flex
-    flex-wrap: wrap
+    flex-wrap: nowrap
     align-items: center
     gap: 10px
+    overflow-x: auto
 
   &__item
     @include fontSize(12, 15)
     color: #EBEBEB
     line-height: 1.2
+    white-space: nowrap
+    overflow: auto
 
   &__item:not(:last-child)
     color: rgba(#EBEBEB, 0.5)

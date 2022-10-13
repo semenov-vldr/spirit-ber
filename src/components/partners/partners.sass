@@ -4,17 +4,17 @@
 
   &__list
     display: grid
-    grid-template-columns: repeat(auto-fit, 280px)
+    grid-template-columns: repeat(5, 1fr)
     gap: 16px
     background-color: $frosted-top
     padding: 8px
     border-radius: 8px
     //justify-content: space-between
     justify-content: center
-    @media (max-width: 1200px)
-      grid-template-columns: repeat(auto-fit, 200px)
+    @media (max-width: 1300px)
+      grid-template-columns: repeat(4, 1fr)
     @media (max-width: 768px)
-      grid-template-columns: repeat(auto-fit, 150px)
+      grid-template-columns: repeat(3, 1fr)
     @media (max-width: 480px)
       grid-template-columns: repeat(2, 1fr)
       justify-content: space-between
@@ -49,8 +49,6 @@
     @media (max-width: 480px)
         &:nth-child(n+1):nth-child(-n+4)
           display: none
-
-
 
   &__logo
     object-fit: cover

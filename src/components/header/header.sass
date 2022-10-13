@@ -70,19 +70,25 @@
       flex-direction: column
       gap: 0
       border-radius: 8px
+      box-shadow: $shadow-block
 
 
   &-nav__item
     @media (max-width: $width-mobile)
-      //padding: 25px 12px
+      padding: 20px 12px
       background-color: $frosted-top
       backdrop-filter: blur(60px)
       width: 100%
+      &:first-child
+        border-radius: 8px 8px 0 0
+      &:last-child
+        border-radius: 0 0 8px 8px
     @media (min-width: $width-mobile)
       &:hover .header-subnav-1
         transform: rotateX(0deg)
         visibility: visible
-    &--services
+    // стрелочка в бургер-меню
+    &:nth-child(1)
       @media (max-width: $width-mobile)
         position: relative
         &::after
@@ -94,10 +100,18 @@
           background-repeat: no-repeat
           width: 7px
           height: 12px
-          top: 50%
-          right: 10px
-          transform: translateY(-50%)
+          top: 25px
+          transform: translateY(50%)
+          right: 17px
           cursor: pointer
+          transition: 0.2s ease
+        &.js-active::after
+          transform: rotate(90deg)
+
+    &.js-active
+      //padding-bottom: 0
+    &:nth-child(2).js-active
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
 
 
 
@@ -135,7 +149,7 @@
         color: $white
       @media (max-width: $width-mobile)
         width: 100%
-        padding: 25px 0
+        padding: 12px 0
     @media (max-width: $width-mobile)
       position: relative
       width: auto
@@ -147,18 +161,19 @@
         display: block
         overflow: hidden
 
+
   &-subnav-1
     padding-top: 15px
     border-radius: 4px 4px 0 0
     .header-subnav__item
       border-left: 2px solid transparent
       @media (min-width: $width-mobile)
+        &:hover
+          border-color: $accent
         &:hover .header-subnav-2
           transform: rotateX(0deg)
           visibility: visible
     & > .header-subnav__item
-      &:hover
-        border-color: $accent
       &::after
         content: ""
         position: absolute
@@ -169,16 +184,29 @@
         width: 7px
         height: 12px
         top: 50%
-        right: 10px
+        right: 17px
         transform: translateY(-50%)
         cursor: pointer
+        transition: 0.2s ease
+      @media (max-width: $width-mobile)
+        &::after
+          top: 25px
+          transform: translateY(50%)
+        &.js-active::after
+          transform: rotate(90deg)
 
 
   &-subnav-2
-    left: 100%
-    top: 0
-    border-radius: 0 0 4px 4px
-    transition: initial
+    @media (min-width: $width-mobile)
+      left: 100%
+      top: 0
+      border-radius: 0 0 4px 4px
+      transition: initial
+    @media (max-width: $width-mobile)
+      &.js-active
+        display: block
+        margin: 0
+
 
 
   &-contact
@@ -190,6 +218,7 @@
       align-items: center
       background-color: $frosted-top
       border-radius: 8px
+      box-shadow: $shadow-block
 
     &__list
       display: flex
@@ -245,7 +274,7 @@
         display: grid
         grid-template-columns: 1fr 1fr
         background-color: initial
-        padding: 20px 12px
+        padding: 20px 15px
         &:hover
           background-color: initial
     &__button-copy
