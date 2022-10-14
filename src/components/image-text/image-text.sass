@@ -35,14 +35,41 @@
 
 
   &__title
-    font-size: clamp(18px, calc(18px + (40 - 18) * ((100vw - 768px) / (1920 - 768))), 40px)
+    @include fontSize(18, 40)
     margin-bottom: 12px
+    &--mobile
+      display: none
+    @media (max-width: $width-mobile)
+      &--desctop
+        display: none
+      &--mobile
+        text-align: center
+        display: block
+        order: 1
 
-  &__text, p
-    font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 768px) / (1920 - 768))), 16px)
+  &__description
+    display: flex
+    flex-direction: column
+    gap: 24px
+    @media (max-width: $width-mobile)
+      gap: 12px
+
+  &__text
+    @include fontSize(14, 16)
     &:not(:last-child)
       margin-bottom: 20px
 
+  &__list
+    display: flex
+    flex-direction: column
+    gap: 12px
+    list-style-type: disc
+    padding-left: 25px
+    &--number
+      list-style-type: decimal
+
+
+  // col3
   &.col3
 
     .image-text
@@ -75,7 +102,6 @@
           flex: 0 1 100%
           justify-content: space-between
 
-
       &-fact__list
         width: 100%
         display: flex
@@ -91,6 +117,63 @@
           background-color: $frosted-top
           box-shadow: $shadow-block
           border-radius: 8px
+
+
+  &.image-text--reverse
+    display: flex
+    flex-direction: column
+    gap: clamp(32px, calc(32px + (80 - 32) * ((100vw - 768px) / (1920 - 768))), 80px)
+
+    .image-text
+      &__container:nth-child(even)
+        flex-direction: row-reverse
+      &__container,
+      &__container:nth-child(even)
+        @media (max-width: $width-mobile)
+          flex-direction: column-reverse
+          gap: 32px
+
+      &__content
+        display: flex
+        flex-direction: column
+        gap: 32px
+        @media (max-width: $width-mobile)
+          gap: 20px
+
+      &__title
+        @include fontSize(24, 40)
+        line-height: 1.4
+        font-weight: 500
+        color: $text
+        margin-bottom: 0
+
+      //&__description
+      //  display: flex
+      //  flex-direction: column
+      //  gap: 24px
+      //  @media (max-width: $width-mobile)
+      //    gap: 12px
+
+      &__subtitle
+        @include fontSize(16, 20)
+        &--accent
+          color: $accent
+        &--bigger
+          @include fontSize(18, 24)
+
+      &-list
+        //display: flex
+        //flex-direction: column
+        //gap: 12px
+        //list-style-type: disc
+        //padding-left: 25px
+        //&--number
+        //  list-style-type: decimal
+
+
+
+
+
 
 
 
