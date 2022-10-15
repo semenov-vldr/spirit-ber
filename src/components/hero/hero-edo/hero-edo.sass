@@ -1,0 +1,165 @@
+.hero.hero-edo
+  position: relative
+  margin-top: 150px
+  margin-bottom: 300px
+  &::before,
+  &::after
+    content: ""
+    position: absolute
+    background-image: url('../img/star-bg-light.svg')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    width: 430px
+    height: 530px
+    z-index: -1
+    @media (max-width: $width-mobile)
+      display: none
+  &::before
+    top: 60%
+    left: 15%
+  &::after
+    top: -10%
+    right: 0%
+
+  .hero
+    &__container
+
+    &__title
+      @include fontSize(32, 64)
+      text-align: center
+      margin-bottom: clamp(32px, calc(32px + (80 - 32) * ((100vw - 768px) / (1920 - 768))), 80px)
+
+    &__inner
+      display: flex
+      gap: 80px
+      @media (max-width: 1400px)
+        flex-direction: column-reverse
+
+    &__content
+      flex: 0 1 300px
+      display: flex
+      flex-direction: column
+      gap: 32px
+
+    &__subtitle
+      @include fontSize(18, 40)
+      line-height: 1.4
+      &--mobile
+        display: none
+      @media (max-width: $width-mobile)
+        &--mobile
+          display: block
+          text-align: center
+          padding: 8px
+        &--desctop
+          display: none
+
+
+    &__text
+      @include fontSize(14, 16)
+      line-height: 1.5
+
+    &-point
+      width: 100%
+      flex: 0 1 auto
+      background-color: rgba($frosted-top, 0.7)
+      border-radius: 8px
+      padding: 24px
+      box-shadow: $shadow-block
+      @media (max-width: 768px)
+        padding: 4px
+
+      &__image
+        background-color: rgba($frosted-bottom, 0.7)
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 8px
+        padding: 50px
+        box-shadow: $shadow-block
+        img
+          width: 100%
+          height: auto
+          object-fit: cover
+          max-width: 730px
+          aspect-ratio: 73 / 27
+          @media (max-width: 768px)
+            display: none
+        @media (max-width: 1600px)
+          padding: 25px
+        @media (max-width: 768px)
+          display: none
+
+      &__swiper
+        overflow: hidden
+
+
+      &__list
+        display: flex
+        margin-top: 24px
+        justify-content: space-between
+        @media (max-width: 768px)
+          margin-top: 0
+
+      &-item
+        position: relative
+        display: flex
+        flex-direction: column
+        padding: 24px
+        @media (min-width: 768px)
+          flex: 0 1 33%
+        &:not(:last-child)::after
+          position: absolute
+          content: ""
+          @extend .decor-line
+          width: 4px
+          height: 100%
+          top: 0
+          right: 16px
+          @media (max-width: 768px)
+            display: none
+        @media (max-width: 768px)
+          padding: 4px 4px 34px
+
+        &__image
+          background-color: rgba($frosted-bottom, 0.7)
+          display: flex
+          align-items: center
+          justify-content: center
+          border-radius: 8px
+          padding: 4px
+          box-shadow: $shadow-block
+          img
+            width: 100%
+            height: auto
+            object-fit: cover
+            max-width: 200px
+            aspect-ratio: 1 / 1
+          @media (min-width: 768px)
+            display: none
+
+
+        &__number
+          font-family: "SpaceGrotesk", sans-serif
+          color: $accent
+          @include fontSize(18, 24)
+          @media (max-width: 768px)
+            margin-bottom: 8px
+
+        &__name
+          @include fontSize(18, 20)
+          font-weight: 500
+
+        &__text
+          @include fontSize(14, 16)
+          padding-right: 20px
+
+
+        &__number,
+        &__name,
+        &__text
+          @media (max-width: 768px)
+            padding: 0 20px
+
+
