@@ -217,68 +217,79 @@
 
   let myMap;
 
-  ymaps.ready(init);
+  const mapDelivery = document.querySelector('#map-delivery');
 
-  function init () {
-    myMap = new ymaps.Map('map-delivery', {
+  if (mapDelivery) {
 
-      center: [55.77567297366562,37.616599835937514],
-      zoom: 5,
-      controls: []
-    });
+    ymaps.ready(init);
 
-    var myGeoObject = new ymaps.GeoObject({
-      // Описываем геометрию геообъекта.
-      geometry: {
-        // Тип геометрии - "Многоугольник".
-        type: "Polygon",
-        // Указываем координаты вершин многоугольника.
-        coordinates: [
-          // Координаты вершин внешнего контура.
-          [[58.90106587919162,50.59202518749981],
-            [62.30425365644154,34.39714756249991],
-            [61.419288495402085,25.254462624999952],
-            [58.3139648375561,23.93404331249995],
-            [56.06829508097347,28.657649421874922],
-            [54.046752005928525,28.679107093749906],
-            [52.637767811218026,31.458390617187398],
-            [51.29200291865248,33.09509601562492],
-            [50.481450658306365,34.215186499999916],
-            [49.88218060774752,36.80864660241689],
-            [49.160187972696114,38.9626535798339],
-            [48.39125152042711,45.292151909667886],
-            [50.596317656485226,47.755836069335814],
-            [48.424967397462325,51.62851688867174],
-            [51.81210613026443,55.686352618906554],
-            [54.14341697177243,55.11942234374991],
-            [58.90106587919162,50.59202518749981]]
+    function init () {
+      myMap = new ymaps.Map('map-delivery', {
 
-        ],
-        // Задаем правило заливки внутренних контуров по алгоритму "nonZero".
-        fillRule: "nonZero"
-      },
-      // Описываем свойства геообъекта.
-      properties:{
-        // Содержимое балуна.
-        balloonContent: "География поставок"
-      }
-    }, {
-      // Описываем опции геообъекта.
-      // Цвет заливки.
-      fillColor: '#2CE3FF',
-      // Цвет обводки.
-      strokeColor: '#24C2DB',
-      // Общая прозрачность (как для заливки, так и для обводки).
-      opacity: 0.3,
-      // Ширина обводки.
-      strokeWidth: 2,
-      // Стиль обводки.
-      strokeStyle: 'solid'
-    });
+        center: [55.77567297366562,37.616599835937514],
+        zoom: 5,
+        controls: []
+      });
 
-    // Добавляем многоугольник на карту.
-    myMap.geoObjects.add(myGeoObject);
+
+      var myGeoObject = new ymaps.GeoObject({
+        // Описываем геометрию геообъекта.
+        geometry: {
+          // Тип геометрии - "Многоугольник".
+          type: "Polygon",
+          // Указываем координаты вершин многоугольника.
+          coordinates: [
+            // Координаты вершин внешнего контура.
+            [[58.90106587919162,50.59202518749981],
+              [62.30425365644154,34.39714756249991],
+              [61.419288495402085,25.254462624999952],
+              [58.3139648375561,23.93404331249995],
+              [56.06829508097347,28.657649421874922],
+              [54.046752005928525,28.679107093749906],
+              [52.637767811218026,31.458390617187398],
+              [51.29200291865248,33.09509601562492],
+              [50.481450658306365,34.215186499999916],
+              [49.88218060774752,36.80864660241689],
+              [49.160187972696114,38.9626535798339],
+              [48.39125152042711,45.292151909667886],
+              [50.596317656485226,47.755836069335814],
+              [48.424967397462325,51.62851688867174],
+              [51.81210613026443,55.686352618906554],
+              [54.14341697177243,55.11942234374991],
+              [58.90106587919162,50.59202518749981]]
+
+          ],
+          // Задаем правило заливки внутренних контуров по алгоритму "nonZero".
+          fillRule: "nonZero"
+        },
+        // Описываем свойства геообъекта.
+        properties:{
+          // Содержимое балуна.
+          balloonContent: "География поставок"
+        }
+      }, {
+        // Описываем опции геообъекта.
+        // Цвет заливки.
+        fillColor: '#2CE3FF',
+        // Цвет обводки.
+        strokeColor: '#24C2DB',
+        // Общая прозрачность (как для заливки, так и для обводки).
+        opacity: 0.3,
+        // Ширина обводки.
+        strokeWidth: 2,
+        // Стиль обводки.
+        strokeStyle: 'solid'
+      });
+
+      // Добавляем многоугольник на карту.
+      myMap.geoObjects.add(myGeoObject);
+    }
+
+
   }
+
+
+
 
 }
 
@@ -942,40 +953,122 @@
 
 {
 
-  let myMap;
+  const mapContacts = document.querySelector('#map-contacts');
 
-  ymaps.ready(init);
+  if (mapContacts) {
 
-  function init () {
-    myMap = new ymaps.Map('map-contacts', {
+    let myMap;
 
-      center: [56.13050415063692,37.07479867231817],
-      zoom: 16,
-      controls: []
-    });
+    ymaps.ready(init);
 
-    const pointPickup = [56.130236759852764,37.07856198817317];
-    const pointAddress = [56.130021055835314,37.079999652205565];
+    function init () {
+      myMap = new ymaps.Map('map-contacts', {
 
-    const myPlacemarkPickup = new ymaps.Placemark(pointPickup, {}, {
-      iconLayout: 'default#image',
-      iconImageHref: './assets/img/icons/orange-mark.svg',
-      iconImageSize: [51, 53],
-      iconImageOffset: [0, -53]
-    });
+        center: [56.13050415063692,37.07479867231817],
+        zoom: 16,
+        controls: []
+      });
 
-    const myPlacemarkAddress = new ymaps.Placemark(pointAddress, {}, {
-      iconLayout: 'default#image',
-      iconImageHref: './assets/img/icons/accent-mark.svg',
-      iconImageSize: [51, 53],
-      iconImageOffset: [0, -53]
-    })
+      const pointPickup = [56.130236759852764,37.07856198817317];
+      const pointAddress = [56.130021055835314,37.079999652205565];
 
-    myMap.geoObjects.add(myPlacemarkPickup)
-    myMap.geoObjects.add(myPlacemarkAddress)
+      const myPlacemarkPickup = new ymaps.Placemark(pointPickup, {}, {
+        iconLayout: 'default#image',
+        iconImageHref: './assets/img/icons/orange-mark.svg',
+        iconImageSize: [51, 53],
+        iconImageOffset: [0, -53]
+      });
 
+      const myPlacemarkAddress = new ymaps.Placemark(pointAddress, {}, {
+        iconLayout: 'default#image',
+        iconImageHref: './assets/img/icons/accent-mark.svg',
+        iconImageSize: [51, 53],
+        iconImageOffset: [0, -53]
+      })
+
+      myMap.geoObjects.add(myPlacemarkPickup)
+      myMap.geoObjects.add(myPlacemarkAddress)
+    }
 
   }
+
+
+
+
+
+}
+
+{
+
+  const data = {
+    // класс для всего блока, в котором мы работаем
+    classWrapper: '.hero-delivery',
+    // класс контента, который будет меняться
+    classSlide: '.hero-data__list',
+    // класс табов
+    classNav: '.hero-nav__item',
+    // имя активного класса
+    activeClass: 'js-delivery-active',
+    // data-атрибут для табов
+    dataNameNav: 'data-delivery-nav',
+    // data-атрибут для слайда
+    dataNameSlide: 'data-delivery-info',
+  };
+
+
+  tabsSlides(data)
+
+
+}
+
+
+{
+
+  const mobileWidth = window.matchMedia('(max-width: 768px)').matches;
+
+  let mySwiper;
+
+  if (mobileWidth) {
+
+    mySwiper = new Swiper('.hero-point__swiper', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      uniqueNavElements: true,
+
+      slidesPerView: 1,
+
+      // Бесконечная прокрутка
+      loop: true,
+
+      // Откл функционала, если слайдов меньше, чем нужно
+      watchOverflow: true,
+
+      centeredSlides: true,
+
+      // Отступ между слайдами
+      spaceBetween: 15,
+
+      // Стартовый слайд
+      initialSlide: 0,
+
+      // Брейк поинты (адаптив)
+      // Ширина экрана
+      breakpoints: {
+        // 320: {
+        //   slidesPerView: 1
+        // },
+      }
+    });
+
+  }
+
+
+
+
+
 
 }
 
@@ -1065,29 +1158,6 @@
 
 }
 
-
-{
-
-  const data = {
-    // класс для всего блока, в котором мы работаем
-    classWrapper: '.hero-delivery',
-    // класс контента, который будет меняться
-    classSlide: '.hero-data__list',
-    // класс табов
-    classNav: '.hero-nav__item',
-    // имя активного класса
-    activeClass: 'js-delivery-active',
-    // data-атрибут для табов
-    dataNameNav: 'data-delivery-nav',
-    // data-атрибут для слайда
-    dataNameSlide: 'data-delivery-info',
-  };
-
-
-  tabsSlides(data)
-
-
-}
 
 {
   const heroService = document.querySelector('.hero-service');
