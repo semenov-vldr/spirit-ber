@@ -182,16 +182,17 @@
                   <p class="feedback__text">Таким образом, начало повседневной работы по формированию позиции позволяет выполнить важные задания по разработке поэтапного и последовательного развития общества.</p>
                 </div>
               </div>
-              <form class="feedback__form feedback-form" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
-                <div class="feedback-form__input-container">
+              <form class="feedback__form feedback-form feedback-form--blog" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
+                <div class="feedback-form__input-container feedback-form__input-container--blog">
                   <h3 class="feedback-form__input-title">Прикрепите файлы</h3>
                   <div class="feedback-form__upload feedback-form-upload">
-                    <svg class="feedback-form-upload__icon" width="24" height="19" fill="#fff">
-                      <use href="assets/img/sprite.svg#drop"></use>
-                    </svg>
-                    <input class="feedback-form-upload__input visually-hidden" id="inputfile" type="file" name="file" multiple accept=".pdf, .doc, .rtf, .jpg, .jpeg, .png" onchange="handleFiles(this.files)">
-                    <label class="feedback-form-upload__label" for="inputfile">Перетащите сюда файл для загрузки</label>
-                    <u>или выберите его в проводнике</u>
+                    <input class="feedback-form-upload__input visually-hidden" id="inputfile" type="file" name="file" multiple accept=".pdf, .doc, .rtf, .jpg, .jpeg, .png">
+                    <label class="feedback-form-upload__label">
+                      <svg class="feedback-form-upload__icon" width="24" height="19" fill="#fff">
+                        <use href="assets/img/sprite.svg#drop"></use>
+                      </svg><span>Перетащите сюда файл для загрузки</span>
+                    </label>
+                    <label for="inputfile">или выберите его в проводнике</label>
                   </div>
                   <site class="feedback-form__input-note">Размер файлов не более 150 мб. Допустимые форматы: .pdf, .doc, .rtf, .jpg, .png</site>
                 </div>
@@ -246,11 +247,11 @@
               <h4 class="footer-nav__title">О компании</h4>
               <ul class="footer-nav__list">
                             <li class="footer-nav__item"><a class="footer-nav__link" href="/">Производство</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Вакансии</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="career.html">Вакансии</a></li>
                             <li class="footer-nav__item"><a class="footer-nav__link" href="/">Реквезиты</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Электронный документооборот</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Контакты</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Доставка</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="edo.html">Электронный документооборот</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="contacts.html">Контакты</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="delivery.html">Доставка</a></li>
                             <li class="footer-nav__item"><a class="footer-nav__link" href="/">Реквизиты</a></li>
               </ul>
             </div>
