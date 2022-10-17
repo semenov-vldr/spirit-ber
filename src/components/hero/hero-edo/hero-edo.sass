@@ -1,7 +1,6 @@
 .hero.hero-edo
   position: relative
   margin-top: 150px
-  margin-bottom: 300px
   &::before,
   &::after
     content: ""
@@ -35,6 +34,8 @@
       gap: 80px
       @media (max-width: 1400px)
         flex-direction: column-reverse
+      @media (max-width: 768px)
+        gap: 32px
 
     &__content
       flex: 0 1 300px

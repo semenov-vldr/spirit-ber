@@ -1,4 +1,5 @@
 
+{
 
   const phoneInputs = document.querySelectorAll('input[data-tel-input]');
 
@@ -115,12 +116,12 @@
           console.log(inputItem.value)
 
           const isValid = inputItem.checkValidity();
-          if (isValid || inputItem.value.length === 0 ) {
+          if (isValid || inputItem.value === '' ) {
             error.classList.add('visually-hidden');
             error.textContent = ''
           } else {
             error.classList.remove('visually-hidden');
-            error.textContent = 'Ошибка ввода'
+            error.textContent = 'Ошибка ввода';
           }
           if (inputItem.value === '' ) {
             console.log('пусто')
@@ -130,13 +131,9 @@
       }
 
 
-
     });
 
-
-
   })
-
 
 
   //-------------------------------------------------------------
@@ -144,70 +141,125 @@
 
 // ---------upload file---------
 
-//   const dropZone = document.querySelector('.feedback-form-upload');
-//
-//   const events = ['dragenter', 'dragleave', 'dragover', 'drop'];
-//
-// //events.forEach(event => dropZone.addEventListener(event,  handlerFunction, false));
-//
-//   function preventDefaults (evt) {
-//     evt.preventDefault();
-//     evt.stopPropagation();
-//   };
-//
-// // Сбрасываем стандартное поведение для всех событий
-//   events.forEach(event => {
-//     dropZone.addEventListener(event, preventDefaults);
-//   });
-//
-//   function highLight (evt) {
-//     dropZone.classList.add('highlight');
-//   };
-//
-//   function unHighLight (evt) {
-//     dropZone.classList.remove('highlight');
-//   };
-//
-//   ['dragenter', 'dragover'].forEach(event => {
-//     dropZone.addEventListener(event, highLight)
-//   });
-//
-//   ['dragleave', 'drop'].forEach(event => {
-//     dropZone.addEventListener(event, unHighLight)
-//   });
-//
-//   function handleDrop (evt) {
-//     let dt = evt.dataTransfer;
-//     let files = dt.files;
-//     handleFiles(files);
-//   };
-//
-//   function handleFiles(files) {
-//     ([...files].forEach(uploadFile));
-//   };
-//
-//   function uploadFile(file) {
-//     let url = 'URL для загрузки файлов';
-//     let formData = new FormData();
-//
-//     formData.append('file', file)
-//
-//     fetch(url, {
-//       method: 'POST',
-//       body: formData
-//     })
-//       .then(() => console.log('Готово'))
-//       .catch(() => console.log('Ошибка'))
-//   }
-//
-//   dropZone.addEventListener('drop', handleDrop);
+  const dropZone = document.querySelector('.feedback-form-upload');
+
+if (dropZone) {
+
+  const events = ['dragenter', 'dragleave', 'dragover', 'drop'];
+
+//events.forEach(event => dropZone.addEventListener(event,  handlerFunction, false));
+
+  function preventDefaults (evt) {
+    evt.preventDefault();
+    evt.stopPropagation();
+  };
+
+// Сбрасываем стандартное поведение для всех событий
+  events.forEach(event => {
+    dropZone.addEventListener(event, preventDefaults);
+  });
+
+  function highLight (evt) {
+    dropZone.classList.add('highlight');
+  };
+
+  function unHighLight (evt) {
+    dropZone.classList.remove('highlight');
+  };
+
+  ['dragenter', 'dragover'].forEach(event => {
+    dropZone.addEventListener(event, highLight)
+  });
+
+  ['dragleave', 'drop'].forEach(event => {
+    dropZone.addEventListener(event, unHighLight)
+  });
+
+  function handleDrop (evt) {
+    let dt = evt.dataTransfer;
+    let files = dt.files;
+    handleFiles(files);
+  };
+
+  function handleFiles(files) {
+    ([...files].forEach(uploadFile));
+    console.log(files)
+  };
+
+  function uploadFile(file) {
+    let url = 'URL для загрузки файлов';
+    let formData = new FormData();
+
+    formData.append('file', file)
+
+    fetch(url, {
+      method: 'POST',
+      body: formData
+    })
+      .then(() => console.log('Готово'))
+      .catch(() => console.log('Ошибка'))
+  }
+
+  dropZone.addEventListener('drop', handleDrop);
+
+}
+
+
+
+
+  //-----другой вариант-----------------------------
+
+
+
+  const formBlog = document.querySelector('.feedback-form__input-container--blog');
+  if (formBlog) {
+
+
+    const labelText = formBlog.querySelector('.feedback-form-upload__label span');
+
+    function addFileInput (evt) {
+      // добавленные файлы
+      const files = Array.from(evt.target.files);
+
+      // добавление имён файлов и общий размер файлов
+      labelText.textContent = '';
+      let arrayNames = [];
+      let size = 0;
+      files.forEach(file => {
+        console.log(file)
+        arrayNames.push(file.name);
+        size += file.size / 1024 / 1024;
+      })
+
+      arrayNames = arrayNames.join(', ');
+      size = size.toFixed(1);
+      labelText.textContent = arrayNames + ' (' + size + ' мб)';
+    };
+
+  }
+
+  function upload (selector, options = {}) {
+    const inputFile = document.querySelector(selector);
+
+    const changeHandler = (evt) => {
+      if (!evt.target.files.length) return
+      addFileInput (evt);
+    };
+
+    inputFile.addEventListener('change', changeHandler);
+
+  };
+
+
+  const inputfile = document.querySelector('.feedback-form__input-container--blog #inputfile');
+  if (inputfile)  upload('#inputfile')
 
 
 
 
 
 
-
+  }
 
 
 

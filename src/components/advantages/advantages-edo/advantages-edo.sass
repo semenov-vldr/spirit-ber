@@ -1,0 +1,30 @@
+.advantages-edo
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+    border: 1px solid rgba(#fff, 0.15)
+    @media (max-width: 768px)
+      border-radius: 4px
+
+
+  &__item
+    display: inline-flex
+    flex-direction: column
+    gap: 20px
+    padding: clamp(12px, calc(12px + (40 - 12) * ((100vw - 480px) / (1920 - 480))), 40px)
+    @media (max-width: 768px)
+      gap: 8px
+      border-bottom: 1px solid rgba(#fff, 0.15)
+    &:not(:last-child)
+      border-right: 1px solid rgba(#fff, 0.15)
+
+  &__name
+    color: $accent
+    @include fontSize(18, 20)
+
+  &__text
+    line-height: 1.6
+    @include fontSize(14, 16)
+
+
