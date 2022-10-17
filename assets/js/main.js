@@ -521,7 +521,6 @@ if (dropZone) {
       let arrayNames = [];
       let size = 0;
       files.forEach(file => {
-        console.log(file)
         arrayNames.push(file.name);
         size += file.size / 1024 / 1024;
       })
@@ -531,23 +530,28 @@ if (dropZone) {
       labelText.textContent = arrayNames + ' (' + size + ' мб)';
     };
 
-  }
+    function upload (selector, options = {}) {
+      const inputFile = document.querySelector(selector);
 
-  function upload (selector, options = {}) {
-    const inputFile = document.querySelector(selector);
+      const changeHandler = (evt) => {
+        if (!evt.target.files.length) return
+        addFileInput (evt);
+      };
 
-    const changeHandler = (evt) => {
-      if (!evt.target.files.length) return
-      addFileInput (evt);
+      inputFile.addEventListener('change', changeHandler);
+
     };
 
-    inputFile.addEventListener('change', changeHandler);
-
-  };
 
 
-  const inputfile = document.querySelector('.feedback-form__input-container--blog #inputfile');
-  if (inputfile)  upload('#inputfile')
+
+    const inputfile = document.querySelector('.feedback-form__input-container--blog #inputfile');
+    if (inputfile)  upload('#inputfile')
+
+
+  }
+
+
 
 
 
