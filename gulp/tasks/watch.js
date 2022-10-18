@@ -7,7 +7,7 @@ module.exports = function () {
       $.gulp.series("video:dev")
     );
     $.gulp.watch(
-      $.path.src + "/img/**/*.{png,svg,jpg,jpeg,gif}",
+      $.path.src + "/img/**/*.{png,svg,jpg,jpeg,gif,webp}",
       $.gulp.series("image:dev")
     );
     $.gulp.watch(

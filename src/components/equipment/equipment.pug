@@ -6,44 +6,108 @@ mixin equipmentSlidePaginationItem (num, name)
 .equipment
   .container.equipment__container
     .equipment__tag Оборудование
+    // внешний слайдер
     .equipment__slider.equipment-slider
 
-
+      //Установка для лазерной резки-------------------------------
       .equipment-slider__item.equipment-slide
 
         .equipment-slide__title Установка для лазерной резки
 
         ul.equipment-slide__pagination.equipment-slide-pagination
-          +equipmentSlidePaginationItem('01', 'FIBER LCM R1530F')
-          +equipmentSlidePaginationItem('02', 'LVD ORION 3015 PLUS')
+          li.equipment-slide-pagination__item(data-model="1")
+            u.equipment-slide-pagination__number 01
+            span.equipment-slide-pagination__name FIBER LCM R1530F
 
+          li.equipment-slide-pagination__item(data-model="2")
+            u.equipment-slide-pagination__number 02
+            span.equipment-slide-pagination__name LVD ORION 3015 PLUS
+
+        // внутренний слайдер
         .equipment-slide__machine.equipment-slide-machine__list
-
-          .equipment-slide-machine__item
+          //--01--
+          .equipment-slide-machine__item(data-machine="1")
             .equipment-slide-machine__image
-              img(src="./assets/img/equipment/01.png")
-
-
-              .equipment-slide-machine__mark-wrapper.machine__mark--1(style="right:55%; bottom: 25%")
-                span.equipment-slide-machine__mark
-                .equipment-slide-machine__mark-info
-                  p.equipment-slide-machine__mark-title Максимальный размер листа
-                  p.equipment-slide-machine__mark-text Станок принимает заготовки габаритами до 3000х1500 мм
-
-              //.equipment-slide-machine__mark-wrapper.machine__mark--2(style="right:14%; bottom: 24%")
-              //  span.equipment-slide-machine__mark.left
-              //  p.equipment-slide-machine__mark-title Мощный лазер
-              //  p.equipment-slide-machine__mark-text Лазер мощностью более 8000 КВт
-              //
-              //.equipment-slide-machine__mark-wrapper.machine__mark--3(style="right:9%; bottom: 45%")
-              //  span.equipment-slide-machine__mark.left
-              //  p.equipment-slide-machine__mark-title Высокоточный луч
-              //  p.equipment-slide-machine__mark-text Точность реза луча +/- 0,02 мм
-
+              .lazer#lazer-1-1
+                include ../../img/equipment/svg/laser-1-1.svg
+                .lazer__popup-slider.swiper-wrapper
+                  .lazer__popup.js-lazer__popup(data-position="left")
+                    .lazer__popup-title Максимальный размер листа
+                    .lazer__popup-text Станок принимает заготовки габаритами до 3000х1500 мм
+                  .lazer__popup.js-lazer__popup(data-position="top")
+                    .lazer__popup-title Высокоточный луч
+                    .lazer__popup-text Точность реза луча +/- 0,02 мм
+                  .lazer__popup.js-lazer__popup(data-position="bottom")
+                    .lazer__popup-title Мощный лазер
+                    .lazer__popup-text Лазер мощностью более 8000 КВт
 
             .equipment-slide__links
               a.button.button--outline.arrow(href="") Смотреть услугу
               a.button.button--bg-grey(href="") Характеристики
 
 
+      // Листогибочный станок-------------------------------
+      .equipment-slider__item.equipment-slide
+
+        .equipment-slide__title Листогибочный станок
+
+        ul.equipment-slide__pagination.equipment-slide-pagination
+          li.equipment-slide-pagination__item(data-model="1")
+            u.equipment-slide-pagination__number 01
+            span.equipment-slide-pagination__name Ber-Tech SHPB 32100
+
+          li.equipment-slide-pagination__item(data-model="2")
+            u.equipment-slide-pagination__number 02
+            span.equipment-slide-pagination__name ERMAKSAN SPEED PRO 6 AXES
+
+          li.equipment-slide-pagination__item(data-model="3")
+            u.equipment-slide-pagination__number 03
+            span.equipment-slide-pagination__name LVD ORION 3015 PLUS
+
+        // внутренний слайдер
+        .equipment-slide__machine.equipment-slide-machine__list
+          //--01--
+          .equipment-slide-machine__item(data-machine="1")
+            .equipment-slide-machine__image
+              .lazer#bend-1-1
+                include ../../img/equipment/svg/bend-1-1.svg
+                .lazer__popup.js-lazer__popup(data-position="left")
+                  .lazer__popup-title Рабочая длина
+                  .lazer__popup-text Станок принимает листы длиной до 3100 мм
+                .lazer__popup.js-lazer__popup(data-position="top")
+                  .lazer__popup-title Гибкость параметров
+                  .lazer__popup-text Величина максимального хода 530 мм
+                .lazer__popup.js-lazer__popup(data-position="bottom")
+                  .lazer__popup-title Мощный гибочный механизм
+                  .lazer__popup-text Эквивалентная мощность гибки - 135 т
+
+            .equipment-slide__links
+              a.button.button--outline.arrow(href="") Смотреть услугу
+              a.button.button--bg-grey(href="") Характеристики
+          //--02--
+          .equipment-slide-machine__item(data-machine="2")
+            .equipment-slide-machine__image
+              .lazer#bend-1-2
+                include ../../img/equipment/svg/bend-1-2.svg
+                .lazer__popup.js-lazer__popup(data-position="left")
+                  .lazer__popup-title Рабочая длина2
+                  .lazer__popup-text Станок принимает листы длиной до 3100 мм
+                .lazer__popup.js-lazer__popup(data-position="top")
+                  .lazer__popup-title Гибкость параметров2
+                  .lazer__popup-text Величина максимального хода 530 мм
+                .lazer__popup.js-lazer__popup(data-position="bottom")
+                  .lazer__popup-title Мощный гибочный механизм2
+                  .lazer__popup-text Эквивалентная мощность гибки - 135 т
+
+            .equipment-slide__links
+              a.button.button--outline.arrow(href="") Смотреть услугу
+              a.button.button--bg-grey(href="") Характеристики
+
+
+
+
+
+    .equipment-slider__nav
+      .slider-nav__prev
+      .slider-nav__next
 

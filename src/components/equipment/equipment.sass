@@ -1,16 +1,14 @@
 .equipment
   position: relative
-  background-image: url('../img/equipment/back.jpg')
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: center
-  width: 100%
+  //width: 100%
   max-width: 1920px
   height: 100vh
 
   &__container
+    height: 100%
     padding-top: 60px
     padding-bottom: 60px
+
 
   &__tag
     position: relative
@@ -21,6 +19,9 @@
     font-size: clamp(12px, calc(12px + (16 - 12) * ((100vw - 768px) / (1920 - 768))), 16px)
 
   &-slide
+    display: none
+    &.js-type-active
+      display: block
 
     &__title
       position: relative
@@ -33,7 +34,7 @@
     &-pagination
       position: relative
       z-index: 1
-      display: flex
+      display: inline-flex
       flex-direction: column
       transform: translateX(-50px)
       margin-bottom: 35px
@@ -67,18 +68,16 @@
   &-slide__links
     display: flex
     gap: 15px
+    @media (max-width: 1600px)
+      flex-direction: column
 
   &-slide-machine
 
     &__item
-      svg
-        width: 100%
-        height: 100%
-        position: absolute
-        top: 0
-        bottom: 0
-        left: 0
-        right: 0
+      display: none
+      &.js-machine-active
+        display: block
+
 
     &__image
       position: absolute
@@ -96,50 +95,16 @@
         height: auto
 
 
-    &__mark-wrapper
-      position: absolute
-      //left: 30%
-      //bottom: 25%
+  &-slider
+    //position: relative
 
-    &__mark
-      width: 34px
-      aspect-ratio: 1 / 1
-      border-radius: 50%
-      background-color: $accent
-      display: flex
-      align-items: center
-      justify-content: center
-      &.left
-        left: -70px
-      span
-        filter: blur(9px)
-        width: 100%
-        aspect-ratio: 1 / 1
-        border-radius: 50%
-        background-color: $accent
-      &::before,
-      &::after
-        content: ""
-        position: absolute
-        border-radius: 50%
-        display: inline-block
-        aspect-ratio: 1 / 1
-      &::before
-        background-color: #fff
-        width: 17px
-        z-index: 2
-      &::after
-        width: 28px
-        background-color: rgba(136, 136, 136, 0.3)
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4)
-
-
-    &__mark-info
-      position: absolute
-      width: 280px
-      padding: 15px
-      background-color: $frosted-top
-      border-radius: 8px
+  &-slider__nav
+    position: relative
+    display: inline-flex
+    gap: 12px
+    & *
+      position: relative
+      transform: initial
 
 
 

@@ -18,6 +18,7 @@
 
   tabsSlides(data)
 
+
   const heroIndex = document.querySelector('.hero--index');
 
   if (heroIndex) {

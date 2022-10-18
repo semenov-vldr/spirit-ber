@@ -19,22 +19,25 @@
 
 function tabsSlides ( { classWrapper, classSlide, classNav, activeClass,  dataNameNav, dataNameSlide} ) {
 
-  const heroDelivery = document.querySelector(classWrapper);
+  const blockWrapper = document.querySelector(classWrapper);
 
-  if (heroDelivery) {
+  if (blockWrapper) {
 
-    const slides = heroDelivery.querySelectorAll(classSlide);
-    const tabs = heroDelivery.querySelectorAll(classNav);
+    const slides = blockWrapper.querySelectorAll(classSlide);
+    const tabs = blockWrapper.querySelectorAll(classNav);
 
     const addClassActive = (item) => item.classList.add(activeClass);
     const removeClassActive = (item) => item.classList.remove(activeClass);
 
+    addClassActive(tabs[0]);
+    addClassActive(slides[0]);
+
     tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(tab => removeClassActive(tab));
-        slides.forEach(slide => removeClassActive(slide));
-        addClassActive(tab);
-        const numberTabs = tab.getAttribute(dataNameNav);
+      tab.addEventListener('click', function() {
+        tabs.forEach(removeClassActive);
+        slides.forEach(removeClassActive);
+        addClassActive(this);
+        const numberTabs = this.getAttribute(dataNameNav);
         slides.forEach(slide => {
           const numberSlide = slide.getAttribute(dataNameSlide);
           if (numberTabs === numberSlide) addClassActive(slide);
@@ -45,3 +48,49 @@ function tabsSlides ( { classWrapper, classSlide, classNav, activeClass,  dataNa
   }
 
 };
+
+
+  //------------------
+
+
+function switchTypeSlide ( { classWrapper, classSlide, classNav, activeClass,  dataNameNav, dataNameSlide} ) {
+
+  const blockWrappers = document.querySelectorAll(classWrapper);
+
+  blockWrappers.forEach(blockWrapper => {
+
+    const isActiveSlide = blockWrapper.classList.contains('js-type-active');
+
+    if (isActiveSlide) {
+
+      const slides = blockWrapper.querySelectorAll(classSlide);
+      const tabs = blockWrapper.querySelectorAll(classNav);
+
+      const addClassActive = (item) => item.classList.add(activeClass);
+      const removeClassActive = (item) => item.classList.remove(activeClass);
+
+      addClassActive(tabs[0]);
+      addClassActive(slides[0]);
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          tabs.forEach(removeClassActive);
+          slides.forEach(removeClassActive);
+          addClassActive(this);
+          const numberTabs = this.getAttribute(dataNameNav);
+          slides.forEach(slide => {
+            const numberSlide = slide.getAttribute(dataNameSlide);
+            if (numberTabs === numberSlide) addClassActive(slide);
+          });
+        });
+      });
+
+    }
+
+  });
+
+
+  }
+
+
+
