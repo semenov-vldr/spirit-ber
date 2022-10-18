@@ -42,7 +42,6 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
       popups.forEach(popup => {
         popup.style.transform = "initial";
-        console.log(popup)
       });
 
 
