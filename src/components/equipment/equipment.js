@@ -27,8 +27,8 @@
 
     const equipmentSlider = equipment.querySelector('.equipment-slider');
 
-    const prev = equipment.querySelector('.slider-nav__prev');
-    const next = equipment.querySelector('.slider-nav__next');
+    const prev = equipment.querySelector('.equipment-slider__nav-prev');
+    const next = equipment.querySelector('.equipment-slider__nav-next');
 
 
       tabsSlides(data);

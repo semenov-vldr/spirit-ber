@@ -7,15 +7,15 @@
 
   if (mobileWidth) {
 
-    mySwiper = new Swiper('.production__advantages-wrapper', {
+    mySwiper = new Swiper('.lazer__popup-slider-wrapper', {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       },
-      // navigation: {
-      //   nextEl: '.arrow-nav__next',
-      //   prevEl: '.arrow-nav__prev',
-      // },
+      navigation: {
+        nextEl: '.popup-next',
+        prevEl: '.popup-prev',
+      },
 
       uniqueNavElements: true,
 
@@ -30,7 +30,7 @@
       centeredSlides: true,
 
       // Отступ между слайдами
-      spaceBetween: 15,
+      spaceBetween: 0,
 
       // Стартовый слайд
       initialSlide: 0,

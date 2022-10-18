@@ -28,18 +28,24 @@ mixin equipmentSlidePaginationItem (num, name)
           //--01--
           .equipment-slide-machine__item(data-machine="1")
             .equipment-slide-machine__image
-              .lazer#lazer-1-1
+              .lazer.lazer-1-1#lazer-1-1
                 include ../../img/equipment/svg/laser-1-1.svg
-                .lazer__popup-slider.swiper-wrapper
-                  .lazer__popup.js-lazer__popup(data-position="left")
-                    .lazer__popup-title Максимальный размер листа
-                    .lazer__popup-text Станок принимает заготовки габаритами до 3000х1500 мм
-                  .lazer__popup.js-lazer__popup(data-position="top")
-                    .lazer__popup-title Высокоточный луч
-                    .lazer__popup-text Точность реза луча +/- 0,02 мм
-                  .lazer__popup.js-lazer__popup(data-position="bottom")
-                    .lazer__popup-title Мощный лазер
-                    .lazer__popup-text Лазер мощностью более 8000 КВт
+                .lazer__popup-slider-wrapper.swiper
+                  .lazer__popup-slider.swiper-wrapper
+                    .lazer__popup.js-lazer__popup.swiper-slide(data-position="left")
+                      .lazer__popup-title Максимальный размер листа
+                      .lazer__popup-text Станок принимает заготовки габаритами до 3000х1500 мм
+                    .lazer__popup.js-lazer__popup.swiper-slide(data-position="top")
+                      .lazer__popup-title Высокоточный луч
+                      .lazer__popup-text Точность реза луча +/- 0,02 мм
+                    .lazer__popup.js-lazer__popup.swiper-slide(data-position="bottom")
+                      .lazer__popup-title Мощный лазер
+                      .lazer__popup-text Лазер мощностью более 8000 КВт
+
+                  .swiper-pagination
+                  .slider-nav__prev.popup-prev
+                  .slider-nav__next.popup-next
+
 
             .equipment-slide__links
               a.button.button--outline.arrow(href="") Смотреть услугу
@@ -108,6 +114,6 @@ mixin equipmentSlidePaginationItem (num, name)
 
 
     .equipment-slider__nav
-      .slider-nav__prev
-      .slider-nav__next
+      .slider-nav__prev.equipment-slider__nav-prev
+      .slider-nav__next.equipment-slider__nav-next
 

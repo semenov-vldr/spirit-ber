@@ -1,4 +1,4 @@
-const desktopWidth = window.matchMedia('(min-width: 1500px)').matches;
+const desktopWidth = window.matchMedia('(min-width: 1500.1px)').matches;
 const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
 // ------Установка для лазерной резки---------------
@@ -36,20 +36,18 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
     };
 
 
+
     function resetPopupsPosition(){
-
-        let popups = lazer_block.querySelectorAll('.js-lazer__popup')
-
+      let popups = lazer_block.querySelectorAll('.js-lazer__popup')
       popups.forEach(popup => {
         popup.style.transform = "initial";
       });
 
-
     };
 
-
-
-    setPopupsPosition()
+    if (desktopWidth) setPopupsPosition();
+    if (tabletWidth) resetPopupsPosition();
+    //setPopupsPosition()
 
     window.addEventListener('resize', () => {
 
