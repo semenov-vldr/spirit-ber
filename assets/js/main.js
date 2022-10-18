@@ -296,6 +296,153 @@
 
 {
 
+  const mobileWidth = window.matchMedia('(max-width: 1500px)').matches;
+
+  let mySwiper;
+
+  if (mobileWidth) {
+
+    mySwiper = new Swiper('.production__advantages-wrapper', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      // navigation: {
+      //   nextEl: '.arrow-nav__next',
+      //   prevEl: '.arrow-nav__prev',
+      // },
+
+      uniqueNavElements: true,
+
+      slidesPerView: 1,
+
+      // Бесконечная прокрутка
+      loop: true,
+
+      // Откл функционала, если слайдов меньше, чем нужно
+      watchOverflow: true,
+
+      centeredSlides: true,
+
+      // Отступ между слайдами
+      spaceBetween: 15,
+
+      // Стартовый слайд
+      initialSlide: 0,
+
+      // Брейк поинты (адаптив)
+      // Ширина экрана
+      breakpoints: {
+        // 320: {
+        //   slidesPerView: 1
+        // },
+      }
+    });
+
+  }
+
+
+
+
+
+
+}
+
+{
+
+  const data = {
+    // класс для всего блока, в котором мы работаем
+    classWrapper: '.equipment-slide',
+    // класс контента, который будет меняться
+    classSlide: '.equipment-slide-machine__item',
+    // класс табов
+    classNav: '.equipment-slide-pagination__item',
+    // имя активного класса
+    activeClass: 'js-machine-active',
+    // data-атрибут для табов
+    dataNameNav: 'data-model',
+    // data-атрибут для слайда
+    dataNameSlide: 'data-machine',
+  };
+
+
+
+  const equipment = document.querySelector('.equipment');
+
+  const addClassActive = (item) => item.classList.add('js-type-active');
+  const removeClassActive = (item) => item.classList.remove('js-type-active');
+
+
+  if (equipment) {
+
+    const equipmentSlider = equipment.querySelector('.equipment-slider');
+
+    const prev = equipment.querySelector('.slider-nav__prev');
+    const next = equipment.querySelector('.slider-nav__next');
+
+
+      tabsSlides(data);
+
+      const slides = equipmentSlider.querySelectorAll('.equipment-slide');
+
+      const dots = equipmentSlider.querySelectorAll('.equipment-slide-pagination__item');
+
+    addClassActive(slides[0])
+    addClassActive(dots[0])
+
+
+      let index = 0;
+
+      const activeSlide = (num) => {
+        slides.forEach(removeClassActive);
+        addClassActive(slides[num]);
+      };
+
+      const activeSDot = (num) => {
+        dots.forEach(removeClassActive);
+        addClassActive(dots[num]);
+      };
+
+      const currentSlide = (idx) => {
+        activeSlide(idx);
+        activeSDot(idx);
+      };
+
+      const nextSlide = () => {
+        if (index === slides.length - 1) {
+          index = 0;
+          currentSlide(index);
+        } else {
+          index++;
+          currentSlide(index);
+        }
+      };
+
+      const prevSlide = () => {
+        if (index === 0) {
+          index = slides.length - 1;
+          currentSlide(index);
+        } else {
+          index--;
+          currentSlide(index);
+        }
+      };
+
+      next.addEventListener('click', nextSlide);
+      prev.addEventListener('click', prevSlide);
+
+      next.addEventListener('click', ()=> switchTypeSlide(data) );
+
+  }
+
+
+
+
+}
+
+
+{
+
   const phoneInputs = document.querySelectorAll('input[data-tel-input]');
 
   const getInputNumbersValue = (input) => {
@@ -1007,6 +1154,73 @@ if (dropZone) {
 
 }
 
+const desktopWidth = window.matchMedia('(min-width: 1500px)').matches;
+const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
+
+// ------Установка для лазерной резки---------------
+{
+  // laser 1-1
+  let lazer_block = document.getElementById('lazer-1-1');
+
+
+  if ( lazer_block ) {
+
+    function setPopupsPosition(){
+      let points = lazer_block.querySelectorAll('.js-point')
+
+      points.forEach(point => {
+        let coeff = (window.innerWidth / 1920);
+
+        let popup = lazer_block.querySelector('.js-lazer__popup[data-position="'+ point.dataset.point +'"]')
+
+          if ( point.dataset.point === 'left' ) {
+            popup.style.left = ((point.getBBox().x - 32) * coeff) +'px'
+            popup.style.top = (point.getBBox().y * coeff) +'px'
+            popup.style.transform = "translate(-100%, calc(-100% + 48px))"
+          }
+          if ( point.dataset.point === 'top' ) {
+            popup.style.left = ((point.getBBox().x) * coeff) +'px'
+            popup.style.top = (point.getBBox().y * coeff) +'px'
+            popup.style.transform = "translate(32px, calc(-50% - 24px))"
+          }
+          if ( point.dataset.point === 'bottom' ) {
+            popup.style.left = ((point.getBBox().x ) * coeff) +'px'
+            popup.style.top = (point.getBBox().y * coeff) +'px'
+            popup.style.transform = "translate(32px, -24px)"
+          }
+      })
+    };
+
+
+    function resetPopupsPosition(){
+
+        let popups = lazer_block.querySelectorAll('.js-lazer__popup')
+
+      popups.forEach(popup => {
+        popup.style.transform = "initial";
+        console.log(popup)
+      });
+
+
+    };
+
+
+
+    setPopupsPosition()
+
+    window.addEventListener('resize', () => {
+
+      if (desktopWidth) setPopupsPosition();
+
+      if (tabletWidth) resetPopupsPosition();
+
+    });
+
+
+  }
+}
+
+
 {
 
   const mapContacts = document.querySelector('#map-contacts');
@@ -1147,6 +1361,7 @@ if (dropZone) {
 
 
   tabsSlides(data)
+
 
   const heroIndex = document.querySelector('.hero--index');
 
@@ -1480,22 +1695,25 @@ playList.forEach(play => {
 
 function tabsSlides ( { classWrapper, classSlide, classNav, activeClass,  dataNameNav, dataNameSlide} ) {
 
-  const heroDelivery = document.querySelector(classWrapper);
+  const blockWrapper = document.querySelector(classWrapper);
 
-  if (heroDelivery) {
+  if (blockWrapper) {
 
-    const slides = heroDelivery.querySelectorAll(classSlide);
-    const tabs = heroDelivery.querySelectorAll(classNav);
+    const slides = blockWrapper.querySelectorAll(classSlide);
+    const tabs = blockWrapper.querySelectorAll(classNav);
 
     const addClassActive = (item) => item.classList.add(activeClass);
     const removeClassActive = (item) => item.classList.remove(activeClass);
 
+    addClassActive(tabs[0]);
+    addClassActive(slides[0]);
+
     tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(tab => removeClassActive(tab));
-        slides.forEach(slide => removeClassActive(slide));
-        addClassActive(tab);
-        const numberTabs = tab.getAttribute(dataNameNav);
+      tab.addEventListener('click', function() {
+        tabs.forEach(removeClassActive);
+        slides.forEach(removeClassActive);
+        addClassActive(this);
+        const numberTabs = this.getAttribute(dataNameNav);
         slides.forEach(slide => {
           const numberSlide = slide.getAttribute(dataNameSlide);
           if (numberTabs === numberSlide) addClassActive(slide);
@@ -1506,3 +1724,49 @@ function tabsSlides ( { classWrapper, classSlide, classNav, activeClass,  dataNa
   }
 
 };
+
+
+  //------------------
+
+
+function switchTypeSlide ( { classWrapper, classSlide, classNav, activeClass,  dataNameNav, dataNameSlide} ) {
+
+  const blockWrappers = document.querySelectorAll(classWrapper);
+
+  blockWrappers.forEach(blockWrapper => {
+
+    const isActiveSlide = blockWrapper.classList.contains('js-type-active');
+
+    if (isActiveSlide) {
+
+      const slides = blockWrapper.querySelectorAll(classSlide);
+      const tabs = blockWrapper.querySelectorAll(classNav);
+
+      const addClassActive = (item) => item.classList.add(activeClass);
+      const removeClassActive = (item) => item.classList.remove(activeClass);
+
+      addClassActive(tabs[0]);
+      addClassActive(slides[0]);
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          tabs.forEach(removeClassActive);
+          slides.forEach(removeClassActive);
+          addClassActive(this);
+          const numberTabs = this.getAttribute(dataNameNav);
+          slides.forEach(slide => {
+            const numberSlide = slide.getAttribute(dataNameSlide);
+            if (numberTabs === numberSlide) addClassActive(slide);
+          });
+        });
+      });
+
+    }
+
+  });
+
+
+  }
+
+
+
