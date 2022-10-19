@@ -3,7 +3,6 @@ const playList = document.querySelectorAll('.play-button');
 function playShow (btnPlay, video) {
   video.play();
   btnPlay.classList.add('visually-hidden');
-  console.log('play')
 };
 
 function pauseShow (btnPlay, video) {

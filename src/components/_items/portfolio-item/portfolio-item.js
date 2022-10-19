@@ -90,10 +90,13 @@
       item.addEventListener('click', () => addClassActive(item));
 
       const close = item.querySelector('.portfolio-popup__close');
-      close.addEventListener('click', function () {
-        removeClassActive(item);
-        console.log(this)
-      });
+      if (close) {
+        close.addEventListener('click', function () {
+          removeClassActive(item);
+          console.log(this)
+        });
+      }
+
     });
 
   }

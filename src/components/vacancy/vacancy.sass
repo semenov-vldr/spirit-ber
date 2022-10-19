@@ -3,6 +3,7 @@
   &__container
     display: grid
     grid-template-columns: 2fr 1fr
+    grid-template-rows: min-content 1fr
     column-gap: 40px
     @media (max-width: $width-mobile)
       grid-template-columns: 1fr
@@ -10,6 +11,7 @@
   &__title
     grid-column: 2 / span 1
     text-align: left
+    margin-bottom: 24px
     @media (max-width: $width-mobile)
       grid-column: 1 / -1
       grid-row: span 1
@@ -17,16 +19,19 @@
 
   &-main
     grid-column: 2 / span 1
+    grid-row: span 1
     @media (max-width: $width-mobile)
       grid-column: 1 / -1
     &__text
       @include fontSize(14, 16)
 
   &__contacts
-    display: flex
+    display: inline-flex
     flex-direction: column
     gap: 24px
     margin-top: 24px
+    @media (max-width: $width-mobile)
+      gap: 20px
 
   &-contact
     position: relative

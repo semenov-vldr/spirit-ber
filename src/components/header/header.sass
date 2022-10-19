@@ -164,7 +164,6 @@
 
   &-subnav-1
     padding-top: 15px
-    border-radius: 4px 4px 0 0
     .header-subnav__item
       border-left: 2px solid transparent
       @media (min-width: $width-mobile)
@@ -173,6 +172,8 @@
         &:hover .header-subnav-2
           transform: rotateX(0deg)
           visibility: visible
+        &:last-child
+          border-radius: 10px
     & > .header-subnav__item
       &::after
         content: ""
@@ -200,8 +201,9 @@
     @media (min-width: $width-mobile)
       left: 100%
       top: 0
-      border-radius: 0 0 4px 4px
+      border-radius: 0 4px 4px 0
       transition: initial
+      overflow: hidden
     @media (max-width: $width-mobile)
       &.js-active
         display: block

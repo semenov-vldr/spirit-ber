@@ -1,16 +1,19 @@
 .history-company
 
-  &__inner
+  &__content-wrapper
+    @media (max-width: 900px)
+      overflow-x: auto
+      overflow-y: hidden
+
+  &__content
     position: relative
-    //scroll-snap-type: x mandatory
-    cursor: pointer
-    height: 600px
+    min-height: 600px
     transform: translateY(200px)
     @media (max-width: 900px)
       transform: translateY(80px)
-      overflow-x: auto
       width: 1350px
-      height: 400px
+      min-height: 100px
+
 
   &__line-years
     margin-top: 280px
@@ -29,6 +32,10 @@
       @media (max-width: 968px)
         left: 20px
         right: 20px
+    @media (max-width: 900px)
+      margin-top: 200px
+    @media (max-width: 480px)
+      margin-top: 150px
 
   &__list
     position: relative
@@ -71,6 +78,8 @@
         transform: translate(-3px, 100%) rotate(45deg)
       @media (max-width: 900px)
         height: 60px
+      @media (max-width: 480px)
+        height: 32px
     &:nth-child(even)
       transform: translateY(100px)
     &:nth-child(even) &__tie
@@ -86,11 +95,15 @@
       &:nth-child(odd),
       &:nth-child(even)
         transform: translateY(calc(-100% - 80px))
+        @media (max-width: 480px)
+          transform: translateY(calc(-100% - 60px))
       &:nth-child(odd) &__tie,
       &:nth-child(even) &__tie
         transform: translateY(56px)
         bottom: -20px
         top: initial
+        @media (max-width: 480px)
+          bottom: 0
 
 
 

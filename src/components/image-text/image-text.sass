@@ -94,6 +94,10 @@
           order: -1
           overflow: hidden
 
+        .swiper-pagination
+          margin-top: 0
+          bottom: 40px
+
       &-cols
         @media (min-width: 768px)
           margin-top: 80px
@@ -112,7 +116,7 @@
         @media (min-width: 768px)
           flex: 0 0 30%
         @media (max-width: 768px)
-          padding: 12px
+          padding: 12px 12px 50px
           color: rgba($text, 0.6)
           background-color: $frosted-top
           box-shadow: $shadow-block
@@ -147,28 +151,12 @@
         color: $text
         margin-bottom: 0
 
-      //&__description
-      //  display: flex
-      //  flex-direction: column
-      //  gap: 24px
-      //  @media (max-width: $width-mobile)
-      //    gap: 12px
-
       &__subtitle
         @include fontSize(16, 20)
         &--accent
           color: $accent
         &--bigger
           @include fontSize(18, 24)
-
-      &-list
-        //display: flex
-        //flex-direction: column
-        //gap: 12px
-        //list-style-type: disc
-        //padding-left: 25px
-        //&--number
-        //  list-style-type: decimal
 
 
 

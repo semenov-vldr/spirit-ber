@@ -1,5 +1,27 @@
 .hero.hero-delivery
+  position: relative
   margin-top: 150px
+  &::before,
+  &::after
+    content: ""
+    position: absolute
+    background-image: url('../img/star-bg-light.svg')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    width: 430px
+    height: 530px
+    z-index: -1
+    @media (max-width: $width-mobile)
+      display: none
+  &::before
+    top: 60%
+    left: 15%
+  &::after
+    top: -10%
+    right: 0%
+
+
   .hero
 
     &__title
@@ -23,10 +45,8 @@
         border-radius: 8px
         overflow: hidden
 
-
-
     &-nav
-      background-color: $frosted-top
+      background-color: rgba($frosted-top, 0.7)
       @media (max-width: 768px)
         order: 1
       &__title
@@ -56,6 +76,13 @@
           box-shadow: inset 0px 0px 2px rgba(113, 200, 255, 0.24)
           backdrop-filter: blur(60px)
           border-color: $accent
+        &:hover .hero-nav__number,
+        &.js-delivery-active .hero-nav__number
+          color: $accent
+        &:hover .hero-nav__name,
+        &.js-delivery-active .hero-nav__name
+          color: #fff
+
         @media (max-width: 1200px)
           padding: 30px
         @media (max-width: 768px)
@@ -64,12 +91,13 @@
 
       &__name
         @include fontSize(18, 24)
+        color: rgba(#fff, 0.4)
 
       &__number
         position: absolute
         left: -22px
         top: 50%
-        color: $accent
+        color: rgba($accent, 0.4)
         @include fontSize(18, 20)
         transform: translate(-100%, -50%)
         width: 25px
@@ -79,7 +107,7 @@
           display: none
 
     &-data
-      background-color: rgba($frosted-top, 0.7)
+      background-color: rgba($frosted-bottom, 0.7)
       @media (max-width: 768px)
         padding: 0 4px 12px
 

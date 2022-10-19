@@ -42,5 +42,21 @@
 
 
 
+  // copy text
+
+  const heroContacts = document.querySelector('.hero-contacts');
+
+  if (heroContacts) {
+    const strList = heroContacts.querySelectorAll('.contacts-item__link');
+    console.log(strList)
+
+    strList.forEach(str => {
+      const copied = str.innerText;
+      const buttonCopy = str.parentNode.querySelector('.contacts__button-copy');
+      if (buttonCopy) {
+        buttonCopy.addEventListener('click', () => copyToClipboard(copied) );
+      }
+    });
+  }
 
 }

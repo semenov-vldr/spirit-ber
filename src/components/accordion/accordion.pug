@@ -1,0 +1,27 @@
+// пример разметки
+.accordion
+  .accordion__container
+    ul.accordion__list
+
+      li.accordion__item
+        p.accordion__title Я ознакомился со всей справочной информацией, но так и не понял, как до вас добраться. Что мне делать?
+          u.accordion__number 01
+          svg(width="10" height="19" fill="currentColor")
+            use(href='./assets/img/sprite.svg#arrow-right')
+        p.accordion__content Обратитесь к нашим специалистам за помощью по телефону:
+          a.accordion__content-link(href="tel:+74999940097") &#160; +7 (499) 994-00-97
+          | &#160;или по мобильному номеру менеджера, ведущего Ваши заказы. Вам обязательно подскажут как добраться до нас и будут с Вами на связи вплоть до Вашего прибытия.
+
+      li.accordion__item
+        p.accordion__title У меня нет чертежей, возможно у вас их заказать?
+          u.accordion__number 02
+          svg(width="10" height="19" fill="currentColor")
+            use(href='./assets/img/sprite.svg#arrow-right')
+        p.accordion__content Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.
+
+      li.accordion__item
+        p.accordion__title Есть ли у вас доставка?
+          u.accordion__number 03
+          svg(width="10" height="19" fill="currentColor")
+            use(href='./assets/img/sprite.svg#arrow-right')
+        p.accordion__content Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.

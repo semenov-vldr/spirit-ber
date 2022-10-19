@@ -48,12 +48,15 @@
       &:hover .hero-service-nav__name,
       &.js-service-active .hero-service-nav__name
         color: #fff
+      &:hover .hero-service-nav__number,
+      &.js-service-active .hero-service-nav__number
+        color: $accent
 
 
     &-service-nav__number
       min-width: 25px
       position: absolute
-      color: $accent
+      color: rgba($accent, 0.4)
       font-family: 'SpaceGrotesk', sans-serif
       font-size: 20px
       left: -45px
