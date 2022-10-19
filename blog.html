@@ -2,6 +2,7 @@
 <!-- ---- Form ------------>
 <!-- Name-->
 <!-- Tel-->
+<!-- Email-->
 <!-- Text-->
 <!-- Кнопка "отправить" и согласие-->
 <!-- карточка партнера--><!DOCTYPE html>
@@ -185,6 +186,11 @@
               <form class="feedback__form feedback-form feedback-form--blog" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
                 <div class="feedback-form__input-container feedback-form__input-container--blog">
                   <h3 class="feedback-form__input-title">Прикрепите файлы</h3>
+                  <!--.feedback-form__upload-progress.feedback-form-upload-progress-->
+                  <!--  .feedback-form-upload-progress__line-->
+                  <!--  .feedback-form-upload-progress__close-->
+                  <!--  span.feedback-form-upload-progress__name iklya.dwg-->
+                  <!--  span.feedback-form-upload-progress__size 60 из 100 мб-->
                   <div class="feedback-form__upload feedback-form-upload">
                     <input class="feedback-form-upload__input visually-hidden" id="inputfile" type="file" name="file" multiple accept=".pdf, .doc, .rtf, .jpg, .jpeg, .png">
                     <label class="feedback-form-upload__label">
@@ -200,7 +206,7 @@
                   <input id="name" placeholder="Иванов Иван Иванович*" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40" required="required"/><span class="feedback-form__error"></span>
                 </div>
                 <div class="feedback-form__input-container">
-                  <input id="phone" type="tel" name="phone" placeholder="+7(___)___-__-__" data-tel-input="" pattern=".{18,}" maxlength="18" autocomplete="off" required="required"/><span class="feedback-form__error"></span>
+                  <input id="email" type="email" name="email" maxlength="40" placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required="required"/><span class="feedback-form__error"></span>
                 </div>
                 <div class="feedback-form__input-container">
                   <textarea id="message" placeholder="Пожалуйста, введите запрос*" name="message" maxlength="200" rows="4" required="required"></textarea><span class="feedback-form__error"></span>
@@ -211,6 +217,12 @@
                   </label>
                   <button class="button arrow button--outline" type="submit">Отправить&nbsp;вопрос</button>
                 </div>
+                <template class="upload-progress__template">
+                  <div class="feedback-form__upload-progress feedback-form-upload-progress">
+                    <div class="feedback-form-upload-progress__line"></div>
+                    <div class="feedback-form-upload-progress__close"></div><span class="feedback-form-upload-progress__name"></span><span class="feedback-form-upload-progress__size"></span>
+                  </div>
+                </template>
               </form>
             </div>
           </div>

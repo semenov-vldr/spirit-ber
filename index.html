@@ -2,6 +2,7 @@
 <!-- ---- Form ------------>
 <!-- Name-->
 <!-- Tel-->
+<!-- Email-->
 <!-- Text-->
 <!-- Кнопка "отправить" и согласие-->
 <!-- карточка партнера--><!DOCTYPE html>
@@ -108,7 +109,7 @@
             <div class="container hero__container">
               <div class="hero__slider hero-slider"><span class="hero__tag">Металлообработка в Москве</span>
                 <ul class="hero-slider__pagination hero-slider-pagination">
-                  <li class="hero-slider-pagination__item js-hero-active" data-pagination="1">
+                  <li class="hero-slider-pagination__item" data-pagination="1">
                     <u class="hero-slider-pagination__number">01</u><span class="hero-slider-pagination__name">Лазерная резка</span>
                   </li>
                   <li class="hero-slider-pagination__item" data-pagination="2">
@@ -128,7 +129,7 @@
                   <div class="slider-nav__prev"></div>
                   <div class="slider-nav__next"></div>
                 </div>
-                <div class="hero-slider__item hero-slide js-hero-active" data-slide="1">
+                <div class="hero-slider__item hero-slide" data-slide="1">
                   <h3 class="hero-slide__title">Лазерная резка</h3><span class="hero-slide__price">-- ОТ 9 Р / гиб</span>
                   <p class="hero-slide__description">Гибка 1 листового металла в нашей компании осуществляется на профессиональных ЧПУ станках DONPRESSMASH и ERMAKSAN. Высокоточная ЧПУ гибка позволяет максимально точно придать форму металлической листовой заготовке. Высокая производительность и программируемые настройки станков обеспечивают минимальные затраты на серийное производство и высокую повторяемость полученного результата.</p>
                   <div class="hero-slide__links"><a class="button button--bg-accept" href="">Заказать услугу</a><a class="button button--outline arrow" href="">Подробнее</a></div>
@@ -285,7 +286,7 @@
                   <div class="equipment-slide__machine equipment-slide-machine__list">
                     <div class="equipment-slide-machine__item" data-machine="1">
                       <div class="equipment-slide-machine__image">
-                        <div class="lazer" id="lazer-1-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 920" fill="none">
+                        <div class="lazer lazer-1-1" id="lazer-1-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 920" fill="none">
   <image id="map_image" href="./assets/img/equipment/laser-1-1.webp" />
   <g filter="url(#filter0_f_1001_21031)">
     <circle cx="1408" cy="450" r="17" fill="#24C2DB"/>
@@ -468,19 +469,24 @@
   </defs>
 </svg>
 
-                          <div class="lazer__popup-slider swiper-wrapper">
-                            <div class="lazer__popup js-lazer__popup" data-position="left">
-                              <div class="lazer__popup-title">Максимальный размер листа</div>
-                              <div class="lazer__popup-text">Станок принимает заготовки габаритами до 3000х1500 мм</div>
+                          <div class="lazer__popup-slider-wrapper swiper">
+                            <div class="lazer__popup-slider swiper-wrapper">
+                              <div class="lazer__popup js-lazer__popup swiper-slide" data-position="left">
+                                <div class="lazer__popup-title">Максимальный размер листа</div>
+                                <div class="lazer__popup-text">Станок принимает заготовки габаритами до 3000х1500 мм</div>
+                              </div>
+                              <div class="lazer__popup js-lazer__popup swiper-slide" data-position="top">
+                                <div class="lazer__popup-title">Высокоточный луч</div>
+                                <div class="lazer__popup-text">Точность реза луча +/- 0,02 мм</div>
+                              </div>
+                              <div class="lazer__popup js-lazer__popup swiper-slide" data-position="bottom">
+                                <div class="lazer__popup-title">Мощный лазер</div>
+                                <div class="lazer__popup-text">Лазер мощностью более 8000 КВт</div>
+                              </div>
                             </div>
-                            <div class="lazer__popup js-lazer__popup" data-position="top">
-                              <div class="lazer__popup-title">Высокоточный луч</div>
-                              <div class="lazer__popup-text">Точность реза луча +/- 0,02 мм</div>
-                            </div>
-                            <div class="lazer__popup js-lazer__popup" data-position="bottom">
-                              <div class="lazer__popup-title">Мощный лазер</div>
-                              <div class="lazer__popup-text">Лазер мощностью более 8000 КВт</div>
-                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="slider-nav__prev popup-prev"></div>
+                            <div class="slider-nav__next popup-next"></div>
                           </div>
                         </div>
                       </div>
@@ -910,8 +916,8 @@
                 </div>
               </div>
               <div class="equipment-slider__nav">
-                <div class="slider-nav__prev"></div>
-                <div class="slider-nav__next"></div>
+                <div class="slider-nav__prev equipment-slider__nav-prev"></div>
+                <div class="slider-nav__next equipment-slider__nav-next"></div>
               </div>
             </div>
           </div>
