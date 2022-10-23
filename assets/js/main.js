@@ -468,22 +468,15 @@
 
 // ---------upload file---------
 
-const formBlog = document.querySelector('.feedback-form__input-container--blog');
+const formUpload = document.querySelector('.feedback-form-upload');
 
-if (formBlog) {
+if (formUpload) {
 
-  const dropZone = formBlog.querySelector('.feedback-form-upload');
 
-  const progressLine = formBlog.querySelector('.feedback-form-upload-progress__line'); // линия загрузки
-  let filesDone = 0; // количество уже загруженных файлов
-  let filesTodo = 0; // сколько файлов выбрано для загрузки
+    addFunctionUploadFile(formUpload)
 
-  if (dropZone) {
-
+  function addFunctionUploadFile (dropZone) {
     const events = ['dragenter', 'dragleave', 'dragover', 'drop'];
-
-//events.forEach(event => dropZone.addEventListener(event,  handlerFunction, false));
-
 
     function preventDefaults(evt) {
       evt.preventDefault();
@@ -513,10 +506,8 @@ if (formBlog) {
 
     function handleFiles(files) {
       files = [...files];
-      //initializeProgress(files.length);
       files.forEach(uploadFile);
       files.forEach(createProgressBar);
-      console.log(files[0]);
     };
 
     function handleDrop(evt) {
@@ -537,27 +528,16 @@ if (formBlog) {
         body: formData
       })
         .then(() => {
-          //progressDone();
           console.log('готово');
         })
         .catch(() => console.log('Ошибка'))
     };
 
-    //---- Сброс состояния индикатора
-    function initializeProgress(numfiles) {
-      progressLine.style.width = '0';
-      filesDone = 0;
-      filesTodo = numfiles;
-    };
-
-    // Увеличения числа загруженых файлов на единицу и обновления индикатора
-    function progressDone() {
-      filesDone++
-      progressLine.style.width = `${filesDone / filesTodo * 100} px`;
-    };
-
 
     dropZone.addEventListener('drop', handleDrop);
+  };
+
+
 
 
 
@@ -566,16 +546,8 @@ if (formBlog) {
 
     const progressBarTemplate = document.querySelector('.upload-progress__template');
 
-
-    const labelText = formBlog.querySelector('.feedback-form-upload__label span');
-
-    const formUpload = formBlog.querySelector('.feedback-form-upload');
-
-    const inputfile = formUpload.querySelector('.feedback-form__input-container--blog #inputfile');
-
-
     // createProgressBar
-    const createProgressBar = (item) => {
+    function createProgressBar (item) {
       const progressItem = progressBarTemplate.content.cloneNode(true);
 
       const nameFile = progressItem.querySelector('.feedback-form-upload-progress__name');
@@ -592,11 +564,6 @@ if (formBlog) {
         size = (size / 1024).toFixed(1);
         sizeFile.textContent = size + ' кб';
       }
-
-      // let size = (item.size / 1024 / 1024).toFixed(1);
-      // sizeFile.textContent = size + ' мб';
-
-
 
       formUpload.before(progressItem);
     };
@@ -621,10 +588,11 @@ if (formBlog) {
     };
 
 
-    if (inputfile) upload('#inputfile');
+     upload('.feedback-form-upload__input');
 
   }
-  }
+
+
 
 }
 
@@ -636,132 +604,138 @@ if (formBlog) {
 
 const phoneInputs = document.querySelectorAll('input[data-tel-input]');
 
-const getInputNumbersValue = (input) => {
-  return input.value.replace(/\D/g,"");
-};
+function validInputTel (phoneInputs) {
+  const getInputNumbersValue = (input) => {
+    return input.value.replace(/\D/g,"");
+  };
 
-const onPhoneInput = (evt) => {
-  const input = evt.target;
-  let inputNumbersValue = getInputNumbersValue(input);
-  let formattedInputValue = "";
-  let selectionStart = input.selectionStart;
+  const onPhoneInput = (evt) => {
+    const input = evt.target;
+    let inputNumbersValue = getInputNumbersValue(input);
+    let formattedInputValue = "";
+    let selectionStart = input.selectionStart;
 
-  if ( !inputNumbersValue ) input.value = "";
+    if ( !inputNumbersValue ) input.value = "";
 
-
-  if ( input.value.length != selectionStart ) {
-    if ( evt.data && /\D/g.test(evt.data) ) {
-      input.value = formattedInputValue;
-    }
-    return;
-  }
-
-  if ( ["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1 ) {
-    // Российские номера
-    if (inputNumbersValue[0] == "9") inputNumbersValue = "7" + inputNumbersValue;
-    let firstSymbols = (inputNumbersValue[0] == "8") ? "8" : "+7";
-    formattedInputValue = firstSymbols + " ";
-
-    {
-      if (inputNumbersValue[0] == "8") {
-        phoneInputs[0].setAttribute("pattern", ".{17,}");
-      } else {
-        phoneInputs[0].setAttribute("pattern", ".{18,}");
+    if ( input.value.length !== selectionStart ) {
+      if ( evt.data && /\D/g.test(evt.data) ) {
+        input.value = formattedInputValue;
       }
+      return;
     }
 
+    if ( ["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1 ) {
+      // Российские номера
+      if (inputNumbersValue[0] === "9") inputNumbersValue = "7" + inputNumbersValue;
+      let firstSymbols = (inputNumbersValue[0] === "8") ? "8" : "+7";
+      formattedInputValue = firstSymbols + " ";
+
+      {
+        if (inputNumbersValue[0] === "8") {
+          phoneInputs.forEach(phoneInput => phoneInput.setAttribute("pattern", ".{17,}") )
+        } else {
+          phoneInputs.forEach(phoneInput => phoneInput.setAttribute("pattern", ".{18,}") )
+        }
+      }
 
 
-    if (inputNumbersValue.length > 1) {
-      formattedInputValue += "(" + inputNumbersValue.slice(1, 4);
-    }
 
-    if (inputNumbersValue.length >= 5) {
-      formattedInputValue += ") " + inputNumbersValue.slice(4, 7);
-    }
+      if (inputNumbersValue.length > 1) {
+        formattedInputValue += "(" + inputNumbersValue.slice(1, 4);
+      }
 
-    if (inputNumbersValue.length >= 8) {
-      formattedInputValue += "-" + inputNumbersValue.slice(7, 9);
-    }
+      if (inputNumbersValue.length >= 5) {
+        formattedInputValue += ") " + inputNumbersValue.slice(4, 7);
+      }
 
-    if (inputNumbersValue.length >= 10) {
-      formattedInputValue += "-" + inputNumbersValue.slice(9, 11);
-    }
+      if (inputNumbersValue.length >= 8) {
+        formattedInputValue += "-" + inputNumbersValue.slice(7, 9);
+      }
+
+      if (inputNumbersValue.length >= 10) {
+        formattedInputValue += "-" + inputNumbersValue.slice(9, 11);
+      }
 
 // Не российские номера
-  } else formattedInputValue = "+" + inputNumbersValue;
+    } else formattedInputValue = "+" + inputNumbersValue;
 
-  input.value = formattedInputValue;
-};
+    input.value = formattedInputValue;
+  };
 
 // Стирание первого символа
-const onPhoneKeyDown = (evt) => {
-  const input = evt.target;
-  if (evt.keyCode === 8 && getInputNumbersValue(input).length === 1) {
-    input.value = "";
-  }
-};
+  const onPhoneKeyDown = (evt) => {
+    const input = evt.target;
+    if (evt.keyCode === 8 && getInputNumbersValue(input).length === 1) {
+      input.value = "";
+    }
+  };
 
 // Вставка цифр в любое место
-const onPhonePaste = (evt) => {
-  const pasted = evt.clipboardData || window.clipboardData;
-  const input = evt.target;
-  const inputNumbersValue = getInputNumbersValue(input);
+  const onPhonePaste = (evt) => {
+    const pasted = evt.clipboardData || window.clipboardData;
+    const input = evt.target;
+    const inputNumbersValue = getInputNumbersValue(input);
 
-  if (pasted) {
-    const pastedText = pasted.getData("Text");
-    if ( /\D/g.test(pastedText) ) {
-      input.value = inputNumbersValue;
+    if (pasted) {
+      const pastedText = pasted.getData("Text");
+      if ( /\D/g.test(pastedText) ) {
+        input.value = inputNumbersValue;
+      }
     }
-  }
-};
+  };
 
-phoneInputs.forEach(input => {
-  input.addEventListener('input', onPhoneInput);
-  input.addEventListener("keydown", onPhoneKeyDown);
-  input.addEventListener("paste", onPhonePaste);
-});
-
-//----------- валидация обязательных полей -----------------
-
-const forms = document.querySelectorAll('.feedback__form');
-
-forms.forEach(form => {
-
-  const inputContainerList = form.querySelectorAll('.feedback-form__input-container');
-
-  const errors = form.querySelectorAll('.feedback-form__error');
-  errors.forEach(error => error.classList.add('visually-hidden'))
-
-  inputContainerList.forEach(inputContainer => {
-
-    const inputItem = inputContainer.querySelector('input[required]');
-
-    if (inputItem) {
-      inputItem.addEventListener('input', () => {
-        const error = inputContainer.querySelector('input + .feedback-form__error');
-
-        console.log(inputItem.value)
-
-        const isValid = inputItem.checkValidity();
-        if (isValid || inputItem.value === '' ) {
-          error.classList.add('visually-hidden');
-          error.textContent = ''
-        } else {
-          error.classList.remove('visually-hidden');
-          error.textContent = 'Ошибка ввода';
-        }
-        if (inputItem.value === '' ) {
-          console.log('пусто')
-        }
-
-      })
-    }
-
-
+  phoneInputs.forEach(phoneInput => {
+    phoneInput.addEventListener('input', onPhoneInput);
+    phoneInput.addEventListener("keydown", onPhoneKeyDown);
+    phoneInput.addEventListener("paste", onPhonePaste);
   });
+}
 
-})
+
+if (phoneInputs) validInputTel(phoneInputs);
+
+
+
+
+
+  //----------- валидация обязательных полей -----------------
+
+  const forms = document.querySelectorAll('.feedback__form');
+
+
+    function validForm (forms) {
+
+      const addClassHidden = (item) => item.classList.add('visually-hidden');
+      const removeClassHidden = (item) => item.classList.remove('visually-hidden');
+
+      forms.forEach(form => {
+
+        const inputContainerList = form.querySelectorAll('.feedback-form__input-container');
+        const errors = form.querySelectorAll('.feedback-form__error');
+        errors.forEach(addClassHidden);
+
+        inputContainerList.forEach(inputContainer => {
+          const inputItem = inputContainer.querySelector('input[required]');
+
+          if (inputItem) {
+            inputItem.addEventListener('input', () => {
+              const error = inputContainer.querySelector('input + .feedback-form__error');
+
+              const isValid = inputItem.checkValidity();
+              if (isValid || inputItem.value === '' ) {
+                addClassHidden(error);
+                error.textContent = ''
+              } else {
+                removeClassHidden(error);
+                error.textContent = 'Ошибка ввода';
+              }
+            })
+          }
+        });
+      })
+    };
+
+  if (forms) validForm(forms)
 
 {
 
@@ -776,43 +750,80 @@ forms.forEach(form => {
     items.forEach( item => item.classList.toggle('js-active') );
   };
 
+  function removeActiveClass(item) {
+    item.classList.remove('js-active' );
+  };
+
   headerMenuDropDown.addEventListener('click', () => toggleActiveElem(headerContactList));
   headerBurger.addEventListener('click', () => {
-    toggleActiveElem(header, headerNav);
-    toggleActiveElem(document.body);
+    toggleActiveElem(document.body, header, headerNav);
+
+    if (!header.classList.contains('js-active')) {
+      header.querySelectorAll('.header-nav__item, .header-subnav, .header-subnav__item').forEach(removeActiveClass)
+    }
   });
 
 
   // mobile menu
   const mobileWidth = window.matchMedia('(max-width: 1100px)');
 
+  //const mobileWidth = window.matchMedia('(max-width: 1100px)').matches;
+
   if (mobileWidth) {
     const headerListSubNav_1 = document.querySelectorAll('.header-subnav-1'); // список подменю 1-го уровня
 
     headerListSubNav_1.forEach(subNav => {
-        const parent = subNav.parentNode;
-        const link = parent.querySelector('.header-nav__link');
-        link.addEventListener('click', () => {
-          toggleActiveElem(subNav);
+      const link = subNav.parentNode.querySelector('.header-nav__link');
+      link.addEventListener('click', () => {
+        toggleActiveElem(subNav);
 
-          // добавление тени над рунктом "цена" в бургер-меню
-          const NavItems = header.querySelectorAll('.header-nav__item');
-          NavItems.forEach(navItem => navItem.classList.toggle('js-active'))
-        });
+        // добавление тени над рунктом "цена" в бургер-меню
+        const navItems = header.querySelectorAll('.header-nav__item');
+        //navItems.forEach(toggleActiveElem)
+        navItems.forEach(navItem => navItem.classList.toggle('js-active'))
       });
+
+    });
 
 
     const headerListSubNav = header.querySelectorAll('.header-subnav__item');
 
     headerListSubNav.forEach(subNav => {
       subNav.addEventListener('click', () => {
-        subNav.classList.toggle('js-active');
+        //subNav.classList.toggle('js-active');
+        toggleActiveElem(subNav)
         const subNav_2 = subNav.querySelector('.header-subnav-2');
 
-        subNav_2.classList.toggle('js-active');
+        //subNav_2.classList.toggle('js-active');
+        toggleActiveElem(subNav_2)
+
       })
     });
-  }
+
+
+
+
+
+      // Сбрасываем стандартное поведение ссылок, имеющих вложенность в меню
+
+    const subNavLinks = header.querySelectorAll('.header-subnav__link, .header-nav__link');
+
+    subNavLinks.forEach(navlink => {
+      const parent = navlink.parentNode;
+      const nestedMenu = parent.querySelector('.header-subnav');
+      if (nestedMenu && mobileWidth) {
+        navlink.addEventListener('click', (evt) => {
+          //evt.preventDefault();
+        })
+      } else {
+        navlink.addEventListener('click', () => false)
+      }
+    })
+
+
+
+
+  } // end --> if (mobileWidth)
 
 
 
@@ -1280,6 +1291,141 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
 
 {
+  // все кнопки, по нажатию на которые появляется поп-ап
+  const callToActionButtons = document.querySelectorAll('.button-popup');
+
+  const API_URL = 'https://httpbin.org/post';
+
+  let replyPopup;
+  let formPopup;
+
+
+  function removeFormPopup () {
+    const formPopup = document.querySelector('.form-popup');
+    if (formPopup) formPopup.remove();
+  };
+
+
+  function closeFormPopup (popup) {
+    popup.remove();
+    unblockScrollBody();
+    popup.querySelector('form').reset();
+  };
+
+  function openFormPopup (popup) {
+    const template = document.querySelector('#form-popup').content.cloneNode(true);
+    popup = template.querySelector('.form-popup')
+    document.body.append(popup);
+    blockScrollBody();
+    const close = popup.querySelector('.form-popup__close');
+    close.addEventListener('click', () => {
+      closeFormPopup(popup);
+      onDocumentClick(popup);
+    });
+  };
+
+  function onDocumentClick (item) {
+    document.body.addEventListener('click', (evt) => {
+      if (evt.target.classList.contains('form-popup')) {
+        closeFormPopup(item);
+      }
+    })
+  };
+
+  if (callToActionButtons) {
+
+    callToActionButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        openFormPopup(formPopup);
+        const phoneInputs = document.querySelectorAll('input[data-tel-input]');
+        const forms = document.querySelectorAll('.feedback__form');
+        if (phoneInputs) validInputTel(phoneInputs);
+        if (forms) validForm(forms);
+        userFormSubmit();
+          });
+    });
+  }
+
+
+
+
+
+// --- reply-popup (ответ на отправленную форму) ------
+
+  function showReplyPopup () {
+    document.body.append(replyPopup);
+    const closeButton = replyPopup.querySelector('.reply-popup__button');
+    closeButton.addEventListener('click', () => {
+      replyPopup.remove();
+      unblockScrollBody();
+    });
+  };
+
+  function displayReplyPopupSuccess () {
+    const template = document.querySelector('#success').content.cloneNode(true);
+    replyPopup = template.querySelector('.reply-popup');
+    showReplyPopup();
+  };
+
+  function displayReplyPopupError () {
+    const template = document.querySelector('#error').content.cloneNode(true);
+    replyPopup = template.querySelector('.reply-popup');
+    showReplyPopup();
+  }
+
+
+  function sendDataForm (onSuccess, onError, body) {
+    fetch(API_URL,{
+        method: 'POST',
+        body,
+      },
+    ).then((responce) => {
+      responce.ok ? onSuccess() : onError();
+    }).catch(() => onError());
+  };
+
+  function userFormSubmit () {
+
+    const forms = document.querySelectorAll('form')
+
+    forms.forEach(form => {
+      form.addEventListener('submit', (evt) => {
+        evt.preventDefault();
+        const isValid = form.checkValidity();
+
+        if (isValid) {
+          sendDataForm(() => {
+              displayReplyPopupSuccess();
+              removeFormPopup();
+              form.reset();
+            },
+            () => {
+              displayReplyPopupError;
+              removeFormPopup();
+            },
+            new FormData(evt.target)
+          );
+        }
+      });
+    })
+  };
+
+
+  userFormSubmit();
+
+
+
+
+
+
+
+
+
+
+
+}
+
+{
 
   const mapContacts = document.querySelector('#map-contacts');
 
@@ -1329,7 +1475,6 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
   if (heroContacts) {
     const strList = heroContacts.querySelectorAll('.contacts-item__link');
-    console.log(strList)
 
     strList.forEach(str => {
       const copied = str.innerText;
@@ -1431,10 +1576,11 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
     dataNameNav: 'data-pagination',
     // data-атрибут для слайда
     dataNameSlide: 'data-slide',
+
   };
 
+  //tabsSlides(data)
 
-  tabsSlides(data)
 
 
   const heroIndex = document.querySelector('.hero--index');
@@ -1450,16 +1596,18 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
     const addClassActive = (item) => item.classList.add('js-hero-active');
     const removeClassActive = (item) => item.classList.remove('js-hero-active');
 
+    addClassActive(slides[0])
+    addClassActive(dots[0])
 
     let index = 0;
 
     const activeSlide = (num) => {
-      slides.forEach(slide => removeClassActive(slide) );
+      slides.forEach(removeClassActive);
       addClassActive(slides[num]);
     };
 
     const activeSDot = (num) => {
-      dots.forEach(dot => removeClassActive(dot) );
+      dots.forEach(removeClassActive);
       addClassActive(dots[num]);
     };
 
@@ -1715,6 +1863,14 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
 }
 
+function blockScrollBody () {
+  document.body.classList.add('js-block-scroll');
+}
+
+function unblockScrollBody () {
+  document.body.classList.remove('js-block-scroll');
+}
+
 // copy text
 function copyToClipboard(str) {
   const el = document.createElement('textarea');
@@ -1787,11 +1943,11 @@ function tabsSlides ( { classWrapper, classSlide, classNav, activeClass,  dataNa
       tab.addEventListener('click', function() {
         tabs.forEach(removeClassActive);
         slides.forEach(removeClassActive);
-        addClassActive(this);
-        const numberTabs = this.getAttribute(dataNameNav);
+        addClassActive(tab);
+        const numberTab = tab.getAttribute(dataNameNav);
         slides.forEach(slide => {
           const numberSlide = slide.getAttribute(dataNameSlide);
-          if (numberTabs === numberSlide) addClassActive(slide);
+          //if (numberTab === numberSlide) addClassActive(slide);
         });
       });
     });
