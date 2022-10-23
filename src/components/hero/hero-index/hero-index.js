@@ -13,10 +13,11 @@
     dataNameNav: 'data-pagination',
     // data-атрибут для слайда
     dataNameSlide: 'data-slide',
+
   };
 
+  //tabsSlides(data)
 
-  tabsSlides(data)
 
 
   const heroIndex = document.querySelector('.hero--index');
@@ -32,16 +33,18 @@
     const addClassActive = (item) => item.classList.add('js-hero-active');
     const removeClassActive = (item) => item.classList.remove('js-hero-active');
 
+    addClassActive(slides[0])
+    addClassActive(dots[0])
 
     let index = 0;
 
     const activeSlide = (num) => {
-      slides.forEach(slide => removeClassActive(slide) );
+      slides.forEach(removeClassActive);
       addClassActive(slides[num]);
     };
 
     const activeSDot = (num) => {
-      dots.forEach(dot => removeClassActive(dot) );
+      dots.forEach(removeClassActive);
       addClassActive(dots[num]);
     };
 

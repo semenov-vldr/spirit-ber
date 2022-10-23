@@ -6,7 +6,7 @@ html
   background-color: var(--bg-black)
   color: var(--text)
 
-body.js-active
+body.js-block-scroll
   position: fixed
 
 
@@ -218,6 +218,15 @@ main
     aspect-ratio: 1 / 1
     right: 0
     top: 0
+
+.tablet-hidden
+  @media (max-width: $width-mobile)
+    display: none
+
+.desctop-hidden
+  @media (min-width: $width-mobile)
+    display: none
+
 
 
 

@@ -1,0 +1,48 @@
+template#form-popup
+  .form-popup
+    .form-popup__container
+
+      header.form-popup__header
+        span.form-popup__close
+          svg(width="12" height="12" fill="#fff")
+            use(href='./assets/img/sprite.svg#close')
+        h2.form-popup__title Форма заявки
+        p.form-popup__subtitle Оставьте заявку и наши менеджеры свяжутся с вами в ближайшее время!
+
+      form.form-popup__form.feedback__form.feedback-form.feedback-form--popup(method='POST' action='' enctype="multipart/form-data" autocomplete="off")
+
+        span.form-popup__title-field Личные данные
+
+        +inputName
+        +inputEmail
+        +inputTel
+        +inputText
+
+        span.form-popup__title-field Прикрепите файлы
+
+        .feedback-form__input-container.feedback-form__input-container--blog
+          .feedback-form__upload.feedback-form-upload
+            input#inputfilepopup.feedback-form-upload__input.visually-hidden(type="file" name="file" multiple accept=".pdf, .doc, .rtf, .jpg, .jpeg, .png")
+            label.feedback-form-upload__label
+              svg.feedback-form-upload__icon(width="24" height="19" fill="#fff")
+                use(href='assets/img/sprite.svg#drop')
+              span.tablet-hidden Перетащите сюда файл для загрузки
+            label(for='inputfilepopup')
+              span.tablet-hidden или выберите его в проводнике
+              span.desctop-hidden Выберите файл для загрузки
+          site.feedback-form__input-note Размер файлов не более 150 мб. Допустимые форматы: .pdf, .doc, .rtf, .jpg, .png
+
+        .feedback-form__sending
+          label
+            input(type='checkbox' checked)
+            span.feedback-form__checkbox
+            span.feedback-form__agreement Даю согласие на обработку персональных данных
+          button.button.button--bg-accept(type='submit') Отправить&nbsp;вопрос
+
+
+        template.upload-progress__template
+          .feedback-form__upload-progress.feedback-form-upload-progress
+            .feedback-form-upload-progress__line
+            .feedback-form-upload-progress__close
+            span.feedback-form-upload-progress__name
+            span.feedback-form-upload-progress__size

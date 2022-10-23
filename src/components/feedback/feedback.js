@@ -3,22 +3,15 @@
 
 // ---------upload file---------
 
-const formBlog = document.querySelector('.feedback-form__input-container--blog');
+const formUpload = document.querySelector('.feedback-form-upload');
 
-if (formBlog) {
+if (formUpload) {
 
-  const dropZone = formBlog.querySelector('.feedback-form-upload');
 
-  const progressLine = formBlog.querySelector('.feedback-form-upload-progress__line'); // линия загрузки
-  let filesDone = 0; // количество уже загруженных файлов
-  let filesTodo = 0; // сколько файлов выбрано для загрузки
+    addFunctionUploadFile(formUpload)
 
-  if (dropZone) {
-
+  function addFunctionUploadFile (dropZone) {
     const events = ['dragenter', 'dragleave', 'dragover', 'drop'];
-
-//events.forEach(event => dropZone.addEventListener(event,  handlerFunction, false));
-
 
     function preventDefaults(evt) {
       evt.preventDefault();
@@ -48,10 +41,8 @@ if (formBlog) {
 
     function handleFiles(files) {
       files = [...files];
-      //initializeProgress(files.length);
       files.forEach(uploadFile);
       files.forEach(createProgressBar);
-      console.log(files[0]);
     };
 
     function handleDrop(evt) {
@@ -72,27 +63,16 @@ if (formBlog) {
         body: formData
       })
         .then(() => {
-          //progressDone();
           console.log('готово');
         })
         .catch(() => console.log('Ошибка'))
     };
 
-    //---- Сброс состояния индикатора
-    function initializeProgress(numfiles) {
-      progressLine.style.width = '0';
-      filesDone = 0;
-      filesTodo = numfiles;
-    };
-
-    // Увеличения числа загруженых файлов на единицу и обновления индикатора
-    function progressDone() {
-      filesDone++
-      progressLine.style.width = `${filesDone / filesTodo * 100} px`;
-    };
-
 
     dropZone.addEventListener('drop', handleDrop);
+  };
+
+
 
 
 
@@ -101,16 +81,8 @@ if (formBlog) {
 
     const progressBarTemplate = document.querySelector('.upload-progress__template');
 
-
-    const labelText = formBlog.querySelector('.feedback-form-upload__label span');
-
-    const formUpload = formBlog.querySelector('.feedback-form-upload');
-
-    const inputfile = formUpload.querySelector('.feedback-form__input-container--blog #inputfile');
-
-
     // createProgressBar
-    const createProgressBar = (item) => {
+    function createProgressBar (item) {
       const progressItem = progressBarTemplate.content.cloneNode(true);
 
       const nameFile = progressItem.querySelector('.feedback-form-upload-progress__name');
@@ -127,11 +99,6 @@ if (formBlog) {
         size = (size / 1024).toFixed(1);
         sizeFile.textContent = size + ' кб';
       }
-
-      // let size = (item.size / 1024 / 1024).toFixed(1);
-      // sizeFile.textContent = size + ' мб';
-
-
 
       formUpload.before(progressItem);
     };
@@ -156,10 +123,11 @@ if (formBlog) {
     };
 
 
-    if (inputfile) upload('#inputfile');
+     upload('.feedback-form-upload__input');
 
   }
-  }
+
+
 
 }
 

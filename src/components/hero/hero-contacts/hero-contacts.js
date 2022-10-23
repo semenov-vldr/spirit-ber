@@ -48,7 +48,6 @@
 
   if (heroContacts) {
     const strList = heroContacts.querySelectorAll('.contacts-item__link');
-    console.log(strList)
 
     strList.forEach(str => {
       const copied = str.innerText;

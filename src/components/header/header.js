@@ -11,43 +11,80 @@
     items.forEach( item => item.classList.toggle('js-active') );
   };
 
+  function removeActiveClass(item) {
+    item.classList.remove('js-active' );
+  };
+
   headerMenuDropDown.addEventListener('click', () => toggleActiveElem(headerContactList));
   headerBurger.addEventListener('click', () => {
-    toggleActiveElem(header, headerNav);
-    toggleActiveElem(document.body);
+    toggleActiveElem(document.body, header, headerNav);
+
+    if (!header.classList.contains('js-active')) {
+      header.querySelectorAll('.header-nav__item, .header-subnav, .header-subnav__item').forEach(removeActiveClass)
+    }
   });
 
 
   // mobile menu
   const mobileWidth = window.matchMedia('(max-width: 1100px)');
 
+  //const mobileWidth = window.matchMedia('(max-width: 1100px)').matches;
+
   if (mobileWidth) {
     const headerListSubNav_1 = document.querySelectorAll('.header-subnav-1'); // список подменю 1-го уровня
 
     headerListSubNav_1.forEach(subNav => {
-        const parent = subNav.parentNode;
-        const link = parent.querySelector('.header-nav__link');
-        link.addEventListener('click', () => {
-          toggleActiveElem(subNav);
+      const link = subNav.parentNode.querySelector('.header-nav__link');
+      link.addEventListener('click', () => {
+        toggleActiveElem(subNav);
 
-          // добавление тени над рунктом "цена" в бургер-меню
-          const NavItems = header.querySelectorAll('.header-nav__item');
-          NavItems.forEach(navItem => navItem.classList.toggle('js-active'))
-        });
+        // добавление тени над рунктом "цена" в бургер-меню
+        const navItems = header.querySelectorAll('.header-nav__item');
+        //navItems.forEach(toggleActiveElem)
+        navItems.forEach(navItem => navItem.classList.toggle('js-active'))
       });
+
+    });
 
 
     const headerListSubNav = header.querySelectorAll('.header-subnav__item');
 
     headerListSubNav.forEach(subNav => {
       subNav.addEventListener('click', () => {
-        subNav.classList.toggle('js-active');
+        //subNav.classList.toggle('js-active');
+        toggleActiveElem(subNav)
         const subNav_2 = subNav.querySelector('.header-subnav-2');
 
-        subNav_2.classList.toggle('js-active');
+        //subNav_2.classList.toggle('js-active');
+        toggleActiveElem(subNav_2)
+
       })
     });
-  }
+
+
+
+
+
+      // Сбрасываем стандартное поведение ссылок, имеющих вложенность в меню
+
+    const subNavLinks = header.querySelectorAll('.header-subnav__link, .header-nav__link');
+
+    subNavLinks.forEach(navlink => {
+      const parent = navlink.parentNode;
+      const nestedMenu = parent.querySelector('.header-subnav');
+      if (nestedMenu && mobileWidth) {
+        navlink.addEventListener('click', (evt) => {
+          //evt.preventDefault();
+        })
+      } else {
+        navlink.addEventListener('click', () => false)
+      }
+    })
+
+
+
+
+  } // end --> if (mobileWidth)
 
 
 

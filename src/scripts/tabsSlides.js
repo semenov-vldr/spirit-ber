@@ -36,11 +36,11 @@ function tabsSlides ( { classWrapper, classSlide, classNav, activeClass,  dataNa
       tab.addEventListener('click', function() {
         tabs.forEach(removeClassActive);
         slides.forEach(removeClassActive);
-        addClassActive(this);
-        const numberTabs = this.getAttribute(dataNameNav);
+        addClassActive(tab);
+        const numberTab = tab.getAttribute(dataNameNav);
         slides.forEach(slide => {
           const numberSlide = slide.getAttribute(dataNameSlide);
-          if (numberTabs === numberSlide) addClassActive(slide);
+          //if (numberTab === numberSlide) addClassActive(slide);
         });
       });
     });

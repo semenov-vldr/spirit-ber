@@ -1,0 +1,17 @@
+template#success
+  .reply-popup
+    .reply-popup__body
+      svg.reply-popup__icon(width="36" height="36")
+        use(href='./assets/img/sprite.svg#success')
+      p.reply-popup__title Успешно!
+      p.reply-popup__text Ваш запрос был успешно обработан. Благодарим вас за обращение в Спирит Бер.
+      button.button.button--outline.reply-popup__button Понятно!
+
+template#error
+  .reply-popup
+    .reply-popup__body
+      svg.reply-popup__icon(width="36" height="36")
+        use(href='./assets/img/sprite.svg#attention')
+      p.reply-popup__title Ошибка!
+      p.reply-popup__text Во время обработки запроса что-то пошло не так! Пожалуйста, попытайтесь еще раз.
+      button.button.button--outline.reply-popup__button Понятно!

@@ -1,0 +1,112 @@
+.form-popup
+  position: fixed
+  background-color: rgba(#0B0D0E, 0.9)
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 2000
+  overflow-y: auto
+  overflow-x: hidden
+  transition: all 0.5s ease 0s
+  overscroll-behavior: contain
+  display: flex
+  justify-content: center
+  align-items: center
+  gap: 100px
+
+  &__container
+    max-width: 980px
+    margin: 30px
+    box-sizing: content-box
+    min-width: 280px
+    background-color: rgba($frosted-bottom, 0.7)
+    border-radius: 8px
+    box-shadow: inset 0 0 3px rgba(113, 200, 255, 0.24)
+    overflow: hidden
+    filter: drop-shadow(0px 251px 100px rgba(24, 26, 27, 0.04)) drop-shadow(0px 141px 85px rgba(24, 26, 27, 0.13)) drop-shadow(0px 63px 63px rgba(24, 26, 27, 0.21)) drop-shadow(0px 16px 34px rgba(24, 26, 27, 0.25)) drop-shadow(0px 0px 0px rgba(24, 26, 27, 0.25))
+    @media (max-width: 768px)
+      margin: 10px 20px
+    @media (max-width: 480px)
+      margin: 10px 0
+
+
+  &__header
+    width: 100%
+    position: relative
+    background-color: rgba($frosted-top, 0.7)
+    text-align: center
+    padding: 24px
+    box-shadow: 0px -8px 10px rgba(0, 0, 0, 0.1), 0px -1px 2px rgba(0, 0, 0, 0.08), 0px 8px 10px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), inset 0px 0px 2px rgba(113, 200, 255, 0.24)
+    backdrop-filter: blur(60px)
+    @media (max-width: 768px)
+      padding: 12px
+
+
+  &__title
+    @include fontSize(24, 40)
+    line-height: 1.4
+    margin-bottom: 17px
+    @media (max-width: 768px)
+      margin-bottom: 12px
+
+  &__subtitle
+    @include fontSize(14, 16)
+
+
+  &__close
+    position: absolute
+    right: 24px
+    width: 44px
+    aspect-ratio: 1 / 1
+    border-radius: 50%
+    @extend .flex-center
+    background-color: rgba(106, 106, 106, 0.1)
+    cursor: pointer
+    &:hover
+      background-color: rgba(106, 106, 106, 0.2)
+    @media (max-width: 768px)
+      width: 40px
+      right: 20px
+
+
+  &__form
+    padding: 24px 40px 40px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    column-gap: 20px
+    row-gap: 0
+    @media (max-width: 768px)
+      padding: 12px
+
+    .feedback-form__input-container
+      grid-column: 1 / -1
+      @media (min-width: $width-mobile)
+        &:nth-child(3)
+          grid-column: span 1
+        &:nth-child(4)
+          grid-column: 2 / span 1
+      & + .feedback-form__input-container
+        margin-top: 16px
+      & + .form-popup__title-field
+        margin-top: 32px
+
+    .feedback-form-upload
+      margin-top: 0
+      justify-content: center
+
+
+  &__title-field
+    align-self: flex-start
+    @include fontSize(16, 20)
+    & + .feedback-form__input-container
+      margin-top: 12px
+
+
+
+
+
+
+
+
+

@@ -46,7 +46,6 @@
       max-width: 1700px
       display: grid
       grid-template-columns: auto 370px
-      //grid-template-rows: auto auto
       @media (max-width: 900px)
         grid-template-columns: 1fr
 
@@ -78,7 +77,8 @@
         &.js-hero-active .hero-slider-pagination__name
           border-left: 2px solid $accent
           color: $white
-        &.js-hero-active .hero-slider-pagination__number
+        &.js-hero-active .hero-slider-pagination__number,
+        &:hover .hero-slider-pagination__number
           color: $accent
         &:hover .hero-slider-pagination__name
           color: $white

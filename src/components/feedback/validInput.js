@@ -1,40 +1,40 @@
-//----------- валидация обязательных полей -----------------
 
-const forms = document.querySelectorAll('.feedback__form');
 
-forms.forEach(form => {
+  //----------- валидация обязательных полей -----------------
 
-  const inputContainerList = form.querySelectorAll('.feedback-form__input-container');
+  const forms = document.querySelectorAll('.feedback__form');
 
-  const errors = form.querySelectorAll('.feedback-form__error');
-  errors.forEach(error => error.classList.add('visually-hidden'))
 
-  inputContainerList.forEach(inputContainer => {
+    function validForm (forms) {
 
-    const inputItem = inputContainer.querySelector('input[required]');
+      const addClassHidden = (item) => item.classList.add('visually-hidden');
+      const removeClassHidden = (item) => item.classList.remove('visually-hidden');
 
-    if (inputItem) {
-      inputItem.addEventListener('input', () => {
-        const error = inputContainer.querySelector('input + .feedback-form__error');
+      forms.forEach(form => {
 
-        console.log(inputItem.value)
+        const inputContainerList = form.querySelectorAll('.feedback-form__input-container');
+        const errors = form.querySelectorAll('.feedback-form__error');
+        errors.forEach(addClassHidden);
 
-        const isValid = inputItem.checkValidity();
-        if (isValid || inputItem.value === '' ) {
-          error.classList.add('visually-hidden');
-          error.textContent = ''
-        } else {
-          error.classList.remove('visually-hidden');
-          error.textContent = 'Ошибка ввода';
-        }
-        if (inputItem.value === '' ) {
-          console.log('пусто')
-        }
+        inputContainerList.forEach(inputContainer => {
+          const inputItem = inputContainer.querySelector('input[required]');
 
+          if (inputItem) {
+            inputItem.addEventListener('input', () => {
+              const error = inputContainer.querySelector('input + .feedback-form__error');
+
+              const isValid = inputItem.checkValidity();
+              if (isValid || inputItem.value === '' ) {
+                addClassHidden(error);
+                error.textContent = ''
+              } else {
+                removeClassHidden(error);
+                error.textContent = 'Ошибка ввода';
+              }
+            })
+          }
+        });
       })
-    }
+    };
 
-
-  });
-
-})
+  if (forms) validForm(forms)
