@@ -1039,52 +1039,54 @@
         </template>
         <template id="form-popup">
           <div class="form-popup">
-            <div class="form-popup__container">
-              <header class="form-popup__header"><span class="form-popup__close">
-                  <svg width="12" height="12" fill="#fff">
-                    <use href="./assets/img/sprite.svg#close"></use>
-                  </svg></span>
-                <h2 class="form-popup__title">Форма заявки</h2>
-                <p class="form-popup__subtitle">Оставьте заявку и наши менеджеры свяжутся с вами в ближайшее время!</p>
-              </header>
-              <form class="form-popup__form feedback__form feedback-form feedback-form--popup" method="POST" action="" enctype="multipart/form-data" autocomplete="off"><span class="form-popup__title-field">Личные данные</span>
-                <div class="feedback-form__input-container">
-                  <input placeholder="Иванов Иван Иванович*" value="Вова" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40" required="required"/><span class="feedback-form__error"></span>
-                </div>
-                <div class="feedback-form__input-container">
-                  <input type="email" value="vova2066@ya.ru" name="email" maxlength="40" placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required="required"/><span class="feedback-form__error"></span>
-                </div>
-                <div class="feedback-form__input-container">
-                  <input type="tel" name="phone" value="+79255536220" placeholder="+7(___)___-__-__*" data-tel-input="" pattern=".{18,}" maxlength="18" autocomplete="off" required="required"/><span class="feedback-form__error"></span>
-                </div>
-                <div class="feedback-form__input-container">
-                  <textarea placeholder="Пожалуйста, введите запрос*" value="text some" name="message" maxlength="200" rows="4" required="required"></textarea><span class="feedback-form__error"></span>
-                </div><span class="form-popup__title-field">Прикрепите файлы</span>
-                <div class="feedback-form__input-container feedback-form__input-container--blog">
-                  <div class="feedback-form__upload feedback-form-upload">
-                    <input class="feedback-form-upload__input visually-hidden" id="inputfilepopup" type="file" name="file" multiple accept=".pdf, .doc, .rtf, .jpg, .jpeg, .png">
-                    <label class="feedback-form-upload__label">
-                      <svg class="feedback-form-upload__icon" width="24" height="19" fill="#fff">
-                        <use href="assets/img/sprite.svg#drop"></use>
-                      </svg><span class="tablet-hidden">Перетащите сюда файл для загрузки</span>
+            <div class="form-popup__wrapper">
+              <div class="form-popup__content">
+                <header class="form-popup__header"><span class="form-popup__close">
+                    <svg width="12" height="12" fill="#fff">
+                      <use href="./assets/img/sprite.svg#close"></use>
+                    </svg></span>
+                  <h2 class="form-popup__title">Форма заявки</h2>
+                  <p class="form-popup__subtitle">Оставьте заявку и наши менеджеры свяжутся с вами в ближайшее время!</p>
+                </header>
+                <form class="form-popup__form feedback__form feedback-form feedback-form--popup" method="POST" action="" enctype="multipart/form-data" autocomplete="off"><span class="form-popup__title-field">Личные данные</span>
+                  <div class="feedback-form__input-container">
+                    <input placeholder="Иванов Иван Иванович*" value="Вова" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40" required="required"/><span class="feedback-form__error"></span>
+                  </div>
+                  <div class="feedback-form__input-container">
+                    <input type="email" value="vova2066@ya.ru" name="email" maxlength="40" placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required="required"/><span class="feedback-form__error"></span>
+                  </div>
+                  <div class="feedback-form__input-container">
+                    <input type="tel" name="phone" value="+79255536220" placeholder="+7(___)___-__-__*" data-tel-input="" pattern=".{18,}" maxlength="18" autocomplete="off" required="required"/><span class="feedback-form__error"></span>
+                  </div>
+                  <div class="feedback-form__input-container">
+                    <textarea placeholder="Пожалуйста, введите запрос*" value="text some" name="message" maxlength="200" rows="4" required="required"></textarea><span class="feedback-form__error"></span>
+                  </div><span class="form-popup__title-field">Прикрепите файлы</span>
+                  <div class="feedback-form__input-container feedback-form__input-container--blog">
+                    <div class="feedback-form__upload feedback-form-upload">
+                      <input class="feedback-form-upload__input visually-hidden" id="inputfilepopup" type="file" name="file" multiple accept=".pdf, .doc, .rtf, .jpg, .jpeg, .png">
+                      <label class="feedback-form-upload__label">
+                        <svg class="feedback-form-upload__icon" width="24" height="19" fill="#fff">
+                          <use href="assets/img/sprite.svg#drop"></use>
+                        </svg><span class="tablet-hidden">Перетащите сюда файл для загрузки</span>
+                      </label>
+                      <label for="inputfilepopup"><span class="tablet-hidden">или выберите его в проводнике</span><span class="desctop-hidden">Выберите файл для загрузки</span></label>
+                    </div>
+                    <site class="feedback-form__input-note">Размер файлов не более 150 мб. Допустимые форматы: .pdf, .doc, .rtf, .jpg, .png</site>
+                  </div>
+                  <div class="feedback-form__sending">
+                    <label>
+                      <input type="checkbox" checked><span class="feedback-form__checkbox"></span><span class="feedback-form__agreement">Даю согласие на обработку персональных данных</span>
                     </label>
-                    <label for="inputfilepopup"><span class="tablet-hidden">или выберите его в проводнике</span><span class="desctop-hidden">Выберите файл для загрузки</span></label>
+                    <button class="button button--bg-accept" type="submit">Отправить&nbsp;вопрос</button>
                   </div>
-                  <site class="feedback-form__input-note">Размер файлов не более 150 мб. Допустимые форматы: .pdf, .doc, .rtf, .jpg, .png</site>
-                </div>
-                <div class="feedback-form__sending">
-                  <label>
-                    <input type="checkbox" checked><span class="feedback-form__checkbox"></span><span class="feedback-form__agreement">Даю согласие на обработку персональных данных</span>
-                  </label>
-                  <button class="button button--bg-accept" type="submit">Отправить&nbsp;вопрос</button>
-                </div>
-                <template class="upload-progress__template">
-                  <div class="feedback-form__upload-progress feedback-form-upload-progress">
-                    <div class="feedback-form-upload-progress__line"></div>
-                    <div class="feedback-form-upload-progress__close"></div><span class="feedback-form-upload-progress__name"></span><span class="feedback-form-upload-progress__size"></span>
-                  </div>
-                </template>
-              </form>
+                  <template class="upload-progress__template">
+                    <div class="feedback-form__upload-progress feedback-form-upload-progress">
+                      <div class="feedback-form-upload-progress__line"></div>
+                      <div class="feedback-form-upload-progress__close"></div><span class="feedback-form-upload-progress__name"></span><span class="feedback-form-upload-progress__size"></span>
+                    </div>
+                  </template>
+                </form>
+              </div>
             </div>
           </div>
         </template>
