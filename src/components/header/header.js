@@ -26,9 +26,9 @@
 
 
   // mobile menu
-  const mobileWidth = window.matchMedia('(max-width: 1100px)');
+  //const mobileWidth = window.matchMedia('(max-width: 1100px)');
 
-  //const mobileWidth = window.matchMedia('(max-width: 1100px)').matches;
+  const mobileWidth = window.matchMedia('(max-width: 1100px)').matches;
 
   if (mobileWidth) {
     const headerListSubNav_1 = document.querySelectorAll('.header-subnav-1'); // список подменю 1-го уровня
@@ -40,7 +40,6 @@
 
         // добавление тени над рунктом "цена" в бургер-меню
         const navItems = header.querySelectorAll('.header-nav__item');
-        //navItems.forEach(toggleActiveElem)
         navItems.forEach(navItem => navItem.classList.toggle('js-active'))
       });
 
@@ -51,11 +50,9 @@
 
     headerListSubNav.forEach(subNav => {
       subNav.addEventListener('click', () => {
-        //subNav.classList.toggle('js-active');
         toggleActiveElem(subNav)
         const subNav_2 = subNav.querySelector('.header-subnav-2');
 
-        //subNav_2.classList.toggle('js-active');
         toggleActiveElem(subNav_2)
 
       })
@@ -63,23 +60,12 @@
 
 
 
+ // Сбрасываем стандартное поведение ссылок, имеющих вложенность в меню
 
-
-      // Сбрасываем стандартное поведение ссылок, имеющих вложенность в меню
-
-    const subNavLinks = header.querySelectorAll('.header-subnav__link, .header-nav__link');
-
-    subNavLinks.forEach(navlink => {
-      const parent = navlink.parentNode;
-      const nestedMenu = parent.querySelector('.header-subnav');
-      if (nestedMenu && mobileWidth) {
-        navlink.addEventListener('click', (evt) => {
-          //evt.preventDefault();
-        })
-      } else {
-        navlink.addEventListener('click', () => false)
-      }
-    })
+const linkPreventDefaultMobile = header.querySelectorAll('.js-prevent-default-mobile');
+linkPreventDefaultMobile.forEach(link => {
+  link.addEventListener('click', (evt) => evt.preventDefault() );
+})
 
 
 

@@ -12,6 +12,10 @@
   &__content
     background-color: #1F272E
     padding: 48px
+    @media (max-width: 768px)
+      padding: 24px
+    @media (max-width: 480px)
+      padding: 24px 12px
 
   &__title
     @include fontSize(18, 40)
@@ -39,6 +43,10 @@
     color: #fff
     @media (max-width: 900px)
       align-items: flex-start
+    @media (max-width: 768px)
+      padding: 24px
+    @media (max-width: 480px)
+      padding: 24px 12px
 
   &-form__input-container
     position: relative
@@ -268,7 +276,8 @@
       aspect-ratio: 1 / 1
       border-radius: 50%
       background-color: rgba($frosted-bottom, 1)
-      top: 10px
+      top: 50%
+      transform: translateY(-50%)
       right: 10px
       border: 1px solid #fff
       opacity: 0

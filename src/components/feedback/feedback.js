@@ -1,14 +1,12 @@
 
-{
-
-// ---------upload file---------
-
-const formUpload = document.querySelector('.feedback-form-upload');
-
-if (formUpload) {
 
 
-    addFunctionUploadFile(formUpload)
+// ---------upload file (drag&drop)---------
+
+const formUploadList = document.querySelectorAll('.feedback-form-upload');
+
+if (formUploadList)  formUploadList.forEach(addFunctionUploadFile)
+
 
   function addFunctionUploadFile (dropZone) {
     const events = ['dragenter', 'dragleave', 'dragover', 'drop'];
@@ -32,17 +30,20 @@ if (formUpload) {
     };
 
     ['dragenter', 'dragover'].forEach(event => {
-      dropZone.addEventListener(event, highLight)
+      dropZone.addEventListener(event, highLight);
     });
 
     ['dragleave', 'drop'].forEach(event => {
-      dropZone.addEventListener(event, unHighLight)
+      dropZone.addEventListener(event, unHighLight);
     });
 
     function handleFiles(files) {
       files = [...files];
+      const names = new Set(files)
+      console.log(names)
       files.forEach(uploadFile);
       files.forEach(createProgressBar);
+
     };
 
     function handleDrop(evt) {
@@ -63,7 +64,7 @@ if (formUpload) {
         body: formData
       })
         .then(() => {
-          console.log('готово');
+          console.log('отправка успешна');
         })
         .catch(() => console.log('Ошибка'))
     };
@@ -76,60 +77,115 @@ if (formUpload) {
 
 
 
-    //-----другой вариант-----------------------------
+    //-----другой вариант (добавление файлов через проводник)-----------------------------
 
-
-    const progressBarTemplate = document.querySelector('.upload-progress__template');
 
     // createProgressBar
-    function createProgressBar (item) {
-      const progressItem = progressBarTemplate.content.cloneNode(true);
+    function createProgressBar (item, index) {
+      const formUploadList = document.querySelectorAll('.feedback-form-upload');
+      const progressBarTemplate = document.querySelector('.upload-progress__template')
+                                  .content.querySelector('.feedback-form__upload-progress');
 
-      const nameFile = progressItem.querySelector('.feedback-form-upload-progress__name');
-      const sizeFile = progressItem.querySelector('.feedback-form-upload-progress__size');
+      if (progressBarTemplate && formUploadList) {
 
-      nameFile.textContent = item.name;
+        const progressItem = progressBarTemplate.cloneNode(true);
+        progressItem.dataset.progress = index;
 
-      let size = item.size;
+        const nameFile = progressItem.querySelector('.feedback-form-upload-progress__name');
+        const sizeFile = progressItem.querySelector('.feedback-form-upload-progress__size');
 
-      if (size > 1024 * 1024 * 2) {
-        size = (size / 1024 / 1024).toFixed(1);
-        sizeFile.textContent = size + ' мб';
-      } else {
-        size = (size / 1024).toFixed(1);
-        sizeFile.textContent = size + ' кб';
+        nameFile.textContent = item.name;
+
+        let size = item.size;
+
+        if (size > 1024 * 1024 * 2) {
+          size = (size / 1024 / 1024).toFixed(1);
+          sizeFile.textContent = size + ' мб';
+        } else {
+          size = (size / 1024).toFixed(1);
+          sizeFile.textContent = size + ' кб';
+        }
+
+        formUploadList.forEach(formUpload => formUpload.before(progressItem));
       }
-
-      formUpload.before(progressItem);
     };
 
 
     function addFileInput(evt) {
       // добавленные файлы
       const files = Array.from(evt.target.files);
-      files.forEach(createProgressBar);
-    };
-
-    function upload(selector) {
-      const inputFile = document.querySelector(selector);
-
-      const changeHandler = (evt) => {
-        if (!evt.target.files.length) return
-        addFileInput(evt);
-      };
-
-      inputFile.addEventListener('change', changeHandler);
-
+      files.forEach((createProgressBar));
     };
 
 
-     upload('.feedback-form-upload__input');
 
+function visibleProgressUpload (evt) {
+
+  const files = [...evt.target.files];
+
+  function readAndVisible (file) {
+    const reader = new FileReader();
+
+    const progress = document.querySelector('.feedback-form-upload-progress__line');
+
+    reader.addEventListener('progress', (evt) => {
+      if (evt.loaded && evt.total) {
+        console.log(evt.target)
+        const percent = (evt.loaded / evt.total) * 100;
+        progress.style.width = `${percent}%`;
+
+        if (percent === 100) console.log(`${file.name} - загружен`)
+      }
+    })
+    reader.readAsDataURL(file);
+  };
+
+  if (files) files.forEach(readAndVisible);
+
+
+};
+
+
+// function visibleProgressUpload (evt) {
+//
+//   const reader = new FileReader();
+//   const files = evt.target.files;
+//   const file = files[0];
+//   reader.readAsDataURL(file)
+//
+//   const progress = document.querySelector('.feedback-form-upload-progress__line');
+//
+//   reader.addEventListener('progress', (evt) => {
+//     if (evt.loaded && evt.total) {
+//       const percent = (evt.loaded / evt.total) * 100;
+//       progress.style.width = `${percent}%`;
+//
+//       if (percent === 100) console.log(`${file.name} - загружен`)
+//     }
+//   })
+// };
+
+
+
+function upload(selector) {
+  const inputFile = document.querySelector(selector);
+  if (inputFile) {
+    const changeHandler = (evt) => {
+      if (!evt.target.files.length) return
+      addFileInput(evt);
+    };
+
+    inputFile.addEventListener('change', (evt) => {
+      changeHandler(evt);
+      visibleProgressUpload(evt);
+    });
   }
+};
 
 
 
-}
+
+upload('.feedback-form-upload__input');
 
 
 

@@ -27,9 +27,9 @@ const
         .pipe(sourcemaps.write())
         .pipe(csso())
         .pipe($.gulp.dest($.path.assets + '/css/'))
-        .pipe($.browserSync.reload({
-          stream: true
-        }));
+        // .pipe($.browserSync.reload({
+        //   stream: true
+        // }));
     })
 
   }

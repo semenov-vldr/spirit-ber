@@ -20,12 +20,12 @@ header.header
       ul.header-nav__list
 
         li.header-nav__item.header-nav__item--service
-          a.header-nav__link(href="service.html" ) Услуги
+          a.header-nav__link.js-prevent-default-mobile(href="service.html" ) Услуги
 
           ul.header-subnav.header-subnav-1
 
             li.header-subnav__item
-              a.header-subnav__link(href="##laser-cutting.html") Лазерная резка металла
+              a.header-subnav__link.js-prevent-default-mobile(href="laser-cutting.html") Лазерная резка металла
               ul.header-subnav.header-subnav-2
                 +headerSubNavItem('/', 'Лазерная резка листа')
                 +headerSubNavItem('/', 'Лазерная резка швеллера')
@@ -33,7 +33,7 @@ header.header
                 +headerSubNavItem('/', 'Лазерная резка уголка')
 
             li.header-subnav__item
-              a.header-subnav__link(href="/") Гибка листового металла
+              a.header-subnav__link.js-prevent-default-mobile(href="/") Гибка листового металла
               ul.header-subnav.header-subnav-2
                 +headerSubNavItem('/', 'Лазерная резка листа2')
                 +headerSubNavItem('/', 'Лазерная резка швеллера2')
@@ -41,7 +41,7 @@ header.header
                 +headerSubNavItem('/', 'Лазерная резка уголка2')
 
             li.header-subnav__item
-              a.header-subnav__link(href="##") Порошковая покраска металла
+              a.header-subnav__link.js-prevent-default-mobile(href="/") Порошковая покраска металла
               ul.header-subnav.header-subnav-2
                 +headerSubNavItem('/', 'Лазерная резка листа2')
                 +headerSubNavItem('/', 'Лазерная резка швеллера2')

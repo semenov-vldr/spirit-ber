@@ -13,7 +13,6 @@
     if (formPopup) formPopup.remove();
   };
 
-
   function closeFormPopup (popup) {
     popup.remove();
     unblockScrollBody();
@@ -25,6 +24,14 @@
     popup = template.querySelector('.form-popup')
     document.body.append(popup);
     blockScrollBody();
+
+    upload('.feedback-form-upload__input');
+
+    // drop zone
+    const formUpload = document.querySelector('.feedback-form-upload');
+    addFunctionUploadFile(formUpload);
+
+    // close
     const close = popup.querySelector('.form-popup__close');
     close.addEventListener('click', () => {
       closeFormPopup(popup);

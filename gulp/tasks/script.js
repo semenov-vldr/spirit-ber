@@ -20,11 +20,11 @@ module.exports = function () {
       ])
       .pipe($.concat("main.js"))
       .pipe($.gulp.dest($.path.assets + "/js/"))
-      .pipe(
-        $.browserSync.reload({
-          stream: true,
-        })
-      );
+      // .pipe(
+      //   $.browserSync.reload({
+      //     stream: true,
+      //   })
+      // );
   });
 
   $.gulp.task("script:json:dev", function () {

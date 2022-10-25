@@ -13,12 +13,6 @@
       .feedback-form__input-container.feedback-form__input-container--blog
         h3.feedback-form__input-title Прикрепите файлы
 
-        //.feedback-form__upload-progress.feedback-form-upload-progress
-        //  .feedback-form-upload-progress__line
-        //  .feedback-form-upload-progress__close
-        //  span.feedback-form-upload-progress__name iklya.dwg
-        //  span.feedback-form-upload-progress__size 60 из 100 мб
-
         .feedback-form__upload.feedback-form-upload
           input#inputfile.feedback-form-upload__input.visually-hidden(type="file" name="file" multiple accept=".pdf, .doc, .rtf, .jpg, .jpeg, .png")
           label.feedback-form-upload__label
@@ -34,9 +28,4 @@
       +sending
 
 
-      template.upload-progress__template
-        .feedback-form__upload-progress.feedback-form-upload-progress
-          .feedback-form-upload-progress__line
-          .feedback-form-upload-progress__close
-          span.feedback-form-upload-progress__name
-          span.feedback-form-upload-progress__size
+      +upload-progress-template

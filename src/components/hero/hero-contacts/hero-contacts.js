@@ -18,23 +18,29 @@
 
       const pointPickup = [56.130236759852764,37.07856198817317];
       const pointAddress = [56.130021055835314,37.079999652205565];
+      let geoObjects = new ymaps.GeoObjectCollection();
 
-      const myPlacemarkPickup = new ymaps.Placemark(pointPickup, {}, {
+      const placemarkPickup = new ymaps.Placemark(pointPickup, {}, {
         iconLayout: 'default#image',
         iconImageHref: './assets/img/icons/orange-mark.svg',
         iconImageSize: [51, 53],
         iconImageOffset: [0, -53]
       });
 
-      const myPlacemarkAddress = new ymaps.Placemark(pointAddress, {}, {
+      const placemarkAddress = new ymaps.Placemark(pointAddress, {}, {
         iconLayout: 'default#image',
         iconImageHref: './assets/img/icons/accent-mark.svg',
         iconImageSize: [51, 53],
         iconImageOffset: [0, -53]
       })
 
-      myMap.geoObjects.add(myPlacemarkPickup)
-      myMap.geoObjects.add(myPlacemarkAddress)
+      myMap.geoObjects
+        .add(placemarkAddress)
+        .add(placemarkPickup)
+
+      myMap.setBounds(myMap.geoObjects.getBounds());
+      myMap.setZoom(myMap.getZoom() - 4);
+
     }
 
   }

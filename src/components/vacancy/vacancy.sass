@@ -32,14 +32,22 @@
     margin-top: 24px
     @media (max-width: $width-mobile)
       gap: 20px
+    @media (max-width: 480px)
+      width: 100%
 
   &-contact
     position: relative
     display: flex
     flex-direction: column
 
+
   &-contact__title
     margin-bottom: 8px
+
+  &-contact__email
+    display: flex
+    justify-content: space-between
+    gap: 8px
 
   &-contact__link
     color: $accent

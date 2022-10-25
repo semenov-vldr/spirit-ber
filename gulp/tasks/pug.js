@@ -7,6 +7,6 @@ module.exports = function() {
         pretty: true
       }))
       .pipe($.gulp.dest($.path.dist))
-      .on('end', $.browserSync.reload)
+      //.on('end', $.browserSync.reload)
   })
 }
