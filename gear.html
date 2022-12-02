@@ -1,0 +1,1611 @@
+
+<!-- ---- Form ------------>
+<!-- Name-->
+<!-- Tel-->
+<!-- Email-->
+<!-- Text-->
+<!-- Кнопка "отправить" и согласие-->
+<!-- шаблон прогресс-бара-->
+<!-- карточка партнера--><!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Главная</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content=""><!--favicon-->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!--favicon end-->
+    <link rel="stylesheet" type="text/css" href="assets/css/libs.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+<!-- Yandex map script -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=dad86943-dfef-45bd-9c5e-c404323cb093&amp;lang=ru_RU" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="header__container"><a class="header__logo" href="index.html">
+            <svg width="181" height="40" fill="#fff">
+              <use href="./assets/img/sprite.svg#header-logo"></use>
+            </svg></a>
+          <button class="header__burger"></button>
+          <div class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item header-nav__item--service"><a class="header-nav__link js-prevent-default-mobile" href="service.html">Услуги</a>
+                <ul class="header-subnav header-subnav-1">
+                  <li class="header-subnav__item"><a class="header-subnav__link js-prevent-default-mobile" href="laser-cutting.html">Лазерная резка металла</a>
+                    <ul class="header-subnav header-subnav-2">
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка листа</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка швеллера</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка труб</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка уголка</a></li>
+                    </ul>
+                  </li>
+                  <li class="header-subnav__item"><a class="header-subnav__link js-prevent-default-mobile" href="/">Гибка листового металла</a>
+                    <ul class="header-subnav header-subnav-2">
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка листа2</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка швеллера2</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка труб2</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка уголка2</a></li>
+                    </ul>
+                  </li>
+                  <li class="header-subnav__item"><a class="header-subnav__link js-prevent-default-mobile" href="/">Порошковая покраска металла</a>
+                    <ul class="header-subnav header-subnav-2">
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка листа2</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка швеллера2</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка труб2</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка уголка2</a></li>
+                    </ul>
+                  </li>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="/">Гибка листового металла</a></li>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="/">Порошковая покраска металла</a></li>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="/">Слесарные работы</a></li>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="/">Металлоконструкции</a></li>
+                </ul>
+              </li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="">Цены</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="portfolio.html">Примеры работ</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="about.html">О нас</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+            <div class="header__contact header-contact">
+              <button class="header-contact__menu-tablet" type="button">Связаться с нами<span>Телефон, почта, адрес</span></button>
+              <ul class="header-contact__list">
+                <li class="header-contact__item">
+                  <div class="header-contact__icon"><img src="./assets/img/icons/header-phone.svg"></div><a class="header-contact__link" href="tel:+74999940097">+7 499 994 00 97</a>
+                  <button class="header-contact__button-copy">
+                    <svg width="12" height="12" fill="#fff">
+                      <use href="./assets/img/sprite.svg#button-copy"></use>
+                    </svg>
+                  </button><span class="header-contact__description">пн-пт с 09:00 до 18:00</span>
+                </li>
+                <li class="header-contact__item">
+                  <div class="header-contact__icon"><img src="./assets/img/icons/email.svg"></div><a class="header-contact__link" href="mailto:sales@spirit-bear.ru">sales@spirit-bear.ru</a>
+                  <button class="header-contact__button-copy">
+                    <svg width="12" height="12" fill="#fff">
+                      <use href="./assets/img/sprite.svg#button-copy"></use>
+                    </svg>
+                  </button><span class="header-contact__description">круглосуточно, без выходных</span>
+                </li>
+                <li class="header-contact__item header-contact__address">
+                  <div class="header-contact__icon"><img src="./assets/img/icons/point.svg"></div><a class="header-contact__link">МО, Солнечногорск,<br>д. Пешки, цех №22</a>
+                  <button class="header-contact__button-copy">
+                    <svg width="12" height="12" fill="#fff">
+                      <use href="./assets/img/sprite.svg#button-copy"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="section-column">
+          <div class="gear js-gear_category_swiper">
+            <div class="gear__category" data-gearCategory="Установка для лазерной резки">
+              <div class="gear__category-head gear__head js-gear-internal_slider">
+                <div class="gear__head-subtitle">Оборудование</div>
+                <div class="gear__head-title">Установка для<br/> лазерной резки</div>
+                <ul class="swiper-no-swiping gear__list js-gear_item_slider_controls">
+                  <li class="gear__list-item active" data-gearitem_control="1_0">FIBER LCM R1530F</li>
+                  <li class="gear__list-item" data-gearitem_control="1_1">LVD ORION 3015 PLUS</li>
+                </ul>
+                <div class="gear__buttons"><a class="button button--outline arrow gear__buttons-item" href="" target="_blank">Смотреть услугу</a>
+                  <button class="button button--bg-grey gear__buttons-item" data-target="">Характеристики</button>
+                </div>
+                <div class="gear__items js-gear_item_slider">
+                  <div class="gear__items-slide js-placeGearPopups">
+                    <svg viewBox="0 0 1920 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <image id="map_image" href="/assets/img/gear/1_1.webp" />
+
+  <g filter="url(#filter0_f_1128_21711)">
+    <circle cx="1408" cy="450" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter1_d_1128_21711)">
+    <circle cx="1408" cy="450" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1408" cy="450" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="top" cx="1408" cy="450" r="8.75" fill="white"/>
+
+  <g filter="url(#filter5_f_1128_21711)">
+    <circle cx="1320" cy="678" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter6_d_1128_21711)">
+    <circle cx="1320" cy="678" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1320" cy="678" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="bottom" cx="1320" cy="678" r="8.75" fill="white"/>
+  <g filter="url(#filter13_f_1128_21711)">
+    <circle cx="934" cy="664" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter14_d_1128_21711)">
+    <circle cx="934" cy="664" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="934" cy="664" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="left" cx="934" cy="664" r="8.75" fill="white"/>
+  <defs>
+    <filter id="filter0_f_1128_21711" x="1373" y="415" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_21711"/>
+    </filter>
+    <filter id="filter1_d_1128_21711" x="1385.75" y="431.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21711"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21711" result="shape"/>
+    </filter>
+    <filter id="filter3_d_1128_21711" x="1463.44" y="388.352" width="154.009" height="23.024" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21711"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21711" result="shape"/>
+    </filter>
+    <filter id="filter4_d_1128_21711" x="1462.32" y="420.64" width="223.613" height="43.36" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21711"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21711" result="shape"/>
+    </filter>
+    <filter id="filter5_f_1128_21711" x="1285" y="643" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_21711"/>
+    </filter>
+    <filter id="filter6_d_1128_21711" x="1297.75" y="659.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21711"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21711" result="shape"/>
+    </filter>
+    <filter id="filter8_d_1128_21711" x="1375.44" y="668.352" width="124.401" height="22.848" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21711"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21711" result="shape"/>
+    </filter>
+    <filter id="filter9_d_1128_21711" x="1374.4" y="700.4" width="244.341" height="43.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21711"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21711" result="shape"/>
+    </filter>
+    <filter id="filter11_d_1128_21711" x="633.44" y="578.352" width="236.752" height="22.848" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21711"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21711" result="shape"/>
+    </filter>
+    <filter id="filter12_d_1128_21711" x="632.64" y="610.4" width="205.443" height="67.76" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21711"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21711" result="shape"/>
+    </filter>
+    <filter id="filter13_f_1128_21711" x="899" y="629" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_21711"/>
+    </filter>
+    <filter id="filter14_d_1128_21711" x="911.75" y="645.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21711"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21711" result="shape"/>
+    </filter>
+  </defs>
+</svg>
+                    <img class="-mobile" src="/assets/img/gear/1_1_mobile.webp" />
+                    <div class="gear__popups">
+                      <div class="gear__popups-item js-gear_popup" data-position="left">
+                        <div class="gear__popups-item-title">1_0 1 Максимальный размер листа</div>
+                        <div class="gear__popups-item-text">Станок принимает заготовки габаритами до 3000х1500 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="top">
+                        <div class="gear__popups-item-title">1_0 2 Высокоточный луч</div>
+                        <div class="gear__popups-item-text">Точность реза луча +/- 0,02 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="bottom">
+                        <div class="gear__popups-item-title">1_0 3 Мощный лазер</div>
+                        <div class="gear__popups-item-text">Лазер мощностью более 8000 КВт</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="gear__items-slide js-placeGearPopups" data-slide="1_1"></div>
+                </div>
+              </div>
+            </div>
+            <div class="gear__category" data-gearCategory="Листогибочный станок">
+              <div class="gear__category-head gear__head js-gear-internal_slider">
+                <div class="gear__head-subtitle">Оборудование</div>
+                <div class="gear__head-title">Листогибочный<br/> станок</div>
+                <ul class="swiper-no-swiping gear__list js-gear_item_slider_controls">
+                  <li class="gear__list-item active" data-gearitem_control="0">Ber-Tech SHPB 32100</li>
+                  <li class="gear__list-item" data-gearitem_control="1">ERMAKSAN SPEED PRO 6 AXES</li>
+                  <li class="gear__list-item" data-gearitem_control="2">ADH WC67K</li>
+                </ul>
+                <div class="gear__buttons"><a class="button button--outline arrow gear__buttons-item" href="" target="_blank">Смотреть услугу</a>
+                  <button class="button button--bg-grey gear__buttons-item" data-target="">Характеристики</button>
+                </div>
+                <div class="gear__items js-gear_item_slider">
+                  <div class="gear__items-slide js-placeGearPopups">
+                    <svg  viewBox="0 0 1920 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <image id="map_image" href="/assets/img/gear/2_1.webp"/>
+  <g filter="url(#filter0_f_1128_21821)">
+    <circle cx="1374" cy="629" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter1_d_1128_21821)">
+    <circle cx="1374" cy="629" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1374" cy="629" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="bottom" cx="1374" cy="629" r="8.75" fill="white"/>
+  <g filter="url(#filter5_f_1128_21821)">
+    <circle cx="1325" cy="458" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter6_d_1128_21821)">
+    <circle cx="1325" cy="458" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1325" cy="458" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="top" cx="1325" cy="458" r="8.75" fill="white"/>
+  <g filter="url(#filter13_f_1128_21821)">
+    <circle cx="1013.5" cy="641" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter14_d_1128_21821)">
+    <circle cx="1013.5" cy="641" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1013.5" cy="641" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="left" cx="1013.5" cy="641" r="8.75" fill="white"/>
+  <defs>
+    <filter id="filter0_f_1128_21821" x="1339" y="594" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_21821"/>
+    </filter>
+    <filter id="filter1_d_1128_21821" x="1351.75" y="610.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21821"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21821" result="shape"/>
+    </filter>
+    <filter id="filter3_d_1128_21821" x="1429.44" y="619.352" width="236.054" height="21.6479" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21821"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21821" result="shape"/>
+    </filter>
+    <filter id="filter4_d_1128_21821" x="1428.8" y="651.64" width="210.681" height="43.52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21821"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21821" result="shape"/>
+    </filter>
+    <filter id="filter5_f_1128_21821" x="1290" y="423" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_21821"/>
+    </filter>
+    <filter id="filter6_d_1128_21821" x="1302.75" y="439.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21821"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21821" result="shape"/>
+    </filter>
+    <filter id="filter8_d_1128_21821" x="1380.44" y="396.4" width="175.509" height="22.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21821"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21821" result="shape"/>
+    </filter>
+    <filter id="filter9_d_1128_21821" x="1379.4" y="428.8" width="209.73" height="45.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21821"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21821" result="shape"/>
+    </filter>
+    <filter id="filter11_d_1128_21821" x="712.94" y="579.4" width="123.705" height="21.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21821"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21821" result="shape"/>
+    </filter>
+    <filter id="filter12_d_1128_21821" x="711.82" y="611.64" width="203.889" height="45.36" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21821"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21821" result="shape"/>
+    </filter>
+    <filter id="filter13_f_1128_21821" x="978.5" y="606" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_21821"/>
+    </filter>
+    <filter id="filter14_d_1128_21821" x="991.25" y="622.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21821"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21821" result="shape"/>
+    </filter>
+  </defs>
+</svg>
+                    <img class="-mobile" src="/assets/img/gear/2_1_mobile.webp" />
+                    <div class="gear__popups">
+                      <div class="gear__popups-item js-gear_popup" data-position="left">
+                        <div class="gear__popups-item-title">2_1 1 Рабочая длина</div>
+                        <div class="gear__popups-item-text">Станок принимает листы длиной до 3100 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="top">
+                        <div class="gear__popups-item-title">2_1 2 Гибкость параметров</div>
+                        <div class="gear__popups-item-text">Величина максимального хода 530 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="bottom">
+                        <div class="gear__popups-item-title">2_1 3 Мощный гибочный механизм</div>
+                        <div class="gear__popups-item-text">Эквивалентная мощность гибки - 135 т</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="gear__items-slide js-placeGearPopups">
+                    <svg  viewBox="0 0 1920 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <image id="map_image" href="/assets/img/gear/2_2.webp" />
+  <g filter="url(#filter0_f_1128_21932)">
+    <circle cx="1374" cy="629" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter1_d_1128_21932)">
+    <circle cx="1374" cy="629" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1374" cy="629" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="bottom" cx="1374" cy="629" r="8.75" fill="white"/>
+  <g filter="url(#filter5_f_1128_21932)">
+    <circle cx="1325" cy="458" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter6_d_1128_21932)">
+    <circle cx="1325" cy="458" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1325" cy="458" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="top" cx="1325" cy="458" r="8.75" fill="white"/>
+  <g filter="url(#filter13_f_1128_21932)">
+    <circle cx="1013.5" cy="641" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter14_d_1128_21932)">
+    <circle cx="1013.5" cy="641" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1013.5" cy="641" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="left" cx="1013.5" cy="641" r="8.75" fill="white"/>
+  <defs>
+    <filter id="filter0_f_1128_21932" x="1339" y="594" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_21932"/>
+    </filter>
+    <filter id="filter1_d_1128_21932" x="1351.75" y="610.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21932"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21932" result="shape"/>
+    </filter>
+    <filter id="filter3_d_1128_21932" x="1429.44" y="619.352" width="236.054" height="21.6479" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21932"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21932" result="shape"/>
+    </filter>
+    <filter id="filter4_d_1128_21932" x="1428.8" y="651.64" width="210.681" height="43.52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21932"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21932" result="shape"/>
+    </filter>
+    <filter id="filter5_f_1128_21932" x="1290" y="423" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_21932"/>
+    </filter>
+    <filter id="filter6_d_1128_21932" x="1302.75" y="439.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21932"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21932" result="shape"/>
+    </filter>
+    <filter id="filter8_d_1128_21932" x="1380.44" y="396.4" width="175.509" height="22.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21932"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21932" result="shape"/>
+    </filter>
+    <filter id="filter9_d_1128_21932" x="1379.4" y="428.8" width="209.73" height="45.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21932"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21932" result="shape"/>
+    </filter>
+    <filter id="filter11_d_1128_21932" x="712.94" y="579.4" width="123.705" height="21.6001" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21932"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21932" result="shape"/>
+    </filter>
+    <filter id="filter12_d_1128_21932" x="711.82" y="611.64" width="203.889" height="45.3601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21932"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21932" result="shape"/>
+    </filter>
+    <filter id="filter13_f_1128_21932" x="978.5" y="606" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_21932"/>
+    </filter>
+    <filter id="filter14_d_1128_21932" x="991.25" y="622.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_21932"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_21932" result="shape"/>
+    </filter>
+  </defs>
+</svg>
+                    <img class="-mobile" src="/assets/img/gear/2_2_mobile.webp" />
+                    <div class="gear__popups">
+                      <div class="gear__popups-item js-gear_popup" data-position="left">
+                        <div class="gear__popups-item-title">2_2 1 Рабочая длина</div>
+                        <div class="gear__popups-item-text">Станок принимает листы длиной до 3100 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="top">
+                        <div class="gear__popups-item-title">2_2 2 Гибкость параметров</div>
+                        <div class="gear__popups-item-text">Величина максимального хода 530 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="bottom">
+                        <div class="gear__popups-item-title">2_2 3 Мощный гибочный механизм</div>
+                        <div class="gear__popups-item-text">Эквивалентная мощность гибки - 135 т</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="gear__items-slide js-placeGearPopups">
+                    <svg viewBox="0 0 1920 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <image id="map_image" href="/assets/img/gear/2_3.webp" />
+  <g filter="url(#filter0_f_1128_22044)">
+    <circle cx="1374" cy="629" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter1_d_1128_22044)">
+    <circle cx="1374" cy="629" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1374" cy="629" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="bottom" cx="1374" cy="629" r="8.75" fill="white"/>
+  <g filter="url(#filter5_f_1128_22044)">
+    <circle cx="1325" cy="458" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter6_d_1128_22044)">
+    <circle cx="1325" cy="458" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1325" cy="458" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="top" cx="1325" cy="458" r="8.75" fill="white"/>
+  <g filter="url(#filter13_f_1128_22044)">
+    <circle cx="1013.5" cy="641" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter14_d_1128_22044)">
+    <circle cx="1013.5" cy="641" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1013.5" cy="641" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="left" cx="1013.5" cy="641" r="8.75" fill="white"/>
+  <defs>
+    <filter id="filter0_f_1128_22044" x="1339" y="594" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22044"/>
+    </filter>
+    <filter id="filter1_d_1128_22044" x="1351.75" y="610.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22044"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22044" result="shape"/>
+    </filter>
+    <filter id="filter3_d_1128_22044" x="1429.44" y="619.352" width="236.054" height="21.6479" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22044"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22044" result="shape"/>
+    </filter>
+    <filter id="filter4_d_1128_22044" x="1428.8" y="651.64" width="210.681" height="43.52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22044"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22044" result="shape"/>
+    </filter>
+    <filter id="filter5_f_1128_22044" x="1290" y="423" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22044"/>
+    </filter>
+    <filter id="filter6_d_1128_22044" x="1302.75" y="439.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22044"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22044" result="shape"/>
+    </filter>
+    <filter id="filter8_d_1128_22044" x="1380.44" y="396.4" width="175.509" height="22.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22044"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22044" result="shape"/>
+    </filter>
+    <filter id="filter9_d_1128_22044" x="1379.4" y="428.8" width="209.73" height="45.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22044"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22044" result="shape"/>
+    </filter>
+    <filter id="filter11_d_1128_22044" x="712.94" y="579.4" width="123.705" height="21.6001" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22044"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22044" result="shape"/>
+    </filter>
+    <filter id="filter12_d_1128_22044" x="711.82" y="611.64" width="203.889" height="45.3601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22044"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22044" result="shape"/>
+    </filter>
+    <filter id="filter13_f_1128_22044" x="978.5" y="606" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22044"/>
+    </filter>
+    <filter id="filter14_d_1128_22044" x="991.25" y="622.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22044"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22044" result="shape"/>
+    </filter>
+  </defs>
+</svg>
+                    <img class="-mobile" src="/assets/img/gear/2_3_mobile.webp" />
+                    <div class="gear__popups">
+                      <div class="gear__popups-item js-gear_popup" data-position="left">
+                        <div class="gear__popups-item-title">2_3 1 Рабочая длина</div>
+                        <div class="gear__popups-item-text">Станок принимает листы длиной до 3100 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="top">
+                        <div class="gear__popups-item-title">2_3 2 Гибкость параметров</div>
+                        <div class="gear__popups-item-text">Величина максимального хода 530 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="bottom">
+                        <div class="gear__popups-item-title">2_3 3 Мощный гибочный механизм</div>
+                        <div class="gear__popups-item-text">Эквивалентная мощность гибки - 135 т</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gear__category" data-gearCategory="Линия порошковой покраски">
+              <div class="gear__category-head gear__head js-gear-internal_slider">
+                <div class="gear__head-subtitle">Оборудование</div>
+                <div class="gear__head-title">Линия порошковой<br/> покраски</div>
+                <ul class="swiper-no-swiping gear__list js-gear_item_slider_controls">
+                  <li class="gear__list-item active" data-gearitem_control="0">AMP-Polimer, кольцевой участок</li>
+                </ul>
+                <div class="gear__buttons"><a class="button button--outline arrow gear__buttons-item" href="" target="_blank">Смотреть услугу</a>
+                  <button class="button button--bg-grey gear__buttons-item" data-target="">Характеристики</button>
+                </div>
+                <div class="gear__items js-gear_item_slider">
+                  <div class="gear__items-slide js-placeGearPopups">
+                    <svg viewBox="0 0 1920 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <image id="map_image" href="/assets/img/gear/4_1.webp"/>
+  <g filter="url(#filter0_f_1128_22146)">
+    <circle cx="1278" cy="748" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter1_d_1128_22146)">
+    <circle cx="1278" cy="748" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1278" cy="748" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="bottom" cx="1278" cy="748" r="8.75" fill="white"/>
+  <g filter="url(#filter5_f_1128_22146)">
+    <circle cx="1447.31" cy="468" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter6_d_1128_22146)">
+    <circle cx="1447.31" cy="468" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1447.31" cy="468" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="top" cx="1447.31" cy="468" r="8.75" fill="white"/>
+  <g filter="url(#filter13_f_1128_22146)">
+    <circle cx="1006" cy="595.348" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter14_d_1128_22146)">
+    <circle cx="1006" cy="595.348" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1006" cy="595.348" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="left" cx="1006" cy="595.348" r="8.75" fill="white"/>
+  <defs>
+    <filter id="filter0_f_1128_22146" x="1243" y="713" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22146"/>
+    </filter>
+    <filter id="filter1_d_1128_22146" x="1255.75" y="729.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter3_d_1128_22146" x="1333.44" y="738.8" width="200.611" height="22.4004" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter4_d_1128_22146" x="1333.6" y="770.8" width="201.108" height="22.5601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter5_f_1128_22146" x="1412.31" y="433" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22146"/>
+    </filter>
+    <filter id="filter6_d_1128_22146" x="1425.06" y="449.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter8_d_1128_22146" x="1502.75" y="382.4" width="224.231" height="22.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter9_d_1128_22146" x="1501.63" y="414.4" width="164.264" height="67.76" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter11_d_1128_22146" x="705.12" y="510.147" width="203.835" height="46.4004" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter12_d_1128_22146" x="705.28" y="566.147" width="177.756" height="43.3604" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter13_f_1128_22146" x="971" y="560.348" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22146"/>
+    </filter>
+    <filter id="filter14_d_1128_22146" x="983.75" y="577.098" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+  </defs>
+</svg>
+                    <img class="-mobile" src="/assets/img/gear/4_1_mobile.webp" />
+                    <div class="gear__popups">
+                      <div class="gear__popups-item js-gear_popup" data-position="left">
+                        <div class="gear__popups-item-title">4_1 1 Рабочая длина</div>
+                        <div class="gear__popups-item-text">Станок принимает листы длиной до 3100 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="top">
+                        <div class="gear__popups-item-title">4_1 2 Гибкость параметров</div>
+                        <div class="gear__popups-item-text">Величина максимального хода 530 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="bottom">
+                        <div class="gear__popups-item-title">4_1 3  Мощный гибочный механизм</div>
+                        <div class="gear__popups-item-text">Эквивалентная мощность гибки - 135 т</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gear__category" data-gearCategory="Участок слесарных работ">
+              <div class="gear__category-head gear__head js-gear-internal_slider">
+                <div class="gear__head-subtitle">Оборудование</div>
+                <div class="gear__head-title">Участок слесарных<br/> работ</div>
+                <ul class="swiper-no-swiping gear__list js-gear_item_slider_controls">
+                  <li class="gear__list-item active" data-gearitem_control="0">Ленточнопильный станок MBS-910CSE</li>
+                  <li class="gear__list-item" data-gearitem_control="1">Сверловочный станок JET JDP-17FM</li>
+                </ul>
+                <div class="gear__buttons"><a class="button button--outline arrow gear__buttons-item" href="" target="_blank">Смотреть услугу</a>
+                  <button class="button button--bg-grey gear__buttons-item" data-target="">Характеристики</button>
+                </div>
+                <div class="gear__items js-gear_item_slider">
+                  <div class="gear__items-slide js-placeGearPopups">
+                    <svg viewBox="0 0 1920 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <image id="map_image" href="/assets/img/gear/5_1.webp" />
+  <g filter="url(#filter3_f_1128_22240)">
+    <circle cx="1122" cy="532" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter4_d_1128_22240)">
+    <circle cx="1122" cy="532" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1122" cy="532" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="left" cx="1122" cy="532" r="8.75" fill="white"/>
+  <g filter="url(#filter5_f_1128_22240)">
+    <circle cx="1539" cy="591.348" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter6_d_1128_22240)">
+    <circle cx="1539" cy="591.348" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1539" cy="591.348" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="bottom" cx="1539" cy="591.348" r="8.75" fill="white"/>
+  <defs>
+    <filter id="filter1_d_1128_22240" x="821.44" y="470.8" width="96.5488" height="22.4004" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22240"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22240" result="shape"/>
+    </filter>
+    <filter id="filter2_d_1128_22240" x="820.96" y="502.64" width="239.499" height="46.5601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22240"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22240" result="shape"/>
+    </filter>
+    <filter id="filter3_f_1128_22240" x="1087" y="497" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22240"/>
+    </filter>
+    <filter id="filter4_d_1128_22240" x="1099.75" y="513.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22240"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22240" result="shape"/>
+    </filter>
+    <filter id="filter5_f_1128_22240" x="1504" y="556.348" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22240"/>
+    </filter>
+    <filter id="filter6_d_1128_22240" x="1516.75" y="573.098" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22240"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22240" result="shape"/>
+    </filter>
+    <filter id="filter8_d_1128_22240" x="1594.44" y="581.972" width="97.7488" height="22.5762" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22240"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22240" result="shape"/>
+    </filter>
+    <filter id="filter9_d_1128_22240" x="1593.96" y="613.988" width="239.499" height="46.5601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22240"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22240" result="shape"/>
+    </filter>
+  </defs>
+</svg>
+                    <img class="-mobile" src="/assets/img/gear/5_1_mobile.webp" />
+                    <div class="gear__popups">
+                      <div class="gear__popups-item js-gear_popup" data-position="left">
+                        <div class="gear__popups-item-title">5_1 1 Рабочая длина</div>
+                        <div class="gear__popups-item-text">Станок принимает листы длиной до 3100 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="bottom">
+                        <div class="gear__popups-item-title">5_1 2 Мощный гибочный механизм</div>
+                        <div class="gear__popups-item-text">Эквивалентная мощность гибки - 135 т</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="gear__items-slide js-placeGearPopups">
+                    <svg viewBox="0 0 1920 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <image id="map_image" href="/assets/img/gear/5_1.webp" />
+  <g filter="url(#filter3_f_1128_22240)">
+    <circle cx="1122" cy="532" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter4_d_1128_22240)">
+    <circle cx="1122" cy="532" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1122" cy="532" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="left" cx="1122" cy="532" r="8.75" fill="white"/>
+  <g filter="url(#filter5_f_1128_22240)">
+    <circle cx="1539" cy="591.348" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter6_d_1128_22240)">
+    <circle cx="1539" cy="591.348" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1539" cy="591.348" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="bottom" cx="1539" cy="591.348" r="8.75" fill="white"/>
+  <defs>
+    <filter id="filter1_d_1128_22240" x="821.44" y="470.8" width="96.5488" height="22.4004" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22240"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22240" result="shape"/>
+    </filter>
+    <filter id="filter2_d_1128_22240" x="820.96" y="502.64" width="239.499" height="46.5601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22240"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22240" result="shape"/>
+    </filter>
+    <filter id="filter3_f_1128_22240" x="1087" y="497" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22240"/>
+    </filter>
+    <filter id="filter4_d_1128_22240" x="1099.75" y="513.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22240"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22240" result="shape"/>
+    </filter>
+    <filter id="filter5_f_1128_22240" x="1504" y="556.348" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22240"/>
+    </filter>
+    <filter id="filter6_d_1128_22240" x="1516.75" y="573.098" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22240"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22240" result="shape"/>
+    </filter>
+    <filter id="filter8_d_1128_22240" x="1594.44" y="581.972" width="97.7488" height="22.5762" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22240"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22240" result="shape"/>
+    </filter>
+    <filter id="filter9_d_1128_22240" x="1593.96" y="613.988" width="239.499" height="46.5601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22240"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22240" result="shape"/>
+    </filter>
+  </defs>
+</svg>
+                    <img class="-mobile" src="/assets/img/gear/5_1_mobile.webp" />
+                    <div class="gear__popups">
+                      <div class="gear__popups-item js-gear_popup" data-position="left">
+                        <div class="gear__popups-item-title">5_2 1 Рабочая длина</div>
+                        <div class="gear__popups-item-text">Станок принимает листы длиной до 3100 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="bottom">
+                        <div class="gear__popups-item-title">5_2 2 Мощный гибочный механизм</div>
+                        <div class="gear__popups-item-text">Эквивалентная мощность гибки - 135 т</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gear__category" data-gearCategory="Изготовление металлоконструкций">
+              <div class="gear__category-head gear__head js-gear-internal_slider">
+                <div class="gear__head-subtitle">Оборудование</div>
+                <div class="gear__head-title">Изготовление<br/> металлоконструкций</div>
+                <ul class="swiper-no-swiping gear__list js-gear_item_slider_controls">
+                  <li class="gear__list-item active" data-gearitem_control="0">Машина точечной сварки PEI-POINT BSP 216 RF S2</li>
+                  <li class="gear__list-item" data-gearitem_control="1">Сварочный полуавтомат PWE 251</li>
+                  <li class="gear__list-item" data-gearitem_control="2">Аппарат сварки шпилек SW-2500</li>
+                </ul>
+                <div class="gear__buttons"><a class="button button--outline arrow gear__buttons-item" href="" target="_blank">Смотреть услугу</a>
+                  <button class="button button--bg-grey gear__buttons-item" data-target="">Характеристики</button>
+                </div>
+                <div class="gear__items js-gear_item_slider">
+                  <div class="gear__items-slide js-placeGearPopups">
+                    <svg viewBox="0 0 1920 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <image id="map_image" href="/assets/img/gear/6_1.webp" />
+  <g filter="url(#filter0_f_1128_22337)">
+    <circle cx="1495" cy="651" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter1_d_1128_22337)">
+    <circle cx="1495" cy="651" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1495" cy="651" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="bottom" cx="1495" cy="651" r="8.75" fill="white"/>
+  <g filter="url(#filter5_f_1128_22337)">
+    <circle cx="1510" cy="481" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter6_d_1128_22337)">
+    <circle cx="1510" cy="481" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1510" cy="481" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="top" cx="1510" cy="481" r="8.75" fill="white"/>
+  <defs>
+    <filter id="filter0_f_1128_22337" x="1460" y="616" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22337"/>
+    </filter>
+    <filter id="filter1_d_1128_22337" x="1472.75" y="632.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+    <filter id="filter3_d_1128_22337" x="1550.44" y="641.624" width="97.7488" height="22.5762" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+    <filter id="filter4_d_1128_22337" x="1549.96" y="673.64" width="239.499" height="46.5601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+    <filter id="filter5_f_1128_22337" x="1475" y="446" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22337"/>
+    </filter>
+    <filter id="filter6_d_1128_22337" x="1487.75" y="462.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+    <filter id="filter8_d_1128_22337" x="1565.44" y="419.8" width="96.5488" height="22.4004" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+    <filter id="filter9_d_1128_22337" x="1564.96" y="451.64" width="239.499" height="46.5601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+  </defs>
+</svg>
+                    <img class="-mobile" src="/assets/img/gear/6_1_mobile.webp" />
+                    <div class="gear__popups">
+                      <div class="gear__popups-item js-gear_popup" data-position="top">
+                        <div class="gear__popups-item-title">6_1 Гибкость параметров</div>
+                        <div class="gear__popups-item-text">Величина максимального хода 530 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="bottom">
+                        <div class="gear__popups-item-title">6_1 Мощный гибочный механизм</div>
+                        <div class="gear__popups-item-text">Эквивалентная мощность гибки - 135 т</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="gear__items-slide js-placeGearPopups">
+                    <svg viewBox="0 0 1920 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <image id="map_image" href="/assets/img/gear/6_1.webp" />
+  <g filter="url(#filter0_f_1128_22337)">
+    <circle cx="1495" cy="651" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter1_d_1128_22337)">
+    <circle cx="1495" cy="651" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1495" cy="651" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="bottom" cx="1495" cy="651" r="8.75" fill="white"/>
+  <g filter="url(#filter5_f_1128_22337)">
+    <circle cx="1510" cy="481" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter6_d_1128_22337)">
+    <circle cx="1510" cy="481" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1510" cy="481" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="top" cx="1510" cy="481" r="8.75" fill="white"/>
+  <defs>
+    <filter id="filter0_f_1128_22337" x="1460" y="616" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22337"/>
+    </filter>
+    <filter id="filter1_d_1128_22337" x="1472.75" y="632.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+    <filter id="filter3_d_1128_22337" x="1550.44" y="641.624" width="97.7488" height="22.5762" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+    <filter id="filter4_d_1128_22337" x="1549.96" y="673.64" width="239.499" height="46.5601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+    <filter id="filter5_f_1128_22337" x="1475" y="446" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22337"/>
+    </filter>
+    <filter id="filter6_d_1128_22337" x="1487.75" y="462.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+    <filter id="filter8_d_1128_22337" x="1565.44" y="419.8" width="96.5488" height="22.4004" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+    <filter id="filter9_d_1128_22337" x="1564.96" y="451.64" width="239.499" height="46.5601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+  </defs>
+</svg>
+                    <img class="-mobile" src="/assets/img/gear/6_1_mobile.webp" />
+                    <div class="gear__popups">
+                      <div class="gear__popups-item js-gear_popup" data-position="top">
+                        <div class="gear__popups-item-title">6_2 Гибкость параметров</div>
+                        <div class="gear__popups-item-text">Величина максимального хода 530 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="bottom">
+                        <div class="gear__popups-item-title">6_2 Мощный гибочный механизм</div>
+                        <div class="gear__popups-item-text">Эквивалентная мощность гибки - 135 т</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="gear__items-slide js-placeGearPopups">
+                    <svg viewBox="0 0 1920 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <image id="map_image" href="/assets/img/gear/6_1.webp" />
+  <g filter="url(#filter0_f_1128_22337)">
+    <circle cx="1495" cy="651" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter1_d_1128_22337)">
+    <circle cx="1495" cy="651" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1495" cy="651" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="bottom" cx="1495" cy="651" r="8.75" fill="white"/>
+  <g filter="url(#filter5_f_1128_22337)">
+    <circle cx="1510" cy="481" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter6_d_1128_22337)">
+    <circle cx="1510" cy="481" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1510" cy="481" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="top" cx="1510" cy="481" r="8.75" fill="white"/>
+  <defs>
+    <filter id="filter0_f_1128_22337" x="1460" y="616" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22337"/>
+    </filter>
+    <filter id="filter1_d_1128_22337" x="1472.75" y="632.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+    <filter id="filter3_d_1128_22337" x="1550.44" y="641.624" width="97.7488" height="22.5762" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+    <filter id="filter4_d_1128_22337" x="1549.96" y="673.64" width="239.499" height="46.5601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+    <filter id="filter5_f_1128_22337" x="1475" y="446" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22337"/>
+    </filter>
+    <filter id="filter6_d_1128_22337" x="1487.75" y="462.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+    <filter id="filter8_d_1128_22337" x="1565.44" y="419.8" width="96.5488" height="22.4004" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+    <filter id="filter9_d_1128_22337" x="1564.96" y="451.64" width="239.499" height="46.5601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22337"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22337" result="shape"/>
+    </filter>
+  </defs>
+</svg>
+                    <img class="-mobile" src="/assets/img/gear/6_1_mobile.webp" />
+                    <div class="gear__popups">
+                      <div class="gear__popups-item js-gear_popup" data-position="top">
+                        <div class="gear__popups-item-title">6_3 Гибкость параметров</div>
+                        <div class="gear__popups-item-text">Величина максимального хода 530 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="bottom">
+                        <div class="gear__popups-item-title">6_3 Мощный гибочный механизм</div>
+                        <div class="gear__popups-item-text">Эквивалентная мощность гибки - 135 т</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gear__category_controls">
+              <div class="gear__category_controls-wrapper">
+                <div class="button button--bg-grey gear__category_controls-navigation js-gear_category_swiper_prev"><svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.99976 18.76C8.74376 18.76 8.48776 18.662 8.29276 18.467L0.292762 10.467C-0.0982383 10.076 -0.0982383 9.44402 0.292762 9.05302L8.29276 1.05302C8.68376 0.662016 9.31576 0.662016 9.70676 1.05302C10.0978 1.44402 10.0978 2.07602 9.70676 2.46702L2.41376 9.76002L9.70676 17.053C10.0978 17.444 10.0978 18.076 9.70676 18.467C9.51176 18.662 9.25576 18.76 8.99976 18.76" fill="white"/>
+</svg>
+                </div>
+                <div class="button button--bg-grey gear__category_controls-navigation js-gear_category_swiper_next"><svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.00024 18.76C1.25624 18.76 1.51224 18.662 1.70724 18.467L9.70724 10.467C10.0982 10.076 10.0982 9.44402 9.70724 9.05302L1.70724 1.05302C1.31624 0.662016 0.684239 0.662016 0.293239 1.05302C-0.0977614 1.44402 -0.0977614 2.07602 0.293239 2.46702L7.58624 9.76002L0.293239 17.053C-0.0977614 17.444 -0.0977614 18.076 0.293239 18.467C0.488239 18.662 0.744238 18.76 1.00024 18.76" fill="white"/>
+</svg>
+                </div>
+                <div class="gear__category_controls-pagination"></div>
+              </div>
+            </div>
+            <div class="gear__buttons-mobile"><a class="button button--outline arrow gear__buttons-item" href="" target="_blank">Смотреть услугу</a>
+              <button class="button button--bg-grey gear__buttons-item" data-target="">Характеристики</button>
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="footer__container"><a class="footer__logo">
+              <svg width="262" height="60">
+                <use href="assets/img/sprite.svg#footer-logo"></use>
+              </svg><span class="footer__logo-text">Металлообработка на заказ</span></a>
+            <ul class="footer__documents footer-documents">
+              <li class="footer-documents__item"><a class="footer-documents__link" href="">Скачать договор оказания услуг</a></li>
+              <li class="footer-documents__item"><a class="footer-documents__link" href="">Скачать договор поставки</a></li>
+            </ul>
+            <div class="footer-requisites">«ООО «Спирит-Бер», 2016-2022. Все права защищены.» Реквизиты: ИНН 7735186587, ОГРН 1207700015753</div>
+            <div class="footer__nav footer-nav footer-nav--services">
+              <h4 class="footer-nav__title">Услуги</h4>
+              <ul class="footer-nav__list">
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Лазерная резка металла</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Гибка листового металла</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Порошковая покраска</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Слесарные работы</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Изготовление металлоконструкций</a></li>
+              </ul>
+            </div>
+            <div class="footer__nav footer-nav footer-nav--info">
+              <h4 class="footer-nav__title">Информация</h4>
+              <ul class="footer-nav__list">
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Карта сайта</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Политика обработки персональных данных</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Электронный документоооборот</a></li>
+              </ul>
+            </div>
+            <div class="footer__nav footer-nav footer-nav--about">
+              <h4 class="footer-nav__title">О компании</h4>
+              <ul class="footer-nav__list">
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Производство</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="career.html">Вакансии</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Реквезиты</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="edo.html">Электронный документооборот</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="contacts.html">Контакты</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="delivery.html">Доставка</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Реквизиты</a></li>
+              </ul>
+            </div>
+            <div class="footer__nav footer-nav footer-nav--contact">
+              <h4 class="footer-nav__title">Контакты</h4>
+              <ul class="footer-nav__list">
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="tel:+74999940097">+7 (499) 994-00-97</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="mailto:sales@spirit-bear.ru">sales@spirit-bear.ru</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Московская область, г.о.Солнечногорск, деревня Пешки, цех № 22</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Пн - Пт с 09:00 до 18:00, Сб - Вс выходной</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+        <template id="success">
+          <div class="reply-popup">
+            <div class="reply-popup__body">
+              <svg class="reply-popup__icon" width="36" height="36">
+                <use href="./assets/img/sprite.svg#success"></use>
+              </svg>
+              <p class="reply-popup__title">Успешно!</p>
+              <p class="reply-popup__text">Ваш запрос был успешно обработан. Благодарим вас за обращение в Спирит Бер.</p>
+              <button class="button button--outline reply-popup__button">Понятно!</button>
+            </div>
+          </div>
+        </template>
+        <template id="error">
+          <div class="reply-popup">
+            <div class="reply-popup__body">
+              <svg class="reply-popup__icon" width="36" height="36">
+                <use href="./assets/img/sprite.svg#attention"></use>
+              </svg>
+              <p class="reply-popup__title">Ошибка!</p>
+              <p class="reply-popup__text">Во время обработки запроса что-то пошло не так! Пожалуйста, попытайтесь еще раз.</p>
+              <button class="button button--outline reply-popup__button">Понятно!</button>
+            </div>
+          </div>
+        </template>
+        <template id="form-popup">
+          <div class="form-popup">
+            <div class="form-popup__content">
+              <header class="form-popup__header"><span class="form-popup__close">
+                  <svg width="12" height="12" fill="#fff">
+                    <use href="./assets/img/sprite.svg#close"></use>
+                  </svg></span>
+                <h2 class="form-popup__title">Форма заявки</h2>
+                <p class="form-popup__subtitle">Оставьте заявку и наши менеджеры свяжутся с вами в ближайшее время!</p>
+              </header>
+              <form class="form-popup__form feedback__form feedback-form feedback-form--popup" method="POST" action="" enctype="multipart/form-data" autocomplete="off"><span class="form-popup__title-field">Личные данные</span>
+                <div class="feedback-form__input-container">
+                  <input placeholder="Иванов Иван Иванович*" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40" required="required"/><span class="feedback-form__error"></span>
+                </div>
+                <div class="feedback-form__input-container">
+                  <input type="email" name="email" maxlength="40" placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required="required"/><span class="feedback-form__error"></span>
+                </div>
+                <div class="feedback-form__input-container">
+                  <input type="tel" name="phone" placeholder="+7(___)___-__-__*" data-tel-input="" pattern=".{18,}" maxlength="18" autocomplete="off" required="required"/><span class="feedback-form__error"></span>
+                </div>
+                <div class="feedback-form__input-container">
+                  <textarea placeholder="Пожалуйста, введите запрос*" name="message" maxlength="200" rows="4" required="required"></textarea><span class="feedback-form__error"></span>
+                </div><span class="form-popup__title-field">Прикрепите файлы</span>
+                <div class="feedback-form__input-container feedback-form__input-container--blog">
+                  <div class="feedback-form__upload feedback-form-upload">
+                    <input class="feedback-form-upload__input visually-hidden" id="inputfilepopup" type="file" name="file" multiple accept=".pdf, .doc, .rtf, .jpg, .jpeg, .png">
+                    <label class="feedback-form-upload__label">
+                      <svg class="feedback-form-upload__icon" width="24" height="19" fill="#fff">
+                        <use href="assets/img/sprite.svg#drop"></use>
+                      </svg><span class="tablet-hidden">Перетащите сюда файл для загрузки</span>
+                    </label>
+                    <label for="inputfilepopup"><span class="tablet-hidden">или выберите его в проводнике</span><span class="desctop-hidden">Выберите файл для загрузки</span></label>
+                  </div>
+                  <site class="feedback-form__input-note">Размер файлов не более 150 мб. Допустимые форматы: .pdf, .doc, .rtf, .jpg, .png</site>
+                </div>
+                <div class="feedback-form__sending">
+                  <label>
+                    <input type="checkbox" checked><span class="feedback-form__checkbox"></span><span class="feedback-form__agreement">Даю согласие на обработку персональных данных</span>
+                  </label>
+                  <button class="button button--bg-accept" type="submit">Отправить&nbsp;вопрос</button>
+                </div>
+                <template class="upload-progress__template">
+                  <div class="feedback-form__upload-progress feedback-form-upload-progress" data-progress="data-progress">
+                    <div class="feedback-form-upload-progress__line"></div>
+                    <div class="feedback-form-upload-progress__close"></div><span class="feedback-form-upload-progress__name"></span><span class="feedback-form-upload-progress__size"></span>
+                  </div>
+                </template>
+              </form>
+            </div>
+          </div>
+        </template>
+      </main>
+    </div>
+    <script src="assets/js/libs.min.js"></script>
+    <script src="assets/js/main.js" type="module"></script>
+  </body>
+</html>
