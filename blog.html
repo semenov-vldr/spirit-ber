@@ -6,7 +6,8 @@
 <!-- Text-->
 <!-- Кнопка "отправить" и согласие-->
 <!-- шаблон прогресс-бара-->
-<!-- карточка партнера--><!DOCTYPE html>
+<!-- карточка партнера-->
+<!--copy text--><!DOCTYPE html>
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
@@ -75,24 +76,24 @@
               <ul class="header-contact__list">
                 <li class="header-contact__item">
                   <div class="header-contact__icon"><img src="./assets/img/icons/header-phone.svg"></div><a class="header-contact__link" href="tel:+74999940097">+7 499 994 00 97</a>
-                  <button class="header-contact__button-copy">
-                    <svg width="12" height="12" fill="#fff">
+                  <button class="button-copy">
+                    <svg width="12" height="12" fill="currentColor">
                       <use href="./assets/img/sprite.svg#button-copy"></use>
                     </svg>
                   </button><span class="header-contact__description">пн-пт с 09:00 до 18:00</span>
                 </li>
                 <li class="header-contact__item">
                   <div class="header-contact__icon"><img src="./assets/img/icons/email.svg"></div><a class="header-contact__link" href="mailto:sales@spirit-bear.ru">sales@spirit-bear.ru</a>
-                  <button class="header-contact__button-copy">
-                    <svg width="12" height="12" fill="#fff">
+                  <button class="button-copy">
+                    <svg width="12" height="12" fill="currentColor">
                       <use href="./assets/img/sprite.svg#button-copy"></use>
                     </svg>
                   </button><span class="header-contact__description">круглосуточно, без выходных</span>
                 </li>
                 <li class="header-contact__item header-contact__address">
                   <div class="header-contact__icon"><img src="./assets/img/icons/point.svg"></div><a class="header-contact__link">МО, Солнечногорск,<br>д. Пешки, цех №22</a>
-                  <button class="header-contact__button-copy">
-                    <svg width="12" height="12" fill="#fff">
+                  <button class="button-copy">
+                    <svg width="12" height="12" fill="currentColor">
                       <use href="./assets/img/sprite.svg#button-copy"></use>
                     </svg>
                   </button>
@@ -104,11 +105,7 @@
       </header>
       <main>
         <div class="breadcrumbs">
-          <div class="container breadcrumbs__container"><a class="breadcrumbs__item" href="">Главная</a>
-            <svg width="7" height="6" fill="#fff">
-              <use href="./assets/img/sprite.svg#breadcrumbs"></use>
-            </svg><a class="breadcrumbs__item" href="">Блог Спирит Бер</a>
-          </div>
+          <div class="container breadcrumbs__container"><a class="breadcrumbs__item" href="index.html">Главная</a><a class="breadcrumbs__item" href="">Блог Спирит Бер</a></div>
         </div>
         <section class="section-column">
           <div class="blog">
@@ -214,9 +211,9 @@
                   <button class="button arrow button--outline" type="submit">Отправить&nbsp;вопрос</button>
                 </div>
                 <template class="upload-progress__template">
-                  <div class="feedback-form__upload-progress feedback-form-upload-progress" data-progress="data-progress">
-                    <div class="feedback-form-upload-progress__line"></div>
-                    <div class="feedback-form-upload-progress__close"></div><span class="feedback-form-upload-progress__name"></span><span class="feedback-form-upload-progress__size"></span>
+                  <div class="feedback-form__upload-progress feedback-form-upload-progress">
+                    <div class="feedback-form-upload-progress__line" data-progress="data-progress"></div>
+                    <div class="feedback-form-upload-progress__close" data-name="data-name"></div><span class="feedback-form-upload-progress__name"></span><span class="feedback-form-upload-progress__size"></span>
                   </div>
                 </template>
               </form>
@@ -233,7 +230,7 @@
               <li class="footer-documents__item"><a class="footer-documents__link" href="">Скачать договор поставки</a></li>
             </ul>
             <div class="footer-requisites">«ООО «Спирит-Бер», 2016-2022. Все права защищены.» Реквизиты: ИНН 7735186587, ОГРН 1207700015753</div>
-            <div class="footer__nav footer-nav footer-nav--services">
+            <nav class="footer__nav footer-nav footer-nav--services">
               <h4 class="footer-nav__title">Услуги</h4>
               <ul class="footer-nav__list">
                             <li class="footer-nav__item"><a class="footer-nav__link" href="/">Лазерная резка металла</a></li>
@@ -242,16 +239,16 @@
                             <li class="footer-nav__item"><a class="footer-nav__link" href="/">Слесарные работы</a></li>
                             <li class="footer-nav__item"><a class="footer-nav__link" href="/">Изготовление металлоконструкций</a></li>
               </ul>
-            </div>
-            <div class="footer__nav footer-nav footer-nav--info">
+            </nav>
+            <nav class="footer__nav footer-nav footer-nav--info">
               <h4 class="footer-nav__title">Информация</h4>
               <ul class="footer-nav__list">
                             <li class="footer-nav__item"><a class="footer-nav__link" href="/">Карта сайта</a></li>
                             <li class="footer-nav__item"><a class="footer-nav__link" href="/">Политика обработки персональных данных</a></li>
                             <li class="footer-nav__item"><a class="footer-nav__link" href="/">Электронный документоооборот</a></li>
               </ul>
-            </div>
-            <div class="footer__nav footer-nav footer-nav--about">
+            </nav>
+            <nav class="footer__nav footer-nav footer-nav--about">
               <h4 class="footer-nav__title">О компании</h4>
               <ul class="footer-nav__list">
                             <li class="footer-nav__item"><a class="footer-nav__link" href="/">Производство</a></li>
@@ -262,8 +259,8 @@
                             <li class="footer-nav__item"><a class="footer-nav__link" href="delivery.html">Доставка</a></li>
                             <li class="footer-nav__item"><a class="footer-nav__link" href="/">Реквизиты</a></li>
               </ul>
-            </div>
-            <div class="footer__nav footer-nav footer-nav--contact">
+            </nav>
+            <nav class="footer__nav footer-nav footer-nav--contact">
               <h4 class="footer-nav__title">Контакты</h4>
               <ul class="footer-nav__list">
                             <li class="footer-nav__item"><a class="footer-nav__link" href="tel:+74999940097">+7 (499) 994-00-97</a></li>
@@ -271,7 +268,7 @@
                             <li class="footer-nav__item"><a class="footer-nav__link" href="">Московская область, г.о.Солнечногорск, деревня Пешки, цех № 22</a></li>
                             <li class="footer-nav__item"><a class="footer-nav__link" href="">Пн - Пт с 09:00 до 18:00, Сб - Вс выходной</a></li>
               </ul>
-            </div>
+            </nav>
           </div>
         </footer>
         <template id="success">
@@ -321,7 +318,7 @@
                 <div class="feedback-form__input-container">
                   <textarea placeholder="Пожалуйста, введите запрос*" name="message" maxlength="200" rows="4" required="required"></textarea><span class="feedback-form__error"></span>
                 </div><span class="form-popup__title-field">Прикрепите файлы</span>
-                <div class="feedback-form__input-container feedback-form__input-container--blog">
+                <div class="feedback-form__input-container">
                   <div class="feedback-form__upload feedback-form-upload">
                     <input class="feedback-form-upload__input visually-hidden" id="inputfilepopup" type="file" name="file" multiple accept=".pdf, .doc, .rtf, .jpg, .jpeg, .png">
                     <label class="feedback-form-upload__label">
@@ -340,9 +337,9 @@
                   <button class="button button--bg-accept" type="submit">Отправить&nbsp;вопрос</button>
                 </div>
                 <template class="upload-progress__template">
-                  <div class="feedback-form__upload-progress feedback-form-upload-progress" data-progress="data-progress">
-                    <div class="feedback-form-upload-progress__line"></div>
-                    <div class="feedback-form-upload-progress__close"></div><span class="feedback-form-upload-progress__name"></span><span class="feedback-form-upload-progress__size"></span>
+                  <div class="feedback-form__upload-progress feedback-form-upload-progress">
+                    <div class="feedback-form-upload-progress__line" data-progress="data-progress"></div>
+                    <div class="feedback-form-upload-progress__close" data-name="data-name"></div><span class="feedback-form-upload-progress__name"></span><span class="feedback-form-upload-progress__size"></span>
                   </div>
                 </template>
               </form>
