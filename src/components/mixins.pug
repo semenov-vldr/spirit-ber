@@ -37,9 +37,9 @@ mixin sending
 // шаблон прогресс-бара
 mixin upload-progress-template
   template.upload-progress__template
-    .feedback-form__upload-progress.feedback-form-upload-progress(data-progress)
-      .feedback-form-upload-progress__line
-      .feedback-form-upload-progress__close
+    .feedback-form__upload-progress.feedback-form-upload-progress
+      .feedback-form-upload-progress__line(data-progress)
+      .feedback-form-upload-progress__close(data-name)
       span.feedback-form-upload-progress__name
       span.feedback-form-upload-progress__size
 
@@ -55,3 +55,10 @@ mixin breadcrumbs_icon
 mixin partnersItem(src)
   li.partners__item
     img.partners__logo(src=src)
+
+
+//copy text
+mixin copyTextButton
+  button.button-copy
+    svg(width="12" height="12" fill="currentColor")
+      use(href='./assets/img/sprite.svg#button-copy')

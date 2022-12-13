@@ -69,18 +69,14 @@ header.header
             .header-contact__icon
               img(src="./assets/img/icons/header-phone.svg")
             a.header-contact__link(href="tel:+74999940097") +7 499 994 00 97
-            button.header-contact__button-copy
-              svg(width="12" height="12" fill="#fff")
-                use(href='./assets/img/sprite.svg#button-copy')
+            +copyTextButton
             span.header-contact__description пн-пт с 09:00 до 18:00
 
           li.header-contact__item
             .header-contact__icon
               img(src="./assets/img/icons/email.svg")
             a.header-contact__link(href="mailto:sales@spirit-bear.ru") sales@spirit-bear.ru
-            button.header-contact__button-copy
-              svg(width="12" height="12" fill="#fff")
-                use(href='./assets/img/sprite.svg#button-copy')
+            +copyTextButton
             span.header-contact__description круглосуточно, без выходных
 
           li.header-contact__item.header-contact__address
@@ -89,9 +85,7 @@ header.header
             a.header-contact__link МО, Солнечногорск,
               br
               | д. Пешки, цех №22
-            button.header-contact__button-copy
-              svg(width="12" height="12" fill="#fff")
-                use(href='./assets/img/sprite.svg#button-copy')
+            +copyTextButton
 
 
 

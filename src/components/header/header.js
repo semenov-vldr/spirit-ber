@@ -25,8 +25,6 @@
   });
 
 
-  // mobile menu
-  //const mobileWidth = window.matchMedia('(max-width: 1100px)');
 
   const mobileWidth = window.matchMedia('(max-width: 1100px)').matches;
 
@@ -68,23 +66,9 @@ linkPreventDefaultMobile.forEach(link => {
 })
 
 
+  }
 
 
-  } // end --> if (mobileWidth)
-
-
-
-
-
-
-  // copy text
-  const strList = header.querySelectorAll('.header-contact__link');
-
-  strList.forEach(str => {
-    const copied = str.innerText;
-    const buttonCopy = str.parentNode.querySelector('.header-contact__button-copy');
-    buttonCopy.addEventListener('click', () => copyToClipboard(copied) );
-  });
 
 
 

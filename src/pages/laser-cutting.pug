@@ -1,7 +1,7 @@
 extends ../layouts/main
 
 block variables
-  - var title = "Лазерная резка"
+  - var title = "Лазерная резка металла"
   - var pageClass = ''
   - var activePage = 'index'
 
@@ -9,10 +9,8 @@ block variables
 block content
   .breadcrumbs
     .container.breadcrumbs__container
-      a(href="").breadcrumbs__item Главная
-      +breadcrumbs_icon
+      a(href="index.html").breadcrumbs__item Главная
       a(href="").breadcrumbs__item Услуги
-      +breadcrumbs_icon
       a(href="").breadcrumbs__item Лазерная резка металла
 
   section.section-column

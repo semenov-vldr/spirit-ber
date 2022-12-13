@@ -3,9 +3,9 @@
     max-width: 1048px
     margin: 0 auto
 
-
-
   &__list
+    counter-reset: num
+    list-style-type: none
     display: flex
     flex-direction: column
     background-color: $frosted-top
@@ -14,6 +14,7 @@
     filter: drop-shadow(0px 251px 100px rgba(24, 26, 27, 0.04)) drop-shadow(0px 141px 85px rgba(24, 26, 27, 0.13)) drop-shadow(0px 63px 63px rgba(24, 26, 27, 0.21)) drop-shadow(0px 16px 34px rgba(24, 26, 27, 0.25)) drop-shadow(0px 0px 0px rgba(24, 26, 27, 0.25))
 
   &__item
+    counter-increment: num
     padding: 12px
     @media (max-width: 768px)
       padding: 12px 10px
@@ -27,28 +28,18 @@
         &::-webkit-scrollbar
           width: 0
           height: 0
+
+
     &.js-accordion-active .accordion__title,
     &:hover .accordion__title
       color: #fff
-    &.js-accordion-active .accordion__title svg
+    &.js-accordion-active .accordion__title::after
       transform: rotate(90deg)
-    &.js-accordion-active .accordion__number,
-    &:hover .accordion__number
+    &.js-accordion-active .accordion__title::before,
+    &:hover .accordion__title::before
       color: $accent
     &.js-accordion-active
       box-shadow: 0px -8px 10px rgba(0, 0, 0, 0.1), 0px -1px 2px rgba(0, 0, 0, 0.08), 0px 8px 10px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), inset 0px 0px 2px rgba(113, 200, 255, 0.24)
-
-  &__number
-    position: absolute
-    transform: translate(-100%, -50%)
-    left: -40px
-    top: 50%
-    font-family: 'SpaceGrotesk', sans-serif
-    color: rgba($accent, 0.6)
-    @include fontSize(20, 24)
-    @media (max-width: 1200px)
-      display: none
-
 
   &__title
     @include fontSize(14, 24)
@@ -60,13 +51,30 @@
     padding: 30px 20px
     cursor: pointer
     color: rgba(#fff, 0.6)
+    &::before
+      content: counter(num) "."
+      position: absolute
+      transform: translate(-100%, -50%)
+      left: -40px
+      top: 50%
+      font-family: 'SpaceGrotesk', sans-serif
+      color: rgba($accent, 0.6)
+      @include fontSize(20, 24)
+      @media (max-width: 1200px)
+          display: none
+    &:nth-child(-n+9)::before
+      content: "0" counter(num) ""
+    &::after
+      content: ""
+      display: inline-block
+      background-image: url('../img/icons/arrow-right.svg')
+      width: 10px
+      height: 19px
+      transition: 0.3s
+      flex: 0 0 10px
+
     @media (max-width: 768px)
       padding: 15px 0
-    & svg
-      transition: 0.3s ease
-      flex: 0 0 10px
-      fill: currentColor
-
 
 
   &__content

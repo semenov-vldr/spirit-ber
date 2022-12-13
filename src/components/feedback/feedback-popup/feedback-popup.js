@@ -96,7 +96,9 @@
       },
     ).then((responce) => {
       responce.ok ? onSuccess() : onError();
-    }).catch(() => onError());
+      console.log(responce.json())
+    })
+      .catch(() => onError());
   };
 
   function userFormSubmit () {

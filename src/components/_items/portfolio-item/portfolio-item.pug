@@ -91,64 +91,59 @@
     {
       srcImg: './assets/img/portfolio/04.png',
       title: 'Кронштейн для крепления фасада',
-      tag_item_1: {
-        text: 'Лазерная резка',
-        classColor: 'tag-orange',
-      },
-      tag_item_2: {
-        text: 'Изготовление металлоизделий',
-        classColor: 'tag-lightblue',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Изготовление металлоизделий',
+          classColor: 'tag-lightblue',
+        },
       },
       description: 'Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005',
-
       popup: {
-        imgSrcSlide_1: './assets/img/portfolio/04.png',
-        imgSrcSlide_2: './assets/img/portfolio/05.png',
-        imgSrcSlide_3: './assets/img/portfolio/06.png',
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/04.png',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
         date: '23.08.2022',
         link: '##',
-
-      }
-
+      },
     },
 
+
     // {
-    //   srcImg: './assets/img/portfolio/05.png',
-    //   title: 'Кронштейн для крепления фасада',
-    //   tag_item_1: {
-    //     text: 'Лазерная резка',
-    //     classColor: 'tag-orange',
+    //   srcImg: './assets/img/portfolio/01.png',
+    //   title: 'Металлический борт 150 (30х150х50)',
+    //   tags: {
+    //     tag_item_1: {
+    //       text: 'Лазерная резка',
+    //       classColor: 'tag-orange',
+    //     },
+    //     tag_item_2: {
+    //       text: 'Гибка листового металла',
+    //       classColor: 'tag-grey',
+    //     },
     //   },
-    //   tag_item_2: {
-    //     text: 'Изготовление металлоизделий',
-    //     classColor: 'tag-lightblue',
-    //   },
-    //   description: 'Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005',
-    //
+    //   description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)',
     //   popup: {
-    //     imgSrcSlide_1: './assets/img/portfolio/04.png',
-    //     imgSrcSlide_2: './assets/img/portfolio/05.png',
-    //     imgSrcSlide_3: './assets/img/portfolio/06.png',
+    //     imgSrcSlides: {
+    //       imgSrcSlide_1: './assets/img/portfolio/01.png',
+    //       imgSrcSlide_2: './assets/img/portfolio/02.png',
+    //       imgSrcSlide_3: './assets/img/portfolio/03.png',
+    //     },
     //     date: '23.08.2022',
     //     link: '##',
-    //   }
-    //
+    //   },
     // },
+
 
 
   ]
 
 
-//mixin createPortfolioItems ( portfolioData )
-//  each card in portfolioData
-//    li.portfolio__item
-//      .portfolio__image-wrapper
-//        img(src=card.srcImg alt='portfolio')
-//      h3.portfolio__title=card.title
-//      ul.portfolio__tags.portfolio-tags
-//        li.portfolio-tags__item(class=card.tag_item_1.classColor)=card.tag_item_1.text
-//        li.portfolio-tags__item(class=card.tag_item_2.classColor)=card.tag_item_2.text
-//      p.portfolio__description= card.description
 
 mixin createPortfolioItems ( portfolioData )
   each card in portfolioData
@@ -157,90 +152,81 @@ mixin createPortfolioItems ( portfolioData )
         img(src=card.srcImg alt='portfolio')
       h3.portfolio__title=card.title
       ul.portfolio__tags.portfolio-tags
-        li.portfolio-tags__item(class=card.tag_item_1.classColor)=card.tag_item_1.text
-        li.portfolio-tags__item(class=card.tag_item_2.classColor)=card.tag_item_2.text
+        each tag in card.tags
+          li.portfolio-tags__item(class=tag.classColor)=tag.text
+
       p.portfolio__description= card.description
 
       .portfolio-item__popup.portfolio-popup__item
         .portfolio-popup__wrapper
           .portfolio-popup__close
-            svg(width="14" height="14")
-              use(href='./assets/img/sprite.svg#close')
 
           .portfolio-popup__swiper.portfolio-popup__swiper--top
             .portfolio-popup__swiper-wrapper.swiper-wrapper
-              .swiper-slide
-                img(src=card.popup.imgSrcSlide_1 alt='portfolio')
-              .swiper-slide
-                img(src=card.popup.imgSrcSlide_2 alt='portfolio')
-              .swiper-slide
-                img(src=card.popup.imgSrcSlide_3 alt='portfolio')
+              each src in card.popup.imgSrcSlides
+                .swiper-slide
+                  img(src=src alt='portfolio')
             .swiper-pagination
 
           .portfolio-popup__swiper.portfolio-popup__swiper--thumbs
             .portfolio-popup__swiper-wrapper.swiper-wrapper
-              .swiper-slide
-                img(src=card.popup.imgSrcSlide_1 alt='portfolio')
-              .swiper-slide
-                img(src=card.popup.imgSrcSlide_2 alt='portfolio')
-              .swiper-slide
-                img(src=card.popup.imgSrcSlide_3 alt='portfolio')
+              each src in card.popup.imgSrcSlides
+                .swiper-slide
+                  img(src=src alt='portfolio')
 
           .portfolio-popup__content
             .portfolio-popup__date=card.popup.date
             .portfolio-popup__title=card.title
             ul.portfolio-popup__tags.portfolio-popup-tags
-              li.portfolio-tags__item.tag-orange.portfolio-popup-tags__item(class=card.tag_item_1.classColor)=card.tag_item_1.text
-              li.portfolio-tags__item.tag-lightblue.portfolio-popup-tags__item(class=card.tag_item_2.classColor)=card.tag_item_2.text
+              each tag in card.tags
+                li.portfolio-tags__item.portfolio-popup-tags__item(class=tag.classColor)=tag.text
             .portfolio-popup__description=card.description
             a.portfolio-popup__link.button.arrow.button--outline(href=card.popup.link) Смотреть кейс
 
 
-//+createPortfolioItems( testdata )
-
-li.portfolio__item.portfolio-item
-  .portfolio__image-wrapper
-    img(src='./assets/img/portfolio/04.png' alt='portfolio')
-  h3.portfolio__title Кронштейн для крепления фасада
-  ul.portfolio__tags.portfolio-tags
-    li.portfolio-tags__item.tag-orange Лазерная резка
-    li.portfolio-tags__item.tag-lightblue Изготовление металлоизделий
-  p.portfolio__description TEST Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005
-
-  .portfolio-item__popup.portfolio-popup__item
-    .portfolio-popup__wrapper
-      .portfolio-popup__close
-        svg(width="14" height="14")
-          use(href='assets/img/sprite.svg#close')
++createPortfolioItems(testdata)
 
 
-      .portfolio-popup__swiper.portfolio-popup__swiper--top
-        .portfolio-popup__swiper-wrapper.swiper-wrapper
-          .swiper-slide
-            img(src='./assets/img/portfolio/04.png' alt='portfolio')
-          .swiper-slide
-            img(src='./assets/img/portfolio/05.png' alt='portfolio')
-          .swiper-slide
-            img(src='./assets/img/portfolio/06.png' alt='portfolio')
-
-      .portfolio-popup__swiper.portfolio-popup__swiper--thumbs
-        .portfolio-popup__swiper-wrapper.swiper-wrapper
-          .swiper-slide
-            img(src='./assets/img/portfolio/04.png' alt='portfolio')
-          .swiper-slide
-            img(src='./assets/img/portfolio/05.png' alt='portfolio')
-          .swiper-slide
-            img(src='./assets/img/portfolio/06.png' alt='portfolio')
-
-      .portfolio-popup__content
-        .portfolio-popup__date 23.08.2022
-        p.portfolio-popup__title Кронштейн для крепления фасада
-        ul.portfolio-popup__tags.portfolio-popup-tags
-          li.portfolio-tags__item.tag-orange.portfolio-popup-tags__item Лазерная резка
-          li.portfolio-tags__item.tag-lightblue.portfolio-popup-tags__item Изготовление металлоизделий
-
-        p.portfolio-popup__description Металлический борт из оцинкованной стали с зазором под пластину S=1,5 мм. Габариты: (10х100х50)
-        a.portfolio-popup__link.button.arrow.button--outline(href="") Смотреть кейс
+//li.portfolio__item.portfolio-item
+//  .portfolio__image-wrapper
+//    img(src='./assets/img/portfolio/04.png' alt='portfolio')
+//  h3.portfolio__title Кронштейн для крепления фасада
+//  ul.portfolio__tags.portfolio-tags
+//    li.portfolio-tags__item.tag-orange Лазерная резка
+//    li.portfolio-tags__item.tag-lightblue Изготовление металлоизделий
+//  p.portfolio__description TEST Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005
+//
+//  .portfolio-item__popup.portfolio-popup__item
+//    .portfolio-popup__wrapper
+//      button.portfolio-popup__close
+//
+//      .portfolio-popup__swiper.portfolio-popup__swiper--top
+//        .portfolio-popup__swiper-wrapper.swiper-wrapper
+//          .swiper-slide
+//            img(src='./assets/img/portfolio/04.png' alt='portfolio')
+//          .swiper-slide
+//            img(src='./assets/img/portfolio/05.png' alt='portfolio')
+//          .swiper-slide
+//            img(src='./assets/img/portfolio/06.png' alt='portfolio')
+//
+//      .portfolio-popup__swiper.portfolio-popup__swiper--thumbs
+//        .portfolio-popup__swiper-wrapper.swiper-wrapper
+//          .swiper-slide
+//            img(src='./assets/img/portfolio/04.png' alt='portfolio')
+//          .swiper-slide
+//            img(src='./assets/img/portfolio/05.png' alt='portfolio')
+//          .swiper-slide
+//            img(src='./assets/img/portfolio/06.png' alt='portfolio')
+//
+//      .portfolio-popup__content
+//        .portfolio-popup__date 23.08.2022
+//        p.portfolio-popup__title Кронштейн для крепления фасада
+//        ul.portfolio-popup__tags.portfolio-popup-tags
+//          li.portfolio-tags__item.tag-orange.portfolio-popup-tags__item Лазерная резка
+//          li.portfolio-tags__item.tag-lightblue.portfolio-popup-tags__item Изготовление металлоизделий
+//
+//        p.portfolio-popup__description Металлический борт из оцинкованной стали с зазором под пластину S=1,5 мм. Габариты: (10х100х50)
+//        a.portfolio-popup__link.button.arrow.button--outline(href="") Смотреть кейс
 
 
 
