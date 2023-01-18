@@ -169,10 +169,8 @@
         const categoryItem = item.dataset.category;
         if (categoryItem === category) {
           item.style.display = 'flex';
-          //console.log(categoryItem + ' показать')
         } else {
           item.style.display = 'none';
-          //console.log(categoryItem + ' скрыть')
         }
       })
 
@@ -189,7 +187,6 @@
         filterItems.forEach(item => removeClassActive(item));
         addClassActive(button);
         const currentCategory = button.dataset.filter;
-        //console.log(currentCategory);
         filterBlog(currentCategory, blogItems);
 
       });
@@ -967,6 +964,33 @@ if (gear_block) {
 }
 
 
+const generalPortfolio = document.querySelector('.general-portfolio');
+
+if (generalPortfolio) {
+
+  // Выбор категории
+  const categories = generalPortfolio.querySelectorAll('.general-portfolio__categories-item');
+
+  categories.forEach(category => {
+    category.addEventListener('click', () => {
+      categories.forEach(item => item.classList.remove('js-categories-active'));
+      category.classList.add('js-categories-active');
+    })
+  });
+
+
+  // Выбор тега
+  const tags = generalPortfolio.querySelectorAll('.general-portfolio__tags-item');
+
+  tags.forEach(tag => {
+    tag.addEventListener('click', () => {
+      tags.forEach(item => item.classList.remove('js-tag-active'));
+      tag.classList.add('js-tag-active');
+    })
+  });
+
+}
+
 {
 
   const header = document.querySelector('.header');
@@ -998,18 +1022,17 @@ if (gear_block) {
   const mobileWidth = window.matchMedia('(max-width: 1100px)').matches;
 
   if (mobileWidth) {
-    const headerListSubNav_1 = document.querySelectorAll('.header-subnav-1'); // список подменю 1-го уровня
+    const headerListSubNav_1 = header.querySelectorAll('.header-subnav-1'); // список подменю 1-го уровня
 
     headerListSubNav_1.forEach(subNav => {
       const link = subNav.parentNode.querySelector('.header-nav__link');
       link.addEventListener('click', () => {
         toggleActiveElem(subNav);
 
-        // добавление тени над рунктом "цена" в бургер-меню
+        // добавление тени над пунктом "цена" в бургер-меню
         const navItems = header.querySelectorAll('.header-nav__item');
         navItems.forEach(navItem => navItem.classList.toggle('js-active'))
       });
-
     });
 
 
@@ -1019,16 +1042,11 @@ if (gear_block) {
       subNav.addEventListener('click', () => {
         toggleActiveElem(subNav)
         const subNav_2 = subNav.querySelector('.header-subnav-2');
-
         toggleActiveElem(subNav_2)
-
       })
     });
 
-
-
  // Сбрасываем стандартное поведение ссылок, имеющих вложенность в меню
-
 const linkPreventDefaultMobile = header.querySelectorAll('.js-prevent-default-mobile');
 linkPreventDefaultMobile.forEach(link => {
   link.addEventListener('click', (evt) => evt.preventDefault() );
@@ -1036,6 +1054,21 @@ linkPreventDefaultMobile.forEach(link => {
 
 
   }
+
+    let previousPosition = window.scrollTop || document.documentElement.scrollTop;
+    window.addEventListener("scroll", () => {
+      const currentPosition = window.scrollTop || document.documentElement.scrollTop;
+      if ( previousPosition < currentPosition) {
+        header.classList.add('js-scroll');
+      }
+      else {
+        header.classList.remove('js-scroll');
+      }
+    });
+
+
+
+
 
 
 
@@ -1104,6 +1137,23 @@ linkPreventDefaultMobile.forEach(link => {
 
 
 
+
+const paginations = document.querySelectorAll('.pagination');
+
+if (paginations) {
+
+  paginations.forEach(pagination => {
+    const paginationItems = pagination.querySelectorAll('.pagination__item');
+    paginationItems.forEach(paginationItem => paginationActive(paginationItem, paginationItems));
+  })
+}
+
+function paginationActive (paginationItem, paginationList) {
+  paginationItem.addEventListener('click', () => {
+    paginationList.forEach(item => item.classList.remove('js-pagination-active'));
+    paginationItem.classList.add('js-pagination-active');
+  })
+};
 
 
 {
@@ -1261,35 +1311,30 @@ if (vacansy) {
       const swiperThumbs = portfolioItem.querySelector('.portfolio-popup__swiper--thumbs');
 
 
+      let swiper__thumbs = new Swiper(".portfolio-popup__swiper--thumbs", {
+        //loop: true,
+        spaceBetween: 28,
+        slidesPerView: "auto",
+        freeMode: true,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        watchOverflow: true,
+        initialSlide: 0,
+      });
 
-
-      // let swiper__thumbs = new Swiper(".portfolio-popup__swiper--thumbs", {
-      //   //loop: true,
-      //   spaceBetween: 28,
-      //   slidesPerView: "auto",
-      //   freeMode: true,
-      //   watchSlidesProgress: true,
-      //   watchSlidesVisibility: true,
-      //   watchOverflow: true,
-      //   initialSlide: 0,
-      // });
-      //
-      // let swiper__top = new Swiper(".portfolio-popup__swiper--top", {
-      //   loop: true,
-      //   slidesPerView: 1,
-      //   centeredSlides: true,
-      //   initialSlide: 0,
-      //   thumbs: {
-      //     swiper: swiper__thumbs,
-      //   },
-      //   effect: 'fade',
-      //   fadeEffect: {
-      //     crossFade: true
-      //   }
-      // });
-
-
-
+      let swiper__top = new Swiper(".portfolio-popup__swiper--top", {
+        loop: true,
+        slidesPerView: 1,
+        centeredSlides: true,
+        initialSlide: 0,
+        thumbs: {
+          swiper: swiper__thumbs,
+        },
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        }
+      });
 
     });
 
@@ -1298,56 +1343,27 @@ if (vacansy) {
 
 
 
-
-
-  let swiper__thumbs = new Swiper(".portfolio-popup__swiper--thumbs", {
-    //loop: true,
-    spaceBetween: 28,
-    slidesPerView: "auto",
-    freeMode: true,
-    watchSlidesProgress: true,
-    watchSlidesVisibility: true,
-    watchOverflow: true,
-    initialSlide: 0,
-  });
-
-  let swiper__top = new Swiper(".portfolio-popup__swiper--top", {
-    loop: true,
-    slidesPerView: 1,
-    centeredSlides: true,
-    initialSlide: 0,
-    thumbs: {
-      swiper: swiper__thumbs,
-    },
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true
-    }
-  });
-
-  //--------------------------------------
-
-
-
   if (portfolio) {
 
     const portfolioItems = portfolio.querySelectorAll('.portfolio__item');
 
-    const addClassActive = (item) => item.classList.add('js-popup-active');
-    const removeClassActive = (item) => item.classList.remove('js-popup-active');
 
-    portfolioItems.forEach(item => {
-      item.addEventListener('click', () => addClassActive(item));
+    portfolioItems.forEach(portfolioItem => {
 
-      const close = item.querySelector('.portfolio-popup__close');
-      if (close) {
-        close.addEventListener('click', function () {
-          removeClassActive(item);
-          console.log(this)
-        });
-      }
+      portfolioItem.addEventListener('click', () => {
+        portfolioItem.classList.add('js-popup-active');
+      });
 
+      const closePortfolioItem = portfolioItem.querySelector('.portfolio-popup__close');
+
+      closePortfolioItem.addEventListener('click', () => {
+        portfolioItem.classList.remove('js-popup-active');
+        console.log(portfolioItem)
+
+      })
     });
+
+
 
   }
 
@@ -2107,7 +2123,7 @@ function unblockScrollBody () {
     span.classList.add('button-copy-alert');
     span.textContent = "Скопировано";
     copyButton.appendChild(span);
-    setTimeout(() => span.remove(),2 * 1000);
+    setTimeout(() => span.remove(),1 * 1000);
   };
 
   const copyButtons = document.querySelectorAll('.button-copy');
@@ -2193,7 +2209,7 @@ function tabsSlides ( { classWrapper, classSlide, classNav, activeClass,  dataNa
         const numberTab = tab.getAttribute(dataNameNav);
         slides.forEach(slide => {
           const numberSlide = slide.getAttribute(dataNameSlide);
-          //if (numberTab === numberSlide) addClassActive(slide);
+          if (numberTab === numberSlide) addClassActive(slide);
         });
       });
     });
