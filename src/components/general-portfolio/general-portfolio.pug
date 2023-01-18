@@ -1,0 +1,149 @@
+-
+  const portfolioItems = [
+    {
+      srcImg: './assets/img/portfolio/01.png',
+      title: 'Металлический борт 150 (30х150х50)',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-grey',
+        },
+      },
+      description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)'
+    },
+
+    {
+      srcImg: './assets/img/portfolio/02.png',
+      title: 'Металлический борт 100',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-grey',
+        },
+      },
+      description: 'Металлический борт из оцинкованной стали с зазором под пластину S=1,5 мм. Габариты: (10х100х50)'
+    },
+
+    {
+      srcImg: './assets/img/portfolio/03.png',
+      title: 'Вентиляционная решетка',
+      tags: {
+        tag_item_1: {
+          text: 'Изготовление металлоизделий',
+          classColor: 'tag-lightblue',
+        },
+        tag_item_2: {
+          text: 'Порошковая покраска',
+          classColor: 'tag-fio',
+        },
+      },
+      description: 'Декоративная решетка на вентиляционные отверстия из нержавеющей стали AISI 304 матовая S=5мм и перфорированного листа S=1мм.'
+    },
+
+    {
+      srcImg: './assets/img/portfolio/04.png',
+      title: 'Кронштейн для крепления фасада',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Изготовление металлоизделий',
+          classColor: 'tag-lightblue',
+        },
+      },
+      description: 'Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005'
+    },
+
+    {
+      srcImg: './assets/img/portfolio/05.png',
+      title: 'Икля',
+      tags: {
+        tag_item_1: {
+          text: 'Порошковая покраска',
+          classColor: 'tag-fio',
+        },
+        tag_item_2: {
+          text: 'Столярные работы',
+          classColor: 'tag-pink',
+        },
+      },
+
+      description: 'Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005'
+    },
+
+    {
+      srcImg: './assets/img/portfolio/06.png',
+      title: 'Зацеп',
+      tags: {
+        tag_item_1: {
+          text: 'Порошковая покраска',
+          classColor: 'tag-fio',
+        },
+        tag_item_2: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+      },
+
+      description: 'Зацеп из нержавеющей стали AISI 304 ммматовая S=1,5мм'
+    },
+
+  ];
+
+
+mixin createPortfolioItems ( portfolioData )
+  each card in portfolioData
+    li.portfolio__item
+      .portfolio__image-wrapper
+        img(src=card.srcImg alt='portfolio')
+      h3.portfolio__title=card.title
+      ul.portfolio__tags.portfolio-tags
+        each tag in card.tags
+          li.portfolio-tags__item(class=tag.classColor)=tag.text
+      p.portfolio__description= card.description
+
+
+.general-portfolio
+  .container.general-portfolio__container
+    h1.title-section.tablet-hidden Примеры работ
+
+    .general-portfolio__inner
+
+      .general-portfolio__categories
+        h1.title-section.desctop-hidden Примеры работ
+        h2.general-portfolio__categories-title Категории
+        ul.general-portfolio__categories-list
+          li.general-portfolio__categories-item.js-categories-active Все
+          li.general-portfolio__categories-item POS-материалы
+          li.general-portfolio__categories-item Перфорированные стенды
+          li.general-portfolio__categories-item Комплектующие для строительства
+          li.general-portfolio__categories-item Корпуса / Короба
+
+      .general-portfolio__tags
+        h2.general-portfolio__tags-title Услуги
+        ul.general-portfolio__tags-list
+          li.general-portfolio__tags-item.tag-grey.js-tag-active Гибка листового металла
+          li.general-portfolio__tags-item.tag-orange Лазерная резка
+          li.general-portfolio__tags-item.tag-fio Порошковая покраска
+          li.general-portfolio__tags-item.tag-lightblue Изготовление металлоизделий
+          li.general-portfolio__tags-item.tag-pink Столярные работы
+
+
+      .general-portfolio__cards-grid
+        +createPortfolioItems(portfolioItems)
+
+        include ../pagination/pagination
+
+
+
+

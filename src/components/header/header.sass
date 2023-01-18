@@ -17,6 +17,9 @@
       background-image: url('../img/icons/close.svg')
       width: 25px
       height: 25px
+  &.js-scroll
+    background-color: rgba($frosted-top, 0.8)
+    position: fixed
 
 
   &__container
@@ -84,6 +87,12 @@
       &:last-child
         border-radius: 0 0 8px 8px
     @media (min-width: $width-mobile)
+      &:hover .header-nav__link
+        background-color: $frosted-top
+        box-shadow: $shadow-fr-top
+        backdrop-filter: blur(60px)
+        border-radius: 4px
+        color: $white
       &:hover .header-subnav-1
         transform: rotateX(0deg)
         visibility: visible
@@ -108,8 +117,6 @@
         &.js-active::after
           transform: rotate(90deg)
 
-    &.js-active
-      //padding-bottom: 0
     &:nth-child(2).js-active
       box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
 
@@ -160,6 +167,8 @@
       &.js-active
         display: block
         overflow: hidden
+    @media (min-width: $width-mobile)
+      max-width: 300px
 
 
   &-subnav-1
@@ -174,7 +183,7 @@
           visibility: visible
         &:last-child
           border-radius: 0 0 4px 4px
-    & > .header-subnav__item
+    & > .header-subnav__item.arrow
       &::after
         content: ""
         position: absolute
@@ -260,7 +269,7 @@
         width: 100%
         background-color: #2C2F32
         &:hover
-          background-color: rgba(#2C2F32, 0.8)
+          background-color: #303234
         .icon-header-contact
           position: absolute
           right: 18px

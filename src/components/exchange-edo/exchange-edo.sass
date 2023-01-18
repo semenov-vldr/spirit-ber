@@ -72,17 +72,36 @@
         gap: 12px
 
     &__item
+      counter-increment: num
+      position: relative
       display: flex
       gap: 24px
+      align-items: baseline
       @media (max-width: $width-mobile)
         gap: 16px
       @media (max-width: 768px)
         gap: 8px
-
-    &__number
-      color: $accent
-      @include fontSize(14, 20)
+      &::before
+        content: counter(num) ""
+        display: inline-block
+        color: $accent
+        @include fontSize(14, 20)
+      &:nth-child(-n+9)::before
+        content: "0" counter(num) ""
 
     &__text
       @include fontSize(14, 16)
+
+    &__text a
+      color: $accent
+
+    &__text ul
+      display: flex
+      flex-direction: column
+      gap: 10px
+      list-style-type: disc
+      margin-top: 20px
+      padding-left: 20px
+      li::marker
+        color: $accent
 

@@ -1,0 +1,56 @@
+.pagination
+  display: flex
+  gap: 24px
+  align-items: center
+  max-width: 520px
+  width: 100%
+  @media (max-width: $width-mobile)
+    gap: 12px
+
+  &__prev,
+  &__next
+    position: relative
+    width: 44px
+    height: 44px
+    border-radius: 4px
+    background-color: rgba(#6A6A6A, 0.1)
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: $transition
+    &:hover
+      background-color: rgba(#6A6A6A5E, 0.25)
+    &::after
+      content: ""
+      display: block
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+      width: 7px
+      height: 12px
+
+  &__prev::after
+    background-image: url('../img/icons/arrow-left.svg')
+  &__next::after
+    background-image: url('../img/icons/arrow-right.svg')
+
+  &__item
+    width: 44px
+    height: 44px
+    border-radius: 4px
+    font-weight: 500
+    opacity: 0.5
+    cursor: pointer
+    transition: $transition
+    font-size: 16px
+    &:hover,
+    &.js-pagination-active
+      opacity: 1
+      background-color: rgba(#6A6A6A5E, 0.4)
+    @media (max-width: $width-mobile)
+      font-size: 14px
+
+
+
+

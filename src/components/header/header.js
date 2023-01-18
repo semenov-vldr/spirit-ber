@@ -29,18 +29,17 @@
   const mobileWidth = window.matchMedia('(max-width: 1100px)').matches;
 
   if (mobileWidth) {
-    const headerListSubNav_1 = document.querySelectorAll('.header-subnav-1'); // список подменю 1-го уровня
+    const headerListSubNav_1 = header.querySelectorAll('.header-subnav-1'); // список подменю 1-го уровня
 
     headerListSubNav_1.forEach(subNav => {
       const link = subNav.parentNode.querySelector('.header-nav__link');
       link.addEventListener('click', () => {
         toggleActiveElem(subNav);
 
-        // добавление тени над рунктом "цена" в бургер-меню
+        // добавление тени над пунктом "цена" в бургер-меню
         const navItems = header.querySelectorAll('.header-nav__item');
         navItems.forEach(navItem => navItem.classList.toggle('js-active'))
       });
-
     });
 
 
@@ -50,16 +49,11 @@
       subNav.addEventListener('click', () => {
         toggleActiveElem(subNav)
         const subNav_2 = subNav.querySelector('.header-subnav-2');
-
         toggleActiveElem(subNav_2)
-
       })
     });
 
-
-
  // Сбрасываем стандартное поведение ссылок, имеющих вложенность в меню
-
 const linkPreventDefaultMobile = header.querySelectorAll('.js-prevent-default-mobile');
 linkPreventDefaultMobile.forEach(link => {
   link.addEventListener('click', (evt) => evt.preventDefault() );
@@ -67,6 +61,21 @@ linkPreventDefaultMobile.forEach(link => {
 
 
   }
+
+    let previousPosition = window.scrollTop || document.documentElement.scrollTop;
+    window.addEventListener("scroll", () => {
+      const currentPosition = window.scrollTop || document.documentElement.scrollTop;
+      if ( previousPosition < currentPosition) {
+        header.classList.add('js-scroll');
+      }
+      else {
+        header.classList.remove('js-scroll');
+      }
+    });
+
+
+
+
 
 
 

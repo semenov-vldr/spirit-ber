@@ -48,6 +48,7 @@
     display: flex
     justify-content: space-between
     gap: 8px
+    color: $accent
 
   &-contact__link
     color: $accent
@@ -55,15 +56,6 @@
   &-contact__timetable
     color: rgba(#fff, 0.4)
     font-size: 12px
-
-  &-contact__button-copy
-    @media (max-width: 480px)
-      width: 44px
-      aspect-ratio: 1 / 1
-      position: absolute
-      right: 20px
-      border-radius: 4px
-      border: 1px solid $accent
 
 
 
@@ -83,25 +75,27 @@
         display: flex
         flex-direction: column
 
-      &__demands--left
-        grid-column: span 1
-      &__demands--right
-        grid-column: 2 / span 1
-        grid-row: span 2
-      &__terms
-        grid-column: span 1
-        grid-row: 2 / span 1
+    &-content__section
+      grid-column: 1 / span 1
+      grid-row: 2 / span 1
 
-      &__title
-        margin-bottom: 16px
-        @include fontSize(14, 20)
+    &-content__section.accordion-content__section--left
+      grid-column: 1 / span 1
+      grid-row: 1 / span 1
+    &-content__section.accordion-content__section--right
+      grid-column: 2 / span 1
+      grid-row: span 2
 
-      &__list
-        list-style-type: disc
-        display: flex
-        flex-direction: column
-        gap: 10px
-        padding-left: 20px
+    &-content__title
+      margin-bottom: 16px
+      @include fontSize(14, 20)
 
-      &__item
-        @include fontSize(14, 16)
+    &-content__section ul
+      list-style-type: disc
+      display: flex
+      flex-direction: column
+      gap: 10px
+      padding-left: 20px
+
+    &-content__section li
+      @include fontSize(14, 16)

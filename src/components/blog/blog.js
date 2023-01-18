@@ -101,10 +101,8 @@
         const categoryItem = item.dataset.category;
         if (categoryItem === category) {
           item.style.display = 'flex';
-          //console.log(categoryItem + ' показать')
         } else {
           item.style.display = 'none';
-          //console.log(categoryItem + ' скрыть')
         }
       })
 
@@ -121,7 +119,6 @@
         filterItems.forEach(item => removeClassActive(item));
         addClassActive(button);
         const currentCategory = button.dataset.filter;
-        //console.log(currentCategory);
         filterBlog(currentCategory, blogItems);
 
       });

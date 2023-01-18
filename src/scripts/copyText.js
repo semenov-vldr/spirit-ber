@@ -19,7 +19,7 @@
     span.classList.add('button-copy-alert');
     span.textContent = "Скопировано";
     copyButton.appendChild(span);
-    setTimeout(() => span.remove(),2 * 1000);
+    setTimeout(() => span.remove(),1 * 1000);
   };
 
   const copyButtons = document.querySelectorAll('.button-copy');

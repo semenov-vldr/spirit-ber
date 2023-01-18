@@ -15,9 +15,7 @@
           span.vacancy-contact__title HR-отдел
           .vacancy-contact__email
             a.vacancy-contact__email-link.vacancy-contact__link(href="mailto:career@spirit-bear.ru") career@spirit-bear.ru
-            button.vacancy-contact__button-copy
-              svg(width="12" height="12" fill="#24C2DB")
-                use(href='assets/img/sprite.svg#button-copy')
+            +copyTextButton
           span.vacancy-contact__timetable пн-пт с 09:00 до 18:00
 
         button.button.button--bg-accept.button-popup Откликнуться
@@ -25,112 +23,103 @@
 
     .accordion
       .accordion__container
-        ul.accordion__list
+        ol.accordion__list
 
           li.accordion__item
             p.accordion__title Бухгалтер
-              u.accordion__number 01
-              svg(width="10" height="19" fill="currentColor")
-                use(href='assets/img/sprite.svg#arrow-right')
             .accordion__content.accordion-content
 
-              .accordion-content__demands.accordion-content__demands--left
+              .accordion-content__section.accordion-content__section--left
                 p.accordion-content__title Требования
-                ul.accordion-content__list
-                  li.accordion-content__item Коммуникабельность, целеустремленность, активность
-                  li.accordion-content__item Грамотная и уверенная речь
-                  li.accordion-content__item Уверенный пользователь ПК
-                  li.accordion-content__item Опыт работы от 1 года
-                  li.accordion-content__item Приветствуется опыт работы в металлообрабатывающих компаниях
+                ul
+                  li Коммуникабельность, целеустремленность, активность
+                  li Грамотная и уверенная речь
+                  li Уверенный пользователь ПК
+                  li Опыт работы от 1 года
+                  li Приветствуется опыт работы в металлообрабатывающих компаниях
 
-              .accordion-content__terms
+              .accordion-content__section
                 p.accordion-content__title Условия
-                ul.accordion-content__list
-                  li.accordion-content__item Работа в офисе Работодателя в г. Химки, мкрн. Сходня
-                  li.accordion-content__item Оформление по ТК РФ
-                  li.accordion-content__item Испытательный срок 3 месяца
-                  li.accordion-content__item График работы 5/2 с 9-00 до 18-00, обед 1 час в период с 12:00 до 15:00
-                  li.accordion-content__item Оплата труда - 35 000 ₽
+                ul
+                  li Работа в офисе Работодателя в г. Химки, мкрн. Сходня
+                  li Оформление по ТК РФ
+                  li Испытательный срок 3 месяца
+                  li График работы 5/2 с 9-00 до 18-00, обед 1 час в период с 12:00 до 15:00
+                  li Оплата труда - 35 000 ₽
 
-              .accordion-content__demands.accordion-content__demands--right
-                p.accordion-content__title Условия
-                ul.accordion-content__list
-                  li.accordion-content__item Ведение бухгалтерского учета в полном объеме
-                  li.accordion-content__item Отслеживание и сверка взаиморасчетов с поставщиками и покупателями, контроль дебиторской и кредиторской задолженности
-                  li.accordion-content__item Расчет заработной платы и предоставление отчетности по НДФЛ, страховым взносам
-                  li.accordion-content__item Подготовка налоговой отчетности, ПФР, ФСС. Формирование книги продаж/покупок и контроль за входящими и исходящими счетами-фактурами в соответствии с требованиями НК РФ
-                  li.accordion-content__item Работа в системе Банк-клиент и 1 С бухгалтерия
-                  li.accordion-content__item Учет ОС и материалов, проведение инвентаризаций
+              .accordion-content__section.accordion-content__section--right
+                p.accordion-content__title Обязанности
+                ul
+                  li Ведение бухгалтерского учета в полном объеме
+                  li Отслеживание и сверка взаиморасчетов с поставщиками и покупателями, контроль дебиторской и кредиторской задолженности
+                  li Расчет заработной платы и предоставление отчетности по НДФЛ, страховым взносам
+                  li Подготовка налоговой отчетности, ПФР, ФСС. Формирование книги продаж/покупок и контроль за входящими и исходящими счетами-фактурами в соответствии с требованиями НК РФ
+                  li Работа в системе Банк-клиент и 1 С бухгалтерия
+                  li Учет ОС и материалов, проведение инвентаризаций
 
 
 
           li.accordion__item
             p.accordion__title Оператор лазерного станка
-              u.accordion__number 02
-              svg(width="10" height="19" fill="currentColor")
-                use(href='assets/img/sprite.svg#arrow-right')
             .accordion__content.accordion-content
-              .accordion-content__demands.accordion-content__demands--left
+              .accordion-content__section.accordion-content__section--left
                 p.accordion-content__title Требования
-                ul.accordion-content__list
-                  li.accordion-content__item Коммуникабельность, целеустремленность, активность
-                  li.accordion-content__item Грамотная и уверенная речь
-                  li.accordion-content__item Уверенный пользователь ПК
-                  li.accordion-content__item Опыт работы от 1 года
-                  li.accordion-content__item Приветствуется опыт работы в металлообрабатывающих компаниях
+                ul
+                  li Коммуникабельность, целеустремленность, активность
+                  li Грамотная и уверенная речь
+                  li Уверенный пользователь ПК
+                  li Опыт работы от 1 года
+                  li Приветствуется опыт работы в металлообрабатывающих компаниях
 
-              .accordion-content__terms
+              .accordion-content__section
                 p.accordion-content__title Условия
-                ul.accordion-content__list
-                  li.accordion-content__item Работа в офисе Работодателя в г. Химки, мкрн. Сходня
-                  li.accordion-content__item Оформление по ТК РФ
-                  li.accordion-content__item Испытательный срок 3 месяца
-                  li.accordion-content__item График работы 5/2 с 9-00 до 18-00, обед 1 час в период с 12:00 до 15:00
-                  li.accordion-content__item Оплата труда - 35 000 ₽
+                ul
+                  li Работа в офисе Работодателя в г. Химки, мкрн. Сходня
+                  li Оформление по ТК РФ
+                  li Испытательный срок 3 месяца
+                  li График работы 5/2 с 9-00 до 18-00, обед 1 час в период с 12:00 до 15:00
+                  li Оплата труда - 35 000 ₽
 
-              .accordion-content__demands.accordion-content__demands--right
-                p.accordion-content__title Условия
-                ul.accordion-content__list
-                  li.accordion-content__item Ведение бухгалтерского учета в полном объеме
-                  li.accordion-content__item Отслеживание и сверка взаиморасчетов с поставщиками и покупателями, контроль дебиторской и кредиторской задолженности
-                  li.accordion-content__item Расчет заработной платы и предоставление отчетности по НДФЛ, страховым взносам
-                  li.accordion-content__item Подготовка налоговой отчетности, ПФР, ФСС. Формирование книги продаж/покупок и контроль за входящими и исходящими счетами-фактурами в соответствии с требованиями НК РФ
-                  li.accordion-content__item Работа в системе Банк-клиент и 1 С бухгалтерия
-                  li.accordion-content__item Учет ОС и материалов, проведение инвентаризаций
+              .accordion-content__section.accordion-content__section--right
+                p.accordion-content__title Обязанности
+                ul
+                  li Ведение бухгалтерского учета в полном объеме
+                  li Отслеживание и сверка взаиморасчетов с поставщиками и покупателями, контроль дебиторской и кредиторской задолженности
+                  li Расчет заработной платы и предоставление отчетности по НДФЛ, страховым взносам
+                  li Подготовка налоговой отчетности, ПФР, ФСС. Формирование книги продаж/покупок и контроль за входящими и исходящими счетами-фактурами в соответствии с требованиями НК РФ
+                  li Работа в системе Банк-клиент и 1 С бухгалтерия
+                  li Учет ОС и материалов, проведение инвентаризаций
 
           li.accordion__item
             p.accordion__title Менеджер в отдел продаж по услугам металлообработки
-              u.accordion__number 03
-              svg(width="10" height="19" fill="currentColor")
-                use(href='assets/img/sprite.svg#arrow-right')
             .accordion__content.accordion-content
-              .accordion-content__demands.accordion-content__demands--left
+              .accordion-content__section.accordion-content__section--left
                 p.accordion-content__title Требования
-                ul.accordion-content__list
-                  li.accordion-content__item Коммуникабельность, целеустремленность, активность
-                  li.accordion-content__item Грамотная и уверенная речь
-                  li.accordion-content__item Уверенный пользователь ПК
-                  li.accordion-content__item Опыт работы от 1 года
-                  li.accordion-content__item Приветствуется опыт работы в металлообрабатывающих компаниях
+                ul
+                  li Коммуникабельность, целеустремленность, активность
+                  li Грамотная и уверенная речь
+                  li Уверенный пользователь ПК
+                  li Опыт работы от 1 года
+                  li Приветствуется опыт работы в металлообрабатывающих компаниях
 
-              .accordion-content__terms
+              .accordion-content__section
                 p.accordion-content__title Условия
-                ul.accordion-content__list
-                  li.accordion-content__item Работа в офисе Работодателя в г. Химки, мкрн. Сходня
-                  li.accordion-content__item Оформление по ТК РФ
-                  li.accordion-content__item Испытательный срок 3 месяца
-                  li.accordion-content__item График работы 5/2 с 9-00 до 18-00, обед 1 час в период с 12:00 до 15:00
-                  li.accordion-content__item Оплата труда - 35 000 ₽
+                ul
+                  li Работа в офисе Работодателя в г. Химки, мкрн. Сходня
+                  li Оформление по ТК РФ
+                  li Испытательный срок 3 месяца
+                  li График работы 5/2 с 9-00 до 18-00, обед 1 час в период с 12:00 до 15:00
+                  li Оплата труда - 35 000 ₽
 
-              .accordion-content__demands.accordion-content__demands--right
-                p.accordion-content__title Условия
-                ul.accordion-content__list
-                  li.accordion-content__item Ведение бухгалтерского учета в полном объеме
-                  li.accordion-content__item Отслеживание и сверка взаиморасчетов с поставщиками и покупателями, контроль дебиторской и кредиторской задолженности
-                  li.accordion-content__item Расчет заработной платы и предоставление отчетности по НДФЛ, страховым взносам
-                  li.accordion-content__item Подготовка налоговой отчетности, ПФР, ФСС. Формирование книги продаж/покупок и контроль за входящими и исходящими счетами-фактурами в соответствии с требованиями НК РФ
-                  li.accordion-content__item Работа в системе Банк-клиент и 1 С бухгалтерия
-                  li.accordion-content__item Учет ОС и материалов, проведение инвентаризаций
+              .accordion-content__section.accordion-content__section--right
+                p.accordion-content__title Обязанности
+                ul
+                  li Ведение бухгалтерского учета в полном объеме
+                  li Отслеживание и сверка взаиморасчетов с поставщиками и покупателями, контроль дебиторской и кредиторской задолженности
+                  li Расчет заработной платы и предоставление отчетности по НДФЛ, страховым взносам
+                  li Подготовка налоговой отчетности, ПФР, ФСС. Формирование книги продаж/покупок и контроль за входящими и исходящими счетами-фактурами в соответствии с требованиями НК РФ
+                  li Работа в системе Банк-клиент и 1 С бухгалтерия
+                  li Учет ОС и материалов, проведение инвентаризаций
 
 
 

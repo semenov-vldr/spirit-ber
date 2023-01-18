@@ -6,6 +6,7 @@
     text-align: left
     padding-bottom: 12px
     cursor: pointer
+    max-width: 500px
     &:hover .portfolio__image-wrapper img
       transform: scale(1.2)
     &:hover .portfolio__image-wrapper
@@ -45,6 +46,7 @@
       font-size: 10px
     @media (max-width: 480px)
       margin-top: auto
+      gap: 6px
   &-tags__item
     position: relative
     display: flex
@@ -94,7 +96,7 @@
       overflow-x: hidden
       transition: all 0.5s ease 0s
       overscroll-behavior: contain
-      @media (max-width: 1200px)
+      @media (max-width: $width-mobile)
         padding: 50px
       @media (max-width: 768px)
         padding: 20px 0
@@ -116,12 +118,14 @@
       filter: drop-shadow(0px 251px 100px rgba(24, 26, 27, 0.04)) drop-shadow(0px 141px 85px rgba(24, 26, 27, 0.13)) drop-shadow(0px 63px 63px rgba(24, 26, 27, 0.21)) drop-shadow(0px 16px 34px rgba(24, 26, 27, 0.25)) drop-shadow(0px 0px 0px rgba(24, 26, 27, 0.25))
       @media (max-width: 1400px)
         grid-template-columns: 60% 40%
-      @media (max-width: 1100px)
+      @media (max-width: $width-mobile)
         grid-template-columns: 1fr
         grid-template-rows: 50% auto
 
       .swiper-slide
         img
+          display: block
+          margin: 0 auto
           width: auto
           height: 100%
           object-fit: cover
@@ -139,7 +143,7 @@
       padding: 25px 50px
       grid-row: 2 / span 1
       background-color: rgba($frosted-top, 0.7)
-      @media (max-width: 1100px)
+      @media (max-width: $width-mobile)
         display: none
 
       .swiper-slide
@@ -177,11 +181,10 @@
       width: 44px
       aspect-ratio: 1 / 1
       border-radius: 50%
-      &:hover
-        background-color: rgba(#6A6A6A, 0.2)
+      cursor: pointer
       &:hover
         background-color: rgba(#6A6A6A, 0.3)
-      @media (max-width: 1100px)
+      @media (max-width: $width-mobile)
         right: 10px
         top: 10px
       &::after

@@ -11,11 +11,11 @@
     background-color: $frosted-top
     border-radius: 8px
     box-shadow: inset 0px 0px 2px rgba(113, 200, 255, 0.25)
-    filter: drop-shadow(0px 251px 100px rgba(24, 26, 27, 0.04)) drop-shadow(0px 141px 85px rgba(24, 26, 27, 0.13)) drop-shadow(0px 63px 63px rgba(24, 26, 27, 0.21)) drop-shadow(0px 16px 34px rgba(24, 26, 27, 0.25)) drop-shadow(0px 0px 0px rgba(24, 26, 27, 0.25))
 
   &__item
     counter-increment: num
     padding: 12px
+    border-radius: 8px
     @media (max-width: 768px)
       padding: 12px 10px
     &.js-accordion-active .accordion__content
@@ -52,7 +52,7 @@
     cursor: pointer
     color: rgba(#fff, 0.6)
     &::before
-      content: counter(num) "."
+      content: counter(num) ""
       position: absolute
       transform: translate(-100%, -50%)
       left: -40px
@@ -72,9 +72,8 @@
       height: 19px
       transition: 0.3s
       flex: 0 0 10px
-
     @media (max-width: 768px)
-      padding: 15px 0
+      padding: 15px 10px 15px 0
 
 
   &__content
@@ -86,7 +85,7 @@
     max-height: 0
     padding: 0 30px
     overflow: hidden
-    transition: 0.3s ease
+    transition: 0.1s
     @media (max-width: 768px)
       padding: 0 20px
 

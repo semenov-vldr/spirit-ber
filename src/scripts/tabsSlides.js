@@ -40,7 +40,7 @@ function tabsSlides ( { classWrapper, classSlide, classNav, activeClass,  dataNa
         const numberTab = tab.getAttribute(dataNameNav);
         slides.forEach(slide => {
           const numberSlide = slide.getAttribute(dataNameSlide);
-          //if (numberTab === numberSlide) addClassActive(slide);
+          if (numberTab === numberSlide) addClassActive(slide);
         });
       });
     });
