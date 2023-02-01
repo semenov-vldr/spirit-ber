@@ -1,0 +1,867 @@
+
+<!-- ---- Form ------------>
+<!-- Name-->
+<!-- Tel-->
+<!-- Email-->
+<!-- Text-->
+<!-- Кнопка "отправить" и согласие-->
+<!-- шаблон прогресс-бара-->
+<!-- карточка партнера-->
+<!--copy text-->
+<!-- создание карточек для портфолио--><!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Порошковая покраска металла</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content=""><!--favicon-->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!--favicon end-->
+    <link rel="stylesheet" type="text/css" href="assets/css/libs.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+<!-- Yandex map script -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=dad86943-dfef-45bd-9c5e-c404323cb093&amp;lang=ru_RU" type="text/javascript"></script><!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="header__container"><a class="header__logo" href="index.html">
+            <svg width="181" height="40" fill="#fff">
+              <use href="./assets/img/sprite.svg#header-logo"></use>
+            </svg></a>
+          <button class="header__burger"></button>
+          <div class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item header-nav__item--service"><a class="header-nav__link js-prevent-default-mobile" href="service.html">Услуги</a>
+                <ul class="header-subnav header-subnav-1">
+                  <li class="header-subnav__item arrow"><a class="header-subnav__link js-prevent-default-mobile" href="lazernaya-rezka-metalla.html">Лазерная резка металла</a>
+                    <ul class="header-subnav header-subnav-2">
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка труб</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка швеллера</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка уголка</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка листа</a></li>
+                    </ul>
+                  </li>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="gibka-listovogo-metalla.html">Гибка листового металла</a></li>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="poroshkovaya-pokraska-metalla.html">Порошковая покраска металла</a></li>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="slesarnye-raboty.html">Слесарные работы</a></li>
+                  <li class="header-subnav__item arrow"><a class="header-subnav__link js-prevent-default-mobile" href="metallokonstruktsii.html">Изготовление металлоконструкций</a>
+                    <ul class="header-subnav header-subnav-2">
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Производство POS материалов</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Изготовление корпусов и коробов из металла</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Производство комплектующих для строительства</a></li>
+                                <li class="header-subnav__item"><a class="header-subnav__link" href="/">Производство фасадных облицовочных элементов</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="">Цены</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="portfolio.html">Примеры работ</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="about.html">О нас</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+            <div class="header__contact header-contact">
+              <button class="header-contact__menu-tablet" type="button">Связаться с нами<span>Телефон, почта, адрес</span></button>
+              <ul class="header-contact__list">
+                <li class="header-contact__item">
+                  <div class="header-contact__icon"><img src="./assets/img/icons/header-phone.svg"></div><a class="header-contact__link" href="tel:+74999940097">+7 499 994 00 97</a>
+                  <button class="button-copy">
+                    <svg width="12" height="12" fill="currentColor">
+                      <use href="./assets/img/sprite.svg#button-copy"></use>
+                    </svg>
+                  </button><span class="header-contact__description">пн-пт с 09:00 до 18:00</span>
+                </li>
+                <li class="header-contact__item">
+                  <div class="header-contact__icon"><img src="./assets/img/icons/email.svg"></div><a class="header-contact__link" href="mailto:sales@spirit-bear.ru">sales@spirit-bear.ru</a>
+                  <button class="button-copy">
+                    <svg width="12" height="12" fill="currentColor">
+                      <use href="./assets/img/sprite.svg#button-copy"></use>
+                    </svg>
+                  </button><span class="header-contact__description">круглосуточно, без выходных</span>
+                </li>
+                <li class="header-contact__item header-contact__address">
+                  <div class="header-contact__icon"><img src="./assets/img/icons/point.svg"></div><a class="header-contact__link">МО, Солнечногорск, <br> д. Пешки, цех №22</a>
+                  <button class="button-copy">
+                    <svg width="12" height="12" fill="currentColor">
+                      <use href="./assets/img/sprite.svg#button-copy"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="breadcrumbs">
+          <div class="container breadcrumbs__container"><a class="breadcrumbs__item" href="index.html">Главная</a><a class="breadcrumbs__item" href="service.html">Услуги</a><a class="breadcrumbs__item" href="">Порошковая покраска металла</a></div>
+        </div>
+        <section class="section-column">
+          <div class="hero hero-laser-cutting" style="background-image: url('./assets/img/service/laser.gif')">
+            <div class="container hero__container"><span class="hero__tag">Услуги</span>
+              <h1 class="hero__title">Лазерная резка металла</h1><span class="hero__price">-- от 6,90 ₽ / метр</span>
+              <p class="hero__text">Наша компания работает на профессиональном лазерном оборудовании LVD ORION 3015 PLUS и FIBER LCM R1530F, которое позволяет выполнять раскрой листового материала, профильных и круглых труб по низким ценам за счет своей высокой производительности и превосходному качеству работы.</p>
+              <button class="button button--bg-accept button-popup">Заказать услугу</button>
+              <table class="hero__anchor hero-anchor">
+                <tbody>
+                  <tr>
+                                  <td class="hero-anchor__item"><a class="hero-anchor__link" href="#laser-cutting-price">Цены</a></td>
+                                  <td class="hero-anchor__item"><a class="hero-anchor__link" href="#laser-cutting-portfolio">Примеры работ</a></td>
+                                  <td class="hero-anchor__item"><a class="hero-anchor__link" href="#laser-cutting-production">Оборудование</a></td>
+                  </tr>
+                  <tr>
+                                  <td class="hero-anchor__item"><a class="hero-anchor__link" href="#laser-cutting-advantage">Преимущества</a></td>
+                                  <td class="hero-anchor__item"><a class="hero-anchor__link" href="#laser-cutting-principle">Принципы работы</a></td>
+                                  <td class="hero-anchor__item"><a class="hero-anchor__link" href="#laser-cutting-faq">FAQ</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="materials-laser-cutting">
+            <div class="container materials-laser-cutting__container">
+              <h2 class="title-section">Используемые материалы</h2>
+              <div class="materials-laser-cutting__wrapper">
+                <ul class="materials-laser-cutting__list materials__list swiper-wrapper">
+                            <li class="materials__item swiper-slide"><img src="./assets/img/service/material/black-steel-01.png"><span class="materials__name">Черная сталь</span></li>
+                            <li class="materials__item swiper-slide"><img src="./assets/img/service/material/zinc-steel-02.png"><span class="materials__name">Оцинкованная сталь</span></li>
+                            <li class="materials__item swiper-slide"><img src="./assets/img/service/material/stainless steel-03.png"><span class="materials__name">Нержавеющая сталь</span></li>
+                            <li class="materials__item swiper-slide"><img src="./assets/img/service/material/aluminum-04.png"><span class="materials__name">Алюминий</span></li>
+                            <li class="materials__item swiper-slide"><img src="./assets/img/service/material/copper-05.png"><span class="materials__name">Медь</span></li>
+                            <li class="materials__item swiper-slide"><img src="./assets/img/service/material/titanium-06.png"><span class="materials__name">Титан</span></li>
+                            <li class="materials__item swiper-slide"><img src="./assets/img/service/material/brass-07.png"><span class="materials__name">Латунь</span></li>
+                            <li class="materials__item swiper-slide"><img src="./assets/img/service/material/hardox-08.png"><span class="materials__name">Хардокс (Hardox)</span></li>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="price price-laser-cutting" id="laser-cutting-price">
+            <div class="price__container container">
+              <h2 class="title-section">Цены</h2>
+              <div class="price__table price-table"><span class="price-table__subtitle">Стоимость обработки 1 метра материала, ₽</span><a class="price-table__download" href="">
+                  <svg width="14" height="16" fill="currentColor">
+                    <use href="./assets/img/sprite.svg#file"></use>
+                  </svg>Скачать прайс</a>
+                <div class="price-table__wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th rowspan="2">Материал</th>
+                        <th class="title" colspan="22">Толщина, мм</th>
+                      </tr>
+                      <tr class="table__thickness">
+                        <td class="col">0,5</td>
+                        <td class="col">0,8</td>
+                        <td class="col">1,0</td>
+                        <td class="col">1,2</td>
+                        <td class="col">1,4</td>
+                        <td class="col">1,99</td>
+                        <td class="col">1,6</td>
+                        <td class="col">1,8</td>
+                        <td class="col">2,0</td>
+                        <td class="col">2,5</td>
+                        <td class="col">3,0</td>
+                        <td class="col">4,0</td>
+                        <td class="col">5,0</td>
+                        <td class="col">6,0</td>
+                        <td class="col">7,0</td>
+                        <td class="col">8,0</td>
+                        <td class="col">9,0</td>
+                        <td class="col">10,0</td>
+                        <td class="col">12,0</td>
+                        <td class="col">14,0</td>
+                        <td class="col">15,0</td>
+                        <td class="col">16,0</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="table-row">
+                        <th class="row">Конструкционная сталь</th>
+                        <td>11,00</td>
+                        <td>11,10</td>
+                        <td>12,00</td>
+                        <td>12,67</td>
+                        <td>13,33</td>
+                        <td>14,00</td>
+                        <td>15,00</td>
+                        <td>16,00</td>
+                        <td>17,00</td>
+                        <td>22,00</td>
+                        <td>25,00</td>
+                        <td>30,10</td>
+                        <td>36,00</td>
+                        <td>40,00</td>
+                        <td>48,00</td>
+                        <td>55,00</td>
+                        <td>63,00</td>
+                        <td>76,10</td>
+                        <td>91,00</td>
+                        <td>106,00</td>
+                        <td>122,10</td>
+                        <td>169,00</td>
+                      </tr>
+                      <tr class="table-row">
+                        <th class="row">Нержавеющая сталь</th>
+                        <td>20,20</td>
+                        <td>20,80</td>
+                        <td>21,30</td>
+                        <td>21,75</td>
+                        <td>22,65</td>
+                        <td>25,80</td>
+                        <td>26,77</td>
+                        <td>28,38</td>
+                        <td>30,80</td>
+                        <td>33,38</td>
+                        <td>47,60</td>
+                        <td>61,40</td>
+                        <td>79,60</td>
+                        <td>107,80</td>
+                        <td>150,90</td>
+                        <td>260,00</td>
+                        <td>320,00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                      <tr class="table-row">
+                        <th class="row">Оцинкованная сталь</th>
+                        <td>11,00</td>
+                        <td>11,10</td>
+                        <td>12,00</td>
+                        <td>12,67</td>
+                        <td>13,33</td>
+                        <td>14,00</td>
+                        <td>15,00</td>
+                        <td>16,00</td>
+                        <td>17,00</td>
+                        <td>22,00</td>
+                        <td>25,00</td>
+                        <td>28,69</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                      <tr class="table-row">
+                        <th class="row">Алюминий</th>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>9,00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>12,10</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>17,50</td>
+                        <td>-</td>
+                        <td>25,00</td>
+                        <td>30,10</td>
+                        <td>33,50</td>
+                        <td>39,90</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                      <tr class="table-row">
+                        <th class="row">Дюраль</th>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>9,00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>12,10</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>17,50</td>
+                        <td>-</td>
+                        <td>25,00</td>
+                        <td>30,10</td>
+                        <td>33,50</td>
+                        <td>39,90</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                      <tr class="table-row">
+                        <th class="row">Медь</th>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>22,50</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>39,20</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>52,50</td>
+                        <td>-</td>
+                        <td>69,00</td>
+                        <td>30,10</td>
+                        <td>33,50</td>
+                        <td>39,90</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                      <tr class="table-row">
+                        <th class="row">Латунь</th>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>25,00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>30,50</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>52,50</td>
+                        <td>-</td>
+                        <td>69,00</td>
+                        <td>30,10</td>
+                        <td>33,50</td>
+                        <td>39,90</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                      <tr class="table-row">
+                        <th class="row">Титан</th>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>25,00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>30,50</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>563,00</td>
+                        <td>-</td>
+                        <td>72,50</td>
+                        <td>86,90</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <site class="price-table__footnote footenote__item"><sup>1</sup>Цена указана на лазерную резку воздухом при длине реза от 5 000 метров. Минимальная сумма заказа на лазерную резку 5 000 рублей.</site>
+                <site class="price-table__footnote footenote__item"><sup>2</sup>Цена рассчитывается индивидуально на каждый заказ и зависит от объемов, сложности конструкции и требуемых сроков изготовления.</site><span class="price-table__pricing footenote__pricing">
+                  <svg width="16" height="16" fill="currentColor">
+                    <use href="./assets/img/sprite.svg#question"></use>
+                  </svg>Как формируется цена</span>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio portfolio-laser-cutting" id="laser-cutting-portfolio">
+            <div class="container portfolio__container">
+              <h2 class="title-section">Примеры работ</h2>
+              <div class="portfolio__slider">
+                <div class="swiper portfolio__swiper">
+                  <ul class="portfolio__list swiper-wrapper">
+                                        <li class="portfolio__item swiper-slide">
+                                          <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/01.png" alt="portfolio"></div>
+                                          <h3 class="portfolio__title">Металлический борт 150 (30х150х50)</h3>
+                                          <ul class="portfolio__tags portfolio-tags">
+                                            <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                                            <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                                          </ul>
+                                          <p class="portfolio__description">Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)</p>
+                                        </li>
+                                        <li class="portfolio__item swiper-slide">
+                                          <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/02.png" alt="portfolio"></div>
+                                          <h3 class="portfolio__title">Металлический борт 100</h3>
+                                          <ul class="portfolio__tags portfolio-tags">
+                                            <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                                            <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                                          </ul>
+                                          <p class="portfolio__description">Металлический борт из оцинкованной стали с зазором под пластину S=1,5 мм. Габариты: (10х100х50)</p>
+                                        </li>
+                                        <li class="portfolio__item swiper-slide">
+                                          <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/03.png" alt="portfolio"></div>
+                                          <h3 class="portfolio__title">Вентиляционная решетка</h3>
+                                          <ul class="portfolio__tags portfolio-tags">
+                                            <li class="portfolio-tags__item tag-lightblue">Изготовление металлоизделий</li>
+                                            <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
+                                          </ul>
+                                          <p class="portfolio__description">Декоративная решетка на вентиляционные отверстия из нержавеющей стали AISI 304 матовая S=5мм и перфорированного листа S=1мм.</p>
+                                        </li>
+                                        <li class="portfolio__item swiper-slide">
+                                          <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/04.png" alt="portfolio"></div>
+                                          <h3 class="portfolio__title">Кронштейн для крепления фасада</h3>
+                                          <ul class="portfolio__tags portfolio-tags">
+                                            <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                                            <li class="portfolio-tags__item tag-lightblue">Изготовление металлоизделий</li>
+                                          </ul>
+                                          <p class="portfolio__description">Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005</p>
+                                        </li>
+                                        <li class="portfolio__item swiper-slide">
+                                          <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/05.png" alt="portfolio"></div>
+                                          <h3 class="portfolio__title">Икля</h3>
+                                          <ul class="portfolio__tags portfolio-tags">
+                                            <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
+                                            <li class="portfolio-tags__item tag-pink">Столярные работы</li>
+                                          </ul>
+                                          <p class="portfolio__description">Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005</p>
+                                        </li>
+                                        <li class="portfolio__item swiper-slide">
+                                          <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/06.png" alt="portfolio"></div>
+                                          <h3 class="portfolio__title">Зацеп</h3>
+                                          <ul class="portfolio__tags portfolio-tags">
+                                            <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
+                                            <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                                          </ul>
+                                          <p class="portfolio__description">Зацеп из нержавеющей стали AISI 304 ммматовая S=1,5мм</p>
+                                        </li>
+                  </ul>
+                  <div class="slider-nav__prev"></div>
+                  <div class="slider-nav__next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gear js-gear_category_swiper">
+            <h2 class="title-section">Оборудование</h2>
+            <div class="gear__category" data-gearCategory="Линия порошковой покраски">
+              <div class="gear__category-head gear__head js-gear-internal_slider">
+                <div class="gear__head-subtitle">Оборудование</div>
+                <div class="gear__head-title">Линия порошковой<br/> покраски</div>
+                <ul class="swiper-no-swiping gear__list js-gear_item_slider_controls">
+                  <li class="gear__list-item active" data-gearitem_control="0">AMP-Polimer, кольцевой участок</li>
+                </ul>
+                <div class="gear__buttons"><a class="button button--outline arrow gear__buttons-item" href="" target="_blank">Смотреть услугу</a>
+                  <button class="button button--bg-grey gear__buttons-item" data-target="">Характеристики</button>
+                </div>
+                <div class="gear__items js-gear_item_slider">
+                  <div class="gear__items-slide js-placeGearPopups">
+                    <svg viewBox="0 0 1920 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <image id="map_image" href="/assets/img/gear/4_1.webp"/>
+  <g filter="url(#filter0_f_1128_22146)">
+    <circle cx="1278" cy="748" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter1_d_1128_22146)">
+    <circle cx="1278" cy="748" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1278" cy="748" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="bottom" cx="1278" cy="748" r="8.75" fill="white"/>
+  <g filter="url(#filter5_f_1128_22146)">
+    <circle cx="1447.31" cy="468" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter6_d_1128_22146)">
+    <circle cx="1447.31" cy="468" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1447.31" cy="468" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="top" cx="1447.31" cy="468" r="8.75" fill="white"/>
+  <g filter="url(#filter13_f_1128_22146)">
+    <circle cx="1006" cy="595.348" r="17" fill="#24C2DB"/>
+  </g>
+  <g filter="url(#filter14_d_1128_22146)">
+    <circle cx="1006" cy="595.348" r="12.25" fill="#888888" fill-opacity="0.3" shape-rendering="crispEdges"/>
+    <circle cx="1006" cy="595.348" r="14.25" stroke="#24C2DB" stroke-width="4" shape-rendering="crispEdges"/>
+  </g>
+  <circle class="js-point" data-point="left" cx="1006" cy="595.348" r="8.75" fill="white"/>
+  <defs>
+    <filter id="filter0_f_1128_22146" x="1243" y="713" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22146"/>
+    </filter>
+    <filter id="filter1_d_1128_22146" x="1255.75" y="729.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter3_d_1128_22146" x="1333.44" y="738.8" width="200.611" height="22.4004" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter4_d_1128_22146" x="1333.6" y="770.8" width="201.108" height="22.5601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter5_f_1128_22146" x="1412.31" y="433" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22146"/>
+    </filter>
+    <filter id="filter6_d_1128_22146" x="1425.06" y="449.75" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter8_d_1128_22146" x="1502.75" y="382.4" width="224.231" height="22.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter9_d_1128_22146" x="1501.63" y="414.4" width="164.264" height="67.76" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter11_d_1128_22146" x="705.12" y="510.147" width="203.835" height="46.4004" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter12_d_1128_22146" x="705.28" y="566.147" width="177.756" height="43.3604" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+    <filter id="filter13_f_1128_22146" x="971" y="560.348" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_1128_22146"/>
+    </filter>
+    <filter id="filter14_d_1128_22146" x="983.75" y="577.098" width="44.5" height="44.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1128_22146"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1128_22146" result="shape"/>
+    </filter>
+  </defs>
+</svg>
+                    <img class="-mobile" src="/assets/img/gear/4_1_mobile.webp" />
+                    <div class="gear__popups">
+                      <div class="gear__popups-item js-gear_popup" data-position="left">
+                        <div class="gear__popups-item-title">4_1 1 Рабочая длина</div>
+                        <div class="gear__popups-item-text">Станок принимает листы длиной до 3100 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="top">
+                        <div class="gear__popups-item-title">4_1 2 Гибкость параметров</div>
+                        <div class="gear__popups-item-text">Величина максимального хода 530 мм</div>
+                      </div>
+                      <div class="gear__popups-item js-gear_popup" data-position="bottom">
+                        <div class="gear__popups-item-title">4_1 3  Мощный гибочный механизм</div>
+                        <div class="gear__popups-item-text">Эквивалентная мощность гибки - 135 т</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--.gear__category_controls-->
+            <!--  .gear__category_controls-wrapper-->
+            <!--    .button.button--bg-grey.gear__category_controls-navigation.js-gear_category_swiper_prev-->
+            <!--      <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+            <!--      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.99976 18.76C8.74376 18.76 8.48776 18.662 8.29276 18.467L0.292762 10.467C-0.0982383 10.076 -0.0982383 9.44402 0.292762 9.05302L8.29276 1.05302C8.68376 0.662016 9.31576 0.662016 9.70676 1.05302C10.0978 1.44402 10.0978 2.07602 9.70676 2.46702L2.41376 9.76002L9.70676 17.053C10.0978 17.444 10.0978 18.076 9.70676 18.467C9.51176 18.662 9.25576 18.76 8.99976 18.76" fill="white"/>-->
+            <!--      </svg>-->
+            <!--    .button.button--bg-grey.gear__category_controls-navigation.js-gear_category_swiper_next-->
+            <!--      <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+            <!--      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.00024 18.76C1.25624 18.76 1.51224 18.662 1.70724 18.467L9.70724 10.467C10.0982 10.076 10.0982 9.44402 9.70724 9.05302L1.70724 1.05302C1.31624 0.662016 0.684239 0.662016 0.293239 1.05302C-0.0977614 1.44402 -0.0977614 2.07602 0.293239 2.46702L7.58624 9.76002L0.293239 17.053C-0.0977614 17.444 -0.0977614 18.076 0.293239 18.467C0.488239 18.662 0.744238 18.76 1.00024 18.76" fill="white"/>-->
+            <!--      </svg>-->
+            <!--    .gear__category_controls-pagination-->
+            <div class="gear__buttons-mobile"><a class="button button--outline arrow gear__buttons-item" href="" target="_blank">Смотреть услугу</a>
+              <button class="button button--bg-grey gear__buttons-item" data-target="">Характеристики</button>
+            </div>
+          </div>
+          <div class="also-interesting also-interesting-laser-cutting">
+            <div class="container also-interesting__container">
+              <h2 class="title-section">Вам также могут быть интересны</h2>
+              <div class="also-interesting-laser-cutting__slider">
+                <ul class="also-interesting__list swiper-wrapper">
+                  <li class="also-interesting__item also-interesting-item swiper-slide">
+                    <div class="also-interesting-item__image"><img class="static" src="./assets/img/service/05.jpg"><img class="animate" src="./assets/img/service/05.gif"></div>
+                    <div class="also-interesting-item__name">Металлоконструкции</div>
+                    <div class="also-interesting-item__price">-- от 6,90 ₽ / метр</div><a class="also-interesting-item__link button arrow button--bg-grey" href="">Смотреть услугу</a>
+                  </li>
+                  <li class="also-interesting__item also-interesting-item swiper-slide">
+                    <div class="also-interesting-item__image"><img class="static" src="./assets/img/service/02.jpg"><img class="animate" src="./assets/img/service/02.gif"></div>
+                    <div class="also-interesting-item__name">Гибка</div>
+                    <div class="also-interesting-item__price">-- от 6,90 ₽ / метр</div><a class="also-interesting-item__link button arrow button--bg-grey" href="">Смотреть услугу</a>
+                  </li>
+                  <li class="also-interesting__item also-interesting-item swiper-slide">
+                    <div class="also-interesting-item__image"><img class="static" src="./assets/img/service/03.jpg"><img class="animate" src="./assets/img/service/03.gif"></div>
+                    <div class="also-interesting-item__name">Порошковая покраска</div>
+                    <div class="also-interesting-item__price">-- от 6,90 ₽ / метр</div><a class="also-interesting-item__link button arrow button--bg-grey" href="">Смотреть услугу</a>
+                  </li>
+                  <li class="also-interesting__item also-interesting-item swiper-slide">
+                    <div class="also-interesting-item__image"><img class="static" src="./assets/img/service/01.jpg"><img class="animate" src="./assets/img/service/01.gif"></div>
+                    <div class="also-interesting-item__name">Лазерная резка</div>
+                    <div class="also-interesting-item__price">-- от 6,90 ₽ / метр</div><a class="also-interesting-item__link button arrow button--bg-grey" href="">Смотреть услугу</a>
+                  </li>
+                  <li class="also-interesting__item also-interesting-item swiper-slide">
+                    <div class="also-interesting-item__image"><img class="static" src="./assets/img/service/04.jpg"><img class="animate" src="./assets/img/service/04.gif"></div>
+                    <div class="also-interesting-item__name">Слесарные работы</div>
+                    <div class="also-interesting-item__price">-- от 6,90 ₽ / метр</div><a class="also-interesting-item__link button arrow button--bg-grey" href="">Смотреть услугу</a>
+                  </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="advantages" id="laser-cutting-advantage">
+            <div class="container advantages__container">
+              <h2 class="title-section">Преимущества</h2>
+              <ul class="advantages__list">
+                <li class="advantages__item"><span class="advantages__number">01</span>
+                  <p class="advantages__text">Грамотные конструктора с большим опытом работы в простых и сложных задачах по лазерной резки стали и металла.</p>
+                </li>
+                <li class="advantages__item"><span class="advantages__number">02</span>
+                  <p class="advantages__text">Отлаженные поставки качественных листов (соответствие ГОСТ, ровные, нержавые).</p>
+                </li>
+                <li class="advantages__item"><span class="advantages__number">03</span>
+                  <p class="advantages__text">Оперативная реакция на заказы, отзывчивость и доброжелательность менеджеров.</p>
+                </li>
+                <li class="advantages__item"><span class="advantages__number">04</span>
+                  <p class="advantages__text">Гибкая система формирования стоимости услуг лазерной резки стали и металла (более 50 градаций).</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="faq" id="laser-cutting-faq">
+            <div class="container faq__container">
+              <h2 class="title-section">Частые вопросы</h2>
+              <div class="accordion">
+                <div class="accordion__container">
+                  <ol class="accordion__list">
+                    <li class="accordion__item">
+                      <p class="accordion__title">У меня срочный заказ. Можно ли запустить его сегодня?</p>
+                      <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                    </li>
+                    <li class="accordion__item">
+                      <p class="accordion__title">Есть ли у Вас доставка?</p>
+                      <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                    </li>
+                    <li class="accordion__item">
+                      <p class="accordion__title">Какой у Вас минимальная стоимость на раскрой лазером?</p>
+                      <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                    </li>
+                    <li class="accordion__item">
+                      <p class="accordion__title">Работаете ли Вы с давальческим сырьем?</p>
+                      <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                    </li>
+                    <li class="accordion__item">
+                      <p class="accordion__title">У меня срочный заказ. Можно ли запустить его сегодня?</p>
+                      <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                    </li>
+                    <li class="accordion__item">
+                      <p class="accordion__title">У меня нет чертежей, но есть образец. Можно ли по нему изготовить изделие?</p>
+                      <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                    </li>
+                    <li class="accordion__item">
+                      <p class="accordion__title">Могу ли я заказать образцы изделий бесплатно?</p>
+                      <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="footer__container"><a class="footer__logo">
+              <svg width="262" height="60">
+                <use href="assets/img/sprite.svg#footer-logo"></use>
+              </svg><span class="footer__logo-text">Металлообработка на заказ</span></a>
+            <ul class="footer__documents footer-documents">
+              <li class="footer-documents__item"><a class="footer-documents__link" href="" download>Скачать договор оказания услуг</a></li>
+              <li class="footer-documents__item"><a class="footer-documents__link" href="" download>Скачать договор поставки</a></li>
+            </ul>
+            <div class="footer-requisites">«ООО «Спирит-Бер», 2016-2023. Все права защищены.» Реквизиты: ИНН 7735186587, ОГРН 1207700015753</div>
+            <nav class="footer__nav footer-nav footer-nav--services">
+              <h4 class="footer-nav__title">Услуги</h4>
+              <ul class="footer-nav__list">
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="lazernaya-rezka-metalla.html">Лазерная резка металла</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="gibka-listovogo-metalla.html">Гибка листового металла</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="poroshkovaya-pokraska-metalla.html">Порошковая покраска</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="slesarnye-raboty.html">Слесарные работы</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="metallokonstruktsii.html">Изготовление металлоконструкций</a></li>
+              </ul>
+            </nav>
+            <nav class="footer__nav footer-nav footer-nav--info">
+              <h4 class="footer-nav__title">Информация</h4>
+              <ul class="footer-nav__list">
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Карта сайта</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Политика обработки персональных данных</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="edo.html">Электронный документоооборот</a></li>
+              </ul>
+            </nav>
+            <nav class="footer__nav footer-nav footer-nav--about">
+              <h4 class="footer-nav__title">О компании</h4>
+              <ul class="footer-nav__list">
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Производство</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="career.html">Вакансии</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Реквезиты</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="contacts.html">Контакты</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="delivery.html">Доставка</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Реквизиты</a></li>
+              </ul>
+            </nav>
+            <nav class="footer__nav footer-nav footer-nav--contact">
+              <h4 class="footer-nav__title">Контакты</h4>
+              <ul class="footer-nav__list">
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="tel:+74999940097">+7 (499) 994-00-97</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="mailto:sales@spirit-bear.ru">sales@spirit-bear.ru</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Московская область, г.о.Солнечногорск, деревня Пешки, цех № 22</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Пн - Пт с 09:00 до 18:00, Сб - Вс выходной</a></li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+        <template id="success">
+          <div class="reply-popup">
+            <div class="reply-popup__body">
+              <svg class="reply-popup__icon" width="36" height="36">
+                <use href="./assets/img/sprite.svg#success"></use>
+              </svg>
+              <p class="reply-popup__title">Успешно!</p>
+              <p class="reply-popup__text">Ваш запрос был успешно обработан. Благодарим вас за обращение в Спирит Бер.</p>
+              <button class="button button--outline reply-popup__button">Понятно!</button>
+            </div>
+          </div>
+        </template>
+        <template id="error">
+          <div class="reply-popup">
+            <div class="reply-popup__body">
+              <svg class="reply-popup__icon" width="36" height="36">
+                <use href="./assets/img/sprite.svg#attention"></use>
+              </svg>
+              <p class="reply-popup__title">Ошибка!</p>
+              <p class="reply-popup__text">Во время обработки запроса что-то пошло не так! Пожалуйста, попытайтесь еще раз.</p>
+              <button class="button button--outline reply-popup__button">Понятно!</button>
+            </div>
+          </div>
+        </template>
+        <template id="form-popup">
+          <div class="form-popup">
+            <div class="form-popup__content">
+              <header class="form-popup__header"><span class="form-popup__close">
+                  <svg width="12" height="12" fill="#fff">
+                    <use href="./assets/img/sprite.svg#close"></use>
+                  </svg></span>
+                <h2 class="form-popup__title">Форма заявки</h2>
+                <p class="form-popup__subtitle">Оставьте заявку и наши менеджеры свяжутся с вами в ближайшее время!</p>
+              </header>
+              <form class="form-popup__form feedback__form feedback-form feedback-form--popup" method="POST" action="" enctype="multipart/form-data" autocomplete="off"><span class="form-popup__title-field">Личные данные</span>
+                <div class="feedback-form__input-container">
+                  <input placeholder="Иванов Иван Иванович*" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40" required="required"/><span class="feedback-form__error"></span>
+                </div>
+                <div class="feedback-form__input-container">
+                  <input type="email" name="email" maxlength="40" placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required="required"/><span class="feedback-form__error"></span>
+                </div>
+                <div class="feedback-form__input-container">
+                  <input type="tel" name="phone" placeholder="+7(___)___-__-__*" data-tel-input="" pattern=".{18,}" maxlength="18" autocomplete="off" required="required"/><span class="feedback-form__error"></span>
+                </div>
+                <div class="feedback-form__input-container">
+                  <textarea placeholder="Пожалуйста, введите запрос*" name="message" maxlength="200" rows="4" required="required"></textarea><span class="feedback-form__error"></span>
+                </div><span class="form-popup__title-field">Прикрепите файлы</span>
+                <div class="feedback-form__input-container">
+                  <div class="feedback-form__upload feedback-form-upload">
+                    <input class="feedback-form-upload__input visually-hidden" id="inputfilepopup" type="file" name="file" multiple accept=".pdf, .doc, .rtf, .jpg, .jpeg, .png">
+                    <label class="feedback-form-upload__label">
+                      <svg class="feedback-form-upload__icon" width="24" height="19" fill="#fff">
+                        <use href="assets/img/sprite.svg#drop"></use>
+                      </svg><span class="tablet-hidden">Перетащите сюда файл для загрузки</span>
+                    </label>
+                    <label for="inputfilepopup"><span class="tablet-hidden">или выберите его в проводнике</span><span class="desctop-hidden">Выберите файл для загрузки</span></label>
+                  </div>
+                  <site class="feedback-form__input-note">Размер файлов не более 150 мб. Допустимые форматы: .pdf, .doc, .rtf, .jpg, .png</site>
+                </div>
+                <div class="feedback-form__sending">
+                  <label>
+                    <input type="checkbox" checked><span class="feedback-form__checkbox"></span><span class="feedback-form__agreement">Даю согласие на обработку персональных данных</span>
+                  </label>
+                  <button class="button button--bg-accept" type="submit">Отправить&nbsp;вопрос</button>
+                </div>
+                <template class="upload-progress__template">
+                  <div class="feedback-form__upload-progress feedback-form-upload-progress">
+                    <div class="feedback-form-upload-progress__line" data-progress="data-progress"></div>
+                    <div class="feedback-form-upload-progress__close" data-name="data-name"></div><span class="feedback-form-upload-progress__name"></span><span class="feedback-form-upload-progress__size"></span>
+                  </div>
+                </template>
+              </form>
+            </div>
+          </div>
+        </template>
+      </main>
+    </div>
+    <script src="assets/js/libs.min.js"></script>
+    <script src="assets/js/main.js" type="module"></script>
+  </body>
+</html>

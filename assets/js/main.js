@@ -989,6 +989,97 @@ if (generalPortfolio) {
     })
   });
 
+
+
+
+
+//------------Pagination--------------------
+
+  function getPageList(totalPages, page, maxLength) {
+
+    function range(start, end) {
+      return Array.from(Array(end - start + 1), (_, i) => i + start);
+    };
+
+    let sideWidth = maxLength < 9 ? 1 : 2;
+    let leftWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+    let rightWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+
+    if (totalPages <= maxLength) {
+      return range(1, totalPages);
+    }
+
+    if (page <= maxLength - sideWidth - 1 - rightWidth) {
+      return range(1, maxLength - sideWidth - 1).concat(0, range(totalPages - sideWidth + 1, totalPages));
+    }
+
+    if (page >= totalPages - sideWidth - 1 - rightWidth) {
+      return range(1, sideWidth).concat(0, range(totalPages - sideWidth - 1 - rightWidth - leftWidth, totalPages));
+    }
+
+    return range(1, sideWidth).concat(0, range(page - leftWidth, page + rightWidth), 0, range(totalPages - sideWidth + 1, totalPages));
+  }
+
+
+  $(function (){
+    let items = $('.general-portfolio__cards-grid .portfolio__item');
+    let numberOfItems = items.length;
+    const limitPerPages = 6; // how may card items visible per a page
+    let totalPages = Math.ceil(numberOfItems / limitPerPages);
+    const paginationSIze = 6; // How many page elements visible in the pagination
+    let currentPage;
+
+    function showPage(whichPage) {
+      if (whichPage < 1 || whichPage > totalPages) return false;
+
+      currentPage = whichPage;
+
+      items.hide().slice((currentPage - 1) * limitPerPages, currentPage * limitPerPages).show();
+
+
+      $('.pagination li').slice(1, -1).remove();
+
+      getPageList(totalPages, currentPage, paginationSIze).forEach(item => {
+        $('<li>').addClass('pagination__item').addClass(item ? 'js-pagination-current' : 'pagination__item--dots')
+        .toggleClass('js-pagination-active', item === currentPage ).text(item || '...').insertBefore('.pagination__next');
+      });
+
+
+      $('.pagination__prev').toggleClass('js-pagination-disable', currentPage === 1);
+      $('.pagination__next').toggleClass('js-pagination-disable', currentPage === totalPages);
+      return true;
+    };
+
+
+    $('.pagination').append(
+      $('<li>').addClass('pagination__item').addClass('pagination__prev'),
+      $('<li>').addClass('pagination__item').addClass('pagination__next'),
+    );
+
+    $('.general-portfolio__cards-grid').show();
+    showPage(1);
+
+
+    $(document).on('click', '.pagination li.js-pagination-current:not(.js-pagination-active)', function() {
+      return showPage(+$(this).text());
+    });
+
+    $('.pagination__next').on('click', function () {
+      return showPage(currentPage + 1);
+    });
+
+    $('.pagination__prev').on('click', function () {
+      return showPage(currentPage - 1);
+    });
+
+  });
+
+
+  //------------Pagination END--------------------
+
+
+
+
 }
 
 {
@@ -1004,6 +1095,7 @@ if (generalPortfolio) {
     items.forEach( item => item.classList.toggle('js-active') );
   };
 
+
   function removeActiveClass(item) {
     item.classList.remove('js-active' );
   };
@@ -1011,6 +1103,7 @@ if (generalPortfolio) {
   headerMenuDropDown.addEventListener('click', () => toggleActiveElem(headerContactList));
   headerBurger.addEventListener('click', () => {
     toggleActiveElem(document.body, header, headerNav);
+    toggleScrollBody();
 
     if (!header.classList.contains('js-active')) {
       header.querySelectorAll('.header-nav__item, .header-subnav, .header-subnav__item').forEach(removeActiveClass)
@@ -1040,9 +1133,9 @@ if (generalPortfolio) {
 
     headerListSubNav.forEach(subNav => {
       subNav.addEventListener('click', () => {
-        toggleActiveElem(subNav)
+        toggleActiveElem(subNav);
         const subNav_2 = subNav.querySelector('.header-subnav-2');
-        toggleActiveElem(subNav_2)
+        toggleActiveElem(subNav_2);
       })
     });
 
@@ -1306,12 +1399,14 @@ if (vacansy) {
 
     const portfolioItems = portfolio.querySelectorAll('.portfolio__item');
 
+    // Слайдер внутри pop-up
     portfolioItems.forEach(portfolioItem => {
 
       const swiperThumbs = portfolioItem.querySelector('.portfolio-popup__swiper--thumbs');
+      const swiperTop = portfolioItem.querySelector('.portfolio-popup__swiper--top');
 
 
-      let swiper__thumbs = new Swiper(".portfolio-popup__swiper--thumbs", {
+      let swiper__thumbs = new Swiper(swiperThumbs, {
         //loop: true,
         spaceBetween: 28,
         slidesPerView: "auto",
@@ -1322,7 +1417,7 @@ if (vacansy) {
         initialSlide: 0,
       });
 
-      let swiper__top = new Swiper(".portfolio-popup__swiper--top", {
+      let swiper__top = new Swiper(swiperTop, {
         loop: true,
         slidesPerView: 1,
         centeredSlides: true,
@@ -1332,47 +1427,50 @@ if (vacansy) {
         },
         effect: 'fade',
         fadeEffect: {
-          crossFade: true
+          crossFade: true,
         }
       });
 
     });
 
-  }
 
-
-
-
-  if (portfolio) {
-
-    const portfolioItems = portfolio.querySelectorAll('.portfolio__item');
-
-
+    // Открытие/закрытие pop-up
     portfolioItems.forEach(portfolioItem => {
+      const closeBtnPortfolioPopup = portfolioItem.querySelector('.portfolio-popup__close');
 
-      portfolioItem.addEventListener('click', () => {
-        portfolioItem.classList.add('js-popup-active');
-      });
-
-      const closePortfolioItem = portfolioItem.querySelector('.portfolio-popup__close');
-
-      closePortfolioItem.addEventListener('click', () => {
+      const closePortfolioPopup = () => {
         portfolioItem.classList.remove('js-popup-active');
-        console.log(portfolioItem)
+        unblockScrollBody();
+      };
 
-      })
+      function onDocumentClick () {
+        portfolioItem.addEventListener('click', (evt) => {
+          if (evt.target.classList.contains('portfolio-item__popup')) {
+            closePortfolioPopup();
+          }
+        });
+      };
+
+      const activePortfolioPopup = (evt) => {
+        if (evt.target === closeBtnPortfolioPopup) {
+          closePortfolioPopup();
+        } else {
+          portfolioItem.classList.add('js-popup-active');
+          blockScrollBody();
+          onDocumentClick();
+        }
+      };
+
+      portfolioItem.addEventListener('click', activePortfolioPopup);
+
     });
 
 
-
   }
-
 
 
 
 }
-
-
 
 
 
@@ -1532,6 +1630,7 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
     popup = template.querySelector('.form-popup')
     document.body.append(popup);
     blockScrollBody();
+    onDocumentClick(popup);
 
     upload('.feedback-form-upload__input');
 
@@ -1543,7 +1642,7 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
     const close = popup.querySelector('.form-popup__close');
     close.addEventListener('click', () => {
       closeFormPopup(popup);
-      onDocumentClick(popup);
+
     });
   };
 
@@ -1987,9 +2086,13 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
 {
 
-  let mySwiper;
+  const portfolioSwiper = document.querySelector('.portfolio__swiper');
 
-    mySwiper = new Swiper('.portfolio__swiper', {
+  if (portfolioSwiper) {
+
+    let mySwiper;
+
+    mySwiper = new Swiper(portfolioSwiper, {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -2012,7 +2115,7 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
       centeredSlides: false,
 
       // Отступ между слайдами
-      spaceBetween: 40,
+      //spaceBetween: 40,
 
       // Стартовый слайд
       initialSlide: 0,
@@ -2021,13 +2124,23 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
       // Ширина экрана
       breakpoints: {
         320: {
-          slidesPerView: 2
+          slidesPerView: 2,
+          spaceBetween: 12,
         },
         768: {
-          slidesPerView: 3
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+
+        1100: {
+          spaceBetween: 40,
         },
       }
     });
+
+  }
+
+
 
 
 
@@ -2094,13 +2207,25 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
 }
 
+
+const html = document.querySelector('html');
+
+
 function blockScrollBody () {
-  document.body.classList.add('js-block-scroll');
-}
+  if ( !html.classList.contains('js-block-scroll') ) {
+    html.classList.add('js-block-scroll');
+  }
+};
 
 function unblockScrollBody () {
-  document.body.classList.remove('js-block-scroll');
-}
+  if ( html.classList.contains('js-block-scroll') ) {
+    html.classList.remove('js-block-scroll');
+  }
+};
+
+function toggleScrollBody () {
+  html.classList.toggle('js-block-scroll');
+};
 
 {
 

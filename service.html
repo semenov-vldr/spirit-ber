@@ -7,7 +7,8 @@
 <!-- Кнопка "отправить" и согласие-->
 <!-- шаблон прогресс-бара-->
 <!-- карточка партнера-->
-<!--copy text--><!DOCTYPE html>
+<!--copy text-->
+<!-- создание карточек для портфолио--><!DOCTYPE html>
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
@@ -22,7 +23,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css"><!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
 <!-- Yandex map script -->
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=dad86943-dfef-45bd-9c5e-c404323cb093&amp;lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=dad86943-dfef-45bd-9c5e-c404323cb093&amp;lang=ru_RU" type="text/javascript"></script><!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" type="text/javascript"></script>
   </head>
   <body>
     <div class="page">
@@ -36,7 +38,7 @@
             <ul class="header-nav__list">
               <li class="header-nav__item header-nav__item--service"><a class="header-nav__link js-prevent-default-mobile" href="service.html">Услуги</a>
                 <ul class="header-subnav header-subnav-1">
-                  <li class="header-subnav__item arrow"><a class="header-subnav__link js-prevent-default-mobile" href="laser-cutting.html">Лазерная резка металла</a>
+                  <li class="header-subnav__item arrow"><a class="header-subnav__link js-prevent-default-mobile" href="lazernaya-rezka-metalla.html">Лазерная резка металла</a>
                     <ul class="header-subnav header-subnav-2">
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка труб</a></li>
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка швеллера</a></li>
@@ -44,10 +46,10 @@
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка листа</a></li>
                     </ul>
                   </li>
-                            <li class="header-subnav__item"><a class="header-subnav__link" href="/">Гибка листового металла</a></li>
-                            <li class="header-subnav__item"><a class="header-subnav__link" href="/">Порошковая покраска металла</a></li>
-                            <li class="header-subnav__item"><a class="header-subnav__link" href="/">Слесарные работы</a></li>
-                  <li class="header-subnav__item arrow"><a class="header-subnav__link js-prevent-default-mobile" href="laser-cutting.html">Изготовление металлоконструкций</a>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="gibka-listovogo-metalla.html">Гибка листового металла</a></li>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="poroshkovaya-pokraska-metalla.html">Порошковая покраска металла</a></li>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="slesarnye-raboty.html">Слесарные работы</a></li>
+                  <li class="header-subnav__item arrow"><a class="header-subnav__link js-prevent-default-mobile" href="metallokonstruktsii.html">Изготовление металлоконструкций</a>
                     <ul class="header-subnav header-subnav-2">
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Производство POS материалов</a></li>
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Изготовление корпусов и коробов из металла</a></li>
@@ -189,15 +191,15 @@
               <li class="footer-documents__item"><a class="footer-documents__link" href="" download>Скачать договор оказания услуг</a></li>
               <li class="footer-documents__item"><a class="footer-documents__link" href="" download>Скачать договор поставки</a></li>
             </ul>
-            <div class="footer-requisites">«ООО «Спирит-Бер», 2016-2022. Все права защищены.» Реквизиты: ИНН 7735186587, ОГРН 1207700015753</div>
+            <div class="footer-requisites">«ООО «Спирит-Бер», 2016-2023. Все права защищены.» Реквизиты: ИНН 7735186587, ОГРН 1207700015753</div>
             <nav class="footer__nav footer-nav footer-nav--services">
               <h4 class="footer-nav__title">Услуги</h4>
               <ul class="footer-nav__list">
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Лазерная резка металла</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Гибка листового металла</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Порошковая покраска</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Слесарные работы</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Изготовление металлоконструкций</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="lazernaya-rezka-metalla.html">Лазерная резка металла</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="gibka-listovogo-metalla.html">Гибка листового металла</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="poroshkovaya-pokraska-metalla.html">Порошковая покраска</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="slesarnye-raboty.html">Слесарные работы</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="metallokonstruktsii.html">Изготовление металлоконструкций</a></li>
               </ul>
             </nav>
             <nav class="footer__nav footer-nav footer-nav--info">

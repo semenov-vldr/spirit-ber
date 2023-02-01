@@ -7,7 +7,8 @@
 <!-- Кнопка "отправить" и согласие-->
 <!-- шаблон прогресс-бара-->
 <!-- карточка партнера-->
-<!--copy text--><!DOCTYPE html>
+<!--copy text-->
+<!-- создание карточек для портфолио--><!DOCTYPE html>
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
@@ -22,7 +23,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css"><!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
 <!-- Yandex map script -->
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=dad86943-dfef-45bd-9c5e-c404323cb093&amp;lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=dad86943-dfef-45bd-9c5e-c404323cb093&amp;lang=ru_RU" type="text/javascript"></script><!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" type="text/javascript"></script>
   </head>
   <body>
     <div class="page">
@@ -36,7 +38,7 @@
             <ul class="header-nav__list">
               <li class="header-nav__item header-nav__item--service"><a class="header-nav__link js-prevent-default-mobile" href="service.html">Услуги</a>
                 <ul class="header-subnav header-subnav-1">
-                  <li class="header-subnav__item arrow"><a class="header-subnav__link js-prevent-default-mobile" href="laser-cutting.html">Лазерная резка металла</a>
+                  <li class="header-subnav__item arrow"><a class="header-subnav__link js-prevent-default-mobile" href="lazernaya-rezka-metalla.html">Лазерная резка металла</a>
                     <ul class="header-subnav header-subnav-2">
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка труб</a></li>
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка швеллера</a></li>
@@ -44,10 +46,10 @@
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Лазерная резка листа</a></li>
                     </ul>
                   </li>
-                            <li class="header-subnav__item"><a class="header-subnav__link" href="/">Гибка листового металла</a></li>
-                            <li class="header-subnav__item"><a class="header-subnav__link" href="/">Порошковая покраска металла</a></li>
-                            <li class="header-subnav__item"><a class="header-subnav__link" href="/">Слесарные работы</a></li>
-                  <li class="header-subnav__item arrow"><a class="header-subnav__link js-prevent-default-mobile" href="laser-cutting.html">Изготовление металлоконструкций</a>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="gibka-listovogo-metalla.html">Гибка листового металла</a></li>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="poroshkovaya-pokraska-metalla.html">Порошковая покраска металла</a></li>
+                            <li class="header-subnav__item"><a class="header-subnav__link" href="slesarnye-raboty.html">Слесарные работы</a></li>
+                  <li class="header-subnav__item arrow"><a class="header-subnav__link js-prevent-default-mobile" href="metallokonstruktsii.html">Изготовление металлоконструкций</a>
                     <ul class="header-subnav header-subnav-2">
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Производство POS материалов</a></li>
                                 <li class="header-subnav__item"><a class="header-subnav__link" href="/">Изготовление корпусов и коробов из металла</a></li>
@@ -99,7 +101,7 @@
           <div class="container breadcrumbs__container"><a class="breadcrumbs__item" href="index.html">Главная</a><a class="breadcrumbs__item" href="">Примеры работ</a></div>
         </div>
         <section class="section-column">
-          <div class="general-portfolio">
+          <div class="general-portfolio portfolio">
             <div class="container general-portfolio__container">
               <h1 class="title-section tablet-hidden">Примеры работ</h1>
               <div class="general-portfolio__inner">
@@ -121,74 +123,1529 @@
                     <li class="general-portfolio__tags-item tag-orange">Лазерная резка</li>
                     <li class="general-portfolio__tags-item tag-fio">Порошковая покраска</li>
                     <li class="general-portfolio__tags-item tag-lightblue">Изготовление металлоизделий</li>
-                    <li class="general-portfolio__tags-item tag-pink">Столярные работы</li>
+                    <li class="general-portfolio__tags-item tag-pink">Слесарные работы</li>
                   </ul>
                 </div>
-                <div class="general-portfolio__cards-grid">
-                            <li class="portfolio__item">
-                              <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/01.png" alt="portfolio"></div>
-                              <h3 class="portfolio__title">Металлический борт 150 (30х150х50)</h3>
-                              <ul class="portfolio__tags portfolio-tags">
-                                <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
-                                <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
-                              </ul>
-                              <p class="portfolio__description">Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)</p>
-                            </li>
-                            <li class="portfolio__item">
-                              <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/02.png" alt="portfolio"></div>
-                              <h3 class="portfolio__title">Металлический борт 100</h3>
-                              <ul class="portfolio__tags portfolio-tags">
-                                <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
-                                <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
-                              </ul>
-                              <p class="portfolio__description">Металлический борт из оцинкованной стали с зазором под пластину S=1,5 мм. Габариты: (10х100х50)</p>
-                            </li>
-                            <li class="portfolio__item">
-                              <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/03.png" alt="portfolio"></div>
-                              <h3 class="portfolio__title">Вентиляционная решетка</h3>
-                              <ul class="portfolio__tags portfolio-tags">
-                                <li class="portfolio-tags__item tag-lightblue">Изготовление металлоизделий</li>
-                                <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
-                              </ul>
-                              <p class="portfolio__description">Декоративная решетка на вентиляционные отверстия из нержавеющей стали AISI 304 матовая S=5мм и перфорированного листа S=1мм.</p>
-                            </li>
-                            <li class="portfolio__item">
-                              <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/04.png" alt="portfolio"></div>
-                              <h3 class="portfolio__title">Кронштейн для крепления фасада</h3>
-                              <ul class="portfolio__tags portfolio-tags">
-                                <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
-                                <li class="portfolio-tags__item tag-lightblue">Изготовление металлоизделий</li>
-                              </ul>
-                              <p class="portfolio__description">Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005</p>
-                            </li>
-                            <li class="portfolio__item">
-                              <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/05.png" alt="portfolio"></div>
-                              <h3 class="portfolio__title">Икля</h3>
-                              <ul class="portfolio__tags portfolio-tags">
-                                <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
-                                <li class="portfolio-tags__item tag-pink">Столярные работы</li>
-                              </ul>
-                              <p class="portfolio__description">Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005</p>
-                            </li>
-                            <li class="portfolio__item">
-                              <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/06.png" alt="portfolio"></div>
-                              <h3 class="portfolio__title">Зацеп</h3>
-                              <ul class="portfolio__tags portfolio-tags">
-                                <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
-                                <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
-                              </ul>
-                              <p class="portfolio__description">Зацеп из нержавеющей стали AISI 304 ммматовая S=1,5мм</p>
-                            </li>
-                  <div class="pagination">
-                    <button class="pagination__prev"></button>
-                    <button class="pagination__item js-pagination-active">1</button>
-                    <button class="pagination__item">2</button>
-                    <button class="pagination__item">3</button>
-                    <button class="pagination__item">4</button>
-                    <button class="pagination__item">...</button>
-                    <button class="pagination__item">8</button>
-                    <button class="pagination__next"></button>
-                  </div>
+                <div class="general-portfolio__cards-grid" style="display: grid">
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/01.png" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Металлический борт 150 (30х150х50)</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                    </ul>
+                    <p class="portfolio__description">Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/01.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/02.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/03.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/01.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/02.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/03.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Металлический борт 150 (30х150х50)</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-grey">Гибка листового металла</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/02.png" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Металлический борт 100</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                    </ul>
+                    <p class="portfolio__description">Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/01.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/02.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/03.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/01.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/02.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/03.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Металлический борт 100</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-grey">Гибка листового металла</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/03.png" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Вентиляционная решетка</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-lightblue">Изготовление металлоизделий</li>
+                      <li class="portfolio-tags__item tag-fio">Гибка листового металла</li>
+                    </ul>
+                    <p class="portfolio__description">Декоративная решетка на вентиляционные отверстия из нержавеющей стали AISI 304 матовая S=5мм и перфорированного листа S=1мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/01.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/02.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/03.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/01.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/02.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/03.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Вентиляционная решетка</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-lightblue">Изготовление металлоизделий</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-fio">Гибка листового металла</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Декоративная решетка на вентиляционные отверстия из нержавеющей стали AISI 304 матовая S=5мм и перфорированного листа S=1мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/04.png" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Кронштейн для крепления фасада</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-lightblue">Изготовление металлоизделий</li>
+                    </ul>
+                    <p class="portfolio__description">Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/04.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/04.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Кронштейн для крепления фасада</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-lightblue">Изготовление металлоизделий</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Икля</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
+                      <li class="portfolio-tags__item tag-pink">Столярные работы</li>
+                    </ul>
+                    <p class="portfolio__description">Икля из черной стали 5 мм, покраска по ral 9005</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/04.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/04.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Икля</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-fio">Порошковая покраска</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-pink">Столярные работы</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Икля из черной стали 5 мм, покраска по ral 9005</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Зацеп</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Зацеп из нержавеющей стали AISI 304 ммматовая S=1,5мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/04.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/04.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Зацеп</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-fio">Порошковая покраска</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Зацеп из нержавеющей стали AISI 304 ммматовая S=1,5мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/07.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Напольный стенд с подсветкой</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Напольный стенд с подсветкой под полками</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/07.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/07.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Напольный стенд с подсветкой</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-fio">Порошковая покраска</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Напольный стенд с подсветкой под полками</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/08.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Съемный блок</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-pink">Слесарные работы</li>
+                    </ul>
+                    <p class="portfolio__description">Съемный блок для промышленного корпуса.</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/08.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/08.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Съемный блок</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-grey">Гибка листового металла</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-pink">Слесарные работы</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Съемный блок для промышленного корпуса.</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/09.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Корпус ПК326</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-pink">Слесарные работы</li>
+                    </ul>
+                    <p class="portfolio__description">Корпус, изготовленный по предоставленному образцу заказчика</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/09.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/09.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Корпус ПК326</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-grey">Гибка листового металла</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-pink">Слесарные работы</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Корпус, изготовленный по предоставленному образцу заказчика</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/10.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Стеллаж в стиле лофт</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-pink">Слесарные работы</li>
+                      <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
+                    </ul>
+                    <p class="portfolio__description">Торговый стенд в стиле лофт из профильных труб и дерева.</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/10.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/10.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Стеллаж в стиле лофт</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-grey">Гибка листового металла</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-pink">Слесарные работы</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-fio">Порошковая покраска</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Торговый стенд в стиле лофт из профильных труб и дерева.</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/11.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Фланец для закладных</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Фланец из конструкционной стали 8мм Ст3  для закладных деталей на стройку</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/11.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/11.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Фланец для закладных</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Фланец из конструкционной стали 8мм Ст3  для закладных деталей на стройку</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/12.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Фланец для труб</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Фланец для опорных труб из конструкционной стали 8мм Ст3</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/12.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/12.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Фланец для труб</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Фланец для опорных труб из конструкционной стали 8мм Ст3</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/13.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Фланец для опоры</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Фланец для опоры из конструкционной стали 8мм Ст3</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/13.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/13.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Фланец для опоры</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Фланец для опоры из конструкционной стали 8мм Ст3</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/14.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Панель для блока питания</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                      <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
+                    </ul>
+                    <p class="portfolio__description">Облицовочная панель для блока питания из конструкционной стали</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/14.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/14.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Панель для блока питания</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-grey">Гибка листового металла</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-fio">Порошковая покраска</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Облицовочная панель для блока питания из конструкционной стали</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/15.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Металлическая картина &quot;Щит викинга&quot;</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-pink">Слесарные работы</li>
+                      <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
+                    </ul>
+                    <p class="portfolio__description">Фигурная  резка черной стали. Покраска в черный муар</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/15.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/15.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Металлическая картина &quot;Щит викинга&quot;</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-pink">Слесарные работы</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-fio">Порошковая покраска</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Фигурная  резка черной стали. Покраска в черный муар</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/16.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Кронштейн для фар автомобиля</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-pink">Слесарные работы</li>
+                      <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
+                      <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                    </ul>
+                    <p class="portfolio__description">Кронштейн для фар автомобиля Мерседес Гелендваген. Изготовление по образцу Заказчика</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/16.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/16.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Кронштейн для фар автомобиля</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-pink">Слесарные работы</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-fio">Порошковая покраска</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-grey">Гибка листового металла</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Кронштейн для фар автомобиля Мерседес Гелендваген. Изготовление по образцу Заказчика</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/17.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Струбцина зеленая</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-pink">Слесарные работы</li>
+                      <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
+                      <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                    </ul>
+                    <p class="portfolio__description">Струбцина для крепления ПОС-конструкций (держателей, дисплеев, корзин). Покраска в зеленый цвет</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/17.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/17.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Струбцина зеленая</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-pink">Слесарные работы</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-fio">Порошковая покраска</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-grey">Гибка листового металла</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Струбцина для крепления ПОС-конструкций (держателей, дисплеев, корзин). Покраска в зеленый цвет</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/18.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Крюк опоры из черной стали</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                    </ul>
+                    <p class="portfolio__description">Вырезка и гибка крюка опоры из черной стали 3 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/18.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/18.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Крюк опоры из черной стали</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-grey">Гибка листового металла</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Вырезка и гибка крюка опоры из черной стали 3 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/19.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Опора из черной стали</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                    </ul>
+                    <p class="portfolio__description">Вырезка и гибка опоры из черной стали 3 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/19.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/19.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Опора из черной стали</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-grey">Гибка листового металла</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Вырезка и гибка опоры из черной стали 3 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/20.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Пластина из черной стали с маленькими отверстиями</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Вырезка пластины из черной стали 5 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/17.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/17.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Пластина из черной стали с маленькими отверстиями</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Вырезка пластины из черной стали 5 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/21.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Пластина из черной стали</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Вырезка пластины из черной стали 5 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/17.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/17.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Пластина из черной стали</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Вырезка пластины из черной стали 5 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/22.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Фланец из черной стали</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Вырезка и гибка фланца из черной стали 1,5 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/17.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/17.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Фланец из черной стали</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Вырезка и гибка фланца из черной стали 1,5 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/23.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Треугольная заготовка из алюминия</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Вырезка алюминия 4 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/17.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/17.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Треугольная заготовка из алюминия</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Вырезка алюминия 4 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/24.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Заготовка из алюминия</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Раскрой алюминия 4 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/24.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/24.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Заготовка из алюминия</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Раскрой алюминия 4 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/25.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Короб из оцинкованной стали</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                    </ul>
+                    <p class="portfolio__description">Короб из оцинкованной стали 1 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/25.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/25.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Короб из оцинкованной стали</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-grey">Гибка листового металла</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Короб из оцинкованной стали 1 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/26.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Панель декоративная</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                    </ul>
+                    <p class="portfolio__description">Декоративная панель из матовой нержавеющей стали 1 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/25.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/25.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Панель декоративная</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-grey">Гибка листового металла</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Декоративная панель из матовой нержавеющей стали 1 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/27.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Косынка из нержавеющей стали</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Раскрой азотом строительных заготовок из нержавеющей стали 5 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/25.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/25.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Косынка из нержавеющей стали</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Раскрой азотом строительных заготовок из нержавеющей стали 5 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/28.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Заготовка из алюминия для авиации</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Раскрой деталей из алюминия 1 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/25.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/25.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Заготовка из алюминия для авиации</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Раскрой деталей из алюминия 1 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/29.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Уголок из оцинковки</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Раскрой азотом и гибка оцинкованной стали 2 мм для уголка</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/25.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/25.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Уголок из оцинковки</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Раскрой азотом и гибка оцинкованной стали 2 мм для уголка</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Полка для торгового оборудования</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                      <li class="portfolio-tags__item tag-pink">Слесарные работы</li>
+                      <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
+                    </ul>
+                    <p class="portfolio__description">Полка для торговой стойки из конструкционной (черной стали) 1,2 мм. Крепление на круглую трубу. Покраска в черный цвет с последующим брендированием</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Полка для торгового оборудования</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-grey">Гибка листового металла</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-pink">Слесарные работы</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-fio">Порошковая покраска</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Полка для торговой стойки из конструкционной (черной стали) 1,2 мм. Крепление на круглую трубу. Покраска в черный цвет с последующим брендированием</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/31.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Заглушка из черной стали для профильных труб</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Раскрой кислородом конструкционной (черной) стали 5 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Заглушка из черной стали для профильных труб</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Раскрой кислородом конструкционной (черной) стали 5 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/32.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Заготовка из оцинкованной стали</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Раскрой азотом оцинкованной стали 1 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Заготовка из оцинкованной стали</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Раскрой азотом оцинкованной стали 1 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/33.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Декоративный элемент из черной стали в форме звезды</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Раскрой кислородом конструкционной (черной) стали 6 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Декоративный элемент из черной стали в форме звезды</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Раскрой кислородом конструкционной (черной) стали 6 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/34.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Заготовка из черной стали для профильных труб</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Раскрой кислородом конструкционной (черной) стали 5 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Заготовка из черной стали для профильных труб</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Раскрой кислородом конструкционной (черной) стали 5 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/35.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Уголок из черной стали</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-grey">Гибка листового металла</li>
+                    </ul>
+                    <p class="portfolio__description">Раскрой кислородом и гибка конструкционной (черной) стали 2 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Уголок из черной стали</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-grey">Гибка листового металла</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Раскрой кислородом и гибка конструкционной (черной) стали 2 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/36.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Шайба из черной стали</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Раскрой кислородом конструкционной (черной) стали 3 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Шайба из черной стали</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Раскрой кислородом конструкционной (черной) стали 3 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/37.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Заготовка из черной стали для сварочных работ</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Раскрой кислородом конструкционной (черной) стали 12 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Заготовка из черной стали для сварочных работ</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Раскрой кислородом конструкционной (черной) стали 12 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/38.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Заготовка из черной стали для сварочных работ</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                    </ul>
+                    <p class="portfolio__description">Раскрой кислородом конструкционной (черной) стали 12 мм</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Заготовка из черной стали для сварочных работ</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Раскрой кислородом конструкционной (черной) стали 12 мм</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/39.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Крючок для торгового оборудования</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
+                    </ul>
+                    <p class="portfolio__description">Крючок из проволоки торговой о/к 6 мм для перфорированного стенда. Покраска в синий цвет</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Крючок для торгового оборудования</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-fio">Порошковая покраска</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Крючок из проволоки торговой о/к 6 мм для перфорированного стенда. Покраска в синий цвет</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="portfolio__item">
+                    <div class="portfolio__image-wrapper"><img src="./assets/img/portfolio/40.jpg" alt="portfolio"/></div>
+                    <h3 class="portfolio__title">Корзинка из проволоки</h3>
+                    <ul class="portfolio__tags portfolio-tags">
+                      <li class="portfolio-tags__item tag-orange">Лазерная резка</li>
+                      <li class="portfolio-tags__item tag-fio">Порошковая покраска</li>
+                    </ul>
+                    <p class="portfolio__description">Подвесные корзинки из проволоки торговой о/к 4 мм. Покраска в оранжевый цвет</p>
+                    <div class="portfolio-item__popup portfolio-popup__item">
+                      <div class="portfolio-popup__wrapper">
+                        <button class="portfolio-popup__close"></button>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--top">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="portfolio-popup__swiper portfolio-popup__swiper--thumbs">
+                          <div class="portfolio-popup__swiper-wrapper swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/30.jpg" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/05.png" alt="portfolio"/></div>
+                            <div class="swiper-slide"><img src="./assets/img/portfolio/06.png" alt="portfolio"/></div>
+                          </div>
+                        </div>
+                        <div class="portfolio-popup__content">
+                          <div class="portfolio-popup__date">23.08.2022</div>
+                          <div class="portfolio-popup__title">Корзинка из проволоки</div>
+                          <ul class="portfolio-popup__tags portfolio-popup-tags">
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
+                            <li class="portfolio-tags__item portfolio-popup-tags__item tag-fio">Порошковая покраска</li>
+                          </ul>
+                          <div class="portfolio-popup__description">Подвесные корзинки из проволоки торговой о/к 4 мм. Покраска в оранжевый цвет</div><a class="portfolio-popup__link button arrow button--outline" href="##">Смотреть кейс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <ul class="pagination">
+                    <!-- Шаблон (элементы добавляются через js)-->
+                    <!--li.pagination__item.pagination__prev.js-pagination-disable-->
+                    <!---->
+                    <!--li.pagination__item.js-pagination-current.js-pagination-active 1-->
+                    <!--li.pagination__item 2-->
+                    <!--li.pagination__item.pagination__item--dots ...-->
+                    <!--li.pagination__item 7-->
+                    <!---->
+                    <!--li.pagination__item.pagination__next-->
+                  </ul>
                 </div>
               </div>
             </div>
@@ -203,15 +1660,15 @@
               <li class="footer-documents__item"><a class="footer-documents__link" href="" download>Скачать договор оказания услуг</a></li>
               <li class="footer-documents__item"><a class="footer-documents__link" href="" download>Скачать договор поставки</a></li>
             </ul>
-            <div class="footer-requisites">«ООО «Спирит-Бер», 2016-2022. Все права защищены.» Реквизиты: ИНН 7735186587, ОГРН 1207700015753</div>
+            <div class="footer-requisites">«ООО «Спирит-Бер», 2016-2023. Все права защищены.» Реквизиты: ИНН 7735186587, ОГРН 1207700015753</div>
             <nav class="footer__nav footer-nav footer-nav--services">
               <h4 class="footer-nav__title">Услуги</h4>
               <ul class="footer-nav__list">
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Лазерная резка металла</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Гибка листового металла</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Порошковая покраска</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Слесарные работы</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="/">Изготовление металлоконструкций</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="lazernaya-rezka-metalla.html">Лазерная резка металла</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="gibka-listovogo-metalla.html">Гибка листового металла</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="poroshkovaya-pokraska-metalla.html">Порошковая покраска</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="slesarnye-raboty.html">Слесарные работы</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="metallokonstruktsii.html">Изготовление металлоконструкций</a></li>
               </ul>
             </nav>
             <nav class="footer__nav footer-nav footer-nav--info">
