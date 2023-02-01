@@ -1,93 +1,82 @@
 -
   const portfolioItems = [
+
     {
       srcImg: './assets/img/portfolio/01.png',
       title: 'Металлический борт 150 (30х150х50)',
-      tag_item_1: {
-        text: 'Лазерная резка',
-        classColor: 'tag-orange',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-grey',
+        },
       },
-      tag_item_2: {
-        text: 'Гибка листового металла',
-        classColor: 'tag-grey',
+      description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/01.png',
+          imgSrcSlide_2: './assets/img/portfolio/02.png',
+          imgSrcSlide_3: './assets/img/portfolio/03.png',
+        },
+        date: '23.08.2022',
+        link: '##',
       },
-      description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)'
     },
 
     {
       srcImg: './assets/img/portfolio/02.png',
       title: 'Металлический борт 100',
-      tag_item_1: {
-        text: 'Лазерная резка',
-        classColor: 'tag-orange',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-grey',
+        },
       },
-      tag_item_2: {
-        text: 'Гибка листового металла',
-        classColor: 'tag-grey',
+      description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/01.png',
+          imgSrcSlide_2: './assets/img/portfolio/02.png',
+          imgSrcSlide_3: './assets/img/portfolio/03.png',
+        },
+        date: '23.08.2022',
+        link: '##',
       },
-      description: 'Металлический борт из оцинкованной стали с зазором под пластину S=1,5 мм. Габариты: (10х100х50)'
     },
 
     {
       srcImg: './assets/img/portfolio/03.png',
       title: 'Вентиляционная решетка',
-      tag_item_1: {
-        text: 'Изготовление металлоизделий',
-        classColor: 'tag-lightblue',
+      tags: {
+        tag_item_1: {
+          text: 'Изготовление металлоизделий',
+          classColor: 'tag-lightblue',
+        },
+        tag_item_2: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-fio',
+        },
       },
-      tag_item_2: {
-        text: 'Порошковая покраска',
-        classColor: 'tag-fio',
+      description: 'Декоративная решетка на вентиляционные отверстия из нержавеющей стали AISI 304 матовая S=5мм и перфорированного листа S=1мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/01.png',
+          imgSrcSlide_2: './assets/img/portfolio/02.png',
+          imgSrcSlide_3: './assets/img/portfolio/03.png',
+        },
+        date: '23.08.2022',
+        link: '##',
       },
-      description: 'Декоративная решетка на вентиляционные отверстия из нержавеющей стали AISI 304 матовая S=5мм и перфорированного листа S=1мм.'
     },
 
-    {
-      srcImg: './assets/img/portfolio/04.png',
-      title: 'Кронштейн для крепления фасада',
-      tag_item_1: {
-        text: 'Лазерная резка',
-        classColor: 'tag-orange',
-      },
-      tag_item_2: {
-        text: 'Изготовление металлоизделий',
-        classColor: 'tag-lightblue',
-      },
-      description: 'Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005'
-    },
 
-    {
-      srcImg: './assets/img/portfolio/05.png',
-      title: 'Икля',
-      tag_item_1: {
-        text: 'Порошковая покраска',
-        classColor: 'tag-fio',
-      },
-      tag_item_2: {
-        text: 'Столярные работы',
-        classColor: 'tag-pink',
-      },
-      description: 'Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005'
-    },
-
-    {
-      srcImg: './assets/img/portfolio/06.png',
-      title: 'Зацеп',
-      tag_item_1: {
-        text: 'Порошковая покраска',
-        classColor: 'tag-fio',
-      },
-      tag_item_2: {
-        text: 'Лазерная резка',
-        classColor: 'tag-orange',
-      },
-      description: 'Зацеп из нержавеющей стали AISI 304 ммматовая S=1,5мм'
-    },
-
-  ];
-
--
-  const testdata = [
     {
       srcImg: './assets/img/portfolio/04.png',
       title: 'Кронштейн для крепления фасада',
@@ -113,120 +102,58 @@
       },
     },
 
+    {
+      srcImg: './assets/img/portfolio/05.png',
+      title: 'Икля',
+      tags: {
+        tag_item_1: {
+          text: 'Порошковая покраска',
+          classColor: 'tag-fio',
+        },
+        tag_item_2: {
+          text: 'Столярные работы',
+          classColor: 'tag-pink',
+        },
+      },
+      description: 'Икля из черной стали 5 мм, покраска по ral 9005',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/04.png',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
 
-    // {
-    //   srcImg: './assets/img/portfolio/01.png',
-    //   title: 'Металлический борт 150 (30х150х50)',
-    //   tags: {
-    //     tag_item_1: {
-    //       text: 'Лазерная резка',
-    //       classColor: 'tag-orange',
-    //     },
-    //     tag_item_2: {
-    //       text: 'Гибка листового металла',
-    //       classColor: 'tag-grey',
-    //     },
-    //   },
-    //   description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)',
-    //   popup: {
-    //     imgSrcSlides: {
-    //       imgSrcSlide_1: './assets/img/portfolio/01.png',
-    //       imgSrcSlide_2: './assets/img/portfolio/02.png',
-    //       imgSrcSlide_3: './assets/img/portfolio/03.png',
-    //     },
-    //     date: '23.08.2022',
-    //     link: '##',
-    //   },
-    // },
+    {
+      srcImg: './assets/img/portfolio/06.png',
+      title: 'Зацеп',
+      tags: {
+        tag_item_1: {
+          text: 'Порошковая покраска',
+          classColor: 'tag-fio',
+        },
+        tag_item_2: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+      },
+      description: 'Зацеп из нержавеющей стали AISI 304 ммматовая S=1,5мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/04.png',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
 
   ];
 
 
 
-mixin createPortfolioItems ( portfolioData )
-  each card in portfolioData
-    li.portfolio__item
-      .portfolio__image-wrapper
-        img(src=card.srcImg alt='portfolio')
-      h3.portfolio__title=card.title
-      ul.portfolio__tags.portfolio-tags
-        each tag in card.tags
-          li.portfolio-tags__item(class=tag.classColor)=tag.text
-
-      p.portfolio__description= card.description
-
-      .portfolio-item__popup.portfolio-popup__item
-        .portfolio-popup__wrapper
-          button.portfolio-popup__close
-
-          .portfolio-popup__swiper.portfolio-popup__swiper--top
-            .portfolio-popup__swiper-wrapper.swiper-wrapper
-              each src in card.popup.imgSrcSlides
-                .swiper-slide
-                  img(src=src alt='portfolio')
-            .swiper-pagination
-
-          .portfolio-popup__swiper.portfolio-popup__swiper--thumbs
-            .portfolio-popup__swiper-wrapper.swiper-wrapper
-              each src in card.popup.imgSrcSlides
-                .swiper-slide
-                  img(src=src alt='portfolio')
-
-          .portfolio-popup__content
-            .portfolio-popup__date=card.popup.date
-            .portfolio-popup__title=card.title
-            ul.portfolio-popup__tags.portfolio-popup-tags
-              each tag in card.tags
-                li.portfolio-tags__item.portfolio-popup-tags__item(class=tag.classColor)=tag.text
-            .portfolio-popup__description=card.description
-            a.portfolio-popup__link.button.arrow.button--outline(href=card.popup.link) Смотреть кейс
-
-
-+createPortfolioItems(testdata)
-
-
-//li.portfolio__item.portfolio-item
-//  .portfolio__image-wrapper
-//    img(src='./assets/img/portfolio/04.png' alt='portfolio')
-//  h3.portfolio__title Кронштейн для крепления фасада
-//  ul.portfolio__tags.portfolio-tags
-//    li.portfolio-tags__item.tag-orange Лазерная резка
-//    li.portfolio-tags__item.tag-lightblue Изготовление металлоизделий
-//  p.portfolio__description TEST Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005
-//
-//  .portfolio-item__popup.portfolio-popup__item
-//    .portfolio-popup__wrapper
-//      button.portfolio-popup__close
-//
-//      .portfolio-popup__swiper.portfolio-popup__swiper--top
-//        .portfolio-popup__swiper-wrapper.swiper-wrapper
-//          .swiper-slide
-//            img(src='./assets/img/portfolio/04.png' alt='portfolio')
-//          .swiper-slide
-//            img(src='./assets/img/portfolio/05.png' alt='portfolio')
-//          .swiper-slide
-//            img(src='./assets/img/portfolio/06.png' alt='portfolio')
-//
-//      .portfolio-popup__swiper.portfolio-popup__swiper--thumbs
-//        .portfolio-popup__swiper-wrapper.swiper-wrapper
-//          .swiper-slide
-//            img(src='./assets/img/portfolio/04.png' alt='portfolio')
-//          .swiper-slide
-//            img(src='./assets/img/portfolio/05.png' alt='portfolio')
-//          .swiper-slide
-//            img(src='./assets/img/portfolio/06.png' alt='portfolio')
-//
-//      .portfolio-popup__content
-//        .portfolio-popup__date 23.08.2022
-//        p.portfolio-popup__title Кронштейн для крепления фасада
-//        ul.portfolio-popup__tags.portfolio-popup-tags
-//          li.portfolio-tags__item.tag-orange.portfolio-popup-tags__item Лазерная резка
-//          li.portfolio-tags__item.tag-lightblue.portfolio-popup-tags__item Изготовление металлоизделий
-//
-//        p.portfolio-popup__description Металлический борт из оцинкованной стали с зазором под пластину S=1,5 мм. Габариты: (10х100х50)
-//        a.portfolio-popup__link.button.arrow.button--outline(href="") Смотреть кейс
-
-
-
-
-
++createPortfolioItems(portfolioItems)

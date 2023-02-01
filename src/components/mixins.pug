@@ -62,3 +62,45 @@ mixin copyTextButton
   button.button-copy
     svg(width="12" height="12" fill="currentColor")
       use(href='./assets/img/sprite.svg#button-copy')
+
+
+
+
+// создание карточек для портфолио
+mixin createPortfolioItems ( portfolioData )
+  each card in portfolioData
+    li.portfolio__item
+      .portfolio__image-wrapper
+        img(src=card.srcImg alt='portfolio')
+      h3.portfolio__title=card.title
+      ul.portfolio__tags.portfolio-tags
+        each tag in card.tags
+          li.portfolio-tags__item(class=tag.classColor)=tag.text
+
+      p.portfolio__description= card.description
+
+      .portfolio-item__popup.portfolio-popup__item
+        .portfolio-popup__wrapper
+          button.portfolio-popup__close
+
+          .portfolio-popup__swiper.portfolio-popup__swiper--top
+            .portfolio-popup__swiper-wrapper.swiper-wrapper
+              each src in card.popup.imgSrcSlides
+                .swiper-slide
+                  img(src=src alt='portfolio')
+            .swiper-pagination
+
+          .portfolio-popup__swiper.portfolio-popup__swiper--thumbs
+            .portfolio-popup__swiper-wrapper.swiper-wrapper
+              each src in card.popup.imgSrcSlides
+                .swiper-slide
+                  img(src=src alt='portfolio')
+
+          .portfolio-popup__content
+            .portfolio-popup__date=card.popup.date
+            .portfolio-popup__title=card.title
+            ul.portfolio-popup__tags.portfolio-popup-tags
+              each tag in card.tags
+                li.portfolio-tags__item.portfolio-popup-tags__item(class=tag.classColor)=tag.text
+            .portfolio-popup__description=card.description
+            a.portfolio-popup__link.button.arrow.button--outline(href=card.popup.link) Смотреть кейс

@@ -4,7 +4,7 @@
   aspect-ratio: 1920 / 920
   width: 100%
   height: auto
-  margin-top: 200px
+  //margin-top: 200px
   position: relative
   @media(min-width: 1024px)
     min-height: 90vh
@@ -16,6 +16,7 @@
     aspect-ratio: auto
     background-position: center
     //background: url("/assets/img/gear/gear_bg_mobile.webp")
+
 .gear__category
   flex: 0 0 100%
   z-index: 1
@@ -79,7 +80,7 @@
     font-weight: 500
     width: fit-content
     display: block
-    &:after
+    &::after
       font-family: 'SpaceGrotesk'
       font-feature-settings: 'tnum' on, 'lnum' on
       counter-increment: li
@@ -285,7 +286,10 @@
   .button--bg-grey
     border: 1px solid rgba(106,106,106,.1)
   @media (max-width: 768px)
-    display: none
+    //display: none
+    order: 1
+    transform: translateY(120%)
+    width: 100%
 
 .gear__category_controls
   position: absolute

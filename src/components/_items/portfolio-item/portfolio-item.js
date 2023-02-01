@@ -6,12 +6,14 @@
 
     const portfolioItems = portfolio.querySelectorAll('.portfolio__item');
 
+    // Слайдер внутри pop-up
     portfolioItems.forEach(portfolioItem => {
 
       const swiperThumbs = portfolioItem.querySelector('.portfolio-popup__swiper--thumbs');
+      const swiperTop = portfolioItem.querySelector('.portfolio-popup__swiper--top');
 
 
-      let swiper__thumbs = new Swiper(".portfolio-popup__swiper--thumbs", {
+      let swiper__thumbs = new Swiper(swiperThumbs, {
         //loop: true,
         spaceBetween: 28,
         slidesPerView: "auto",
@@ -22,7 +24,7 @@
         initialSlide: 0,
       });
 
-      let swiper__top = new Swiper(".portfolio-popup__swiper--top", {
+      let swiper__top = new Swiper(swiperTop, {
         loop: true,
         slidesPerView: 1,
         centeredSlides: true,
@@ -32,47 +34,50 @@
         },
         effect: 'fade',
         fadeEffect: {
-          crossFade: true
+          crossFade: true,
         }
       });
 
     });
 
-  }
 
-
-
-
-  if (portfolio) {
-
-    const portfolioItems = portfolio.querySelectorAll('.portfolio__item');
-
-
+    // Открытие/закрытие pop-up
     portfolioItems.forEach(portfolioItem => {
+      const closeBtnPortfolioPopup = portfolioItem.querySelector('.portfolio-popup__close');
 
-      portfolioItem.addEventListener('click', () => {
-        portfolioItem.classList.add('js-popup-active');
-      });
-
-      const closePortfolioItem = portfolioItem.querySelector('.portfolio-popup__close');
-
-      closePortfolioItem.addEventListener('click', () => {
+      const closePortfolioPopup = () => {
         portfolioItem.classList.remove('js-popup-active');
-        console.log(portfolioItem)
+        unblockScrollBody();
+      };
 
-      })
+      function onDocumentClick () {
+        portfolioItem.addEventListener('click', (evt) => {
+          if (evt.target.classList.contains('portfolio-item__popup')) {
+            closePortfolioPopup();
+          }
+        });
+      };
+
+      const activePortfolioPopup = (evt) => {
+        if (evt.target === closeBtnPortfolioPopup) {
+          closePortfolioPopup();
+        } else {
+          portfolioItem.classList.add('js-popup-active');
+          blockScrollBody();
+          onDocumentClick();
+        }
+      };
+
+      portfolioItem.addEventListener('click', activePortfolioPopup);
+
     });
 
 
-
   }
-
 
 
 
 }
-
-
 
 
 

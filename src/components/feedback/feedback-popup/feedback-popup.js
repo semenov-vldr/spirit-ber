@@ -24,6 +24,7 @@
     popup = template.querySelector('.form-popup')
     document.body.append(popup);
     blockScrollBody();
+    onDocumentClick(popup);
 
     upload('.feedback-form-upload__input');
 
@@ -35,7 +36,7 @@
     const close = popup.querySelector('.form-popup__close');
     close.addEventListener('click', () => {
       closeFormPopup(popup);
-      onDocumentClick(popup);
+
     });
   };
 

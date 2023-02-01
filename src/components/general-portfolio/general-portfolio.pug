@@ -1,5 +1,6 @@
 -
-  const portfolioItems = [
+  const generalPortfolioItems = [
+
     {
       srcImg: './assets/img/portfolio/01.png',
       title: 'Металлический борт 150 (30х150х50)',
@@ -13,8 +14,18 @@
           classColor: 'tag-grey',
         },
       },
-      description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)'
+      description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/01.png',
+          imgSrcSlide_2: './assets/img/portfolio/02.png',
+          imgSrcSlide_3: './assets/img/portfolio/03.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
     },
+          //-------------------------
 
     {
       srcImg: './assets/img/portfolio/02.png',
@@ -29,8 +40,19 @@
           classColor: 'tag-grey',
         },
       },
-      description: 'Металлический борт из оцинкованной стали с зазором под пластину S=1,5 мм. Габариты: (10х100х50)'
+      description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/01.png',
+          imgSrcSlide_2: './assets/img/portfolio/02.png',
+          imgSrcSlide_3: './assets/img/portfolio/03.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
     },
+
+    //-------------------------
 
     {
       srcImg: './assets/img/portfolio/03.png',
@@ -41,12 +63,24 @@
           classColor: 'tag-lightblue',
         },
         tag_item_2: {
-          text: 'Порошковая покраска',
+          text: 'Гибка листового металла',
           classColor: 'tag-fio',
         },
       },
-      description: 'Декоративная решетка на вентиляционные отверстия из нержавеющей стали AISI 304 матовая S=5мм и перфорированного листа S=1мм.'
+      description: 'Декоративная решетка на вентиляционные отверстия из нержавеющей стали AISI 304 матовая S=5мм и перфорированного листа S=1мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/01.png',
+          imgSrcSlide_2: './assets/img/portfolio/02.png',
+          imgSrcSlide_3: './assets/img/portfolio/03.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
     },
+
+    //-------------------------
+
 
     {
       srcImg: './assets/img/portfolio/04.png',
@@ -61,8 +95,19 @@
           classColor: 'tag-lightblue',
         },
       },
-      description: 'Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005'
+      description: 'Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/04.png',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
     },
+
+    //-------------------------
 
     {
       srcImg: './assets/img/portfolio/05.png',
@@ -77,9 +122,19 @@
           classColor: 'tag-pink',
         },
       },
-
-      description: 'Кронштейн из черной стали 5 и 3 мм, покраска по ral 9005'
+      description: 'Икля из черной стали 5 мм, покраска по ral 9005',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/04.png',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
     },
+
+    //-------------------------
 
     {
       srcImg: './assets/img/portfolio/06.png',
@@ -94,26 +149,922 @@
           classColor: 'tag-orange',
         },
       },
-
-      description: 'Зацеп из нержавеющей стали AISI 304 ммматовая S=1,5мм'
+      description: 'Зацеп из нержавеющей стали AISI 304 ммматовая S=1,5мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/04.png',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
     },
+
+    //-------------------------
+
+    {
+      srcImg: './assets/img/portfolio/07.jpg',
+      title: 'Напольный стенд с подсветкой',
+      tags: {
+        tag_item_1: {
+          text: 'Порошковая покраска',
+          classColor: 'tag-fio',
+        },
+        tag_item_2: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+      },
+      description: 'Напольный стенд с подсветкой под полками',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/07.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+
+    {
+      srcImg: './assets/img/portfolio/08.jpg',
+      title: 'Съемный блок',
+      tags: {
+        tag_item_1: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-grey',
+        },
+        tag_item_2: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_3: {
+          text: 'Слесарные работы',
+          classColor: 'tag-pink',
+        },
+      },
+      description: 'Съемный блок для промышленного корпуса.',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/08.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+
+    {
+      srcImg: './assets/img/portfolio/09.jpg',
+      title: 'Корпус ПК326',
+      tags: {
+        tag_item_1: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-grey',
+        },
+        tag_item_2: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_3: {
+          text: 'Слесарные работы',
+          classColor: 'tag-pink',
+        },
+      },
+      description: 'Корпус, изготовленный по предоставленному образцу заказчика',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/09.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+
+    {
+      srcImg: './assets/img/portfolio/10.jpg',
+      title: 'Стеллаж в стиле лофт',
+      tags: {
+        tag_item_1: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-grey',
+        },
+        tag_item_2: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_3: {
+          text: 'Слесарные работы',
+          classColor: 'tag-pink',
+        },
+        tag_item_4: {
+          text: 'Порошковая покраска',
+          classColor: 'tag-fio',
+        },
+      },
+      description: 'Торговый стенд в стиле лофт из профильных труб и дерева.',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/10.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+
+    {
+      srcImg: './assets/img/portfolio/11.jpg',
+      title: 'Фланец для закладных',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+      },
+      description: 'Фланец из конструкционной стали 8мм Ст3  для закладных деталей на стройку',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/11.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+
+    {
+      srcImg: './assets/img/portfolio/12.jpg',
+      title: 'Фланец для труб',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+      },
+      description: 'Фланец для опорных труб из конструкционной стали 8мм Ст3',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/12.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+
+    {
+      srcImg: './assets/img/portfolio/13.jpg',
+      title: 'Фланец для опоры',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+      },
+      description: 'Фланец для опоры из конструкционной стали 8мм Ст3',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/13.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+
+    //-------------------------
+
+    {
+      srcImg: './assets/img/portfolio/14.jpg',
+      title: 'Панель для блока питания',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-grey',
+        },
+        tag_item_3: {
+          text: 'Порошковая покраска',
+          classColor: 'tag-fio',
+        },
+      },
+      description: 'Облицовочная панель для блока питания из конструкционной стали',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/14.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+
+    //-------------------------
+
+    {
+      srcImg: './assets/img/portfolio/15.jpg',
+      title: 'Металлическая картина "Щит викинга"',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Слесарные работы',
+          classColor: 'tag-pink',
+        },
+        tag_item_3: {
+          text: 'Порошковая покраска',
+          classColor: 'tag-fio',
+        },
+      },
+      description: 'Фигурная  резка черной стали. Покраска в черный муар',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/15.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+
+    {
+      srcImg: './assets/img/portfolio/16.jpg',
+      title: 'Кронштейн для фар автомобиля',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Слесарные работы',
+          classColor: 'tag-pink',
+        },
+        tag_item_3: {
+          text: 'Порошковая покраска',
+          classColor: 'tag-fio',
+        },
+        tag_item_4: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-grey',
+        },
+      },
+      description: 'Кронштейн для фар автомобиля Мерседес Гелендваген. Изготовление по образцу Заказчика',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/16.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+
+    {
+      srcImg: './assets/img/portfolio/17.jpg',
+      title: 'Струбцина зеленая',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Слесарные работы',
+          classColor: 'tag-pink',
+        },
+        tag_item_3: {
+          text: 'Порошковая покраска',
+          classColor: 'tag-fio',
+        },
+        tag_item_4: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-grey',
+        },
+      },
+      description: 'Струбцина для крепления ПОС-конструкций (держателей, дисплеев, корзин). Покраска в зеленый цвет',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/17.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+
+    //-------------------------
+
+    {
+      srcImg: './assets/img/portfolio/18.jpg',
+      title: 'Крюк опоры из черной стали',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-grey',
+        },
+      },
+      description: 'Вырезка и гибка крюка опоры из черной стали 3 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/18.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+
+    {
+      srcImg: './assets/img/portfolio/19.jpg',
+      title: 'Опора из черной стали',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-grey',
+        },
+      },
+      description: 'Вырезка и гибка опоры из черной стали 3 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/19.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/20.jpg',
+      title: 'Пластина из черной стали с маленькими отверстиями',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      },
+      description: 'Вырезка пластины из черной стали 5 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/17.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/21.jpg',
+      title: 'Пластина из черной стали',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      },
+      description: 'Вырезка пластины из черной стали 5 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/17.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/22.jpg',
+      title: 'Фланец из черной стали',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      },
+      description: 'Вырезка и гибка фланца из черной стали 1,5 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/17.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/23.jpg',
+      title: 'Треугольная заготовка из алюминия',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      },
+      description: 'Вырезка алюминия 4 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/17.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/24.jpg',
+      title: 'Заготовка из алюминия',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      },
+      description: 'Раскрой алюминия 4 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/24.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/25.jpg',
+      title: 'Короб из оцинкованной стали',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-grey',
+        },
+
+      },
+      description: 'Короб из оцинкованной стали 1 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/25.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/26.jpg',
+      title: 'Панель декоративная',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-grey',
+        },
+
+      },
+      description: 'Декоративная панель из матовой нержавеющей стали 1 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/25.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/27.jpg',
+      title: 'Косынка из нержавеющей стали',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      },
+      description: 'Раскрой азотом строительных заготовок из нержавеющей стали 5 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/25.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/28.jpg',
+      title: 'Заготовка из алюминия для авиации',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      },
+      description: 'Раскрой деталей из алюминия 1 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/25.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/29.jpg',
+      title: 'Уголок из оцинковки',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      },
+      description: 'Раскрой азотом и гибка оцинкованной стали 2 мм для уголка',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/25.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/30.jpg',
+      title: 'Полка для торгового оборудования',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Гибка листового металла',
+          classColor: 'tag-grey',
+        },
+        tag_item_3: {
+          text: 'Слесарные работы',
+          classColor: 'tag-pink',
+        },
+        tag_item_4: {
+          text: 'Порошковая покраска',
+          classColor: 'tag-fio',
+        },
+
+      },
+      description: 'Полка для торговой стойки из конструкционной (черной стали) 1,2 мм. Крепление на круглую трубу. Покраска в черный цвет с последующим брендированием',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/30.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/31.jpg',
+      title: 'Заглушка из черной стали для профильных труб',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      },
+      description: 'Раскрой кислородом конструкционной (черной) стали 5 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/30.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/32.jpg',
+      title: 'Заготовка из оцинкованной стали',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      },
+      description: 'Раскрой азотом оцинкованной стали 1 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/30.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/33.jpg',
+      title: 'Декоративный элемент из черной стали в форме звезды',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      },
+      description: 'Раскрой кислородом конструкционной (черной) стали 6 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/30.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/34.jpg',
+      title: 'Заготовка из черной стали для профильных труб',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      },
+      description: 'Раскрой кислородом конструкционной (черной) стали 5 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/30.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/35.jpg',
+      title: 'Уголок из черной стали',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      tag_item_2: {
+        text: 'Гибка листового металла',
+        classColor: 'tag-grey',
+      },
+
+      },
+      description: 'Раскрой кислородом и гибка конструкционной (черной) стали 2 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/30.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/36.jpg',
+      title: 'Шайба из черной стали',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      },
+      description: 'Раскрой кислородом конструкционной (черной) стали 3 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/30.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/37.jpg',
+      title: 'Заготовка из черной стали для сварочных работ',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      },
+      description: 'Раскрой кислородом конструкционной (черной) стали 12 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/30.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/38.jpg',
+      title: 'Заготовка из черной стали для сварочных работ',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+
+      },
+      description: 'Раскрой кислородом конструкционной (черной) стали 12 мм',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/30.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/39.jpg',
+      title: 'Крючок для торгового оборудования',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Порошковая покраска',
+          classColor: 'tag-fio',
+        },
+
+      },
+      description: 'Крючок из проволоки торговой о/к 6 мм для перфорированного стенда. Покраска в синий цвет',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/30.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
+    //-------------------------
+    {
+      srcImg: './assets/img/portfolio/40.jpg',
+      title: 'Корзинка из проволоки',
+      tags: {
+        tag_item_1: {
+          text: 'Лазерная резка',
+          classColor: 'tag-orange',
+        },
+        tag_item_2: {
+          text: 'Порошковая покраска',
+          classColor: 'tag-fio',
+        },
+
+      },
+      description: 'Подвесные корзинки из проволоки торговой о/к 4 мм. Покраска в оранжевый цвет',
+      popup: {
+        imgSrcSlides: {
+          imgSrcSlide_1: './assets/img/portfolio/30.jpg',
+          imgSrcSlide_2: './assets/img/portfolio/05.png',
+          imgSrcSlide_3: './assets/img/portfolio/06.png',
+        },
+        date: '23.08.2022',
+        link: '##',
+      },
+    },
+
 
   ];
 
 
-mixin createPortfolioItems ( portfolioData )
-  each card in portfolioData
-    li.portfolio__item
-      .portfolio__image-wrapper
-        img(src=card.srcImg alt='portfolio')
-      h3.portfolio__title=card.title
-      ul.portfolio__tags.portfolio-tags
-        each tag in card.tags
-          li.portfolio-tags__item(class=tag.classColor)=tag.text
-      p.portfolio__description= card.description
 
-
-.general-portfolio
+.general-portfolio.portfolio
   .container.general-portfolio__container
     h1.title-section.tablet-hidden Примеры работ
 
@@ -136,11 +1087,11 @@ mixin createPortfolioItems ( portfolioData )
           li.general-portfolio__tags-item.tag-orange Лазерная резка
           li.general-portfolio__tags-item.tag-fio Порошковая покраска
           li.general-portfolio__tags-item.tag-lightblue Изготовление металлоизделий
-          li.general-portfolio__tags-item.tag-pink Столярные работы
+          li.general-portfolio__tags-item.tag-pink Слесарные работы
 
 
-      .general-portfolio__cards-grid
-        +createPortfolioItems(portfolioItems)
+      .general-portfolio__cards-grid(style="display: grid")
+        +createPortfolioItems(generalPortfolioItems)
 
         include ../pagination/pagination
 

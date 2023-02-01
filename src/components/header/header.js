@@ -11,6 +11,7 @@
     items.forEach( item => item.classList.toggle('js-active') );
   };
 
+
   function removeActiveClass(item) {
     item.classList.remove('js-active' );
   };
@@ -18,6 +19,7 @@
   headerMenuDropDown.addEventListener('click', () => toggleActiveElem(headerContactList));
   headerBurger.addEventListener('click', () => {
     toggleActiveElem(document.body, header, headerNav);
+    toggleScrollBody();
 
     if (!header.classList.contains('js-active')) {
       header.querySelectorAll('.header-nav__item, .header-subnav, .header-subnav__item').forEach(removeActiveClass)
@@ -47,9 +49,9 @@
 
     headerListSubNav.forEach(subNav => {
       subNav.addEventListener('click', () => {
-        toggleActiveElem(subNav)
+        toggleActiveElem(subNav);
         const subNav_2 = subNav.querySelector('.header-subnav-2');
-        toggleActiveElem(subNav_2)
+        toggleActiveElem(subNav_2);
       })
     });
 

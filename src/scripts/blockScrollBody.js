@@ -1,7 +1,19 @@
+
+const html = document.querySelector('html');
+
+
 function blockScrollBody () {
-  document.body.classList.add('js-block-scroll');
-}
+  if ( !html.classList.contains('js-block-scroll') ) {
+    html.classList.add('js-block-scroll');
+  }
+};
 
 function unblockScrollBody () {
-  document.body.classList.remove('js-block-scroll');
-}
+  if ( html.classList.contains('js-block-scroll') ) {
+    html.classList.remove('js-block-scroll');
+  }
+};
+
+function toggleScrollBody () {
+  html.classList.toggle('js-block-scroll');
+};

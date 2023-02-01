@@ -1,9 +1,13 @@
 
 {
 
-  let mySwiper;
+  const portfolioSwiper = document.querySelector('.portfolio__swiper');
 
-    mySwiper = new Swiper('.portfolio__swiper', {
+  if (portfolioSwiper) {
+
+    let mySwiper;
+
+    mySwiper = new Swiper(portfolioSwiper, {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -26,7 +30,7 @@
       centeredSlides: false,
 
       // Отступ между слайдами
-      spaceBetween: 40,
+      //spaceBetween: 40,
 
       // Стартовый слайд
       initialSlide: 0,
@@ -35,13 +39,23 @@
       // Ширина экрана
       breakpoints: {
         320: {
-          slidesPerView: 2
+          slidesPerView: 2,
+          spaceBetween: 12,
         },
         768: {
-          slidesPerView: 3
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+
+        1100: {
+          spaceBetween: 40,
         },
       }
     });
+
+  }
+
+
 
 
 
