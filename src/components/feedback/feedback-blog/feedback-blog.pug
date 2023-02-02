@@ -1,31 +1,32 @@
-.feedback.feedback-blog
-  .feedback__container.container
+.container
+  .feedback.feedback-blog
+    .feedback__container
 
-    .feedback__content
-      h3.feedback__title Задать вопрос
-      .feedback__text-wrapper
-        p.feedback__text Как принято считать, акционеры крупнейших компаний будут ассоциативно распределены по отраслям.
-        p.feedback__text Имеется спорная точка зрения, гласящая примерно следующее: акционеры крупнейших компаний, вне зависимости от их уровня, должны быть преданы социально-демократической анафеме.
-        p.feedback__text Таким образом, начало повседневной работы по формированию позиции позволяет выполнить важные задания по разработке поэтапного и последовательного развития общества.
+      .feedback__content
+        h3.feedback__title Задать вопрос
+        .feedback__text-wrapper
+          p.feedback__text Как принято считать, акционеры крупнейших компаний будут ассоциативно распределены по отраслям.
+          p.feedback__text Имеется спорная точка зрения, гласящая примерно следующее: акционеры крупнейших компаний, вне зависимости от их уровня, должны быть преданы социально-демократической анафеме.
+          p.feedback__text Таким образом, начало повседневной работы по формированию позиции позволяет выполнить важные задания по разработке поэтапного и последовательного развития общества.
 
-    form.feedback__form.feedback-form.feedback-form--blog(method='POST' action='' enctype="multipart/form-data" autocomplete="off")
+      form.feedback__form.feedback-form.feedback-form--blog(method='POST' action='' enctype="multipart/form-data" autocomplete="off")
 
-      .feedback-form__input-container.feedback-form__input-container--blog
-        h3.feedback-form__input-title Прикрепите файлы
+        .feedback-form__input-container.feedback-form__input-container--blog
+          h3.feedback-form__input-title Прикрепите файлы
 
-        .feedback-form__upload.feedback-form-upload
-          input#inputfile.feedback-form-upload__input.visually-hidden(type="file" name="file" multiple accept=".pdf, .doc, .rtf, .jpg, .jpeg, .png")
-          label.feedback-form-upload__label
-            svg.feedback-form-upload__icon(width="24" height="19" fill="#fff")
-              use(href='assets/img/sprite.svg#drop')
-            span Перетащите сюда файл для загрузки
-          label(for='inputfile') или выберите его в проводнике
-        site.feedback-form__input-note Размер файлов не более 150 мб. Допустимые форматы: .pdf, .doc, .rtf, .jpg, .png
+          .feedback-form__upload.feedback-form-upload
+            input#inputfile.feedback-form-upload__input.visually-hidden(type="file" name="file" multiple accept=".pdf, .doc, .rtf, .jpg, .jpeg, .png")
+            label.feedback-form-upload__label
+              svg.feedback-form-upload__icon(width="24" height="19" fill="#fff")
+                use(href='assets/img/sprite.svg#drop')
+              span Перетащите сюда файл для загрузки
+            label(for='inputfile') или выберите его в проводнике
+          site.feedback-form__input-note Размер файлов не более 150 мб. Допустимые форматы: .pdf, .doc, .rtf, .jpg, .png
 
-      +inputName
-      +inputEmail
-      +inputText
-      +sending
+        +inputName
+        +inputEmail
+        +inputText
+        +sending
 
 
-      +upload-progress-template
+        +upload-progress-template

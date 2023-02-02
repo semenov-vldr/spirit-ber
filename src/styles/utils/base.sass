@@ -32,16 +32,44 @@ main
   -webkit-box-flex: 1
   -ms-flex: 1 1 auto
 
+//.container
+//  max-width: 1600px
+//  min-width: 280px
+//  padding: 0 160px
+//  margin: 0 auto
+//  box-sizing: content-box
+//  @media (max-width: 1200px)
+//    padding: 0 50px
+//  @media (max-width: 768px)
+//    padding: 0 20px
+
+
 .container
   max-width: 1600px
   min-width: 280px
-  padding: 0 160px
+  width: 100%
   margin: 0 auto
   box-sizing: content-box
   @media (max-width: 1200px)
-    padding: 0 50px
+    width: calc(100vw - 100px)
   @media (max-width: 768px)
-    padding: 0 20px
+    width: calc(100vw - 40px)
+  &.container-width-full
+    max-width: 100%
+    @media (max-width: 1200px)
+      width: 100%
+    @media (max-width: 768px)
+      width: 100%
+    & > *
+      padding-left: 160px
+      padding-right: 160px
+      @media (max-width: 1200px)
+        padding-left: 50px
+        padding-right: 50px
+      @media (max-width: 768px)
+        padding-left: 20px
+        padding-right: 20px
+
 
 
 .hidden

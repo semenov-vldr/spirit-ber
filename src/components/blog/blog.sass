@@ -27,7 +27,7 @@
       gap: 25px
     @media (max-width: 480px)
       gap: 12px
-      margin-top: 0
+      margin-top: 56px
 
 
   &__item
@@ -110,6 +110,8 @@
 
   .pagination
     display: flex
+    justify-content: center
+    align-items: center
     margin-top: 50px
     gap: 24px
 
@@ -141,6 +143,8 @@
 
   &-nav
     align-self: flex-start
+    overflow: hidden
+    width: 100%
 
 
     &__title
@@ -159,8 +163,12 @@
       margin-left: 20px
 
     &__list
+      overflow: auto
       display: flex
       gap: 16px
+      flex-wrap: nowrap
+      @media (max-width: 768px)
+        gap: 8px
 
     &__item
       width: max-content
@@ -171,6 +179,7 @@
       color: rgba($white, 0.6)
       border-radius: 32px
       cursor: pointer
+      white-space: nowrap
       &:hover,
       &.js-filter-active
         color: $white

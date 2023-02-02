@@ -1,0 +1,41 @@
+-
+  const popup_lazernaya_rezka_metalla = {
+    number: 1,
+    srcImg: './assets/img/portfolio/01.png',
+    title: 'Металлический борт 150 (30х150х50)',
+
+    description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)',
+    imgSrcSlides: {
+      imgSrcSlide_1: './assets/img/portfolio/01.png',
+      imgSrcSlide_2: './assets/img/portfolio/02.png',
+      imgSrcSlide_3: './assets/img/portfolio/03.png',
+    },
+    link: '##',
+  }
+
+// создание карточек для портфолио
+mixin createGearPopup ( gearPopupData )
+  .gear-popup__item(data-number=gearPopupData.number)
+    .gear-popup__wrapper
+      button.gear-popup__close
+
+      .gear-popup__swiper.gear-popup__swiper--top
+        .gear-popup__swiper-wrapper.swiper-wrapper
+          each src in gearPopupData.imgSrcSlides
+            .swiper-slide
+              img(src=src alt='portfolio')
+        .swiper-pagination
+
+      .gear-popup__swiper.gear-popup__swiper--thumbs
+        .gear-popup__swiper-wrapper.swiper-wrapper
+          each src in gearPopupData.imgSrcSlides
+            .swiper-slide
+              img(src=src alt='portfolio')
+
+      .gear-popup__content
+        .gear-popup__tag Технические характеристики
+        .gear-popup__title=gearPopupData.title
+        .gear-popup__description=gearPopupData.description
+        a.gear-popup__link.button.button--bg-accept(href=gearPopupData.link) Заказать услугу
+
++createGearPopup(popup_lazernaya_rezka_metalla)

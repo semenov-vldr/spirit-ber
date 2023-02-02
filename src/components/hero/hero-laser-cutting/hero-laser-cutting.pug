@@ -1,25 +1,26 @@
-.hero.hero-laser-cutting(style="background-image: url('./assets/img/service/laser.gif')")
-  .container.hero__container
-    span.hero__tag Услуги
-    h1.hero__title Лазерная резка металла
-    span.hero__price -- от 6,90 ₽ / метр
-    p.hero__text Наша компания работает на профессиональном лазерном оборудовании LVD ORION 3015 PLUS и FIBER LCM R1530F, которое позволяет выполнять раскрой листового материала, профильных и круглых труб по низким ценам за счет своей высокой производительности и превосходному качеству работы.
-    button.button.button--bg-accept.button-popup Заказать услугу
+.container.container-width-full
+  .hero.hero-laser-cutting(style="background-image: url('./assets/img/service/laser.gif')")
+    .hero__container
+      span.hero__tag Услуги
+      h1.hero__title Лазерная резка металла
+      span.hero__price -- от 6,90 ₽ / метр
+      p.hero__text Наша компания работает на профессиональном лазерном оборудовании LVD ORION 3015 PLUS и FIBER LCM R1530F, которое позволяет выполнять раскрой листового материала, профильных и круглых труб по низким ценам за счет своей высокой производительности и превосходному качеству работы.
+      button.button.button--bg-accept.button-popup Заказать услугу
 
-    mixin anchorItem(id, name)
-      td.hero-anchor__item
-        a.hero-anchor__link(href=id)=name
+      mixin anchorItem(id, name)
+        td.hero-anchor__item
+          a.hero-anchor__link(href=id)=name
 
-    table.hero__anchor.hero-anchor
-      tbody
-        tr
-          +anchorItem('#laser-cutting-price', 'Цены')
-          +anchorItem('#laser-cutting-portfolio', 'Примеры работ')
-          +anchorItem('#laser-cutting-production', 'Оборудование')
-        tr
-          +anchorItem('#laser-cutting-advantage', 'Преимущества')
-          +anchorItem('#laser-cutting-principle', 'Принципы работы')
-          +anchorItem('#laser-cutting-faq', 'FAQ')
+      table.hero__anchor.hero-anchor
+        tbody
+          tr
+            +anchorItem('#laser-cutting-price', 'Цены')
+            +anchorItem('#laser-cutting-portfolio', 'Примеры работ')
+            +anchorItem('#laser-cutting-production', 'Оборудование')
+          tr
+            +anchorItem('#laser-cutting-advantage', 'Преимущества')
+            +anchorItem('#laser-cutting-principle', 'Принципы работы')
+            +anchorItem('#laser-cutting-faq', 'FAQ')
 
 
 

@@ -75,6 +75,8 @@
 
     .image-text
 
+
+
       &__container
         flex-direction: column
       &__top
@@ -89,6 +91,12 @@
           gap: 20px
         @media (max-width: 768px)
           padding: 0 20px
+
+      &__title
+        &:not(:first-child)
+          margin-top: 32px
+        &:not(:last-child)
+          margin-bottom: 16px
 
       &__swiper
         width: 100%
@@ -152,6 +160,7 @@
         font-weight: 500
         color: $text
         margin-bottom: 0
+
 
       &__subtitle
         @include fontSize(16, 20)

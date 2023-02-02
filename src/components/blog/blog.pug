@@ -123,29 +123,30 @@ mixin createGlogItem (list)
 
 
 
-.blog
-  .container.blog__container
-    h1.title-section Блог Спирит Бер
+.container
+  .blog
+    .blog__container
+      h1.title-section Блог Спирит Бер
 
-    nav.blog__nav.blog-nav
-      .blog-nav__header
-        span.blog-nav__title Темы
-        button.blog-nav__reset(data-filter="all" title="reset")
-          svg(width="8px" height="8px" fill="#A7A7A7")
-            use(href='assets/img/sprite.svg#close')
-      ul.blog-nav__list
-        li.blog-nav__item(data-filter="news") Новости Спирит Бер
-        li.blog-nav__item(data-filter="cases") Кейсы
-        li.blog-nav__item(data-filter="articles") Статьи
-        li.blog-nav__item(data-filter="reviews") Обзоры
+      nav.blog__nav.blog-nav
+        .blog-nav__header
+          span.blog-nav__title Темы
+          button.blog-nav__reset(data-filter="all" title="reset")
+            svg(width="8px" height="8px" fill="#A7A7A7")
+              use(href='assets/img/sprite.svg#close')
+        ul.blog-nav__list
+          li.blog-nav__item(data-filter="news") Новости Спирит Бер
+          li.blog-nav__item(data-filter="cases") Кейсы
+          li.blog-nav__item(data-filter="articles") Статьи
+          li.blog-nav__item(data-filter="reviews") Обзоры
 
-    .blog__list
-      +createGlogItem(blogList)
+      .blog__list
+        +createGlogItem(blogList)
 
-    .blog__pagination.pagination
-      button.slider-nav__prev(aria-label="Previous page" title="Previous page")
-      ul.pagination__list(data-current-page="1")
-      button.slider-nav__next(aria-label="Next page" title="Next page")
+      .blog__pagination.pagination
+        button.slider-nav__prev(aria-label="Previous page" title="Previous page")
+        ul.pagination__list(data-current-page="1")
+        button.slider-nav__next(aria-label="Next page" title="Next page")
 
 
 

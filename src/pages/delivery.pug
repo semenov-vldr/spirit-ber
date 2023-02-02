@@ -10,7 +10,7 @@ block content
   .breadcrumbs
     .container.breadcrumbs__container
       a(href="index.html").breadcrumbs__item Главная
-      a(href="").breadcrumbs__item О компании
+      a(href="about.html").breadcrumbs__item О компании
       a(href="").breadcrumbs__item Доставка
 
   section.section-column
@@ -18,12 +18,13 @@ block content
     include ../components/hero/hero-delivery/hero-delivery
     include ../components/delivery-map/delivery-map
 
-    .partners
-      .container.partners__container
-        h2.title-section Логистические партнеры
-        ul.partners__list
-          +partnersItem("./assets/img/partners/01.svg")
-          +partnersItem("./assets/img/partners/02.svg")
-          +partnersItem("./assets/img/partners/03.svg")
-          +partnersItem("./assets/img/partners/04.svg")
-          +partnersItem("./assets/img/partners/05.svg")
+    .container
+      .partners
+        .partners__container
+          h2.title-section Логистические партнеры
+          ul.partners__list
+            +partnersItem("./assets/img/partners/01.svg")
+            +partnersItem("./assets/img/partners/02.svg")
+            +partnersItem("./assets/img/partners/03.svg")
+            +partnersItem("./assets/img/partners/04.svg")
+            +partnersItem("./assets/img/partners/05.svg")

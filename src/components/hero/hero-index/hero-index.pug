@@ -1,74 +1,75 @@
-.hero.hero--index(style="background-image: url('./assets/img/bg-hero.png')")
-  //video.hero__video(preload='auto' autoplay muted loop)
-  //  source(src='./assets/video/video1.mp4' type='video/mp4')
-  .container.hero__container
+.container.container-width-full
+  .hero.hero--index(style="background-image: url('./assets/img/bg-hero.png')")
+    //video.hero__video(preload='auto' autoplay muted loop)
+    //  source(src='./assets/video/video1.mp4' type='video/mp4')
+    .hero__container
 
-    .hero__slider.hero-slider
+      .hero__slider.hero-slider
 
-      span.hero__tag Металлообработка в Москве
+        span.hero__tag Металлообработка в Москве
 
-      ol.hero-slider__pagination.hero-slider-pagination
+        ol.hero-slider__pagination.hero-slider-pagination
 
-        li.hero-slider-pagination__item(data-pagination="1")
-          u.hero-slider-pagination__number 01
-          span.hero-slider-pagination__name Лазерная резка
+          li.hero-slider-pagination__item(data-pagination="1")
+            u.hero-slider-pagination__number 01
+            span.hero-slider-pagination__name Лазерная резка
 
-        li.hero-slider-pagination__item(data-pagination="2")
-          u.hero-slider-pagination__number 02
-          span.hero-slider-pagination__name Гибка листового металла
+          li.hero-slider-pagination__item(data-pagination="2")
+            u.hero-slider-pagination__number 02
+            span.hero-slider-pagination__name Гибка листового металла
 
-        li.hero-slider-pagination__item(data-pagination="3")
-          u.hero-slider-pagination__number 03
-          span.hero-slider-pagination__name Порошковая покраска
+          li.hero-slider-pagination__item(data-pagination="3")
+            u.hero-slider-pagination__number 03
+            span.hero-slider-pagination__name Порошковая покраска
 
-        li.hero-slider-pagination__item(data-pagination="4")
-          u.hero-slider-pagination__number 04
-          span.hero-slider-pagination__name Слесарные работы
+          li.hero-slider-pagination__item(data-pagination="4")
+            u.hero-slider-pagination__number 04
+            span.hero-slider-pagination__name Слесарные работы
 
-        li.hero-slider-pagination__item(data-pagination="5")
-          u.hero-slider-pagination__number 05
-          span.hero-slider-pagination__name Металлоконструкции
+          li.hero-slider-pagination__item(data-pagination="5")
+            u.hero-slider-pagination__number 05
+            span.hero-slider-pagination__name Металлоконструкции
 
-      .hero-slider__nav.hero-slider-nav
-        .slider-nav__prev
-        .slider-nav__next
+        .hero-slider__nav.hero-slider-nav
+          .slider-nav__prev
+          .slider-nav__next
 
-      .hero-slider__item.hero-slide(data-slide="1")
-        h3.hero-slide__title Лазерная резка
-        span.hero-slide__price -- ОТ 6,90 ₽ / метр
-        p.hero-slide__description Наша компания работает на профессиональном лазерном оборудовании LVD ORION 3015 PLUS и FIBER LCM R1530F, которое позволяет выполнять раскрой листового материала, профильных и круглых труб по низким ценам за счет своей высокой производительности и превосходному качеству работы.
-        .hero-slide__links
-          button.button.button--bg-accept.button-popup Заказать услугу
-          a(href="lazernaya-rezka-metalla.html").button.button--outline.arrow Подробнее
+        .hero-slider__item.hero-slide(data-slide="1")
+          h3.hero-slide__title Лазерная резка
+          span.hero-slide__price -- ОТ 6,90 ₽ / метр
+          p.hero-slide__description Наша компания работает на профессиональном лазерном оборудовании LVD ORION 3015 PLUS и FIBER LCM R1530F, которое позволяет выполнять раскрой листового материала, профильных и круглых труб по низким ценам за счет своей высокой производительности и превосходному качеству работы.
+          .hero-slide__links
+            button.button.button--bg-accept.button-popup Заказать услугу
+            a(href="lazernaya-rezka-metalla.html").button.button--outline.arrow Подробнее
 
-      .hero-slider__item.hero-slide(data-slide="2")
-        h3.hero-slide__title Гибка листового металла
-        span.hero-slide__price -- ОТ 9 ₽ / гиб
-        p.hero-slide__description Гибка листового металла в нашей компании осуществляется на профессиональных ЧПУ станках DONPRESSMASH и ERMAKSAN. Высокоточная ЧПУ гибка позволяет максимально точно придать форму металлической листовой заготовке.
-        .hero-slide__links
-          button.button.button--bg-accept.button-popup Заказать услугу
-          a(href="gibka-listovogo-metalla.html").button.button--outline.arrow Подробнее
+        .hero-slider__item.hero-slide(data-slide="2")
+          h3.hero-slide__title Гибка листового металла
+          span.hero-slide__price -- ОТ 9 ₽ / гиб
+          p.hero-slide__description Гибка листового металла в нашей компании осуществляется на профессиональных ЧПУ станках DONPRESSMASH и ERMAKSAN. Высокоточная ЧПУ гибка позволяет максимально точно придать форму металлической листовой заготовке.
+          .hero-slide__links
+            button.button.button--bg-accept.button-popup Заказать услугу
+            a(href="gibka-listovogo-metalla.html").button.button--outline.arrow Подробнее
 
-      .hero-slider__item.hero-slide(data-slide="3")
-        h3.hero-slide__title Порошковая покраска
-        span.hero-slide__price -- ОТ 120 ₽ / метр <sup>2</sup>
-        p.hero-slide__description Порошковая покраска металлоизделий является практичным и долговечным решением. Цветовая палитра RAL обладает множеством оттенков различных цветов, также предоставляет выбор структуры порошковой краски. Для порошковой покраски металла наша компания использует профессиональные камеры порошкового напыления, печи полимеризации PHILIPS и пистолеты-распылители. ​
-        .hero-slide__links
-          button.button.button--bg-accept.button-popup Заказать услугу
-          a(href="poroshkovaya-pokraska-metalla.html").button.button--outline.arrow Подробнее
+        .hero-slider__item.hero-slide(data-slide="3")
+          h3.hero-slide__title Порошковая покраска
+          span.hero-slide__price -- ОТ 120 ₽ / метр <sup>2</sup>
+          p.hero-slide__description Порошковая покраска металлоизделий является практичным и долговечным решением. Цветовая палитра RAL обладает множеством оттенков различных цветов, также предоставляет выбор структуры порошковой краски. Для порошковой покраски металла наша компания использует профессиональные камеры порошкового напыления, печи полимеризации PHILIPS и пистолеты-распылители. ​
+          .hero-slide__links
+            button.button.button--bg-accept.button-popup Заказать услугу
+            a(href="poroshkovaya-pokraska-metalla.html").button.button--outline.arrow Подробнее
 
-      .hero-slider__item.hero-slide(data-slide="4")
-        h3.hero-slide__title Слесарные работы
-        span.hero-slide__price -- ОТ 6000 ₽
-        p.hero-slide__description Спирит-Бер предоставляет услуги по сварным и слесарным работам (черная сталь, оцинкованная сталь, нержавеющая сталь, алюминий). Мы проводим такие операции как: сборка и сварка конструкций, нарезка труб на лентопильном станке, нарезка резьбы, снятие фаски, сверление отверстий, заклепка, удаление заусенцев.
-        .hero-slide__links
-          button.button.button--bg-accept.button-popup Заказать услугу
-          a(href="slesarnye-raboty.html").button.button--outline.arrow Подробнее
+        .hero-slider__item.hero-slide(data-slide="4")
+          h3.hero-slide__title Слесарные работы
+          span.hero-slide__price -- ОТ 6000 ₽
+          p.hero-slide__description Спирит-Бер предоставляет услуги по сварным и слесарным работам (черная сталь, оцинкованная сталь, нержавеющая сталь, алюминий). Мы проводим такие операции как: сборка и сварка конструкций, нарезка труб на лентопильном станке, нарезка резьбы, снятие фаски, сверление отверстий, заклепка, удаление заусенцев.
+          .hero-slide__links
+            button.button.button--bg-accept.button-popup Заказать услугу
+            a(href="slesarnye-raboty.html").button.button--outline.arrow Подробнее
 
-      .hero-slider__item.hero-slide(data-slide="5")
-        h3.hero-slide__title Металлоконструкции
-        span.hero-slide__price -- ОТ 6000 ₽
-        p.hero-slide__description Гибка 5 листового металла в нашей компании осуществляется на профессиональных ЧПУ станках DONPRESSMASH и ERMAKSAN. Высокоточная ЧПУ гибка позволяет максимально точно придать форму металлической листовой заготовке. Высокая производительность и программируемые настройки станков обеспечивают минимальные
-        .hero-slide__links
-          button.button.button--bg-accept.button-popup Заказать услугу
-          a(href="metallokonstruktsii,html").button.button--outline.arrow Подробнее
+        .hero-slider__item.hero-slide(data-slide="5")
+          h3.hero-slide__title Металлоконструкции
+          span.hero-slide__price -- ОТ 6000 ₽
+          p.hero-slide__description Гибка 5 листового металла в нашей компании осуществляется на профессиональных ЧПУ станках DONPRESSMASH и ERMAKSAN. Высокоточная ЧПУ гибка позволяет максимально точно придать форму металлической листовой заготовке. Высокая производительность и программируемые настройки станков обеспечивают минимальные
+          .hero-slide__links
+            button.button.button--bg-accept.button-popup Заказать услугу
+            a(href="metallokonstruktsii.html").button.button--outline.arrow Подробнее

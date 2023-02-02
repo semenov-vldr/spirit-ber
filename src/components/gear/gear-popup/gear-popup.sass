@@ -1,91 +1,8 @@
-.portfolio
-  &__item
-    display: flex
-    flex-direction: column
-    gap: 8px
-    text-align: left
-    padding-bottom: 12px
-    cursor: pointer
-    &:hover .portfolio__image-wrapper img
-      transform: scale(1.2)
-    &:hover .portfolio__image-wrapper
-      box-shadow: $shadow-card
-    @media (max-width: 480px)
-      &:nth-child(5),
-      &:nth-child(6)
-        display: none
-    &.js-popup-active .portfolio-popup__item
-      display: block
-
-  &__image-wrapper
-    overflow: hidden
-    aspect-ratio: 55 / 43
-    background: radial-gradient(68.25% 68.25% at 43.57% 31.75%, rgba(71, 75, 77, 0) 0%, rgba(71, 76, 78, 0.176327) 55.82%, rgba(37, 55, 63, 0.75) 100%), #BFC4C6
-    padding: 32px
-    border-radius: 4px
-    width: 100%
-    @media (max-width: 768px)
-      aspect-ratio: 1 / 1
-    @media (max-width: 480px)
-      max-height: 175px
-    img
-      width: 100%
-      height: 100%
-      object-fit: cover
-      transition: 0.5s ease
-
-
-  &__title
-    font-size: clamp(14px, calc(14px + (20 - 14) * ((100vw - 768px) / (1920 - 768))), 20px)
-    line-height: 1.7
-
-  &-tags
-    display: flex
-    flex-wrap: wrap
-    gap: 12px
-    font-size: 12px
-    @media (max-width: $width-mobile)
-      font-size: 10px
-    @media (max-width: 480px)
-      //margin-top: auto
-      gap: 6px
-  &-tags__item
-    position: relative
-    display: flex
-    align-items: center
-    justify-content: center
-    gap: 6px
-    padding: 4px 8px
-    &::before
-      content: ""
-      display: inline-block
-      width: 6px
-      height: 6px
-      border-radius: 50%
-      transition: 0.3s ease
-    &:hover::before
-      filter: blur(1px)
-    &.tag-grey::before
-      background-color: #BABABA
-    &.tag-orange::before
-      background-color: #FF7733
-    &.tag-fio::before
-      background-color: #933EFF
-    &.tag-lightblue::before
-      background-color: #24E5FF
-    &.tag-pink::before
-      background-color: #FF5BEF
-
-  &__description
-    @include fontSize(14, 16)
-    line-height: 1.5
-    @media (max-width: 480px)
-      display: none
-
 // pop-up
-.portfolio-popup
+.gear-popup
   &__item
     display: none
+    //display: block
     position: fixed
     background-color: rgba(#0B0D0E, 0.9)
     top: 0
@@ -98,10 +15,16 @@
     overflow-x: hidden
     transition: all 0.5s ease 0s
     overscroll-behavior: contain
+    opacity: 0.7
     @media (max-width: 1300px)
       padding: 50px
     @media (max-width: 768px)
       padding: 20px 10px
+
+  &.js-gear-popup-active
+    display: block
+    opacity: 1
+
 
   &__wrapper
     position: relative
@@ -116,7 +39,7 @@
     overflow: hidden
     margin: 0 auto
     border-radius: 8px
-    box-shadow: inset 0px 0px 3px rgba(113, 200, 255, 0.24)
+    box-shadow: inset 0 0 3px rgba(113, 200, 255, 0.24)
     @media (max-width: 1400px)
       grid-template-columns: 60% 40%
     @media (max-width: $width-mobile)
@@ -212,6 +135,3 @@
 
   &__link
     margin-top: 32px
-
-
-

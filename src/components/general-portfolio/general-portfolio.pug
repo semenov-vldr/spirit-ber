@@ -1064,36 +1064,37 @@
 
 
 
-.general-portfolio.portfolio
-  .container.general-portfolio__container
-    h1.title-section.tablet-hidden Примеры работ
+.container
+  .general-portfolio.portfolio
+    .general-portfolio__container
+      h1.title-section.tablet-hidden Примеры работ
 
-    .general-portfolio__inner
+      .general-portfolio__inner
 
-      .general-portfolio__categories
-        h1.title-section.desctop-hidden Примеры работ
-        h2.general-portfolio__categories-title Категории
-        ul.general-portfolio__categories-list
-          li.general-portfolio__categories-item.js-categories-active Все
-          li.general-portfolio__categories-item POS-материалы
-          li.general-portfolio__categories-item Перфорированные стенды
-          li.general-portfolio__categories-item Комплектующие для строительства
-          li.general-portfolio__categories-item Корпуса / Короба
+        .general-portfolio__categories
+          h1.title-section.desctop-hidden Примеры работ
+          h2.general-portfolio__categories-title Категории
+          ul.general-portfolio__categories-list
+            li.general-portfolio__categories-item.js-categories-active Все
+            li.general-portfolio__categories-item POS-материалы
+            li.general-portfolio__categories-item Перфорированные стенды
+            li.general-portfolio__categories-item Комплектующие для строительства
+            li.general-portfolio__categories-item Корпуса / Короба
 
-      .general-portfolio__tags
-        h2.general-portfolio__tags-title Услуги
-        ul.general-portfolio__tags-list
-          li.general-portfolio__tags-item.tag-grey.js-tag-active Гибка листового металла
-          li.general-portfolio__tags-item.tag-orange Лазерная резка
-          li.general-portfolio__tags-item.tag-fio Порошковая покраска
-          li.general-portfolio__tags-item.tag-lightblue Изготовление металлоизделий
-          li.general-portfolio__tags-item.tag-pink Слесарные работы
+        .general-portfolio__tags
+          h2.general-portfolio__tags-title Услуги
+          ul.general-portfolio__tags-list
+            li.general-portfolio__tags-item.tag-grey.js-tag-active Гибка листового металла
+            li.general-portfolio__tags-item.tag-orange Лазерная резка
+            li.general-portfolio__tags-item.tag-fio Порошковая покраска
+            li.general-portfolio__tags-item.tag-lightblue Изготовление металлоизделий
+            li.general-portfolio__tags-item.tag-pink Слесарные работы
 
 
-      .general-portfolio__cards-grid(style="display: grid")
-        +createPortfolioItems(generalPortfolioItems)
+        .general-portfolio__cards-grid(style="display: grid")
+          +createPortfolioItems(generalPortfolioItems)
 
-        include ../pagination/pagination
+          include ../pagination/pagination
 
 
 

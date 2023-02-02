@@ -71,25 +71,26 @@ mixin createProductionAdvantages ( data )
       p.production-advantage__title=item.title
 
 
-.production
-  .container.production__container.grid
-    h2.title-section Наше производство
-    a(href="").button.button--outline Команда Спирит Бер
-    ul.production__values
-      +createProductionValues(productionValues)
+.container
+  .production
+    .production__container.grid
+      h2.title-section Наше производство
+      a(href="").button.button--outline Команда Спирит Бер
+      ul.production__values
+        +createProductionValues(productionValues)
 
-    .production__video-wrapper
-      video.video-content(preload='auto')
-        source(src='./assets/video/video1.mp4' type='video/mp4')
-      .play-button
-        svg(width="36" height="37")
-          use(href='./assets/img/sprite.svg#playpause')
+      .production__video-wrapper
+        video.video-content(preload='auto')
+          source(src='./assets/video/video1.mp4' type='video/mp4')
+        .play-button
+          svg(width="36" height="37")
+            use(href='./assets/img/sprite.svg#playpause')
 
 
-    .production__advantages-wrapper
-      ul.production__advantages.swiper-wrapper
-        +createProductionAdvantages(productionAdvantages)
+      .production__advantages-wrapper
+        ul.production__advantages.swiper-wrapper
+          +createProductionAdvantages(productionAdvantages)
 
-      .swiper-pagination
+        .swiper-pagination
 
 

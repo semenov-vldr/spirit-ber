@@ -1,29 +1,30 @@
-.hero.hero-post(style="background-image: url('./assets/img/hero-post.jpg')")
-  .container.hero__container
-    span.hero__tag Блог
-    .hero__content
-      h1.hero__title Виды стали
-      span.hero__time Время чтения: 12 минут
-      p.hero__text Черная металлургия производит множество видов стали с разнообразными характеристиками. Основным отличием стали от других металлов является плотность, теплоемкость и температура плавления.
+.container.container-width-full
+  .hero.hero-post(style="background-image: url('./assets/img/hero-post.jpg')")
+    .hero__container
+      span.hero__tag Блог
+      .hero__content
+        h1.hero__title Виды стали
+        span.hero__time Время чтения: 12 минут
+        p.hero__text Черная металлургия производит множество видов стали с разнообразными характеристиками. Основным отличием стали от других металлов является плотность, теплоемкость и температура плавления.
 
 
-    mixin anchorItem(id, name)
-      td.hero-anchor__item
-        a.hero-anchor__link(href=id)=name
+      mixin anchorItem(id, name)
+        td.hero-anchor__item
+          a.hero-anchor__link(href=id)=name
 
 
-    table.hero__anchor.hero-anchor
-      tbody
-        tr
-          +anchorItem('#', 'Плюсы и минусы сплавов')
-          +anchorItem('#', 'Разновидности стали')
-          +anchorItem('#', 'По химическому составу')
-        tr
-          +anchorItem('#', 'По способу производства')
-          +anchorItem('#', 'По назначению')
-          +anchorItem('#', 'По структуре')
-        tr
-          +anchorItem('#', 'По степени раскисления')
-          +anchorItem('#', 'По качеству')
-          +anchorItem('#', 'Маркировка стали')
+      table.hero__anchor.hero-anchor
+        tbody
+          tr
+            +anchorItem('#', 'Плюсы и минусы сплавов')
+            +anchorItem('#', 'Разновидности стали')
+            +anchorItem('#', 'По химическому составу')
+          tr
+            +anchorItem('#', 'По способу производства')
+            +anchorItem('#', 'По назначению')
+            +anchorItem('#', 'По структуре')
+          tr
+            +anchorItem('#', 'По степени раскисления')
+            +anchorItem('#', 'По качеству')
+            +anchorItem('#', 'Маркировка стали')
 

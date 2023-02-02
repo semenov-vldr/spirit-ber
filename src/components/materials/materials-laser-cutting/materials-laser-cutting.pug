@@ -16,14 +16,16 @@ mixin createMaterialList ( data )
       img(src=item.imgSrc)
       span.materials__name=item.name
 
-.materials-laser-cutting
-  .container.materials-laser-cutting__container
-    h2.title-section Используемые материалы
 
-    .materials-laser-cutting__wrapper
-      ul.materials-laser-cutting__list.materials__list.swiper-wrapper
-        +createMaterialList(materialsLaserCutting)
+.container
+  .materials-laser-cutting
+    .materials-laser-cutting__container
+      h2.title-section Используемые материалы
 
-      .swiper-pagination
+      .materials-laser-cutting__wrapper
+        ul.materials-laser-cutting__list.materials__list.swiper-wrapper
+          +createMaterialList(materialsLaserCutting)
+
+        .swiper-pagination
 
 
