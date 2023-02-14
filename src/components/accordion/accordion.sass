@@ -2,6 +2,41 @@
   &__container
     max-width: 1048px
     margin: 0 auto
+    overflow: hidden
+    border-radius: 8px
+
+  &__header
+    position: relative
+    background-color: $frosted-top
+    box-shadow: inset 0 0 2px rgba(113, 200, 255, 0.25)
+    padding: 40px
+    @media (max-width: 768px)
+      padding: 40px 20px
+
+  &__close
+    position: absolute
+    right: 24px
+    width: 44px
+    aspect-ratio: 1 / 1
+    border-radius: 50%
+    @extend .flex-center
+    background-color: rgba(106, 106, 106, 0.1)
+    cursor: pointer
+    &:hover
+      background-color: rgba(106, 106, 106, 0.2)
+    @media (max-width: 768px)
+      width: 30px
+      right: 20px
+      top: 20px
+
+  &__header-title
+    @include fontSize(20, 40)
+    margin-bottom: 24px
+
+  &__header-text
+    @include fontSize(14, 16)
+
+
 
   &__list
     counter-reset: num
@@ -9,8 +44,8 @@
     display: flex
     flex-direction: column
     background-color: $frosted-top
-    border-radius: 8px
-    box-shadow: inset 0px 0px 2px rgba(113, 200, 255, 0.25)
+    //border-radius: 8px
+    box-shadow: inset 0 0 2px rgba(113, 200, 255, 0.25)
 
   &__item
     counter-increment: num

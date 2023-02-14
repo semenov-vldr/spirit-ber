@@ -41,7 +41,6 @@
 
     // Открытие/закрытие gear pop-up
     gearPopupItems.forEach(gearPopupItem => {
-      const closeBtnPortfolioPopup = gearPopupItem.querySelector('.gear-popup__close');
 
       const closePortfolioPopup = () => {
         gearPopupItem.classList.remove('js-gear-popup-active');
@@ -75,7 +74,6 @@
           activePortfolioPopup(gearPopupBtnActive)
         });
       });
-
 
       const closeBtnGearPopup = gearPopupItem.querySelector('.gear-popup__close');
       closeBtnGearPopup.addEventListener('click', closePortfolioPopup);

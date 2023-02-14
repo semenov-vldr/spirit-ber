@@ -1,20 +1,67 @@
 -
-  const popup_lazernaya_rezka_metalla = {
+  const popup_lazernaya_rezka_metalla1 = {
     number: 1,
-    srcImg: './assets/img/portfolio/01.png',
-    title: 'Металлический борт 150 (30х150х50)',
+    srcImg: './assets/img/gear/characteristics/01.png',
+    title: 'Металлический борт 150 (30х150х50) 1',
 
-    description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50)',
+    description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50) 1',
     imgSrcSlides: {
-      imgSrcSlide_1: './assets/img/portfolio/01.png',
-      imgSrcSlide_2: './assets/img/portfolio/02.png',
-      imgSrcSlide_3: './assets/img/portfolio/03.png',
+      imgSrcSlide_1: './assets/img/gear/characteristics/01.png',
+      imgSrcSlide_2: './assets/img/gear/characteristics/02.png',
+      imgSrcSlide_3: './assets/img/gear/characteristics/03.png',
+      imgSrcSlide_4: './assets/img/gear/characteristics/04.jpg',
+    },
+    link: '##',
+  }
+
+  const popup_lazernaya_rezka_metalla2 = {
+    number: 2,
+    srcImg: './assets/img/gear/characteristics/01.png',
+    title: 'Металлический борт 150 (30х150х50) 2',
+
+    description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50) 2',
+    imgSrcSlides: {
+      imgSrcSlide_1: './assets/img/gear/characteristics/01.png',
+      imgSrcSlide_2: './assets/img/gear/characteristics/02.png',
+      imgSrcSlide_3: './assets/img/gear/characteristics/03.png',
+      imgSrcSlide_4: './assets/img/gear/characteristics/04.jpg',
+    },
+    link: '##',
+  }
+
+  const popup_lazernaya_rezka_metalla3 = {
+    number: 3,
+    srcImg: './assets/img/gear/characteristics/01.png',
+    title: 'Металлический борт 150 (30х150х50) 3',
+
+    description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50) 3',
+    imgSrcSlides: {
+      imgSrcSlide_1: './assets/img/gear/characteristics/01.png',
+      imgSrcSlide_2: './assets/img/gear/characteristics/02.png',
+      imgSrcSlide_3: './assets/img/gear/characteristics/03.png',
+      imgSrcSlide_4: './assets/img/gear/characteristics/04.jpg',
+    },
+    link: '##',
+  }
+
+  const popup_lazernaya_rezka_metalla4 = {
+    number: 4,
+    srcImg: './assets/img/gear/characteristics/01.png',
+    title: 'Металлический борт 150 (30х150х50) 4',
+
+    description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50) 4',
+    imgSrcSlides: {
+      imgSrcSlide_1: './assets/img/gear/characteristics/01.png',
+      imgSrcSlide_2: './assets/img/gear/characteristics/02.png',
+      imgSrcSlide_3: './assets/img/gear/characteristics/03.png',
+      imgSrcSlide_4: './assets/img/gear/characteristics/04.jpg',
     },
     link: '##',
   }
 
 // создание карточек для портфолио
 mixin createGearPopup ( gearPopupData )
+  // --------Pop-up "Характеристики"--------
   .gear-popup__item(data-number=gearPopupData.number)
     .gear-popup__wrapper
       button.gear-popup__close
@@ -36,6 +83,9 @@ mixin createGearPopup ( gearPopupData )
         .gear-popup__tag Технические характеристики
         .gear-popup__title=gearPopupData.title
         .gear-popup__description=gearPopupData.description
-        a.gear-popup__link.button.button--bg-accept(href=gearPopupData.link) Заказать услугу
+        a.gear-popup__link.button.button--bg-accept.button-popup(href=gearPopupData.link) Заказать услугу
 
-+createGearPopup(popup_lazernaya_rezka_metalla)
++createGearPopup(popup_lazernaya_rezka_metalla1)
++createGearPopup(popup_lazernaya_rezka_metalla2)
++createGearPopup(popup_lazernaya_rezka_metalla3)
++createGearPopup(popup_lazernaya_rezka_metalla4)
