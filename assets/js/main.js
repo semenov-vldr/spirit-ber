@@ -995,84 +995,84 @@ if (generalPortfolio) {
 
 //------------Pagination--------------------
 
-  function getPageList(totalPages, page, maxLength) {
-
-    function range(start, end) {
-      return Array.from(Array(end - start + 1), (_, i) => i + start);
-    };
-
-    let sideWidth = maxLength < 9 ? 1 : 2;
-    let leftWidth = (maxLength - sideWidth * 2 - 3) >> 1;
-    let rightWidth = (maxLength - sideWidth * 2 - 3) >> 1;
-
-    if (totalPages <= maxLength) {
-      return range(1, totalPages);
-    }
-
-    if (page <= maxLength - sideWidth - 1 - rightWidth) {
-      return range(1, maxLength - sideWidth - 1).concat(0, range(totalPages - sideWidth + 1, totalPages));
-    }
-
-    if (page >= totalPages - sideWidth - 1 - rightWidth) {
-      return range(1, sideWidth).concat(0, range(totalPages - sideWidth - 1 - rightWidth - leftWidth, totalPages));
-    }
-
-    return range(1, sideWidth).concat(0, range(page - leftWidth, page + rightWidth), 0, range(totalPages - sideWidth + 1, totalPages));
-  }
-
-
-  $(function (){
-    let items = $('.general-portfolio__cards-grid .portfolio__item');
-    let numberOfItems = items.length;
-    const limitPerPages = 6; // how may card items visible per a page
-    let totalPages = Math.ceil(numberOfItems / limitPerPages);
-    const paginationSIze = 6; // How many page elements visible in the pagination
-    let currentPage;
-
-    function showPage(whichPage) {
-      if (whichPage < 1 || whichPage > totalPages) return false;
-
-      currentPage = whichPage;
-
-      items.hide().slice((currentPage - 1) * limitPerPages, currentPage * limitPerPages).show();
-
-
-      $('.pagination li').slice(1, -1).remove();
-
-      getPageList(totalPages, currentPage, paginationSIze).forEach(item => {
-        $('<li>').addClass('pagination__item').addClass(item ? 'js-pagination-current' : 'pagination__item--dots')
-        .toggleClass('js-pagination-active', item === currentPage ).text(item || '...').insertBefore('.pagination__next');
-      });
-
-
-      $('.pagination__prev').toggleClass('js-pagination-disable', currentPage === 1);
-      $('.pagination__next').toggleClass('js-pagination-disable', currentPage === totalPages);
-      return true;
-    };
-
-
-    $('.pagination').append(
-      $('<li>').addClass('pagination__item').addClass('pagination__prev'),
-      $('<li>').addClass('pagination__item').addClass('pagination__next'),
-    );
-
-    $('.general-portfolio__cards-grid').show();
-    showPage(1);
-
-
-    $(document).on('click', '.pagination li.js-pagination-current:not(.js-pagination-active)', function() {
-      return showPage(+$(this).text());
-    });
-
-    $('.pagination__next').on('click', function () {
-      return showPage(currentPage + 1);
-    });
-
-    $('.pagination__prev').on('click', function () {
-      return showPage(currentPage - 1);
-    });
-
-  });
+  // function getPageList(totalPages, page, maxLength) {
+  //
+  //   function range(start, end) {
+  //     return Array.from(Array(end - start + 1), (_, i) => i + start);
+  //   };
+  //
+  //   let sideWidth = maxLength < 9 ? 1 : 2;
+  //   let leftWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+  //   let rightWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+  //
+  //   if (totalPages <= maxLength) {
+  //     return range(1, totalPages);
+  //   }
+  //
+  //   if (page <= maxLength - sideWidth - 1 - rightWidth) {
+  //     return range(1, maxLength - sideWidth - 1).concat(0, range(totalPages - sideWidth + 1, totalPages));
+  //   }
+  //
+  //   if (page >= totalPages - sideWidth - 1 - rightWidth) {
+  //     return range(1, sideWidth).concat(0, range(totalPages - sideWidth - 1 - rightWidth - leftWidth, totalPages));
+  //   }
+  //
+  //   return range(1, sideWidth).concat(0, range(page - leftWidth, page + rightWidth), 0, range(totalPages - sideWidth + 1, totalPages));
+  // }
+  //
+  //
+  // $(function (){
+  //   let items = $('.general-portfolio__cards-grid .portfolio__item');
+  //   let numberOfItems = items.length;
+  //   const limitPerPages = 6; // how may card items visible per a page
+  //   let totalPages = Math.ceil(numberOfItems / limitPerPages);
+  //   const paginationSIze = 6; // How many page elements visible in the pagination
+  //   let currentPage;
+  //
+  //   function showPage(whichPage) {
+  //     if (whichPage < 1 || whichPage > totalPages) return false;
+  //
+  //     currentPage = whichPage;
+  //
+  //     items.hide().slice((currentPage - 1) * limitPerPages, currentPage * limitPerPages).show();
+  //
+  //
+  //     $('.pagination li').slice(1, -1).remove();
+  //
+  //     getPageList(totalPages, currentPage, paginationSIze).forEach(item => {
+  //       $('<li>').addClass('pagination__item').addClass(item ? 'js-pagination-current' : 'pagination__item--dots')
+  //       .toggleClass('js-pagination-active', item === currentPage ).text(item || '...').insertBefore('.pagination__next');
+  //     });
+  //
+  //
+  //     $('.pagination__prev').toggleClass('js-pagination-disable', currentPage === 1);
+  //     $('.pagination__next').toggleClass('js-pagination-disable', currentPage === totalPages);
+  //     return true;
+  //   };
+  //
+  //
+  //   $('.pagination').append(
+  //     $('<li>').addClass('pagination__item').addClass('pagination__prev'),
+  //     $('<li>').addClass('pagination__item').addClass('pagination__next'),
+  //   );
+  //
+  //   $('.general-portfolio__cards-grid').show();
+  //   showPage(1);
+  //
+  //
+  //   $(document).on('click', '.pagination li.js-pagination-current:not(.js-pagination-active)', function() {
+  //     return showPage(+$(this).text());
+  //   });
+  //
+  //   $('.pagination__next').on('click', function () {
+  //     return showPage(currentPage + 1);
+  //   });
+  //
+  //   $('.pagination__prev').on('click', function () {
+  //     return showPage(currentPage - 1);
+  //   });
+  //
+  // });
 
 
   //------------Pagination END--------------------
@@ -1751,8 +1751,6 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
 {
 
-  const gearPopupBtnActiveList = document.querySelectorAll('.gear .js-gearPopupBtnActive');
-
   const gearPopupItems = document.querySelectorAll('.gear-popup__item');
 
   if (gearPopupItems.length) {
@@ -1792,7 +1790,7 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
     });
 
 
-    // Открытие/закрытие pop-up
+    // Открытие/закрытие gear pop-up
     gearPopupItems.forEach(gearPopupItem => {
       const closeBtnPortfolioPopup = gearPopupItem.querySelector('.gear-popup__close');
 
@@ -1803,23 +1801,35 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
       function onDocumentClick () {
         gearPopupItem.addEventListener('click', (evt) => {
-          if (evt.target.classList.contains('portfolio-item__popup')) {
+          if (evt.target.classList.contains('gear-popup__item')) {
             closePortfolioPopup();
           }
         });
       };
 
-      const activePortfolioPopup = (evt) => {
-        if (evt.target === closeBtnPortfolioPopup) {
-          closePortfolioPopup();
-        } else {
+      const activePortfolioPopup = (gearPopupBtnActive) => {
+        const dataNumberPopup = gearPopupItem.dataset.number;
+        const dataNumberGear = gearPopupBtnActive.dataset.numberGear;
+
+        if(dataNumberPopup === dataNumberGear) {
           gearPopupItem.classList.add('js-gear-popup-active');
           blockScrollBody();
           onDocumentClick();
         }
       };
 
-      gearPopupItem.addEventListener('click', activePortfolioPopup);
+
+      const gearPopupBtnActiveList = document.querySelectorAll('.gear .js-gearPopupBtnActive');
+
+      gearPopupBtnActiveList.forEach(gearPopupBtnActive => {
+        gearPopupBtnActive.addEventListener('click', function () {
+          activePortfolioPopup(gearPopupBtnActive)
+        });
+      });
+
+
+      const closeBtnGearPopup = gearPopupItem.querySelector('.gear-popup__close');
+      closeBtnGearPopup.addEventListener('click', closePortfolioPopup);
 
     });
 
@@ -1983,23 +1993,6 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
 {
 
-  const data = {
-    // класс для всего блока, в котором мы работаем
-    classWrapper: '.hero--index',
-    // класс контента, который будет меняться
-    classSlide: '.hero-slider-pagination__item',
-    // класс табов
-    classNav: '.hero-slide',
-    // имя активного класса
-    activeClass: 'js-hero-active',
-    // data-атрибут для табов
-    dataNameNav: 'data-pagination',
-    // data-атрибут для слайда
-    dataNameSlide: 'data-slide',
-
-  };
-
-  //tabsSlides(data)
 
 
 
@@ -2007,13 +2000,41 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
   if (heroIndex) {
 
+    const videoHeroIndex = heroIndex.querySelector('video.hero__video');
+
     const prev = heroIndex.querySelector('.slider-nav__prev');
     const next = heroIndex.querySelector('.slider-nav__next');
 
     const slides = heroIndex.querySelectorAll('.hero-slide');
     const dots = heroIndex.querySelectorAll('.hero-slider-pagination__item');
 
-    const addClassActive = (item) => item.classList.add('js-hero-active');
+    const addClassActive = (item) => {
+      item.classList.add('js-hero-active');
+
+      const dataBgImgSrc = item.dataset.bgImgSrc;
+      const dataBgVideoSrc = item.dataset.bgVideoSrc;
+
+      if (dataBgImgSrc && !dataBgVideoSrc) {
+        heroIndex.style.backgroundImage = `url(${dataBgImgSrc})`;
+        videoHeroIndex.style.display = "none"
+        videoHeroIndex.src = "";
+      }
+
+      if (!dataBgImgSrc && !dataBgVideoSrc) {
+        heroIndex.style.backgroundImage = "url('')";
+        videoHeroIndex.src = "";
+        videoHeroIndex.style.display = "none"
+      }
+
+      if (dataBgVideoSrc) {
+        videoHeroIndex.style.display = "block"
+        videoHeroIndex.src = dataBgVideoSrc;
+        heroIndex.style.backgroundImage = `url('')`;
+      }
+
+    };
+
+
     const removeClassActive = (item) => item.classList.remove('js-hero-active');
 
     addClassActive(slides[0])
@@ -2180,9 +2201,7 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
   if (portfolioSwiper) {
 
-    let mySwiper;
-
-    mySwiper = new Swiper(portfolioSwiper, {
+    let mySwiper = new Swiper(portfolioSwiper, {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -2204,9 +2223,6 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
       centeredSlides: false,
 
-      // Отступ между слайдами
-      //spaceBetween: 40,
-
       // Стартовый слайд
       initialSlide: 0,
 
@@ -2214,6 +2230,10 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
       // Ширина экрана
       breakpoints: {
         320: {
+          slidesPerView: 1,
+          spaceBetween: 8,
+        },
+        380: {
           slidesPerView: 2,
           spaceBetween: 12,
         },
@@ -2227,6 +2247,79 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
         },
       }
     });
+
+
+
+    // -------Слайдлер внутри карточки портфолио (в виде слайдера)------------------
+
+
+    const portfolioPopups = document.querySelectorAll('.portfolio-item__popup');
+
+    // Слайдер внутри pop-up
+    portfolioPopups.forEach(portfolioPopup => {
+
+      const swiperThumbs = portfolioPopup.querySelector('.portfolio-popup__swiper--thumbs');
+      const swiperTop = portfolioPopup.querySelector('.portfolio-popup__swiper--top');
+
+
+      let swiper__thumbs = new Swiper(swiperThumbs, {
+        spaceBetween: 28,
+        slidesPerView: "auto",
+        freeMode: true,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        watchOverflow: true,
+        initialSlide: 0,
+      });
+
+      let swiper__top = new Swiper(swiperTop, {
+        loop: true,
+        slidesPerView: 1,
+        centeredSlides: true,
+        initialSlide: 0,
+        thumbs: {
+          swiper: swiper__thumbs,
+        },
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true,
+        }
+      });
+
+
+      // значение дата-атрибута поп-апа (data-number-popup)
+      const numberPopup = portfolioPopup.dataset.numberPopup;
+      // Слайд в фортфолио, который относится к поп-ап
+      const portfolioSlide = portfolioSwiper.querySelector(`[data-number-slide="${numberPopup}"`);
+
+        const closeBtnPortfolioPopup = portfolioPopup.querySelector('.portfolio-popup__close');
+
+
+        const closePortfolioPopup = () => {
+          portfolioPopup.style.display = "";
+          unblockScrollBody();
+        };
+
+      closeBtnPortfolioPopup.addEventListener('click', closePortfolioPopup);
+
+        function onDocumentClick () {
+          portfolioPopup.addEventListener('click', (evt) => {
+            if (evt.target.classList.contains('portfolio-item__popup')) {
+              closePortfolioPopup();
+            }
+          });
+        };
+
+        const activePortfolioPopup = () => {
+            portfolioPopup.style.display = "block";
+            blockScrollBody();
+            onDocumentClick();
+        };
+
+      portfolioSlide.addEventListener('click', activePortfolioPopup);
+    });
+
+
 
   }
 
