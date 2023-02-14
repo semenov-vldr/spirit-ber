@@ -106,11 +106,25 @@
       margin-top: 8px
 
   &__tags-title
+    display: flex
+    gap: 20px
+    width: fit-content
+    position: relative
     margin-bottom: 16px
     font-weight: 500
     font-size: 24px
     @media (max-width: $width-mobile)
       font-size: 18px
+
+  &__tags-reset
+    cursor: pointer
+    svg
+      vertical-align: super
+    &:hover svg
+      fill: #fff
+
+
+
 
   &__tags-list
     display: flex

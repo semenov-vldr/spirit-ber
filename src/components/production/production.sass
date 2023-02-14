@@ -1,5 +1,7 @@
 .production
   background: radial-gradient(circle, rgba($accent, 0.5) 0%, rgba(0,0,0,0) 50%)
+  @media (max-width: 768px)
+    background: linear-gradient(180deg, rgba(44,227,255,0) 15%, rgba(44,227,255,0.14) 27%, rgba(44,227,255,0.27) 43%, rgba(44,227,255,0.3) 55%, rgba(44,227,255,0.24) 61%, rgba(44,227,255,0.05) 74%, rgba(44,227,255,0) 100%)
 
   &__container
     text-align: center
@@ -7,6 +9,11 @@
     @media (max-width: $width-mobile)
       display: flex
       flex-direction: column
+      margin-left: -50px
+      margin-right: -50px
+    @media (max-width: 768px)
+      margin-left: -20px
+      margin-right: -20px
 
   h2
     grid-column: 1 / -1
@@ -24,6 +31,8 @@
     grid-template-columns: 1fr 1fr
     grid-column: span 5
     gap: 45px 60px
+    @media (max-width: $width-mobile)
+      padding: 0 20px
     @media (max-width: 768px)
       gap: 30px
 
@@ -59,7 +68,7 @@
     overflow: hidden
     @media (max-width: 768px)
       aspect-ratio: 37 / 18
-      margin: 30px -20px 0
+      margin: 30px 0 0
 
 
   &__advantages-wrapper

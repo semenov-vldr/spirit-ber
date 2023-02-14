@@ -5,9 +5,7 @@
 
   if (portfolioSwiper) {
 
-    let mySwiper;
-
-    mySwiper = new Swiper(portfolioSwiper, {
+    let mySwiper = new Swiper(portfolioSwiper, {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -29,9 +27,6 @@
 
       centeredSlides: false,
 
-      // Отступ между слайдами
-      //spaceBetween: 40,
-
       // Стартовый слайд
       initialSlide: 0,
 
@@ -39,6 +34,10 @@
       // Ширина экрана
       breakpoints: {
         320: {
+          slidesPerView: 1,
+          spaceBetween: 8,
+        },
+        380: {
           slidesPerView: 2,
           spaceBetween: 12,
         },
@@ -52,6 +51,79 @@
         },
       }
     });
+
+
+
+    // -------Слайдлер внутри карточки портфолио (в виде слайдера)------------------
+
+
+    const portfolioPopups = document.querySelectorAll('.portfolio-item__popup');
+
+    // Слайдер внутри pop-up
+    portfolioPopups.forEach(portfolioPopup => {
+
+      const swiperThumbs = portfolioPopup.querySelector('.portfolio-popup__swiper--thumbs');
+      const swiperTop = portfolioPopup.querySelector('.portfolio-popup__swiper--top');
+
+
+      let swiper__thumbs = new Swiper(swiperThumbs, {
+        spaceBetween: 28,
+        slidesPerView: "auto",
+        freeMode: true,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        watchOverflow: true,
+        initialSlide: 0,
+      });
+
+      let swiper__top = new Swiper(swiperTop, {
+        loop: true,
+        slidesPerView: 1,
+        centeredSlides: true,
+        initialSlide: 0,
+        thumbs: {
+          swiper: swiper__thumbs,
+        },
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true,
+        }
+      });
+
+
+      // значение дата-атрибута поп-апа (data-number-popup)
+      const numberPopup = portfolioPopup.dataset.numberPopup;
+      // Слайд в фортфолио, который относится к поп-ап
+      const portfolioSlide = portfolioSwiper.querySelector(`[data-number-slide="${numberPopup}"`);
+
+        const closeBtnPortfolioPopup = portfolioPopup.querySelector('.portfolio-popup__close');
+
+
+        const closePortfolioPopup = () => {
+          portfolioPopup.style.display = "";
+          unblockScrollBody();
+        };
+
+      closeBtnPortfolioPopup.addEventListener('click', closePortfolioPopup);
+
+        function onDocumentClick () {
+          portfolioPopup.addEventListener('click', (evt) => {
+            if (evt.target.classList.contains('portfolio-item__popup')) {
+              closePortfolioPopup();
+            }
+          });
+        };
+
+        const activePortfolioPopup = () => {
+            portfolioPopup.style.display = "block";
+            blockScrollBody();
+            onDocumentClick();
+        };
+
+      portfolioSlide.addEventListener('click', activePortfolioPopup);
+    });
+
+
 
   }
 

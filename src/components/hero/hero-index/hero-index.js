@@ -1,22 +1,5 @@
 {
 
-  const data = {
-    // класс для всего блока, в котором мы работаем
-    classWrapper: '.hero--index',
-    // класс контента, который будет меняться
-    classSlide: '.hero-slider-pagination__item',
-    // класс табов
-    classNav: '.hero-slide',
-    // имя активного класса
-    activeClass: 'js-hero-active',
-    // data-атрибут для табов
-    dataNameNav: 'data-pagination',
-    // data-атрибут для слайда
-    dataNameSlide: 'data-slide',
-
-  };
-
-  //tabsSlides(data)
 
 
 
@@ -24,13 +7,41 @@
 
   if (heroIndex) {
 
+    const videoHeroIndex = heroIndex.querySelector('video.hero__video');
+
     const prev = heroIndex.querySelector('.slider-nav__prev');
     const next = heroIndex.querySelector('.slider-nav__next');
 
     const slides = heroIndex.querySelectorAll('.hero-slide');
     const dots = heroIndex.querySelectorAll('.hero-slider-pagination__item');
 
-    const addClassActive = (item) => item.classList.add('js-hero-active');
+    const addClassActive = (item) => {
+      item.classList.add('js-hero-active');
+
+      const dataBgImgSrc = item.dataset.bgImgSrc;
+      const dataBgVideoSrc = item.dataset.bgVideoSrc;
+
+      if (dataBgImgSrc && !dataBgVideoSrc) {
+        heroIndex.style.backgroundImage = `url(${dataBgImgSrc})`;
+        videoHeroIndex.style.display = "none"
+        videoHeroIndex.src = "";
+      }
+
+      if (!dataBgImgSrc && !dataBgVideoSrc) {
+        heroIndex.style.backgroundImage = "url('')";
+        videoHeroIndex.src = "";
+        videoHeroIndex.style.display = "none"
+      }
+
+      if (dataBgVideoSrc) {
+        videoHeroIndex.style.display = "block"
+        videoHeroIndex.src = dataBgVideoSrc;
+        heroIndex.style.backgroundImage = `url('')`;
+      }
+
+    };
+
+
     const removeClassActive = (item) => item.classList.remove('js-hero-active');
 
     addClassActive(slides[0])

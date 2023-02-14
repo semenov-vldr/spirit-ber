@@ -1,0 +1,104 @@
+.principle
+  display: flex
+  flex-direction: column
+  gap: clamp(32px, calc(32px + (80 - 32) * ((100vw - 768px) / (1920 - 768))), 80px)
+
+
+  &__container
+    display: flex
+    gap: 40px
+    align-items: center
+    @media (max-width: $width-mobile)
+      flex-direction: column
+      padding: 0 50px
+      gap: 20px
+    @media (max-width: 768px)
+      padding: 0 20px
+  &__container:nth-child(odd)
+    flex-direction: row-reverse
+  &__container,
+  &__container:nth-child(odd)
+    @media (max-width: $width-mobile)
+      flex-direction: column-reverse
+      gap: 32px
+
+  h2
+    margin-bottom: 0
+
+  ol
+    list-style-type: decimal
+
+  &__image
+    position: relative
+    flex: 0 1 50%
+    align-self: stretch
+    max-height: 500px
+    border-radius: 4px
+    overflow: hidden
+    img, video
+      width: 100%
+      height: 100%
+      object-fit: cover
+    @media (max-width: 1400px)
+      grid-column: span 6
+    @media (max-width: $width-mobile)
+      grid-column: 1 / -1
+
+  &__content
+    flex: 0 1 50%
+    display: flex
+    flex-direction: column
+    gap: 32px
+    @media (max-width: $width-mobile)
+      gap: 20px
+
+
+  &__title
+    @include fontSize(24, 40)
+    line-height: 1.4
+    font-weight: 500
+    color: $text
+    margin-bottom: 0
+
+
+  &__description
+    display: flex
+    flex-direction: column
+    gap: 24px
+    @media (max-width: $width-mobile)
+      gap: 12px
+
+  &__text
+    @include fontSize(14, 16)
+    &:not(:last-child)
+      margin-bottom: 20px
+
+  &__list
+    display: flex
+    flex-direction: column
+    gap: 12px
+    list-style-type: disc
+    padding-left: 25px
+    &--number
+      list-style-type: decimal
+
+  &__subtitle
+    @include fontSize(16, 20)
+    &--accent
+      color: $accent
+    &--bigger
+      @include fontSize(18, 24)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

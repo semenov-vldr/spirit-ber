@@ -1,5 +1,5 @@
 .container
-  .portfolio.portfolio-laser-cutting#laser-cutting-portfolio
+  .portfolio-slider#laser-cutting-portfolio
     .portfolio__container
       h2.title-section Примеры работ
 
@@ -13,6 +13,68 @@
           .slider-nav__next
 
 
+      .portfolio-item__popup.portfolio-popup__item(data-number-popup="0")
+        .portfolio-popup__wrapper.swiper-wrapper
+          button.portfolio-popup__close
+
+          .portfolio-popup__swiper.portfolio-popup__swiper--top
+            .portfolio-popup__swiper-wrapper.swiper-wrapper
+              .swiper-slide
+                img(src="./assets/img/portfolio/04.png" alt='portfolio')
+              .swiper-slide
+                img(src="./assets/img/portfolio/05.png" alt='portfolio')
+              .swiper-slide
+                img(src="./assets/img/portfolio/06.png" alt='portfolio')
+            .swiper-pagination
+
+          .portfolio-popup__swiper.portfolio-popup__swiper--thumbs
+            .portfolio-popup__swiper-wrapper.swiper-wrapper
+              .swiper-slide
+                img(src="./assets/img/portfolio/04.png" alt='portfolio')
+              .swiper-slide
+                img(src="./assets/img/portfolio/05.png" alt='portfolio')
+              .swiper-slide
+                img(src="./assets/img/portfolio/06.png" alt='portfolio')
+
+          .portfolio-popup__content
+            .portfolio-popup__date Дата 1
+            .portfolio-popup__title Зацеп 1
+            ul.portfolio-popup__tags.portfolio-popup-tags
+              li.portfolio-tags__item.portfolio-popup-tags__item(class="tag-orange") Лазерная резка
+            .portfolio-popup__description Зацеп из нержавеющей стали AISI 304 ммматовая S=1,5мм
+            a.portfolio-popup__link.button.arrow.button--outline(href="##") Смотреть кейс
+
+
+      .portfolio-item__popup.portfolio-popup__item(data-number-popup="1")
+        .portfolio-popup__wrapper.swiper-wrapper
+          button.portfolio-popup__close
+
+          .portfolio-popup__swiper.portfolio-popup__swiper--top
+            .portfolio-popup__swiper-wrapper.swiper-wrapper
+              .swiper-slide
+                img(src="./assets/img/portfolio/05.png" alt='portfolio')
+              .swiper-slide
+                img(src="./assets/img/portfolio/06.png" alt='portfolio')
+              .swiper-slide
+                img(src="./assets/img/portfolio/03.png" alt='portfolio')
+            .swiper-pagination
+
+          .portfolio-popup__swiper.portfolio-popup__swiper--thumbs
+            .portfolio-popup__swiper-wrapper.swiper-wrapper
+              .swiper-slide
+                img(src="./assets/img/portfolio/05.png" alt='portfolio')
+              .swiper-slide
+                img(src="./assets/img/portfolio/06.png" alt='portfolio')
+              .swiper-slide
+                img(src="./assets/img/portfolio/03.png" alt='portfolio')
+
+          .portfolio-popup__content
+            .portfolio-popup__date Дата 2
+            .portfolio-popup__title Зацеп 2
+            ul.portfolio-popup__tags.portfolio-popup-tags
+              li.portfolio-tags__item.portfolio-popup-tags__item(class="tag-orange") Лазерная резка
+            .portfolio-popup__description Зацеп из нержавеющей стали AISI 304 ммматовая S=1,5мм
+            a.portfolio-popup__link.button.arrow.button--outline(href="##") Смотреть кейс
 
 
 

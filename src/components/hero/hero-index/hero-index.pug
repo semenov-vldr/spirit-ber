@@ -1,7 +1,7 @@
 .container.container-width-full
-  .hero.hero--index(style="background-image: url('./assets/img/bg-hero.png')")
-    //video.hero__video(preload='auto' autoplay muted loop)
-    //  source(src='./assets/video/video1.mp4' type='video/mp4')
+  .hero.hero--index(style="background-image: url('')")
+    video.hero__video(preload='auto' autoplay muted loop src='' playsinline)
+
     .hero__container
 
       .hero__slider.hero-slider
@@ -10,11 +10,11 @@
 
         ol.hero-slider__pagination.hero-slider-pagination
 
-          li.hero-slider-pagination__item(data-pagination="1")
+          li.hero-slider-pagination__item(data-pagination="1" data-bg-img-src="./assets/img/bg-hero.png")
             u.hero-slider-pagination__number 01
             span.hero-slider-pagination__name Лазерная резка
 
-          li.hero-slider-pagination__item(data-pagination="2")
+          li.hero-slider-pagination__item(data-pagination="2" data-bg-video-src="./assets/video/video1.mp4")
             u.hero-slider-pagination__number 02
             span.hero-slider-pagination__name Гибка листового металла
 

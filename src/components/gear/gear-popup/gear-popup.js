@@ -1,7 +1,5 @@
 {
 
-  const gearPopupBtnActiveList = document.querySelectorAll('.gear .js-gearPopupBtnActive');
-
   const gearPopupItems = document.querySelectorAll('.gear-popup__item');
 
   if (gearPopupItems.length) {
@@ -41,7 +39,7 @@
     });
 
 
-    // Открытие/закрытие pop-up
+    // Открытие/закрытие gear pop-up
     gearPopupItems.forEach(gearPopupItem => {
       const closeBtnPortfolioPopup = gearPopupItem.querySelector('.gear-popup__close');
 
@@ -52,23 +50,35 @@
 
       function onDocumentClick () {
         gearPopupItem.addEventListener('click', (evt) => {
-          if (evt.target.classList.contains('portfolio-item__popup')) {
+          if (evt.target.classList.contains('gear-popup__item')) {
             closePortfolioPopup();
           }
         });
       };
 
-      const activePortfolioPopup = (evt) => {
-        if (evt.target === closeBtnPortfolioPopup) {
-          closePortfolioPopup();
-        } else {
+      const activePortfolioPopup = (gearPopupBtnActive) => {
+        const dataNumberPopup = gearPopupItem.dataset.number;
+        const dataNumberGear = gearPopupBtnActive.dataset.numberGear;
+
+        if(dataNumberPopup === dataNumberGear) {
           gearPopupItem.classList.add('js-gear-popup-active');
           blockScrollBody();
           onDocumentClick();
         }
       };
 
-      gearPopupItem.addEventListener('click', activePortfolioPopup);
+
+      const gearPopupBtnActiveList = document.querySelectorAll('.gear .js-gearPopupBtnActive');
+
+      gearPopupBtnActiveList.forEach(gearPopupBtnActive => {
+        gearPopupBtnActive.addEventListener('click', function () {
+          activePortfolioPopup(gearPopupBtnActive)
+        });
+      });
+
+
+      const closeBtnGearPopup = gearPopupItem.querySelector('.gear-popup__close');
+      closeBtnGearPopup.addEventListener('click', closePortfolioPopup);
 
     });
 

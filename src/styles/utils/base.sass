@@ -47,15 +47,16 @@ main
 .container
   max-width: 1600px
   min-width: 280px
-  width: 100%
+  width: calc(100vw - 320px)
   margin: 0 auto
   box-sizing: content-box
   @media (max-width: 1200px)
-    width: calc(100vw - 100px)
+    width: calc(100vw - 200px)
   @media (max-width: 768px)
     width: calc(100vw - 40px)
   &.container-width-full
     max-width: 100%
+    width: 100%
     @media (max-width: 1200px)
       width: 100%
     @media (max-width: 768px)

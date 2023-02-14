@@ -89,8 +89,8 @@
 
 
 mixin createPortfolioSlides ( portfolioData )
-  each card in portfolioData
-    li.portfolio__item.swiper-slide
+  each card, index in portfolioData
+    li.portfolio__item.swiper-slide(data-number-slide=index)
       .portfolio__image-wrapper
         img(src=card.srcImg alt='portfolio')
       h3.portfolio__title=card.title
