@@ -1792,7 +1792,6 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
     // Открытие/закрытие gear pop-up
     gearPopupItems.forEach(gearPopupItem => {
-      const closeBtnPortfolioPopup = gearPopupItem.querySelector('.gear-popup__close');
 
       const closePortfolioPopup = () => {
         gearPopupItem.classList.remove('js-gear-popup-active');
@@ -1826,7 +1825,6 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
           activePortfolioPopup(gearPopupBtnActive)
         });
       });
-
 
       const closeBtnGearPopup = gearPopupItem.querySelector('.gear-popup__close');
       closeBtnGearPopup.addEventListener('click', closePortfolioPopup);
@@ -2338,11 +2336,8 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
   const priceLaserCutting = document.querySelector('.price-laser-cutting'); // блок с таблицей цен
 
-  //console.log(priceLaserCutting)
-
   let tableRowList = document.querySelectorAll('.table-row');    // строки значений
 
-  //console.log(tableRowList)
 
   const table_thickness = document.querySelectorAll('.col');       // строка толщин материалов
 
@@ -2382,8 +2377,35 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
         td.addEventListener('mouseout', () => DontSelectRowCol(idx) );
       });
     });
+  }
 
 
+
+  // Открытие поп-ап "Формирование цены"
+  const tablePrice = document.querySelector('.price');
+
+  if (tablePrice) {
+
+    const openPriceFormation = tablePrice.querySelector('.price-table__pricing');
+    const priceFormation = tablePrice.querySelector('.price-formation');
+    const closePriceFormation = priceFormation.querySelector('.accordion .accordion__close');
+
+    openPriceFormation.addEventListener('click', () => {
+      priceFormation.classList.add('js-priceFormation-visible');
+      blockScrollBody()
+    });
+
+    closePriceFormation.addEventListener('click', () => {
+      priceFormation.classList.remove('js-priceFormation-visible');
+      unblockScrollBody()
+    });
+
+    priceFormation.addEventListener('click', (evt) => {
+      if (evt.target.classList.contains('price-formation')) {
+        priceFormation.classList.remove('js-priceFormation-visible');
+        unblockScrollBody()
+      }
+    })
 
   }
 
