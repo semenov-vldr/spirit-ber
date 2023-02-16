@@ -2253,9 +2253,11 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
     const portfolioPopups = document.querySelectorAll('.portfolio-item__popup');
 
-    // Слайдер внутри pop-up
+
     portfolioPopups.forEach(portfolioPopup => {
 
+
+      // Слайдеры внутри pop-up портфолио
       const swiperThumbs = portfolioPopup.querySelector('.portfolio-popup__swiper--thumbs');
       const swiperTop = portfolioPopup.querySelector('.portfolio-popup__swiper--top');
 
@@ -2287,18 +2289,18 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
       // значение дата-атрибута поп-апа (data-number-popup)
       const numberPopup = portfolioPopup.dataset.numberPopup;
-      // Слайд в фортфолио, который относится к поп-ап
-      const portfolioSlide = portfolioSwiper.querySelector(`[data-number-slide="${numberPopup}"`);
+
+        // Слайд в фортфолио, который относится к поп-ап
+        const portfolioSlide = portfolioSwiper.querySelector(`[data-number-slide="${numberPopup}"`);
 
         const closeBtnPortfolioPopup = portfolioPopup.querySelector('.portfolio-popup__close');
-
 
         const closePortfolioPopup = () => {
           portfolioPopup.style.display = "";
           unblockScrollBody();
         };
 
-      closeBtnPortfolioPopup.addEventListener('click', closePortfolioPopup);
+        closeBtnPortfolioPopup.addEventListener('click', closePortfolioPopup);
 
         function onDocumentClick () {
           portfolioPopup.addEventListener('click', (evt) => {
@@ -2309,12 +2311,13 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
         };
 
         const activePortfolioPopup = () => {
-            portfolioPopup.style.display = "block";
-            blockScrollBody();
-            onDocumentClick();
+          portfolioPopup.style.display = "block";
+          blockScrollBody();
+          onDocumentClick();
         };
 
-      portfolioSlide.addEventListener('click', activePortfolioPopup);
+        portfolioSlide.addEventListener('click', activePortfolioPopup);
+
     });
 
 
@@ -2322,7 +2325,7 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
   }
 
 
-
+//document.addEventListener('click', (evt) => console.log(evt.target))
 
 
 
@@ -2337,7 +2340,6 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
   const priceLaserCutting = document.querySelector('.price-laser-cutting'); // блок с таблицей цен
 
   let tableRowList = document.querySelectorAll('.table-row');    // строки значений
-
 
   const table_thickness = document.querySelectorAll('.col');       // строка толщин материалов
 
@@ -2387,25 +2389,29 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
   if (tablePrice) {
 
     const openPriceFormation = tablePrice.querySelector('.price-table__pricing');
-    const priceFormation = tablePrice.querySelector('.price-formation');
-    const closePriceFormation = priceFormation.querySelector('.accordion .accordion__close');
 
-    openPriceFormation.addEventListener('click', () => {
-      priceFormation.classList.add('js-priceFormation-visible');
-      blockScrollBody()
-    });
+    if (openPriceFormation) {
 
-    closePriceFormation.addEventListener('click', () => {
-      priceFormation.classList.remove('js-priceFormation-visible');
-      unblockScrollBody()
-    });
+      const priceFormation = tablePrice.querySelector('.price-formation');
+      const closePriceFormation = priceFormation.querySelector('.accordion .accordion__close');
 
-    priceFormation.addEventListener('click', (evt) => {
-      if (evt.target.classList.contains('price-formation')) {
+      openPriceFormation.addEventListener('click', () => {
+        priceFormation.classList.add('js-priceFormation-visible');
+        blockScrollBody()
+      });
+
+      closePriceFormation.addEventListener('click', () => {
         priceFormation.classList.remove('js-priceFormation-visible');
         unblockScrollBody()
-      }
-    })
+      });
+
+      priceFormation.addEventListener('click', (evt) => {
+        if (evt.target.classList.contains('price-formation')) {
+          priceFormation.classList.remove('js-priceFormation-visible');
+          unblockScrollBody()
+        }
+      })
+    }
 
   }
 
