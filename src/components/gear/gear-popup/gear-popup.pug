@@ -2,24 +2,25 @@
   const popup_lazernaya_rezka_metalla1 = {
     number: 1,
     srcImg: './assets/img/gear/characteristics/01.png',
-    title: 'Металлический борт 150 (30х150х50) 1',
+    title: 'Установка для лазерной резки',
 
-    description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50) 1',
+    model: 'FIBER LCM R1530F',
     imgSrcSlides: {
       imgSrcSlide_1: './assets/img/gear/characteristics/01.png',
       imgSrcSlide_2: './assets/img/gear/characteristics/02.png',
       imgSrcSlide_3: './assets/img/gear/characteristics/03.png',
       imgSrcSlide_4: './assets/img/gear/characteristics/04.jpg',
     },
+
     link: '##',
   }
 
   const popup_lazernaya_rezka_metalla2 = {
     number: 2,
     srcImg: './assets/img/gear/characteristics/01.png',
-    title: 'Металлический борт 150 (30х150х50) 2',
+    title: 'Установка для лазерной резки',
 
-    description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50) 2',
+    model: 'LVD ORION 3015 PLUS',
     imgSrcSlides: {
       imgSrcSlide_1: './assets/img/gear/characteristics/01.png',
       imgSrcSlide_2: './assets/img/gear/characteristics/02.png',
@@ -29,35 +30,8 @@
     link: '##',
   }
 
-  const popup_lazernaya_rezka_metalla3 = {
-    number: 3,
-    srcImg: './assets/img/gear/characteristics/01.png',
-    title: 'Металлический борт 150 (30х150х50) 3',
 
-    description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50) 3',
-    imgSrcSlides: {
-      imgSrcSlide_1: './assets/img/gear/characteristics/01.png',
-      imgSrcSlide_2: './assets/img/gear/characteristics/02.png',
-      imgSrcSlide_3: './assets/img/gear/characteristics/03.png',
-      imgSrcSlide_4: './assets/img/gear/characteristics/04.jpg',
-    },
-    link: '##',
-  }
 
-  const popup_lazernaya_rezka_metalla4 = {
-    number: 4,
-    srcImg: './assets/img/gear/characteristics/01.png',
-    title: 'Металлический борт 150 (30х150х50) 4',
-
-    description: 'Металлический борт из оцинкованной стали с плющением до конца S=1,5 мм. Габариты: (30х150х50) 4',
-    imgSrcSlides: {
-      imgSrcSlide_1: './assets/img/gear/characteristics/01.png',
-      imgSrcSlide_2: './assets/img/gear/characteristics/02.png',
-      imgSrcSlide_3: './assets/img/gear/characteristics/03.png',
-      imgSrcSlide_4: './assets/img/gear/characteristics/04.jpg',
-    },
-    link: '##',
-  }
 
 // создание карточек для портфолио
 mixin createGearPopup ( gearPopupData )
@@ -80,12 +54,28 @@ mixin createGearPopup ( gearPopupData )
               img(src=src alt='portfolio')
 
       .gear-popup__content
-        .gear-popup__tag Технические характеристики
+        .gear-popup__tag Технические <br> характеристики
         .gear-popup__title=gearPopupData.title
-        .gear-popup__description=gearPopupData.description
+        .gear-popup__model=gearPopupData.model
+
+        ul.gear-popup__properties
+          li.gear-popup__properties-item
+            span.gear-popup__properties-item-name Максимальный размер листа
+            span.gear-popup__properties-item-value 3000х1500 мм
+          li.gear-popup__properties-item
+            span.gear-popup__properties-item-name Мощность гибки
+            span.gear-popup__properties-item-value 200 мм/с
+          li.gear-popup__properties-item
+            span.gear-popup__properties-item-name Скорость подвода инструмента
+            span.gear-popup__properties-item-value 200 мм/с
+          li.gear-popup__properties-item
+            span.gear-popup__properties-item-name Скорость обратного хода
+            span.gear-popup__properties-item-value 120 мм/с
+
+
         a.gear-popup__link.button.button--bg-accept.button-popup(href=gearPopupData.link) Заказать услугу
 
 +createGearPopup(popup_lazernaya_rezka_metalla1)
 +createGearPopup(popup_lazernaya_rezka_metalla2)
-+createGearPopup(popup_lazernaya_rezka_metalla3)
-+createGearPopup(popup_lazernaya_rezka_metalla4)
+//+createGearPopup(popup_lazernaya_rezka_metalla3)
+//+createGearPopup(popup_lazernaya_rezka_metalla4)

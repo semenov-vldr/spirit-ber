@@ -18,6 +18,11 @@
 
   ol
     list-style-type: decimal
+  ul
+    padding-left: 16px
+
+  ol
+    padding-left: 16px
 
   &__image
     position: relative
@@ -34,6 +39,9 @@
       grid-column: span 6
     @media (max-width: $width-mobile)
       grid-column: 1 / -1
+      max-height: 500px
+    @media (max-width: 768px)
+      max-height: 350px
 
   &__content
     flex: 0 1 50%
