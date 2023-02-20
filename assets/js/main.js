@@ -959,7 +959,10 @@ if (gear_block) {
       window.matchMedia('(min-width: 1280px)').matches ? setPopupsPosition() : resetPopupsPosition()
     });
 
-  })
+  });
+
+
+
 
 }
 
@@ -1145,12 +1148,15 @@ linkPreventDefaultMobile.forEach(link => {
   link.addEventListener('click', (evt) => evt.preventDefault() );
 })
 
-
   }
 
     let previousPosition = window.scrollTop || document.documentElement.scrollTop;
+
+
     window.addEventListener("scroll", () => {
+
       const currentPosition = window.scrollTop || document.documentElement.scrollTop;
+
       if ( previousPosition < currentPosition) {
         header.classList.add('js-scroll');
       }
@@ -1159,15 +1165,13 @@ linkPreventDefaultMobile.forEach(link => {
       }
     });
 
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
 
 
 
@@ -1763,7 +1767,6 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
 
       let swiper__thumbs = new Swiper(swiperThumbs, {
-        //loop: true,
         spaceBetween: 28,
         slidesPerView: "auto",
         freeMode: true,
@@ -1774,6 +1777,10 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
       });
 
       let swiper__top = new Swiper(swiperTop, {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
         loop: true,
         slidesPerView: 1,
         centeredSlides: true,
@@ -1793,7 +1800,7 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
     // Открытие/закрытие gear pop-up
     gearPopupItems.forEach(gearPopupItem => {
 
-      const closePortfolioPopup = () => {
+      const closeGearPopup = () => {
         gearPopupItem.classList.remove('js-gear-popup-active');
         unblockScrollBody();
       };
@@ -1801,14 +1808,18 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
       function onDocumentClick () {
         gearPopupItem.addEventListener('click', (evt) => {
           if (evt.target.classList.contains('gear-popup__item')) {
-            closePortfolioPopup();
+            closeGearPopup();
           }
         });
       };
 
-      const activePortfolioPopup = (gearPopupBtnActive) => {
-        const dataNumberPopup = gearPopupItem.dataset.number;
-        const dataNumberGear = gearPopupBtnActive.dataset.numberGear;
+      const activeGearPopup = (gearPopupBtnActive) => {
+        const dataNumberPopup = gearPopupItem.dataset.numberPopup; // номер поп-ап
+
+        const numberGearItemActive = document.querySelector('.swiper-slide-active li.gear__list-item.active');
+        const dataNumberGear = numberGearItemActive.dataset.numberGear; // номер активного оборудования
+
+        gearPopupBtnActive.setAttribute('data-number-gear-btn', dataNumberGear);
 
         if(dataNumberPopup === dataNumberGear) {
           gearPopupItem.classList.add('js-gear-popup-active');
@@ -1821,20 +1832,17 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
       const gearPopupBtnActiveList = document.querySelectorAll('.gear .js-gearPopupBtnActive');
 
       gearPopupBtnActiveList.forEach(gearPopupBtnActive => {
-        gearPopupBtnActive.addEventListener('click', function () {
-          activePortfolioPopup(gearPopupBtnActive)
+        gearPopupBtnActive.addEventListener('click', () => {
+          activeGearPopup(gearPopupBtnActive);
         });
       });
 
       const closeBtnGearPopup = gearPopupItem.querySelector('.gear-popup__close');
-      closeBtnGearPopup.addEventListener('click', closePortfolioPopup);
+      closeBtnGearPopup.addEventListener('click', closeGearPopup);
 
     });
 
-
   }
-
-
 
 }
 
@@ -2273,6 +2281,10 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
       });
 
       let swiper__top = new Swiper(swiperTop, {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
         loop: true,
         slidesPerView: 1,
         centeredSlides: true,
@@ -2320,16 +2332,7 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
     });
 
-
-
   }
-
-
-//document.addEventListener('click', (evt) => console.log(evt.target))
-
-
-
-
 
 
 }

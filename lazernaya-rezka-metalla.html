@@ -8,7 +8,8 @@
 <!-- шаблон прогресс-бара-->
 <!-- карточка партнера-->
 <!--copy text-->
-<!-- создание карточек для портфолио--><!DOCTYPE html>
+<!-- создание карточек для портфолио-->
+<!-- создание popup для оборудования--><!DOCTYPE html>
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
@@ -694,7 +695,6 @@
                         <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
                       </ul>
                       <div class="portfolio-popup__description">Зацеп из нержавеющей стали AISI 304 ммматовая S=1,5мм</div>
-                      <!--a.portfolio-popup__link.button.arrow.button--outline(href="##") Смотреть кейс-->
                     </div>
                   </div>
                 </div>
@@ -724,7 +724,6 @@
                         <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
                       </ul>
                       <div class="portfolio-popup__description">Зацеп из нержавеющей стали AISI 304 ммматовая S=1,5мм</div>
-                      <!--a.portfolio-popup__link.button.arrow.button--outline(href="##") Смотреть кейс-->
                     </div>
                   </div>
                 </div>
@@ -754,7 +753,6 @@
                         <li class="portfolio-tags__item portfolio-popup-tags__item tag-orange">Лазерная резка</li>
                       </ul>
                       <div class="portfolio-popup__description">Зацеп из нержавеющей стали AISI 304 ммматовая S=1,5мм</div>
-                      <!--a.portfolio-popup__link.button.arrow.button--outline(href="##") Смотреть кейс-->
                     </div>
                   </div>
                 </div>
@@ -768,11 +766,11 @@
                 <div class="gear__head-subtitle">Оборудование</div>
                 <div class="gear__head-title">Установка для<br/> лазерной резки</div>
                 <ul class="swiper-no-swiping gear__list js-gear_item_slider_controls">
-                  <li class="gear__list-item active" data-gearitem_control="1_0">FIBER LCM R1530F</li>
-                  <li class="gear__list-item" data-gearitem_control="1_1">LVD ORION 3015 PLUS</li>
+                  <li class="gear__list-item active" data-gearitem_control="1_0" data-number-gear="1">FIBER LCM R1530F</li>
+                  <li class="gear__list-item" data-gearitem_control="1_1" data-number-gear="2">LVD ORION 3015 PLUS</li>
                 </ul>
                 <div class="gear__buttons"><a class="button button--outline arrow gear__buttons-item" href="" target="_blank">Смотреть услугу</a>
-                  <button class="button button--bg-grey gear__buttons-item" data-target="">Характеристики</button>
+                  <button class="button button--bg-grey gear__buttons-item js-gearPopupBtnActive" data-target="">Характеристики</button>
                 </div>
                 <div class="gear__items js-gear_item_slider">
                   <div class="gear__items-slide js-placeGearPopups">
@@ -928,23 +926,76 @@
                       </div>
                     </div>
                   </div>
-                  <div class="gear__items-slide js-placeGearPopups" data-slide="1_1"></div>
                 </div>
               </div>
             </div>
-            <!--.gear__category_controls-->
-            <!--  .gear__category_controls-wrapper-->
-            <!--    .button.button--bg-grey.gear__category_controls-navigation.js-gear_category_swiper_prev-->
-            <!--      <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-            <!--      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.99976 18.76C8.74376 18.76 8.48776 18.662 8.29276 18.467L0.292762 10.467C-0.0982383 10.076 -0.0982383 9.44402 0.292762 9.05302L8.29276 1.05302C8.68376 0.662016 9.31576 0.662016 9.70676 1.05302C10.0978 1.44402 10.0978 2.07602 9.70676 2.46702L2.41376 9.76002L9.70676 17.053C10.0978 17.444 10.0978 18.076 9.70676 18.467C9.51176 18.662 9.25576 18.76 8.99976 18.76" fill="white"/>-->
-            <!--      </svg>-->
-            <!--    .button.button--bg-grey.gear__category_controls-navigation.js-gear_category_swiper_next-->
-            <!--      <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-            <!--      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.00024 18.76C1.25624 18.76 1.51224 18.662 1.70724 18.467L9.70724 10.467C10.0982 10.076 10.0982 9.44402 9.70724 9.05302L1.70724 1.05302C1.31624 0.662016 0.684239 0.662016 0.293239 1.05302C-0.0977614 1.44402 -0.0977614 2.07602 0.293239 2.46702L7.58624 9.76002L0.293239 17.053C-0.0977614 17.444 -0.0977614 18.076 0.293239 18.467C0.488239 18.662 0.744238 18.76 1.00024 18.76" fill="white"/>-->
-            <!--      </svg>-->
-            <!--    .gear__category_controls-pagination-->
-            <div class="gear__buttons-mobile"><a class="button button--outline arrow gear__buttons-item" href="" target="_blank">Смотреть услугу</a>
-              <button class="button button--bg-grey gear__buttons-item" data-target="">Характеристики</button>
+            <!-- --------Pop-up "Характеристики"---------->
+            <div class="gear-popup__item" data-number-popup="1">
+              <div class="gear-popup__wrapper">
+                <button class="gear-popup__close"></button>
+                <div class="gear-popup__swiper gear-popup__swiper--top">
+                  <div class="gear-popup__swiper-wrapper swiper-wrapper">
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/01.png" alt="portfolio"/></div>
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/02.png" alt="portfolio"/></div>
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/03.png" alt="portfolio"/></div>
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/04.jpg" alt="portfolio"/></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="gear-popup__swiper gear-popup__swiper--thumbs">
+                  <div class="gear-popup__swiper-wrapper swiper-wrapper">
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/01.png" alt="portfolio"/></div>
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/02.png" alt="portfolio"/></div>
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/03.png" alt="portfolio"/></div>
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/04.jpg" alt="portfolio"/></div>
+                  </div>
+                </div>
+                <div class="gear-popup__content">
+                  <div class="gear-popup__tag">Технические <br> характеристики</div>
+                  <div class="gear-popup__title">Установка для лазерной резки</div>
+                  <div class="gear-popup__model">FIBER LCM R1530F</div>
+                  <ul class="gear-popup__properties">
+                    <li class="gear-popup__properties-item"><span class="gear-popup__properties-item-name">Максимальный размер листа</span><span class="gear-popup__properties-item-value">3000х1500 мм</span></li>
+                    <li class="gear-popup__properties-item"><span class="gear-popup__properties-item-name">Мощность гибки</span><span class="gear-popup__properties-item-value">200 мм/с</span></li>
+                    <li class="gear-popup__properties-item"><span class="gear-popup__properties-item-name">Скорость подвода инструмента</span><span class="gear-popup__properties-item-value">200 мм/с</span></li>
+                    <li class="gear-popup__properties-item"><span class="gear-popup__properties-item-name">Скорость обратного хода</span><span class="gear-popup__properties-item-value">120 мм/с</span></li>
+                  </ul><a class="gear-popup__link button button--bg-accept button-popup" href="##">Заказать услугу</a>
+                </div>
+              </div>
+            </div>
+            <!-- --------Pop-up "Характеристики"---------->
+            <div class="gear-popup__item" data-number-popup="2">
+              <div class="gear-popup__wrapper">
+                <button class="gear-popup__close"></button>
+                <div class="gear-popup__swiper gear-popup__swiper--top">
+                  <div class="gear-popup__swiper-wrapper swiper-wrapper">
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/01.png" alt="portfolio"/></div>
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/02.png" alt="portfolio"/></div>
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/03.png" alt="portfolio"/></div>
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/04.jpg" alt="portfolio"/></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="gear-popup__swiper gear-popup__swiper--thumbs">
+                  <div class="gear-popup__swiper-wrapper swiper-wrapper">
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/01.png" alt="portfolio"/></div>
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/02.png" alt="portfolio"/></div>
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/03.png" alt="portfolio"/></div>
+                    <div class="swiper-slide"><img src="./assets/img/gear/characteristics/04.jpg" alt="portfolio"/></div>
+                  </div>
+                </div>
+                <div class="gear-popup__content">
+                  <div class="gear-popup__tag">Технические <br> характеристики</div>
+                  <div class="gear-popup__title">Установка для лазерной резки</div>
+                  <div class="gear-popup__model">LVD ORION 3015 PLUS</div>
+                  <ul class="gear-popup__properties">
+                    <li class="gear-popup__properties-item"><span class="gear-popup__properties-item-name">Максимальный размер листа</span><span class="gear-popup__properties-item-value">3000х1500 мм</span></li>
+                    <li class="gear-popup__properties-item"><span class="gear-popup__properties-item-name">Мощность гибки</span><span class="gear-popup__properties-item-value">200 мм/с</span></li>
+                    <li class="gear-popup__properties-item"><span class="gear-popup__properties-item-name">Скорость подвода инструмента</span><span class="gear-popup__properties-item-value">200 мм/с</span></li>
+                    <li class="gear-popup__properties-item"><span class="gear-popup__properties-item-name">Скорость обратного хода</span><span class="gear-popup__properties-item-value">120 мм/с</span></li>
+                  </ul><a class="gear-popup__link button button--bg-accept button-popup" href="##">Заказать услугу</a>
+                </div>
+              </div>
             </div>
           </div>
           <div class="container">
@@ -1113,19 +1164,18 @@
             <h4 class="footer-nav__title">Информация</h4>
             <ul class="footer-nav__list">
                         <li class="footer-nav__item"><a class="footer-nav__link" href="/">Карта сайта</a></li>
-                        <li class="footer-nav__item"><a class="footer-nav__link" href="">Политика обработки персональных данных</a></li>
+                        <li class="footer-nav__item"><a class="footer-nav__link" href="politika-obrabotki-personalnykh-dannykh.html">Политика обработки персональных данных</a></li>
                         <li class="footer-nav__item"><a class="footer-nav__link" href="edo.html">Электронный документоооборот</a></li>
             </ul>
           </nav>
           <nav class="footer__nav footer-nav footer-nav--about">
             <h4 class="footer-nav__title">О компании</h4>
             <ul class="footer-nav__list">
-                        <li class="footer-nav__item"><a class="footer-nav__link" href="/">Производство</a></li>
                         <li class="footer-nav__item"><a class="footer-nav__link" href="career.html">Вакансии</a></li>
-                        <li class="footer-nav__item"><a class="footer-nav__link" href="/">Реквезиты</a></li>
+                        <li class="footer-nav__item"><a class="footer-nav__link" href="requisites.html">Реквезиты</a></li>
                         <li class="footer-nav__item"><a class="footer-nav__link" href="contacts.html">Контакты</a></li>
                         <li class="footer-nav__item"><a class="footer-nav__link" href="delivery.html">Доставка</a></li>
-                        <li class="footer-nav__item"><a class="footer-nav__link" href="/">Реквизиты</a></li>
+                        <li class="footer-nav__item"><a class="footer-nav__link" href="blog.html">Блог</a></li>
             </ul>
           </nav>
           <nav class="footer__nav footer-nav footer-nav--contact">
