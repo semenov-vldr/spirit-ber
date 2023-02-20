@@ -61,12 +61,15 @@ linkPreventDefaultMobile.forEach(link => {
   link.addEventListener('click', (evt) => evt.preventDefault() );
 })
 
-
   }
 
     let previousPosition = window.scrollTop || document.documentElement.scrollTop;
+
+
     window.addEventListener("scroll", () => {
+
       const currentPosition = window.scrollTop || document.documentElement.scrollTop;
+
       if ( previousPosition < currentPosition) {
         header.classList.add('js-scroll');
       }
@@ -75,12 +78,10 @@ linkPreventDefaultMobile.forEach(link => {
       }
     });
 
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+

@@ -79,6 +79,10 @@
       });
 
       let swiper__top = new Swiper(swiperTop, {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
         loop: true,
         slidesPerView: 1,
         centeredSlides: true,
@@ -126,16 +130,7 @@
 
     });
 
-
-
   }
-
-
-//document.addEventListener('click', (evt) => console.log(evt.target))
-
-
-
-
 
 
 }

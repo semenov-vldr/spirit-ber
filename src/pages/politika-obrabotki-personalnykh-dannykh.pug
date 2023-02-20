@@ -1,0 +1,16 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Политика обработки персональных данных"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+
+block content
+  .breadcrumbs
+    .container.breadcrumbs__container
+      a(href="index.html").breadcrumbs__item Главная
+      a(href="").breadcrumbs__item Политика обработки персональных данных
+
+  section.section-column
+    include ../components/politics/politics

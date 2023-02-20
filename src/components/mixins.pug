@@ -104,3 +104,44 @@ mixin createPortfolioItems ( portfolioData )
                 li.portfolio-tags__item.portfolio-popup-tags__item(class=tag.classColor)=tag.text
             .portfolio-popup__description=card.description
             a.portfolio-popup__link.button.arrow.button--outline(href=card.popup.link) Смотреть кейс
+
+
+// создание popup для оборудования
+mixin createGearPopup ( gearPopupData )
+  // --------Pop-up "Характеристики"--------
+  .gear-popup__item(data-number-popup=gearPopupData.number)
+    .gear-popup__wrapper
+      button.gear-popup__close
+
+      .gear-popup__swiper.gear-popup__swiper--top
+        .gear-popup__swiper-wrapper.swiper-wrapper
+          each src in gearPopupData.imgSrcSlides
+            .swiper-slide
+              img(src=src alt='portfolio')
+        .swiper-pagination
+
+      .gear-popup__swiper.gear-popup__swiper--thumbs
+        .gear-popup__swiper-wrapper.swiper-wrapper
+          each src in gearPopupData.imgSrcSlides
+            .swiper-slide
+              img(src=src alt='portfolio')
+
+      .gear-popup__content
+        .gear-popup__tag Технические <br> характеристики
+        .gear-popup__title=gearPopupData.title
+        .gear-popup__model=gearPopupData.model
+
+        ul.gear-popup__properties
+          li.gear-popup__properties-item
+            span.gear-popup__properties-item-name Максимальный размер листа
+            span.gear-popup__properties-item-value 3000х1500 мм
+          li.gear-popup__properties-item
+            span.gear-popup__properties-item-name Мощность гибки
+            span.gear-popup__properties-item-value 200 мм/с
+          li.gear-popup__properties-item
+            span.gear-popup__properties-item-name Скорость подвода инструмента
+            span.gear-popup__properties-item-value 200 мм/с
+          li.gear-popup__properties-item
+            span.gear-popup__properties-item-name Скорость обратного хода
+            span.gear-popup__properties-item-value 120 мм/с
+        a.gear-popup__link.button.button--bg-accept.button-popup(href=gearPopupData.link) Заказать услугу

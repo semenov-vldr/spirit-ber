@@ -1,7 +1,6 @@
 -
   const popup_lazernaya_rezka_metalla1 = {
     number: 1,
-    srcImg: './assets/img/gear/characteristics/01.png',
     title: 'Установка для лазерной резки',
 
     model: 'FIBER LCM R1530F',
@@ -17,7 +16,6 @@
 
   const popup_lazernaya_rezka_metalla2 = {
     number: 2,
-    srcImg: './assets/img/gear/characteristics/01.png',
     title: 'Установка для лазерной резки',
 
     model: 'LVD ORION 3015 PLUS',
@@ -30,52 +28,66 @@
     link: '##',
   }
 
+  const popup_lazernaya_rezka_metalla3 = {
+    number: 3,
+    title: 'Листосгибочный станок',
 
+    model: 'Ber-Tech SHPB 32100',
+    imgSrcSlides: {
+      imgSrcSlide_1: './assets/img/gear/characteristics/01.png',
+      imgSrcSlide_2: './assets/img/gear/characteristics/02.png',
+      imgSrcSlide_3: './assets/img/gear/characteristics/03.png',
+      imgSrcSlide_4: './assets/img/gear/characteristics/04.jpg',
+    },
+    link: '##',
+  }
 
+  const popup_lazernaya_rezka_metalla4 = {
+    number: 4,
+    title: 'Листосгибочный станок',
 
-// создание карточек для портфолио
-mixin createGearPopup ( gearPopupData )
-  // --------Pop-up "Характеристики"--------
-  .gear-popup__item(data-number=gearPopupData.number)
-    .gear-popup__wrapper
-      button.gear-popup__close
+    model: 'ERMAKSAN SPEED PRO 6 AXES',
+    imgSrcSlides: {
+      imgSrcSlide_1: './assets/img/gear/characteristics/01.png',
+      imgSrcSlide_2: './assets/img/gear/characteristics/02.png',
+      imgSrcSlide_3: './assets/img/gear/characteristics/03.png',
+      imgSrcSlide_4: './assets/img/gear/characteristics/04.jpg',
+    },
+    link: '##',
+  }
 
-      .gear-popup__swiper.gear-popup__swiper--top
-        .gear-popup__swiper-wrapper.swiper-wrapper
-          each src in gearPopupData.imgSrcSlides
-            .swiper-slide
-              img(src=src alt='portfolio')
-        .swiper-pagination
+  const popup_lazernaya_rezka_metalla5 = {
+    number: 5,
+    title: 'Листосгибочный станок',
 
-      .gear-popup__swiper.gear-popup__swiper--thumbs
-        .gear-popup__swiper-wrapper.swiper-wrapper
-          each src in gearPopupData.imgSrcSlides
-            .swiper-slide
-              img(src=src alt='portfolio')
+    model: 'ADH WC67K',
+    imgSrcSlides: {
+      imgSrcSlide_1: './assets/img/gear/characteristics/01.png',
+      imgSrcSlide_2: './assets/img/gear/characteristics/02.png',
+      imgSrcSlide_3: './assets/img/gear/characteristics/03.png',
+      imgSrcSlide_4: './assets/img/gear/characteristics/04.jpg',
+    },
+    link: '##',
+  }
 
-      .gear-popup__content
-        .gear-popup__tag Технические <br> характеристики
-        .gear-popup__title=gearPopupData.title
-        .gear-popup__model=gearPopupData.model
+  const popup_lazernaya_rezka_metalla6 = {
+    number: 6,
+    title: 'Линии порошковой покраски',
 
-        ul.gear-popup__properties
-          li.gear-popup__properties-item
-            span.gear-popup__properties-item-name Максимальный размер листа
-            span.gear-popup__properties-item-value 3000х1500 мм
-          li.gear-popup__properties-item
-            span.gear-popup__properties-item-name Мощность гибки
-            span.gear-popup__properties-item-value 200 мм/с
-          li.gear-popup__properties-item
-            span.gear-popup__properties-item-name Скорость подвода инструмента
-            span.gear-popup__properties-item-value 200 мм/с
-          li.gear-popup__properties-item
-            span.gear-popup__properties-item-name Скорость обратного хода
-            span.gear-popup__properties-item-value 120 мм/с
+    model: 'AMP-Polimer, кольцевой участок',
+    imgSrcSlides: {
+      imgSrcSlide_1: './assets/img/gear/characteristics/01.png',
+      imgSrcSlide_2: './assets/img/gear/characteristics/02.png',
+      imgSrcSlide_3: './assets/img/gear/characteristics/03.png',
+      imgSrcSlide_4: './assets/img/gear/characteristics/04.jpg',
+    },
+    link: '##',
+  }
 
-
-        a.gear-popup__link.button.button--bg-accept.button-popup(href=gearPopupData.link) Заказать услугу
 
 +createGearPopup(popup_lazernaya_rezka_metalla1)
 +createGearPopup(popup_lazernaya_rezka_metalla2)
-//+createGearPopup(popup_lazernaya_rezka_metalla3)
-//+createGearPopup(popup_lazernaya_rezka_metalla4)
++createGearPopup(popup_lazernaya_rezka_metalla3)
++createGearPopup(popup_lazernaya_rezka_metalla4)
++createGearPopup(popup_lazernaya_rezka_metalla5)
++createGearPopup(popup_lazernaya_rezka_metalla6)

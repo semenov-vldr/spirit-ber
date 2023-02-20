@@ -5,6 +5,7 @@
   background-size: cover
   height: 100vh
   min-height: 768px
+  padding-bottom: 50px
   &::after
     content: ""
     position: absolute
@@ -37,11 +38,11 @@
       display: flex
       flex-direction: column
       gap: 32px
-      width: 35%
+      width: 45%
       @media (max-width: 1400px)
-        width: 60%
-      @media (max-width: $width-mobile)
         width: 70%
+      @media (max-width: $width-mobile)
+        width: 80%
       @media (max-width: 480px)
         width: 100%
 

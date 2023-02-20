@@ -164,7 +164,10 @@ if (gear_block) {
       window.matchMedia('(min-width: 1280px)').matches ? setPopupsPosition() : resetPopupsPosition()
     });
 
-  })
+  });
+
+
+
 
 }
 

@@ -19,26 +19,31 @@
   h2
     margin-bottom: 32px
     text-align: center
+    @include fontSize(18, 40)
   h3
     margin: 54px 0 24px
     text-align: center
+    @include fontSize(18, 32)
 
   table
-    background-color: #fff
-    color: #000
+    margin: 0 auto
+    background-color: #f3f4f5
+    color: #333333
     width: 100%
     max-width: 900px
     border-collapse: collapse
     border-spacing: 0
-    height: auto
-    border: 1px solid #000
     border-radius: 8px
     overflow: hidden
+    font-size: 14px
+    @media (max-width: 768px)
+      font-size: 12px
 
     th
       font-weight: 500
     th, td
       padding: 8px 12px
-      border: 1px solid #000
+      border: 1px solid #BEBEBE
+      min-width: 65px
     td
       text-align: center

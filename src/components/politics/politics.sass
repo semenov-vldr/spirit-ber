@@ -1,0 +1,43 @@
+.politics
+  padding-top: 150px
+  @media (max-width: 480px)
+    padding-top: 170px
+
+  &__container
+    width: 80%
+    @media (max-width: 768px)
+      width: auto
+
+  h1
+    margin-bottom: 50px
+    @include fontSize(28, 52)
+    font-weight: 500
+
+  &__container > ol > li
+    @include fontSize(20, 28)
+    color: #fff
+
+  &__container > ol > li *
+    @include fontSize(14, 20)
+
+
+  ol
+    list-style: none
+    counter-reset: li
+    display: flex
+    flex-direction: column
+    row-gap: 48px
+
+  ol ol
+    margin-top: 30px
+    row-gap: 16px
+
+
+  li p:first-child
+    margin-top: 20px
+
+  li:before
+    counter-increment: li
+    content: counters(li, ".") ". "
+
+
