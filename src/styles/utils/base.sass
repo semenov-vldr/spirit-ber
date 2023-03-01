@@ -155,12 +155,14 @@ main
     background-repeat: no-repeat
   &.arrow
     &::after
-      background-image: url('/assets/img/icons/arrow-right.svg')
+      //background-image: url('/assets/img/icons/arrow-right.svg')
+      background-image: url('/local/templates/.default/assets/img/icons/arrow-right.svg')
       width: 7px
       height: 12px
   &.file
     &::before
-      background-image: url('/assets/img/icons/file.svg')
+      //background-image: url('/assets/img/icons/file.svg')
+      background-image: url('/local/templates/.default/assets/img/icons/file.svg')
       width: 13px
       height: 16px
 
@@ -199,10 +201,6 @@ main
   height: 100%
   object-fit: cover
   z-index: 0
-
-.hero__video
-  @media (max-width: 768px)
-    display: none
 
 .play-button
   position: absolute
@@ -245,7 +243,8 @@ main
   &::after
     content: ""
     display: block
-    background-image: url('../img/icons/question.svg')
+    //background-image: url('../img/icons/question.svg')
+    background-image: url('/local/templates/.default/assets/img/icons/question.svg')
     background-repeat: no-repeat
     background-position: center
     background-size: cover
@@ -322,9 +321,9 @@ main
     left: 0
     &:hover
       opacity: 0
-@media (max-width: 768px)
-  img.animate
-    display: none
+//@media (max-width: 768px)
+//  img.animate
+//    display: none
 
 
 

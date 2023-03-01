@@ -15,7 +15,7 @@
   @media (max-width: 768px)
     aspect-ratio: auto
     background-position: center
-    //background: url("/assets/img/gear/gear_bg_mobile.webp")
+    margin-bottom: 200px
 
 .gear__category
   flex: 0 0 100%
@@ -43,6 +43,9 @@
     line-height: 1.2
     position: relative
     z-index: 2
+    width: 40%
+    @media (max-width: 768px)
+      width: auto
 
 .gear__list
   list-style: none
@@ -51,6 +54,7 @@
   position: relative
   z-index: 2
   box-sizing: border-box
+  width: 50%
   @media(max-width: 1279px)
     margin: 24px 0
   @media (max-width: 768px)
@@ -81,7 +85,7 @@
     width: fit-content
     display: block
     &::after
-      font-family: 'SpaceGrotesk'
+      font-family: 'SpaceGrotesk', sans-serif
       font-feature-settings: 'tnum' on, 'lnum' on
       counter-increment: li
       content: "0" counter(li)
@@ -172,6 +176,8 @@
         display: none
       @media (max-width: 768px)
         display: block
+        height: 100%
+        object-fit: cover
       @media(max-width: 560px)
         aspect-ratio: 450 / 475
         object-position: center
@@ -198,40 +204,42 @@
     box-shadow: 0px -8px 10px rgba(0, 0, 0, 0.1), 0px -1px 2px rgba(0, 0, 0, 0.08), 0px 8px 10px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), inset 0px 0px 2px rgba(113, 200, 255, 0.24)
     border-radius: 8px
     --swiper-navigation-color: #fff
-    padding: 8px 80px 32px
-    @media (max-width: 1024px)
-      left: unset
-      transform: translateX(0)
-      right: 48px
+    padding: 8px 65px 32px
+  @media (max-width: 1024px)
+    left: unset
+    transform: translateX(0)
+    right: 48px
+  @media (max-width: 768px)
+    position: static
+    right: 0
+    left: 0
+    bottom: 0
+    width: calc(100% - 40px)
+    //transform: translate(20px, -24px)
+    padding: 0 0 24px
+    height: fit-content
+    margin: 0 auto
+  .swiper-pagination
+    margin-top: 12px
+    position: absolute
+    bottom: 8px
+    z-index: 2
+    pointer-events: all
     @media (max-width: 768px)
-      position: static
-      right: 0
-      left: 0
-      bottom: 0
-      width: calc(100% - 40px)
-      transform: translate(20px, -24px)
-      padding: 0 0 24px
-    .swiper-pagination
-      margin-top: 12px
-      position: absolute
-      bottom: 8px
-      z-index: 2
-      pointer-events: all
-      @media (max-width: 768px)
-        margin-top: 8px
-    .swiper-button-next, .swiper-button-prev
-      pointer-events: all
-      cursor: pointer
-      //z-index: 3 !important
-      width: 44px
-      height: 44px
-      border: 1px solid rgba(106,106,106,.1)
-      background-color: rgba(106,106,106,.1)
-      backdrop-filter: blur(60px)
-      &:after
-        font-size: 20px
-      @media (max-width: 768px)
-        display: none
+      margin-top: 8px
+  .swiper-button-next, .swiper-button-prev
+    pointer-events: all
+    cursor: pointer
+    //z-index: 3 !important
+    width: 44px
+    height: 44px
+    border: 1px solid rgba(106,106,106,.1)
+    background-color: rgba(106,106,106,.1)
+    backdrop-filter: blur(60px)
+    &:after
+      font-size: 20px
+    @media (max-width: 768px)
+      display: none
   &-item
     left: 0
     top: 0
@@ -355,7 +363,6 @@
   gap: 12px
   z-index: 2
   padding: 20px
-  //order: 3
   position: absolute
   width: 100%
   top: 100%
@@ -364,9 +371,3 @@
     width: 100%
   .button--bg-grey
     border: 1px solid rgba(106,106,106,.1)
-
-@media (max-width: 768px)
-  .gear
-    //display: flex
-    //flex-direction: column
-    margin-bottom: 150px

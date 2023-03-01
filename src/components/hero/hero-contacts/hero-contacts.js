@@ -4,42 +4,35 @@
 
   if (mapContacts) {
 
-    let myMap;
+    const pointAddress = [56.130262, 37.079226];
 
     ymaps.ready(init);
 
     function init () {
-      myMap = new ymaps.Map('map-contacts', {
+      let myMap = new ymaps.Map('map-contacts', {
 
-        center: [56.13050415063692,37.07479867231817],
-        zoom: 16,
-        controls: []
+        center: pointAddress,
+        zoom: 15,
+        controls: [],
       });
 
-      const pointPickup = [56.130236759852764,37.07856198817317];
-      const pointAddress = [56.130021055835314,37.079999652205565];
-      let geoObjects = new ymaps.GeoObjectCollection();
-
-      const placemarkPickup = new ymaps.Placemark(pointPickup, {}, {
-        iconLayout: 'default#image',
-        iconImageHref: './assets/img/icons/orange-mark.svg',
-        iconImageSize: [51, 53],
-        iconImageOffset: [0, -53]
-      });
 
       const placemarkAddress = new ymaps.Placemark(pointAddress, {}, {
         iconLayout: 'default#image',
-        iconImageHref: './assets/img/icons/accent-mark.svg',
+        //iconImageHref: './assets/img/icons/orange-mark.svg',
+        iconImageHref: '/local/templates/.default/assets/img/icons/orange-mark.svg',
         iconImageSize: [51, 53],
         iconImageOffset: [0, -53]
-      })
+      });
 
-      myMap.geoObjects
-        .add(placemarkAddress)
-        .add(placemarkPickup)
+      //let geoObjects = new ymaps.GeoObjectCollection({});
+      // geoObjects.add(placemarkAddress);
+      // myMap.geoObjects.add(geoObjects);
 
-      myMap.setBounds(myMap.geoObjects.getBounds());
-      myMap.setZoom(myMap.getZoom() - 4);
+      myMap.geoObjects.add(placemarkAddress);
+
+      // myMap.setBounds(geoObjects.getBounds());
+      // myMap.setZoom(myMap.getZoom() - 4);
 
     }
 

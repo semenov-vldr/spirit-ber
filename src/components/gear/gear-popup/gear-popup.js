@@ -71,6 +71,11 @@
           blockScrollBody();
           onDocumentClick();
         }
+
+
+        document.addEventListener('keydown', (evt) => {
+          if (evt.key === 'Escape') closeGearPopup();
+        });
       };
 
 

@@ -21,24 +21,10 @@
       const dataBgImgSrc = item.dataset.bgImgSrc;
       const dataBgVideoSrc = item.dataset.bgVideoSrc;
 
-      if (dataBgImgSrc && !dataBgVideoSrc) {
-        heroIndex.style.backgroundImage = `url(${dataBgImgSrc})`;
-        videoHeroIndex.style.display = "none"
-        videoHeroIndex.src = "";
-      }
-
-      if (!dataBgImgSrc && !dataBgVideoSrc) {
-        heroIndex.style.backgroundImage = "url('')";
-        videoHeroIndex.src = "";
-        videoHeroIndex.style.display = "none"
-      }
-
-      if (dataBgVideoSrc) {
-        videoHeroIndex.style.display = "block"
+      if (dataBgVideoSrc || dataBgImgSrc) {
         videoHeroIndex.src = dataBgVideoSrc;
-        heroIndex.style.backgroundImage = `url('')`;
+        videoHeroIndex.poster = dataBgImgSrc;
       }
-
     };
 
 

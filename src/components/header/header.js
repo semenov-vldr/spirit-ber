@@ -58,7 +58,9 @@
  // Сбрасываем стандартное поведение ссылок, имеющих вложенность в меню
 const linkPreventDefaultMobile = header.querySelectorAll('.js-prevent-default-mobile');
 linkPreventDefaultMobile.forEach(link => {
-  link.addEventListener('click', (evt) => evt.preventDefault() );
+  link.addEventListener('click', (evt) => {
+    evt.preventDefault();
+  });
 })
 
   }

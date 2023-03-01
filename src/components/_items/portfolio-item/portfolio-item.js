@@ -14,7 +14,6 @@
 
 
       let swiper__thumbs = new Swiper(swiperThumbs, {
-        //loop: true,
         spaceBetween: 28,
         slidesPerView: "auto",
         freeMode: true,
@@ -25,6 +24,10 @@
       });
 
       let swiper__top = new Swiper(swiperTop, {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
         loop: true,
         slidesPerView: 1,
         centeredSlides: true,

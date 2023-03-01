@@ -36,8 +36,15 @@
     const close = popup.querySelector('.form-popup__close');
     close.addEventListener('click', () => {
       closeFormPopup(popup);
-
     });
+
+    document.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Escape') {
+        closeFormPopup(popup);
+      }
+    });
+
+
   };
 
   function onDocumentClick (item) {
@@ -74,6 +81,13 @@
     closeButton.addEventListener('click', () => {
       replyPopup.remove();
       unblockScrollBody();
+    });
+
+    document.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Escape') {
+        replyPopup.remove();
+        unblockScrollBody();
+      }
     });
   };
 
