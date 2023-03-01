@@ -1145,7 +1145,9 @@ if (generalPortfolio) {
  // Сбрасываем стандартное поведение ссылок, имеющих вложенность в меню
 const linkPreventDefaultMobile = header.querySelectorAll('.js-prevent-default-mobile');
 linkPreventDefaultMobile.forEach(link => {
-  link.addEventListener('click', (evt) => evt.preventDefault() );
+  link.addEventListener('click', (evt) => {
+    evt.preventDefault();
+  });
 })
 
   }
@@ -1330,7 +1332,7 @@ function paginationActive (paginationItem, paginationList) {
       slidesPerView: 4,
 
       // Бесконечная прокрутка
-      loop: true,
+      //loop: true,
 
       // Откл функционала, если слайдов меньше, чем нужно
       watchOverflow: true,
@@ -1411,7 +1413,6 @@ if (vacansy) {
 
 
       let swiper__thumbs = new Swiper(swiperThumbs, {
-        //loop: true,
         spaceBetween: 28,
         slidesPerView: "auto",
         freeMode: true,
@@ -1422,6 +1423,10 @@ if (vacansy) {
       });
 
       let swiper__top = new Swiper(swiperTop, {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
         loop: true,
         slidesPerView: 1,
         centeredSlides: true,
@@ -1646,8 +1651,15 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
     const close = popup.querySelector('.form-popup__close');
     close.addEventListener('click', () => {
       closeFormPopup(popup);
-
     });
+
+    document.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Escape') {
+        closeFormPopup(popup);
+      }
+    });
+
+
   };
 
   function onDocumentClick (item) {
@@ -1684,6 +1696,13 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
     closeButton.addEventListener('click', () => {
       replyPopup.remove();
       unblockScrollBody();
+    });
+
+    document.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Escape') {
+        replyPopup.remove();
+        unblockScrollBody();
+      }
     });
   };
 
@@ -1826,6 +1845,11 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
           blockScrollBody();
           onDocumentClick();
         }
+
+
+        document.addEventListener('keydown', (evt) => {
+          if (evt.key === 'Escape') closeGearPopup();
+        });
       };
 
 
@@ -1861,42 +1885,35 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
 
   if (mapContacts) {
 
-    let myMap;
+    const pointAddress = [56.130262, 37.079226];
 
     ymaps.ready(init);
 
     function init () {
-      myMap = new ymaps.Map('map-contacts', {
+      let myMap = new ymaps.Map('map-contacts', {
 
-        center: [56.13050415063692,37.07479867231817],
-        zoom: 16,
-        controls: []
+        center: pointAddress,
+        zoom: 15,
+        controls: [],
       });
 
-      const pointPickup = [56.130236759852764,37.07856198817317];
-      const pointAddress = [56.130021055835314,37.079999652205565];
-      let geoObjects = new ymaps.GeoObjectCollection();
-
-      const placemarkPickup = new ymaps.Placemark(pointPickup, {}, {
-        iconLayout: 'default#image',
-        iconImageHref: './assets/img/icons/orange-mark.svg',
-        iconImageSize: [51, 53],
-        iconImageOffset: [0, -53]
-      });
 
       const placemarkAddress = new ymaps.Placemark(pointAddress, {}, {
         iconLayout: 'default#image',
-        iconImageHref: './assets/img/icons/accent-mark.svg',
+        //iconImageHref: './assets/img/icons/orange-mark.svg',
+        iconImageHref: '/local/templates/.default/assets/img/icons/orange-mark.svg',
         iconImageSize: [51, 53],
         iconImageOffset: [0, -53]
-      })
+      });
 
-      myMap.geoObjects
-        .add(placemarkAddress)
-        .add(placemarkPickup)
+      //let geoObjects = new ymaps.GeoObjectCollection({});
+      // geoObjects.add(placemarkAddress);
+      // myMap.geoObjects.add(geoObjects);
 
-      myMap.setBounds(myMap.geoObjects.getBounds());
-      myMap.setZoom(myMap.getZoom() - 4);
+      myMap.geoObjects.add(placemarkAddress);
+
+      // myMap.setBounds(geoObjects.getBounds());
+      // myMap.setZoom(myMap.getZoom() - 4);
 
     }
 
@@ -2020,24 +2037,10 @@ const tabletWidth = window.matchMedia('(max-width: 1500px)').matches;
       const dataBgImgSrc = item.dataset.bgImgSrc;
       const dataBgVideoSrc = item.dataset.bgVideoSrc;
 
-      if (dataBgImgSrc && !dataBgVideoSrc) {
-        heroIndex.style.backgroundImage = `url(${dataBgImgSrc})`;
-        videoHeroIndex.style.display = "none"
-        videoHeroIndex.src = "";
-      }
-
-      if (!dataBgImgSrc && !dataBgVideoSrc) {
-        heroIndex.style.backgroundImage = "url('')";
-        videoHeroIndex.src = "";
-        videoHeroIndex.style.display = "none"
-      }
-
-      if (dataBgVideoSrc) {
-        videoHeroIndex.style.display = "block"
+      if (dataBgVideoSrc || dataBgImgSrc) {
         videoHeroIndex.src = dataBgVideoSrc;
-        heroIndex.style.backgroundImage = `url('')`;
+        videoHeroIndex.poster = dataBgImgSrc;
       }
-
     };
 
 

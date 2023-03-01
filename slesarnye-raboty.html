@@ -35,7 +35,7 @@
               <use href="./assets/img/sprite.svg#header-logo"></use>
             </svg></a>
           <button class="header__burger"></button>
-          <div class="header-nav">
+          <nav class="header-nav">
             <ul class="header-nav__list">
               <li class="header-nav__item header-nav__item--service"><a class="header-nav__link js-prevent-default-mobile" href="service.html">Услуги</a>
                 <ul class="header-subnav header-subnav-1">
@@ -94,7 +94,7 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </nav>
         </div>
       </header>
       <main>
@@ -103,7 +103,8 @@
         </div>
         <section class="section-column">
           <div class="container container-width-full">
-            <div class="hero hero-laser-cutting" style="background-image: url('./assets/img/service/laser.gif')">
+            <div class="hero hero-laser-cutting">
+              <video class="hero__video" preload="auto" autoplay muted loop src="" playsinline poster="./assets/img/service/laser.gif"></video>
               <div class="hero__container"><span class="hero__tag">Услуги</span>
                 <h1 class="hero__title">Лазерная резка металла</h1><span class="hero__price">-- от 6,90 ₽ / метр</span>
                 <p class="hero__text">Наша компания работает на профессиональном лазерном оборудовании LVD ORION 3015 PLUS и FIBER LCM R1530F, которое позволяет выполнять раскрой листового материала, профильных и круглых труб по низким ценам за счет своей высокой производительности и превосходному качеству работы.</p>
@@ -913,27 +914,37 @@
                 <div class="also-interesting-laser-cutting__slider">
                   <ul class="also-interesting__list swiper-wrapper">
                     <li class="also-interesting__item also-interesting-item swiper-slide">
-                      <div class="also-interesting-item__image"><img class="static" src="./assets/img/service/05.jpg"><img class="animate" src="./assets/img/service/05.gif"></div>
+                      <div class="also-interesting-item__image">
+                        <!--img.static(src="./assets/img/service/05.jpg")--><img class="animate" src="./assets/img/service/05.gif">
+                      </div>
                       <div class="also-interesting-item__name">Металлоконструкции</div>
                       <div class="also-interesting-item__price">-- от 6,90 ₽ / метр</div><a class="also-interesting-item__link button arrow button--bg-grey" href="">Смотреть услугу</a>
                     </li>
                     <li class="also-interesting__item also-interesting-item swiper-slide">
-                      <div class="also-interesting-item__image"><img class="static" src="./assets/img/service/02.jpg"><img class="animate" src="./assets/img/service/02.gif"></div>
+                      <div class="also-interesting-item__image">
+                        <!--img.static(src="./assets/img/service/02.jpg")--><img class="animate" src="./assets/img/service/02.gif">
+                      </div>
                       <div class="also-interesting-item__name">Гибка</div>
                       <div class="also-interesting-item__price">-- от 6,90 ₽ / метр</div><a class="also-interesting-item__link button arrow button--bg-grey" href="">Смотреть услугу</a>
                     </li>
                     <li class="also-interesting__item also-interesting-item swiper-slide">
-                      <div class="also-interesting-item__image"><img class="static" src="./assets/img/service/03.jpg"><img class="animate" src="./assets/img/service/03.gif"></div>
+                      <div class="also-interesting-item__image">
+                        <!--img.static(src="./assets/img/service/03.jpg")--><img class="animate" src="./assets/img/service/03.gif">
+                      </div>
                       <div class="also-interesting-item__name">Порошковая покраска</div>
                       <div class="also-interesting-item__price">-- от 6,90 ₽ / метр</div><a class="also-interesting-item__link button arrow button--bg-grey" href="">Смотреть услугу</a>
                     </li>
                     <li class="also-interesting__item also-interesting-item swiper-slide">
-                      <div class="also-interesting-item__image"><img class="static" src="./assets/img/service/01.jpg"><img class="animate" src="./assets/img/service/01.gif"></div>
+                      <div class="also-interesting-item__image">
+                        <!--img.static(src="./assets/img/service/01.jpg")--><img class="animate" src="./assets/img/service/01.gif">
+                      </div>
                       <div class="also-interesting-item__name">Лазерная резка</div>
                       <div class="also-interesting-item__price">-- от 6,90 ₽ / метр</div><a class="also-interesting-item__link button arrow button--bg-grey" href="">Смотреть услугу</a>
                     </li>
                     <li class="also-interesting__item also-interesting-item swiper-slide">
-                      <div class="also-interesting-item__image"><img class="static" src="./assets/img/service/04.jpg"><img class="animate" src="./assets/img/service/04.gif"></div>
+                      <div class="also-interesting-item__image">
+                        <!--img.static(src="./assets/img/service/04.jpg")--><img class="animate" src="./assets/img/service/04.gif">
+                      </div>
                       <div class="also-interesting-item__name">Слесарные работы</div>
                       <div class="also-interesting-item__price">-- от 6,90 ₽ / метр</div><a class="also-interesting-item__link button arrow button--bg-grey" href="">Смотреть услугу</a>
                     </li>
