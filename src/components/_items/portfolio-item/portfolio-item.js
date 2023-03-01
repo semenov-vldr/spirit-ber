@@ -12,7 +12,6 @@
       const swiperThumbs = portfolioItem.querySelector('.portfolio-popup__swiper--thumbs');
       const swiperTop = portfolioItem.querySelector('.portfolio-popup__swiper--top');
 
-
       let swiper__thumbs = new Swiper(swiperThumbs, {
         spaceBetween: 28,
         slidesPerView: "auto",

@@ -48,36 +48,39 @@
 
 
   // Открытие поп-ап "Формирование цены"
-  const tablePrice = document.querySelector('.price');
+  const tablePriceList = document.querySelectorAll('.price');
+  if (tablePriceList) {
+    tablePriceList.forEach(tablePrice => {
 
-  if (tablePrice) {
+      const openPriceFormation = tablePrice.querySelector('.price-table__pricing');
 
-    const openPriceFormation = tablePrice.querySelector('.price-table__pricing');
+      if (openPriceFormation) {
 
-    if (openPriceFormation) {
+        const priceFormation = tablePrice.querySelector('.price-formation');
+        const closePriceFormation = priceFormation.querySelector('.accordion .accordion__close');
 
-      const priceFormation = tablePrice.querySelector('.price-formation');
-      const closePriceFormation = priceFormation.querySelector('.accordion .accordion__close');
-
-      openPriceFormation.addEventListener('click', () => {
-        priceFormation.classList.add('js-priceFormation-visible');
-        blockScrollBody()
-      });
-
-      closePriceFormation.addEventListener('click', () => {
-        priceFormation.classList.remove('js-priceFormation-visible');
-        unblockScrollBody()
-      });
-
-      priceFormation.addEventListener('click', (evt) => {
-        if (evt.target.classList.contains('price-formation')) {
-          priceFormation.classList.remove('js-priceFormation-visible');
-          unblockScrollBody()
+        function visiblePriceFormation () {
+          priceFormation.classList.add('js-priceFormation-visible');
+          blockScrollBody();
         }
-      })
-    }
 
+        function hiddenPriceFormation () {
+          priceFormation.classList.remove('js-priceFormation-visible');
+          unblockScrollBody();
+        }
+
+        openPriceFormation.addEventListener('click', visiblePriceFormation);
+        closePriceFormation.addEventListener('click', hiddenPriceFormation);
+
+        priceFormation.addEventListener('click', (evt) => {
+          if (evt.target.classList.contains('price-formation')) {
+            hiddenPriceFormation();
+          }
+        })
+      }
+    });
   }
+
 
 
 }

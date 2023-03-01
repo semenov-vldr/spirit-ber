@@ -36,7 +36,7 @@
 
 
   &__title
-    font-size: clamp(14px, calc(14px + (20 - 14) * ((100vw - 768px) / (1920 - 768))), 20px)
+    @include fontSize(14, 20)
     line-height: 1.7
 
   &-tags
@@ -46,9 +46,8 @@
     font-size: 12px
     @media (max-width: $width-mobile)
       font-size: 10px
-    @media (max-width: 480px)
-      //margin-top: auto
       gap: 6px
+
   &-tags__item
     position: relative
     display: flex
@@ -169,15 +168,19 @@
       border-radius: 8px
       padding: 10px
       aspect-ratio: 3 / 2
+      min-height: 100px
 
   &__content
-    padding: 70px 40px 40px
+    padding: 100px 40px 40px
     text-align: left
     display: flex
     flex-direction: column
     @media (max-width: 768px)
       padding: 20px
       height: 100%
+
+    ul.portfolio-tags
+      margin: 20px 0
 
   &__date
     color: rgba(#fff, 0.5)
